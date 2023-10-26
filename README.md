@@ -41,7 +41,7 @@ This monorepo is structured as follows:
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see
-the [tags on this repository](https://gitlab.tools.eon.cz/ece/selfcare-2/sc20-ui-kit/-/tags).
+the [tags on this repository](https://github.com/ApiTreeCZ/toolbox/tags).
 
 ## Contributing
 
