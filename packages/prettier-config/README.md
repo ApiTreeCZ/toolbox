@@ -1,6 +1,10 @@
 <div align="center">
 
-# ApiTree Prettier Config
+<a href="https://github.com/ApiTreeCZ">
+<img alt="ApiTree s.r.o." src="https://www.apitree.cz/static/images/logo-header.svg" width="120" />
+</a>
+
+# Prettier Config
 
 ### Prettier configuration for ApiTree projects
 

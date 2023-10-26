@@ -1,6 +1,10 @@
 <div align="center">
 
-# ApiTree Toolbox
+<a href="https://github.com/ApiTreeCZ">
+<img alt="ApiTree s.r.o." src="https://www.apitree.cz/static/images/logo-header.svg" width="120" />
+</a>
+
+# Toolbox
 
 ### Shared configurations and utilities for ApiTree projects
 
