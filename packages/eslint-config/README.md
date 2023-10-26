@@ -14,13 +14,13 @@ pnpm add --save-dev @apitree/eslint-config eslint
 
 ## Usage
 
-Add one of the following configurations to your `.eslintrc.cjs`:
+Use one of the following configurations in your `.eslintrc.cjs`:
 
 ### Base
 
 ```javascript
 module.exports = {
-  extends: ['@apitree'],
+  extends: '@apitree',
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
@@ -32,7 +32,19 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: ['@apitree/eslint-config/react'],
+  extends: '@apitree/eslint-config/react',
+  parserOptions: {
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
+  },
+};
+```
+
+### Next.js
+
+```javascript
+module.exports = {
+  extends: '@apitree/eslint-config/nextjs',
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,

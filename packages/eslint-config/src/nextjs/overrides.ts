@@ -1,16 +1,6 @@
 import type { Linter } from 'eslint';
 
-export const overrides: Linter.ConfigOverride[] = [
-  {
-    files: '*.test.tsx',
-    extends: ['plugin:jest-dom/recommended', 'plugin:testing-library/react'],
-  },
-  {
-    files: ['*.stories.tsx', '*.test.tsx'],
-    rules: {
-      'react/jsx-props-no-spreading': 'off',
-    },
-  },
+export const overrides = [
   {
     files: 'next-env.d.ts',
     rules: {
@@ -20,7 +10,6 @@ export const overrides: Linter.ConfigOverride[] = [
   {
     files: ['src/pages/**/*.ts', 'src/pages/**/*.tsx'],
     rules: {
-      'no-restricted-exports': 'off',
       'react/function-component-definition': [
         'error',
         {
@@ -36,4 +25,4 @@ export const overrides: Linter.ConfigOverride[] = [
       'react/jsx-props-no-spreading': 'off',
     },
   },
-];
+] satisfies Linter.ConfigOverride[];

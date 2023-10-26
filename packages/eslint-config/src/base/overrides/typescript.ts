@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 
-export const typescript: Linter.ConfigOverride = {
-  files: ['*.ts', '*.tsx'],
+export const typescript = {
+  files: ['*.ts'],
   extends: [
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/strict',
@@ -15,4 +15,4 @@ export const typescript: Linter.ConfigOverride = {
     '@typescript-eslint/no-unsafe-declaration-merging': 'error',
     '@typescript-eslint/sort-type-constituents': 'error',
   },
-};
+} satisfies Linter.ConfigOverride;

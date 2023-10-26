@@ -2,8 +2,7 @@
   "extends": "@apitree/ts-config/library",
   "compilerOptions": {
     "module": "CommonJS",
-    "moduleResolution": "node",
-    "target": "ES5"
+    "moduleResolution": "node"
   },
   "include": [".eslintrc.js", "./*.js", "src/**/*"],
   "exclude": ["node_modules", "dist", "coverage"]

@@ -23,10 +23,12 @@ Suitable for distributable `npm` packages (both Node.js and React).
 ```json
 {
   "extends": "@apitree/ts-config/library",
-  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts"],
+  "exclude": ["dist", "node_modules"]
 }
 ```
+
+> **Note:** If you are using React, you should also add `"**/*.tsx"` to the `include` array.
 
 ### App
 
@@ -35,10 +37,12 @@ Suitable for stand-alone applications (both Node.js and React).
 ```json
 {
   "extends": "@apitree/ts-config/app",
-  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts"],
+  "exclude": ["build", "node_modules"]
 }
 ```
+
+> **Note:** If you are using React, you should also add `"**/*.tsx"` to the `include` array.
 
 ### Next.js
 
@@ -48,7 +52,7 @@ Suitable for Next.js apps.
 {
   "extends": "@apitree/ts-config/next",
   "include": [
-    ".eslintrc.js",
+    ".eslintrc.cjs",
     "next-env.d.ts",
     "**/*.js",
     "**/*.ts",

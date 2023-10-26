@@ -1,29 +1,13 @@
 import type { Linter } from 'eslint';
 
+import {
+  getExtraneousDependenciesRule,
+  getImportExtensionsRule,
+} from '../../utils';
+
 export const imports: Linter.RulesRecord = {
-  'import/extensions': [
-    'error',
-    'ignorePackages',
-    {
-      cjs: 'never',
-      js: 'never',
-      ts: 'never',
-      tsx: 'never',
-    },
-  ],
-  'import/no-extraneous-dependencies': [
-    'error',
-    {
-      devDependencies: [
-        '*.config.js',
-        '*.config.ts',
-        '/scripts/**/*',
-        '/stories/**/*',
-        '/tests/**/*',
-        '/types/*.d.ts',
-      ],
-    },
-  ],
+  ...getImportExtensionsRule(),
+  ...getExtraneousDependenciesRule(),
   'import/order': [
     'error',
     {

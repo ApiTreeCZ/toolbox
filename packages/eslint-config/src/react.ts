@@ -1,6 +1,8 @@
-import { config as react } from './react/config';
+import type { Linter } from 'eslint';
+
+import { config } from './react/config';
 
 export = {
-  ...react,
-  extends: ['airbnb', './base', ...react.extends],
-};
+  ...config,
+  extends: ['airbnb', './base', ...config.extends],
+} satisfies Linter.Config;

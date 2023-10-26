@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@apitree'],
+  extends: '@apitree',
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
