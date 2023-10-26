@@ -1,0 +1,63 @@
+{
+  "name": "apitree-toolbox",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared configuration and utilities for ApiTree projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ApiTreeCZ/toolbox"
+  },
+  "license": "MIT",
+  "author": "ApiTree <info@apitree.cz>",
+  "contributors": [
+    "Vít Rozsíval <vit.rozsival@apitree.cz"
+  ],
+  "type": "module",
+  "workspaces": [
+    "./packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "cleanup": "turbo run cleanup",
+    "postcleanup": "rimraf .eslintcache node_modules",
+    "fix": "turbo run fix",
+    "postfix": "run-p postformat:fix postlint:fix",
+    "format": "turbo run format --parallel",
+    "postformat": "prettier --check \"./*.{json,md,yaml}\" \".github/**/*.yaml\"",
+    "format:fix": "turbo run format:fix --parallel",
+    "postformat:fix": "pnpm run postformat --write",
+    "lint": "turbo run lint",
+    "postlint": "eslint --cache \"./*.{cjs,js}\"",
+    "lint:fix": "turbo run lint:fix",
+    "postlint:fix": "pnpm run postlint --fix",
+    "prepare": "is-ci || run-p prepare:husky build",
+    "prepare:husky": "husky install",
+    "postinstall": "check-dependency-version-consistency .",
+    "qa": "turbo run qa",
+    "postqa": "run-p postlint postformat",
+    "test": "turbo run test",
+    "ts": "turbo run ts"
+  },
+  "devDependencies": {
+    "@apitree/eslint-config": "workspace:*",
+    "@apitree/prettier-config": "workspace:*",
+    "@apitree/ts-config": "workspace:*",
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@types/node": "^20.8.9",
+    "check-dependency-version-consistency": "^4.1.0",
+    "eslint": "^8.52.0",
+    "husky": "^8.0.3",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^15.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "turbo": "^1.10.16",
+    "typescript": "^5.2.2"
+  },
+  "packageManager": "pnpm@8.9.2",
+  "engines": {
+    "node": ">=20"
+  }
+}

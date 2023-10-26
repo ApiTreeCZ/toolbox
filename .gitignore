@@ -1,0 +1,17 @@
+# IDE
+.idea
+.vscode
+.history
+
+# Dependencies
+node_modules
+
+# Temporary files
+*.log
+.eslintcache
+.turbo
+tsconfig.tsbuildinfo
+tsconfig.build.tsbuildinfo
+
+# Builds
+/packages/*/dist

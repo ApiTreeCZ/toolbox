@@ -1,0 +1,37 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist", "tsconfig.tsbuildinfo"]
+    },
+    "cleanup": {
+      "cache": false
+    },
+    "fix": {
+      "dependsOn": ["^build"],
+      "outputs": [".eslintcache"]
+    },
+    "lint": {
+      "dependsOn": ["^build"],
+      "outputs": [".eslintcache"]
+    },
+    "lint:fix": {
+      "outputs": [".eslintchache"]
+    },
+    "format": {
+      "outputs": []
+    },
+    "format:fix": {
+      "outputs": []
+    },
+    "qa": {
+      "dependsOn": ["^build"],
+      "outputs": [".eslintcache"]
+    },
+    "ts": {
+      "dependsOn": ["^build"],
+      "outputs": ["tsconfig.tsbuildinfo"]
+    }
+  }
+}

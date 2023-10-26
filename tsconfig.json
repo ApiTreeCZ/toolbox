@@ -1,0 +1,9 @@
+{
+  "extends": "@apitree/ts-config",
+  "files": [
+    ".eslintrc.cjs",
+    "commitlint.config.cjs",
+    "lint-staged.config.js",
+    "prettier.config.js"
+  ]
+}

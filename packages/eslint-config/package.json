@@ -1,0 +1,58 @@
+{
+  "name": "@apitree/eslint-config",
+  "version": "0.0.0",
+  "description": "ESLint configuration for ApiTree projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ApiTreeCZ/toolbox",
+    "directory": "packages/eslint-config"
+  },
+  "sideEffects": false,
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "fix": "run-p ts format:fix lint:fix",
+    "format": "prettier --check \"./**/*.{json,md}\"",
+    "format:fix": "pnpm run format --write",
+    "lint": "eslint --cache --ext js,ts .",
+    "lint:fix": "pnpm run lint --fix",
+    "qa": "run-p ts format lint",
+    "ts": "tsc --build tsconfig.json"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-turbo": "^1.10.16",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jest-dom": "^5.1.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "eslint-plugin-testing-library": "^6.1.0",
+    "eslint-plugin-unicorn": "^48.0.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint-plugin-vitest": "^0.3.8"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "eslint": "^8.52.0",
+    "react": "^18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  }
+}

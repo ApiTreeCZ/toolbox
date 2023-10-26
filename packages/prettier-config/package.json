@@ -1,0 +1,34 @@
+{
+  "name": "@apitree/prettier-config",
+  "version": "0.0.0",
+  "description": "Prettier configuration for ApiTree projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ApiTreeCZ/toolbox",
+    "directory": "packages/prettier-config"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "fix": "run-p ts format:fix lint:fix",
+    "format": "prettier --check \"./**/*.{json,md}\"",
+    "format:fix": "pnpm run format --write",
+    "lint": "eslint --cache --ext cjs,js,ts .",
+    "lint:fix": "pnpm run lint --fix",
+    "qa": "run-p ts format lint",
+    "ts": "tsc --build tsconfig.json"
+  },
+  "dependencies": {
+    "prettier-plugin-packagejson": "^2.4.6"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "prettier": "^3.0.3"
+  }
+}

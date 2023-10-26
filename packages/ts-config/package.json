@@ -1,0 +1,28 @@
+{
+  "name": "@apitree/ts-config",
+  "version": "0.0.0",
+  "description": "TypeScript configuration for ApiTree projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ApiTreeCZ/toolbox",
+    "directory": "packages/ts-config"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "main": "base.json",
+  "scripts": {
+    "cleanup": "rimraf .eslintcache .turbo node_modules",
+    "fix": "run-p format:fix lint:fix",
+    "format": "prettier --check \"./**/*.{json,md}\"",
+    "format:fix": "pnpm run format --write",
+    "lint": "eslint --cache .",
+    "lint:fix": "pnpm run lint --fix",
+    "qa": "pnpm run format lint"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
