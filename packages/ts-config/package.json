@@ -9,7 +9,12 @@
   },
   "sideEffects": false,
   "type": "module",
-  "main": "base.json",
+  "exports": {
+    ".": "./base.json",
+    "./app": "./app.json",
+    "./library": "./library.json",
+    "./nextjs": "./nextjs.json"
+  },
   "scripts": {
     "cleanup": "rimraf .eslintcache .turbo node_modules",
     "fix": "run-p format:fix lint:fix",

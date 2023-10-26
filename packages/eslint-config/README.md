@@ -6,7 +6,7 @@
 
 # ESLint Config
 
-### ESLint configuration for ApiTree projects
+### [ESLint](https://eslint.org) configuration for ApiTree projects
 
 </div>
 

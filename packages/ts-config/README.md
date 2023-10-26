@@ -6,7 +6,7 @@
 
 # TS Config
 
-### TypeScript configuration for ApiTree projects
+### [TypeScript](https://typescriptlang.org) configuration for ApiTree projects
 
 </div>
 

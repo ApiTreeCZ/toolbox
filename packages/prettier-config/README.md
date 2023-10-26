@@ -6,7 +6,7 @@
 
 # Prettier Config
 
-### Prettier configuration for ApiTree projects
+### [Prettier](https://prettier.io) configuration for ApiTree projects
 
 </div>
 
