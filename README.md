@@ -37,6 +37,7 @@ This monorepo is structured as follows:
   - `eslint-config/`: Contains the ESLint configurations.
   - `prettier-config/`: Contains the Prettier configuration .
   - `ts-config/`: Contains the TypeScript configurations.
+  - `vitest-config/`: Contains the Vitest configurations.
 
 ## Authors
 
