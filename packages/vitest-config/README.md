@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree/vitest-config vitest
+pnpm add --save-dev @apitree/vitest-config vite vitest
 ```
 
 ## Usage
