@@ -13,12 +13,12 @@ export const imports = {
     'error',
     {
       devDependencies: [
+        '*.config.js',
+        '*.config.ts',
         '/scripts/**/*',
         '/stories/**/*',
         '/tests/**/*',
         '/types/*.d.ts',
-        'typedoc.config.js',
-        'vitest.config.ts',
       ],
     },
   ],
