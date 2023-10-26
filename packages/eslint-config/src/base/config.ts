@@ -1,3 +1,5 @@
+import type { Linter } from 'eslint';
+
 import { overrides } from './overrides';
 import { rules } from './rules';
 
@@ -42,4 +44,4 @@ export const config = {
     'import/resolver': { typescript: {} },
   },
   overrides,
-};
+} satisfies Linter.Config;

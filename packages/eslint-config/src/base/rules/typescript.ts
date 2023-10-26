@@ -1,4 +1,6 @@
-export const typescript = {
+import type { Linter } from 'eslint';
+
+export const typescript: Linter.RulesRecord = {
   '@typescript-eslint/no-unused-vars': 'off',
   '@typescript-eslint/no-use-before-define': 'error',
 };

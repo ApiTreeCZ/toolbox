@@ -1,4 +1,6 @@
-export const common = {
+import type { Linter } from 'eslint';
+
+export const common: Linter.RulesRecord = {
   'array-callback-return': [
     'error',
     {

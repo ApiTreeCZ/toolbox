@@ -1,3 +1,5 @@
+import type { Linter } from 'eslint';
+
 import { overrides } from './overrides';
 import { rules } from './rules';
 
@@ -9,4 +11,4 @@ export const config = {
   settings: {
     react: { version: 'detect' },
   },
-};
+} satisfies Linter.Config;

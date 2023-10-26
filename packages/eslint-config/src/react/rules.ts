@@ -1,4 +1,6 @@
-export const rules = {
+import type { Linter } from 'eslint';
+
+export const rules: Linter.RulesRecord = {
   'react/function-component-definition': [
     'error',
     {

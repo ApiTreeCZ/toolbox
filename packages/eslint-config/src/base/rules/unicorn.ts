@@ -1,4 +1,6 @@
-export const unicorn = {
+import type { Linter } from 'eslint';
+
+export const unicorn: Linter.RulesRecord = {
   'unicorn/no-array-callback-reference': 'off',
   'unicorn/prevent-abbreviations': [
     'error',

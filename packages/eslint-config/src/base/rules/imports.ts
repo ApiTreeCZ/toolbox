@@ -1,4 +1,6 @@
-export const imports = {
+import type { Linter } from 'eslint';
+
+export const imports: Linter.RulesRecord = {
   'import/extensions': [
     'error',
     'ignorePackages',

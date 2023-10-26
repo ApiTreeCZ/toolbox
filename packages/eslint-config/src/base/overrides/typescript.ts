@@ -1,4 +1,6 @@
-export const typescript = {
+import type { Linter } from 'eslint';
+
+export const typescript: Linter.ConfigOverride = {
   files: ['*.ts', '*.tsx'],
   extends: [
     'plugin:@typescript-eslint/recommended-requiring-type-checking',

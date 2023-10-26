@@ -1,4 +1,6 @@
-export const tests = {
+import type { Linter } from 'eslint';
+
+export const tests: Linter.ConfigOverride = {
   files: ['*.test.ts', '*.test.tsx'],
   extends: ['plugin:vitest/recommended'],
   rules: {

@@ -1,4 +1,6 @@
-export const overrides = [
+import type { Linter } from 'eslint';
+
+export const overrides: Linter.ConfigOverride[] = [
   {
     files: '*.test.tsx',
     extends: ['plugin:jest-dom/recommended', 'plugin:testing-library/react'],
