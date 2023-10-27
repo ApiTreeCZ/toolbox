@@ -10,7 +10,7 @@
   "sideEffects": false,
   "type": "module",
   "exports": {
-    ".": "./dist/config.js",
+    ".": "./dist/index.js",
     "./react": "./dist/react.js"
   },
   "scripts": {
