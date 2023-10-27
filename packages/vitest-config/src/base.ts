@@ -2,7 +2,7 @@ import { defineConfig } from 'vitest/config';
 
 import { coverage } from './constants.js';
 
-export const config = defineConfig({
+export const base = defineConfig({
   test: {
     environment: 'node',
     coverage: {
