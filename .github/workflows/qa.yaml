@@ -16,11 +16,6 @@ env:
 jobs:
   setup:
     runs-on: ubuntu-latest
-    env:
-      ACCESS_TOKEN_SECRET: ${{ secrets.TEST_ACCESS_TOKEN_SECRET }}
-      REFRESH_TOKEN_SECRET: ${{ secrets.TEST_REFRESH_TOKEN_SECRET }}
-      SESSION_SECRET: ${{ secrets.TEST_SESSION_SECRET }}
-      TOKEN_AUTHORITY: ${{ secrets.TEST_TOKEN_AUTHORITY }}
     strategy:
       matrix:
         node-version:
