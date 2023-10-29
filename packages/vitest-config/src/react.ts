@@ -11,5 +11,6 @@ export const config = defineConfig({
       ...coverage,
       include: ['src/**/*.{ts,tsx}'],
     },
+    setupFiles: ['tests/setup.ts'],
   },
 });

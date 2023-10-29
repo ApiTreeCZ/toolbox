@@ -21,13 +21,7 @@ pnpm add --save-dev @apitree/testing-library @apitree/vitest-config vitest
 1. Create `vitest.config.ts` in your project root:
 
    ```typescript
-   import { config } from '@apitree/vitest-config/react';
-   import { mergeConfig } from 'vitest/config';
-   import type { UserConfig } from 'vitest/config';
-
-   export default mergeConfig<UserConfig, UserConfig>(config, {
-     test: { setup: 'tests/setup.ts' },
-   });
+   export { config as default } from '@apitree/vitest-config/react';
    ```
 
 2. Create `tests/setup.ts`:
