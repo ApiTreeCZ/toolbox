@@ -35,7 +35,8 @@ This monorepo is structured as follows:
 
 - `packages/`
   - `eslint-config/`: Contains the ESLint configurations.
-  - `prettier-config/`: Contains the Prettier configuration .
+  - `prettier-config/`: Contains the Prettier configuration.
+  - `testing-library/`: Contains the React Testing Library setup.
   - `ts-config/`: Contains the TypeScript configurations.
   - `vitest-config/`: Contains the Vitest configurations.
 
