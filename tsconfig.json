@@ -4,6 +4,7 @@
     ".eslintrc.cjs",
     "commitlint.config.cjs",
     "lint-staged.config.js",
-    "prettier.config.js"
+    "prettier.config.js",
+    "vitest.workspace.ts"
   ]
 }

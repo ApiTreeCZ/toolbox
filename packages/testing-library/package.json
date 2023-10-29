@@ -1,17 +1,17 @@
 {
-  "name": "@apitree/vitest-config",
+  "name": "@apitree/testing-library",
   "version": "0.0.0",
-  "description": "Vitest configuration for ApiTree projects.",
+  "description": "React Testing Library setup for Vitest in ApiTree projects.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ApiTreeCZ/toolbox",
-    "directory": "packages/vitest-config"
+    "directory": "packages/testing-library"
   },
   "sideEffects": false,
   "type": "module",
   "exports": {
     ".": "./dist/index.js",
-    "./react": "./dist/react.js"
+    "./setup": "./dist/setup.js"
   },
   "scripts": {
     "build": "tsc --build tsconfig.build.json",
@@ -19,20 +19,32 @@
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{json,md}\"",
     "format:fix": "pnpm run format --write",
-    "lint": "eslint --cache --ext cjs,js,ts .",
+    "lint": "eslint --cache --ext cjs,ts,tsx .",
     "lint:fix": "pnpm run lint --fix",
     "qa": "run-p ts format lint",
+    "test": "vitest --run",
+    "test:coverage": "pnpm run test --coverage",
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "^4.1.0",
-    "@vitest/coverage-istanbul": "^0.34.6",
-    "vite": "^4.5.0"
+    "@testing-library/dom": "^9.3.3",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.5.1",
+    "jsdom": "^22.1.0"
   },
   "devDependencies": {
+    "@apitree/vitest-config": "workspace:*",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "@vitest/coverage-istanbul": "^0.34.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "vitest": "^0.34.6"
   },
   "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "vitest": "^0.34.6"
   }
 }

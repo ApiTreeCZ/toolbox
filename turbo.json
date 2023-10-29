@@ -29,6 +29,10 @@
       "dependsOn": ["^build"],
       "outputs": [".eslintcache"]
     },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage"]
+    },
     "ts": {
       "dependsOn": ["^build"],
       "outputs": ["tsconfig.tsbuildinfo"]

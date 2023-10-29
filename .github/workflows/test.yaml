@@ -1,0 +1,75 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - develop
+      - main
+
+env:
+  CACHE_KEY: ${{ github.sha }}-${{ github.run_number }}-${{ github.run_attempt }}
+  CACHE_PATH: ./*
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+          - 20.9.0
+        pnpm-version:
+          - 8.9.2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup pnpm v${{ matrix.pnpm-version }}
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ matrix.pnpm-version }}
+      - name: Setup node.js v${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          cache: pnpm
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build packages
+        run: pnpm run build
+      - name: Cache setup
+        uses: actions/cache@v3
+        id: cache-setup
+        with:
+          key: ${{ env.CACHE_KEY }}
+          path: ${{ env.CACHE_PATH }}
+      - name: Set node-version
+        id: set-node-version
+        run: echo "node-version=${{ matrix.node-version }}" >> $GITHUB_OUTPUT
+      - name: Set pnpm-version
+        id: set-pnpm-version
+        run: echo "pnpm-version={{ matrix.pnpm-version }}" >> $GITHUB_OUTPUT
+  test:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ needs.setup.outputs.pnpm-version }}
+      - name: Setup node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: pnpm
+          node-version: ${{ needs.setup.outputs.node-version }}
+      - name: Restore setup
+        uses: actions/cache@v3
+        id: restore-setup
+        with:
+          key: ${{ env.CACHE_KEY }}
+          path: ${{ env.CACHE_PATH }}
+      - name: Run tests
+        run: pnpm run test

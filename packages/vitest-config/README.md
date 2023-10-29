@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree/vitest-config vite vitest
+pnpm add --save-dev @apitree/vitest-config vitest
 ```
 
 ## Usage
@@ -39,8 +39,9 @@ You can customize the configuration with `mergeConfig` function:
 ```typescript
 import { config } from '@apitree/vitest-config';
 import { mergeConfig } from 'vitest/config';
+import type { UserConfig } from 'vitest/config';
 
-export default mergeConfig(config, {
+export default mergeConfig<UserConfig, UserConfig>(config, {
   // project specific configuration
 });
 ```
