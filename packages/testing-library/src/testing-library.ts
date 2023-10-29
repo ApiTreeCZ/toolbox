@@ -23,10 +23,7 @@ export const createRenderers = ({
     options?: RenderHookOptions<Props>,
   ) => {
     const { wrapper = defaultWrapper } = options ?? {};
-    return renderHook(render, {
-      ...options,
-      wrapper,
-    });
+    return renderHook(render, { ...options, wrapper });
   };
   return { render: customRender, renderHook: customRenderHook };
 };
