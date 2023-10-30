@@ -74,7 +74,7 @@ jobs:
       - name: Build
         run: pnpm run build
       - name: Setup npm registry
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$HOME/.npmrc"
       - name: Canary release
         if: github.ref_name == 'develop'
         run: |
