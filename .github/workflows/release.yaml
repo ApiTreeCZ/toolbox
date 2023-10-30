@@ -11,44 +11,7 @@ env:
   CACHE_PATH: ./*
 
 jobs:
-  setup:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version:
-          - 20.9.0
-        pnpm-version:
-          - 8.10.0
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup pnpm v${{ matrix.pnpm-version }}
-        uses: pnpm/action-setup@v2
-        with:
-          version: ${{ matrix.pnpm-version }}
-      - name: Setup node.js v${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          cache: pnpm
-          node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-      - name: Build packages
-        run: pnpm run build
-      - name: Cache setup
-        uses: actions/cache@v3
-        id: cache-setup
-        with:
-          key: ${{ env.CACHE_KEY }}
-          path: ${{ env.CACHE_PATH }}
-      - name: Set node-version
-        id: node-version
-        run: echo "node-version=${{ matrix.node-version }}" >> $GITHUB_OUTPUT
-      - name: Set pnpm-version
-        id: pnpm-version
-        run: echo "pnpm-version={{ matrix.pnpm-version }}" >> $GITHUB_OUTPUT
   release:
-    needs: setup
     runs-on: ubuntu-latest
     name: release:${{ github.ref_name == 'main' && 'main' || 'develop' }}
     steps:
@@ -57,15 +20,14 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: ${{ needs.setup.outputs.pnpm-version }}
+          version: 8.10.0
       - name: Setup node.js
         uses: actions/setup-node@v3
         with:
           cache: pnpm
-          node-version: ${{ needs.setup.outputs.node-version }}
-      - name: Restore setup
+          node-version: 20.9.0
+      - name: Cache
         uses: actions/cache@v3
-        id: restore-setup
         with:
           key: ${{ env.CACHE_KEY }}
           path: ${{ env.CACHE_PATH }}
