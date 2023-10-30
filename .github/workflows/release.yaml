@@ -77,7 +77,7 @@ jobs:
         if: github.ref_name == 'develop'
         run: |
           pnpm changeset version --snapshot next
-          pnpm changeset publish --tag next --no-git-tag
+          pnpm publish --access public --dry-run --recursive --tag next
       - name: Stable release
         if: github.ref_name == 'main'
         run: |
