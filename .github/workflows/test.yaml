@@ -15,7 +15,6 @@ env:
 
 jobs:
   test:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
