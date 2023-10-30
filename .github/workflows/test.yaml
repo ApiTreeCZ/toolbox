@@ -16,9 +16,6 @@ env:
 jobs:
   setup:
     runs-on: ubuntu-latest
-    outputs:
-      node-version: ${{ steps.node-version.outputs.node-version }}
-      pnpm-version: ${{ steps.pnpm-version.outputs.pnpm-version }}
     strategy:
       matrix:
         node-version:
