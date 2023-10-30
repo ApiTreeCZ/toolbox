@@ -1,5 +1,5 @@
 {
-  "extends": "@apitree/ts-config/library",
+  "extends": "@apitree.cz/ts-config/library",
   "include": [".eslintrc.cjs", "./*.js", "src/**/*"],
   "exclude": ["dist", "node_modules"]
 }

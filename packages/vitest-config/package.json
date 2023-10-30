@@ -1,5 +1,5 @@
 {
-  "name": "@apitree/vitest-config",
+  "name": "@apitree.cz/vitest-config",
   "version": "0.0.0",
   "description": "Vitest configuration for ApiTree projects.",
   "repository": {

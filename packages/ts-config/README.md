@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree/ts-config typescript
+pnpm add --save-dev @apitree.cz/ts-config typescript
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ Suitable for distributable `npm` packages (both Node.js and React).
 
 ```json
 {
-  "extends": "@apitree/ts-config/library",
+  "extends": "@apitree.cz/ts-config/library",
   "include": [".eslintrc.cjs", "**/*.js", "**/*.ts"],
   "exclude": ["dist", "node_modules"]
 }
@@ -40,7 +40,7 @@ Suitable for stand-alone applications (both Node.js and React).
 
 ```json
 {
-  "extends": "@apitree/ts-config/app",
+  "extends": "@apitree.cz/ts-config/app",
   "include": [".eslintrc.cjs", "**/*.js", "**/*.ts"],
   "exclude": ["build", "node_modules"]
 }
@@ -54,7 +54,7 @@ Suitable for Next.js apps.
 
 ```json
 {
-  "extends": "@apitree/ts-config/next",
+  "extends": "@apitree.cz/ts-config/next",
   "include": [
     ".eslintrc.cjs",
     "next-env.d.ts",

@@ -1,5 +1,5 @@
 {
-  "extends": "@apitree/ts-config",
+  "extends": "@apitree.cz/ts-config",
   "files": [
     ".eslintrc.cjs",
     "commitlint.config.cjs",

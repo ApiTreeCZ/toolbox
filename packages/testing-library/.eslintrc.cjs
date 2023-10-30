@@ -1,5 +1,5 @@
 module.exports = {
-  extends: '@apitree/eslint-config/react',
+  extends: '@apitree.cz/eslint-config/react',
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,

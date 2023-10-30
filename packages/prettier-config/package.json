@@ -1,5 +1,5 @@
 {
-  "name": "@apitree/prettier-config",
+  "name": "@apitree.cz/prettier-config",
   "version": "0.0.0",
   "description": "Prettier configuration for ApiTree projects.",
   "repository": {

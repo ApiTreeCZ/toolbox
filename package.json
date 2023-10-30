@@ -1,5 +1,5 @@
 {
-  "name": "apitree-toolbox",
+  "name": "apitree.cz-toolbox",
   "version": "0.0.0",
   "private": true,
   "description": "Shared configuration and utilities for ApiTree projects.",
@@ -39,9 +39,9 @@
     "ts": "turbo run ts"
   },
   "devDependencies": {
-    "@apitree/eslint-config": "workspace:*",
-    "@apitree/prettier-config": "workspace:*",
-    "@apitree/ts-config": "workspace:*",
+    "@apitree.cz/eslint-config": "workspace:*",
+    "@apitree.cz/prettier-config": "workspace:*",
+    "@apitree.cz/ts-config": "workspace:*",
     "@changesets/cli": "^2.26.2",
     "@commitlint/cli": "^18.2.0",
     "@commitlint/config-conventional": "^18.1.0",

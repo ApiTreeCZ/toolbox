@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree/testing-library @apitree/vitest-config vitest
+pnpm add --save-dev @apitree.cz/testing-library @apitree.cz/vitest-config vitest
 ```
 
 ## Usage
@@ -21,20 +21,20 @@ pnpm add --save-dev @apitree/testing-library @apitree/vitest-config vitest
 1. Create `vitest.config.ts` in your project root:
 
    ```typescript
-   export { config as default } from '@apitree/vitest-config/react';
+   export { config as default } from '@apitree.cz/vitest-config/react';
    ```
 
 2. Create `tests/setup.ts`:
 
    ```typescript
-   import '@apitree/testing-library/setup';
+   import '@apitree.cz/testing-library/setup';
    ```
 
 3. Create test renderers in `tests/testing-library.ts`
 
    ```typescript jsx
-   import { createRenderers } from '@apitree/testing-library';
-   export * from '@apitree/testing-library';
+   import { createRenderers } from '@apitree.cz/testing-library';
+   export * from '@apitree.cz/testing-library';
    export const { render, renderHook } = createRenderers();
    ```
 

@@ -1,5 +1,5 @@
 {
-  "name": "@apitree/testing-library",
+  "name": "@apitree.cz/testing-library",
   "version": "0.0.0",
   "description": "React Testing Library setup for Vitest in ApiTree projects.",
   "repository": {
@@ -34,7 +34,7 @@
     "jsdom": "^22.1.0"
   },
   "devDependencies": {
-    "@apitree/vitest-config": "workspace:*",
+    "@apitree.cz/vitest-config": "workspace:*",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
     "@vitest/coverage-istanbul": "^0.34.6",

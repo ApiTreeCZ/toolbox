@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree/eslint-config eslint
+pnpm add --save-dev @apitree.cz/eslint-config eslint
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ Use one of the following configurations in your `.eslintrc.cjs`:
 
 ```javascript
 module.exports = {
-  extends: '@apitree',
+  extends: '@apitree.cz',
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
@@ -36,7 +36,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: '@apitree/eslint-config/react',
+  extends: '@apitree.cz/eslint-config/react',
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
@@ -48,7 +48,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: '@apitree/eslint-config/nextjs',
+  extends: '@apitree.cz/eslint-config/nextjs',
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,

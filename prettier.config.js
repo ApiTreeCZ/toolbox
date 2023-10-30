@@ -1,1 +1,1 @@
-export { config as default } from '@apitree/prettier-config';
+export { config as default } from '@apitree.cz/prettier-config';

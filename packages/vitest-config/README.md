@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree/vitest-config vitest
+pnpm add --save-dev @apitree.cz/vitest-config vitest
 ```
 
 ## Usage
@@ -23,13 +23,13 @@ Use one of the following configurations in your `vitest.config.ts`:
 ### Base
 
 ```typescript
-export { config as default } from '@apitree/vitest-config';
+export { config as default } from '@apitree.cz/vitest-config';
 ```
 
 ### React
 
 ```typescript
-export { config as default } from '@apitree/vitest-config/react';
+export { config as default } from '@apitree.cz/vitest-config/react';
 ```
 
 ### Customization
@@ -37,7 +37,7 @@ export { config as default } from '@apitree/vitest-config/react';
 You can customize the configuration with `mergeConfig` function:
 
 ```typescript
-import { config } from '@apitree/vitest-config';
+import { config } from '@apitree.cz/vitest-config';
 import { mergeConfig } from 'vitest/config';
 import type { UserConfig } from 'vitest/config';
 

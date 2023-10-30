@@ -1,5 +1,5 @@
 {
-  "extends": "@apitree/ts-config/library",
+  "extends": "@apitree.cz/ts-config/library",
   "compilerOptions": {
     "module": "CommonJS",
     "moduleResolution": "node"

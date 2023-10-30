@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree/prettier-config prettier
+pnpm add --save-dev @apitree.cz/prettier-config prettier
 ```
 
 ## Usage
@@ -21,5 +21,5 @@ pnpm add --save-dev @apitree/prettier-config prettier
 Add the following configuration to your `prettier.config.js`:
 
 ```javascript
-export { config as default } from '@apitree/prettier-config';
+export { config as default } from '@apitree.cz/prettier-config';
 ```
