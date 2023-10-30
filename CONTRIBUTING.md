@@ -20,7 +20,7 @@ git checkout -b feature/my-feature
 Please follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard when making commits.
 This will help with automated versioning and changelogs.
 
-Additionally, we use [Changesets](https://github.com/atlassian/changesets) to manage the release process. Be sure to
+Additionally, we use [Changesets](https://github.com/changesets/changesets) to manage the release process. Be sure to
 document your changes accordingly.
 
 ### 3. Open a Pull Request

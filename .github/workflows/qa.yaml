@@ -21,7 +21,7 @@ jobs:
         node-version:
           - 20.9.0
         pnpm-version:
-          - 8.9.2
+          - 8.10.0
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -34,7 +34,7 @@ jobs:
         with:
           cache: pnpm
           node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
+      - name: Install dependencies --frozen-lockfile
         run: pnpm install
       - name: Build packages
         run: pnpm run build
