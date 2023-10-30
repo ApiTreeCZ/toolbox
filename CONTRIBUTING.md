@@ -29,7 +29,7 @@ When your work is ready for review, push your branch to the main repository and 
 
 - Assign the PR to the appropriate reviewers.
 - Provide a clear and concise description of your changes.
-- Reference any issues that the MR addresses.
+- Reference any issues that the PR addresses.
 
 ### 4. Review and Approval
 
@@ -38,7 +38,7 @@ request changes or provide feedback. Make necessary adjustments to address these
 
 ### 5. Merge to `develop`
 
-Once your MR is approved, a maintainer will merge it into the `develop` branch.
+Once your PR is approved, a maintainer will merge it into the `develop` branch.
 
 ## Conventional Commits and Changesets
 
