@@ -36,7 +36,8 @@
     "qa": "turbo run qa",
     "postqa": "run-p postlint postformat",
     "test": "turbo run test",
-    "ts": "turbo run ts"
+    "ts": "turbo run ts",
+    "postts": "tsc --project tsconfig.json"
   },
   "devDependencies": {
     "@apitree.cz/eslint-config": "workspace:*",

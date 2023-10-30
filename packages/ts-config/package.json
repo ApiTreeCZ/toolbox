@@ -15,6 +15,12 @@
     "./library": "./library.json",
     "./nextjs": "./nextjs.json"
   },
+  "files": [
+    "app.json",
+    "base.json",
+    "library.json",
+    "nextjs.json"
+  ],
   "scripts": {
     "cleanup": "rimraf .eslintcache .turbo node_modules",
     "fix": "run-p format:fix lint:fix",

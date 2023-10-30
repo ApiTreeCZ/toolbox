@@ -10,6 +10,9 @@
   "sideEffects": false,
   "type": "commonjs",
   "main": "index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc --build tsconfig.build.json",
     "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
