@@ -93,7 +93,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -- .npmrc
           git add .
-          git commit -m "chore: release"
+          git diff-index --quiet HEAD || git commit -m "chore: release"
       - name: Create git tags
         if: github.ref_name == 'main'
         run: |
