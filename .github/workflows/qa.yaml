@@ -16,6 +16,9 @@ env:
 jobs:
   setup:
     runs-on: ubuntu-latest
+    outputs:
+      node-version: ${{ steps.node-version.outputs.node-version }}
+      pnpm-version: ${{ steps.pnpm-version.outputs.pnpm-version }}
     strategy:
       matrix:
         node-version:
@@ -45,10 +48,10 @@ jobs:
           key: ${{ env.CACHE_KEY }}
           path: ${{ env.CACHE_PATH }}
       - name: Set node-version
-        id: set-node-version
+        id: node-version
         run: echo "node-version=${{ matrix.node-version }}" >> $GITHUB_OUTPUT
       - name: Set pnpm-version
-        id: set-pnpm-version
+        id: pnpm-version
         run: echo "pnpm-version={{ matrix.pnpm-version }}" >> $GITHUB_OUTPUT
   commitlint:
     needs: setup
