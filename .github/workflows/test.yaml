@@ -29,7 +29,7 @@ jobs:
           cache: pnpm
           node-version: 20.9.0
       - name: Cache
-        uses: actions/cache@v3p
+        uses: actions/cache@v3
         with:
           key: ${{ env.CACHE_KEY }}
           path: ${{ env.CACHE_PATH }}
