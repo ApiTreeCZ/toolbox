@@ -70,14 +70,16 @@ jobs:
           key: ${{ env.CACHE_KEY }}
           path: ${{ env.CACHE_PATH }}
       - name: Build
-        run: pnpm run build
+        run: |
+          pnpm install --frozen-lockfile --prefer-offline
+          pnpm run build
       - name: Setup npm registry
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$HOME/.npmrc"
       - name: Canary release
         if: github.ref_name == 'develop'
         run: |
           pnpm changeset version --snapshot next
-          echo "Done"
+          pnpm changeset publish --tag next --no-git-tag
       - name: Stable release
         if: github.ref_name == 'main'
         run: |
