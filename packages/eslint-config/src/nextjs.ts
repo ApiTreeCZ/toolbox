@@ -4,5 +4,5 @@ import { config } from './nextjs/config';
 
 export = {
   ...config,
-  extends: ['./react', ...config.extends],
+  extends: [require.resolve('./react'), ...config.extends],
 } satisfies Linter.Config;

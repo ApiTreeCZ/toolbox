@@ -11,7 +11,11 @@
   "type": "commonjs",
   "main": "index.js",
   "files": [
-    "dist"
+    "base.js",
+    "dist",
+    "index.js",
+    "nextjs.js",
+    "react.js"
   ],
   "scripts": {
     "build": "tsc --build tsconfig.build.json",
