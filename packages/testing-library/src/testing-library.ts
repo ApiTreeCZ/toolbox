@@ -2,7 +2,6 @@ import type {
   Queries,
   RenderHookOptions,
   RenderOptions,
-  queries,
 } from '@testing-library/react';
 import { render, renderHook } from '@testing-library/react';
 import type { ReactElement } from 'react';
@@ -20,7 +19,7 @@ export const createRenderers = ({
   },
 }: CreateRenderersProps = {}) => {
   const customRender = <
-    Q extends Queries = typeof queries,
+    Q extends Queries,
     Container extends DocumentFragment | Element = HTMLElement,
     BaseElement extends DocumentFragment | Element = Container,
   >(
@@ -33,7 +32,7 @@ export const createRenderers = ({
   const customRenderHook = <
     Result,
     Props,
-    Q extends Queries = typeof queries,
+    Q extends Queries,
     Container extends DocumentFragment | Element = HTMLElement,
     BaseElement extends DocumentFragment | Element = Container,
   >(
