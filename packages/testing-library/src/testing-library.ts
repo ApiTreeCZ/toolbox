@@ -1,4 +1,9 @@
-import type { RenderHookOptions, RenderOptions } from '@testing-library/react';
+import type {
+  Queries,
+  RenderHookOptions,
+  RenderOptions,
+  queries,
+} from '@testing-library/react';
 import { render, renderHook } from '@testing-library/react';
 import type { ReactElement } from 'react';
 
@@ -14,20 +19,35 @@ export const createRenderers = ({
     return children;
   },
 }: CreateRenderersProps = {}) => {
-  const customRender = (ui: ReactElement, options?: RenderOptions) => {
-    const { wrapper = defaultWrapper } = options ?? {};
-    return render(ui, { ...options, wrapper });
-  };
-  const customRenderHook = <Result, Props>(
-    render: (initialProps: Props) => Result,
-    options?: RenderHookOptions<Props>,
+  const customRender = <
+    Q extends Queries = typeof queries,
+    Container extends DocumentFragment | Element = HTMLElement,
+    BaseElement extends DocumentFragment | Element = Container,
+  >(
+    ui: ReactElement,
+    options?: RenderOptions<Q, Container, BaseElement>,
   ) => {
     const { wrapper = defaultWrapper } = options ?? {};
-    return renderHook(render, { ...options, wrapper });
+    return render<Q, Container, BaseElement>(ui, { ...options, wrapper });
+  };
+  const customRenderHook = <
+    Result,
+    Props,
+    Q extends Queries = typeof queries,
+    Container extends DocumentFragment | Element = HTMLElement,
+    BaseElement extends DocumentFragment | Element = Container,
+  >(
+    render: (initialProps: Props) => Result,
+    options?: RenderHookOptions<Props, Q, Container, BaseElement>,
+  ) => {
+    const { wrapper = defaultWrapper } = options ?? {};
+    return renderHook<Result, Props, Q, Container, BaseElement>(render, {
+      ...options,
+      wrapper,
+    });
   };
   return { render: customRender, renderHook: customRenderHook };
 };
 
-export { queries } from '@testing-library/dom';
 export * from '@testing-library/react';
 export * from '@testing-library/user-event';

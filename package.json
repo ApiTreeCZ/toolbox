@@ -19,9 +19,9 @@
   "scripts": {
     "build": "turbo run build",
     "cleanup": "turbo run cleanup",
-    "postcleanup": "rimraf .eslintcache node_modules",
+    "postcleanup": "rimraf .eslintcache tsconfig.tsbuildinfo node_modules",
     "fix": "turbo run fix",
-    "postfix": "run-p postformat:fix postlint:fix",
+    "postfix": "run-p postts postformat:fix postlint:fix",
     "format": "turbo run format --parallel",
     "postformat": "prettier --check \"./*.{json,md,yaml}\" \".github/**/*.yaml\"",
     "format:fix": "turbo run format:fix --parallel",
@@ -34,7 +34,7 @@
     "prepare:husky": "husky install",
     "postinstall": "check-dependency-version-consistency .",
     "qa": "turbo run qa",
-    "postqa": "run-p postlint postformat",
+    "postqa": "run-p postts postlint postformat",
     "test": "turbo run test",
     "ts": "turbo run ts",
     "postts": "tsc --project tsconfig.json"
