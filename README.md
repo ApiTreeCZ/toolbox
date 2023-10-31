@@ -38,6 +38,7 @@ This monorepo is structured as follows:
   - `prettier-config/`: Contains the Prettier configuration.
   - `testing-library/`: Contains the React Testing Library setup.
   - `ts-config/`: Contains the TypeScript configurations.
+  - `typedoc-config/`: Contains the TypeDoc configuration.
   - `vitest-config/`: Contains the Vitest configurations.
 
 ## Authors

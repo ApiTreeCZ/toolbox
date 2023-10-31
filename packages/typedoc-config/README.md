@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree.cz/typedoc-config typescript
+pnpm add --save-dev @apitree.cz/typedoc-config typedoc typescript
 ```
 
 ## Usage
@@ -23,6 +23,8 @@ Add the following configuration to your `typedoc.config.js`:
 ```javascript
 export { config as default } from '@apitree.cz/typedoc-config';
 ```
+
+Then, run `pnpm typedoc` to generate the documentation.
 
 ### Custom Entry Points
 
