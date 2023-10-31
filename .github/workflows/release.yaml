@@ -5,6 +5,7 @@ on:
     branches:
       - develop
       - main
+  workflow_dispatch:
 
 env:
   CACHE_KEY: ${{ github.sha }}-${{ github.run_number }}-${{ github.run_attempt }}
@@ -66,7 +67,7 @@ jobs:
         run: |
           git push origin main
           git push origin main --tags
-      - name: Merge to develop
+      - name: Rebase develop onto main
         if: github.ref_name == 'main'
         run: |
           git checkout main
