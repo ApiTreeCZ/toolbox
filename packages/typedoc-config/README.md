@@ -39,3 +39,5 @@ export default {
   entryPoints: ['./src/module-a/index.ts', './src/module-b/index.ts'],
 };
 ```
+
+> See [Options](https://typedoc.org/options/) documentation for config reference.
