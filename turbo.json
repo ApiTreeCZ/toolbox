@@ -10,7 +10,7 @@
     },
     "fix": {
       "dependsOn": ["^build"],
-      "outputs": [".eslintcache"]
+      "outputs": [".eslintcache", "tsconfig.buildinfo"]
     },
     "lint": {
       "dependsOn": ["^build"],
@@ -27,7 +27,7 @@
     },
     "qa": {
       "dependsOn": ["^build"],
-      "outputs": [".eslintcache"]
+      "outputs": [".eslintcache", "tsconfig.buildinfo"]
     },
     "test": {
       "dependsOn": ["^build"],
