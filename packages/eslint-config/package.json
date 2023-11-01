@@ -14,6 +14,7 @@
     "base.js",
     "dist",
     "index.js",
+    "nestjs.js",
     "nextjs.js",
     "react.js"
   ],

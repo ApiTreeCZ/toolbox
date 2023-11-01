@@ -55,3 +55,15 @@ module.exports = {
   },
 };
 ```
+
+### Nest.js
+
+```javascript
+module.exports = {
+  extends: '@apitree.cz/eslint-config/nestjs',
+  parserOptions: {
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
+  },
+};
+```

@@ -65,3 +65,15 @@ Suitable for Next.js apps.
   "exclude": [".next", "node_modules"]
 }
 ```
+
+### Nest.js
+
+Suitable for Nest.js apps.
+
+```json
+{
+  "extends": "@apitree.cz/ts-config/nestjs",
+  "include": [".eslintrc.js", "**/*.js", "**/*.ts"],
+  "exclude": ["build", "node_modules"]
+}
+```

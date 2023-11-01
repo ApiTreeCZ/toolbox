@@ -9,7 +9,7 @@
     "incremental": true,
     "isolatedModules": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "module": "Node16",
+    "module": "node16",
     "moduleResolution": "node16",
     "noEmit": true,
     "noUnusedLocals": true,
@@ -19,6 +19,6 @@
     "skipLibCheck": true,
     "strict": true,
     "strictPropertyInitialization": false,
-    "target": "ESNext"
+    "target": "esnext"
   }
 }

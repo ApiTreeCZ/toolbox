@@ -13,12 +13,15 @@
     ".": "./base.json",
     "./app": "./app.json",
     "./library": "./library.json",
+    "./nestjs": "./nestjs.json",
     "./nextjs": "./nextjs.json"
   },
+  "main": "base.json",
   "files": [
     "app.json",
     "base.json",
     "library.json",
+    "nestjs.json",
     "nextjs.json"
   ],
   "scripts": {
