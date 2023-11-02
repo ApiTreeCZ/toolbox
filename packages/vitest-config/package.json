@@ -9,19 +9,12 @@
   },
   "sideEffects": false,
   "type": "module",
-  "exports": {
-    "import": "./dist/esm/index.js",
-    "require": "./dist/cjs/index.js"
-  },
-  "main": "./dist/cjs/index.js",
-  "types": "./dist/esm/index.d.ts",
+  "exports": "./dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "run-p build:cjs build:esm",
-    "build:cjs": "tsc --project tsconfig.build.cjs.json",
-    "build:esm": "tsc --build tsconfig.build.json",
+    "build": "tsc --build tsconfig.build.json",
     "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{json,md}\"",

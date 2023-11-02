@@ -2,9 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "noEmit": false,
-    "outDir": "./dist/esm",
-    "rootDir": "./src",
-    "tsBuildInfoFile": "tsconfig.build.tsbuildinfo"
+    "outDir": "./dist",
+    "rootDir": "./src"
   },
   "include": ["./src"]
 }
