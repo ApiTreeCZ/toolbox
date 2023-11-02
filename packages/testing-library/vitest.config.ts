@@ -1,1 +1,1 @@
-export { config as default } from '@apitree.cz/vitest-config/react';
+export { react as default } from '@apitree.cz/vitest-config';
