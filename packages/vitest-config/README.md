@@ -32,6 +32,12 @@ export { config as default } from '@apitree.cz/vitest-config';
 export { config as default } from '@apitree.cz/vitest-config/react';
 ```
 
+### Nest.js
+
+```typescript
+export { config as default } from '@apitree.cz/vitest-config/nestjs';
+```
+
 ### Customization
 
 You can customize the configuration with `mergeConfig` function:
