@@ -3,7 +3,7 @@ import { defineConfig } from 'vitest/config';
 
 import { coverage } from './constants.js';
 
-export const config = defineConfig({
+export const react = defineConfig({
   plugins: [viteReact()],
   test: {
     environment: 'jsdom',

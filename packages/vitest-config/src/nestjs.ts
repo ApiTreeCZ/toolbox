@@ -4,6 +4,6 @@ import { mergeConfig } from 'vitest/config';
 
 import { base } from './base.js';
 
-export const config = mergeConfig<UserConfig, UserConfig>(base, {
+export const nestjs: UserConfig = mergeConfig(base, {
   plugins: [swc.vite({ module: { type: 'es6' } })],
-});
+} satisfies UserConfig);

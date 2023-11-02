@@ -23,19 +23,19 @@ Use one of the following configurations in your `vitest.config.ts`:
 ### Base
 
 ```typescript
-export { config as default } from '@apitree.cz/vitest-config';
+export { base as default } from '@apitree.cz/vitest-config';
 ```
 
 ### React
 
 ```typescript
-export { config as default } from '@apitree.cz/vitest-config/react';
+export { react as default } from '@apitree.cz/vitest-config';
 ```
 
 ### Nest.js
 
 ```typescript
-export { config as default } from '@apitree.cz/vitest-config/nestjs';
+export { nestjs as default } from '@apitree.cz/vitest-config';
 ```
 
 ### Customization
@@ -43,13 +43,13 @@ export { config as default } from '@apitree.cz/vitest-config/nestjs';
 You can customize the configuration with `mergeConfig` function:
 
 ```typescript
-import { config } from '@apitree.cz/vitest-config';
+import { base } from '@apitree.cz/vitest-config';
 import { mergeConfig } from 'vitest/config';
 import type { UserConfig } from 'vitest/config';
 
-export default mergeConfig<UserConfig, UserConfig>(config, {
+export default mergeConfig(config, {
   // project specific configuration
-});
+} satisfies UserConfig);
 ```
 
 > See [Options](https://vitest.dev/config/#options) documentation for config reference.
