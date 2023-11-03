@@ -34,8 +34,8 @@ export { react as default } from '@apitree.cz/vitest-config';
 
 ### Nest.js
 
-⚠️ Nest.js projects are CJS by default, this configuration needs to be placed in `vitest.config.mjs` to interpret it as
-ESM.
+⚠️ _Nest.js projects are CJS by default. This configuration needs to be placed in `vitest.config.mjs` to interpret it as
+ESM._
 
 ```typescript
 export { nestjs as default } from '@apitree.cz/vitest-config';

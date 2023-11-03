@@ -13,16 +13,12 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree.cz/testing-library @apitree.cz/vitest-config vitest
+pnpm add --save-dev @apitree.cz/testing-library @testing-library/react vitest
 ```
 
 ## Usage
 
-1. Create `vitest.config.ts` in your project root:
-
-   ```typescript
-   export { config as default } from '@apitree.cz/vitest-config/react';
-   ```
+1. Setup [Vitest for React](../vitest-config/README.md#react) with `@apitree.cz/vitest-config`.
 
 2. Create `tests/setup.ts`:
 
@@ -34,6 +30,7 @@ pnpm add --save-dev @apitree.cz/testing-library @apitree.cz/vitest-config vitest
 
    ```typescript jsx
    import { createRenderers } from '@apitree.cz/testing-library';
+
    export * from '@apitree.cz/testing-library';
    export const { render, renderHook } = createRenderers();
    ```
