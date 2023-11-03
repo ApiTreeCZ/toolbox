@@ -1,5 +1,8 @@
-import type { Queries } from '@testing-library/dom';
-import type { RenderHookOptions, RenderOptions } from '@testing-library/react';
+import type {
+  Queries,
+  RenderHookOptions,
+  RenderOptions,
+} from '@testing-library/react';
 import { render, renderHook } from '@testing-library/react';
 import type { ReactElement } from 'react';
 
@@ -45,6 +48,5 @@ export const createRenderers = ({
   return { render: customRender, renderHook: customRenderHook };
 };
 
-export * from '@testing-library/dom';
 export * from '@testing-library/react';
 export * from '@testing-library/user-event';
