@@ -45,8 +45,6 @@ export const createRenderers = ({
   return { render: customRender, renderHook: customRenderHook };
 };
 
-export { render, renderHook } from '@testing-library/react';
-export { screen, queries } from '@testing-library/dom';
-export type { Screen, Queries } from '@testing-library/dom';
-export { userEvent } from '@testing-library/user-event';
-export type { UserEvent } from '@testing-library/user-event';
+export * from '@testing-library/dom';
+export * from '@testing-library/react';
+export * from '@testing-library/user-event';

@@ -2,4 +2,4 @@
 '@apitree.cz/testing-library': patch
 ---
 
-Make re-exports from Testing Library packages explicit.
+Re-export everything from Testing Library packages.
