@@ -1,5 +1,7 @@
 export const extraneousDependenciesPatterns = [
+  '*.config.cjs',
   '*.config.js',
+  '*.config.mjs',
   '*.config.ts',
   '/scripts/**/*',
   '/tests/**/*',
