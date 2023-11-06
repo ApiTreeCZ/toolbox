@@ -3,7 +3,7 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", "tsconfig.build.tsbuildinfo"]
+      "outputs": ["dist/**/*", "tsconfig.build.tsbuildinfo"]
     },
     "cleanup": {
       "cache": false
@@ -31,7 +31,7 @@
     },
     "test": {
       "dependsOn": ["^build"],
-      "outputs": ["coverage/**"]
+      "outputs": ["coverage/**/*"]
     },
     "ts": {
       "dependsOn": ["^build"],
