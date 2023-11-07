@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree.cz/vitest-config vitest
+pnpm add --save-dev @apitree.cz/vitest-config @vitest/coverage-istanbul vitest
 ```
 
 ## Usage
