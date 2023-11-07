@@ -10,9 +10,20 @@
   "sideEffects": false,
   "type": "module",
   "exports": {
-    ".": "./dist/index.js",
-    "./setup": "./dist/setup.js"
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./setup": {
+      "import": "./dist/setup.js",
+      "types": "./dist/setup.d.ts"
+    },
+    "./testing-library": {
+      "import": "./dist/testing-library.js",
+      "types": "./dist/testing-library.d.ts"
+    }
   },
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],

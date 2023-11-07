@@ -9,7 +9,8 @@
   },
   "sideEffects": false,
   "type": "commonjs",
-  "main": "index.js",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "files": [
     "base.js",
     "dist",

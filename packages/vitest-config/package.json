@@ -9,7 +9,29 @@
   },
   "sideEffects": false,
   "type": "module",
-  "exports": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./base": {
+      "import": "./dist/base.js",
+      "types": "./dist/base.d.ts"
+    },
+    "./constants": {
+      "import": "./dist/constants.js",
+      "types": "./dist/constants.d.ts"
+    },
+    "./nestjs": {
+      "import": "./dist/nestjs.js",
+      "types": "./dist/nestjs.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react.js",
+      "types": "./dist/react.d.ts"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
