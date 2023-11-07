@@ -48,5 +48,6 @@ export const createRenderers = ({
   return { render: customRender, renderHook: customRenderHook };
 };
 
+export * from '@testing-library/dom';
 export * from '@testing-library/react';
 export * from '@testing-library/user-event';

@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree.cz/testing-library @testing-library/react vitest
+pnpm add --save-dev @apitree.cz/testing-library @testing-library/jest-dom vitest
 ```
 
 ## Usage
@@ -24,6 +24,7 @@ pnpm add --save-dev @apitree.cz/testing-library @testing-library/react vitest
 
    ```typescript
    import '@apitree.cz/testing-library/setup';
+   import '@testing-library/jest-dom/vitest';
    ```
 
 3. Create test renderers in `tests/testing-library.ts`
@@ -32,7 +33,6 @@ pnpm add --save-dev @apitree.cz/testing-library @testing-library/react vitest
    import { createRenderers } from '@apitree.cz/testing-library';
 
    export * from '@apitree.cz/testing-library';
-   export * from '@testing-library/react';
    export const { render, renderHook } = createRenderers();
    ```
 

@@ -31,13 +31,13 @@
   },
   "dependencies": {
     "@testing-library/dom": "^9.3.3",
-    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.5.1",
     "jsdom": "^22.1.0"
   },
   "devDependencies": {
     "@apitree.cz/vitest-config": "workspace:*",
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^6.1.4",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
     "@vitest/coverage-istanbul": "^0.34.6",
@@ -46,7 +46,7 @@
     "vitest": "^0.34.6"
   },
   "peerDependencies": {
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^6.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vitest": "^0.34.6"
