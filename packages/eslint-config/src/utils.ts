@@ -14,6 +14,7 @@ export const getExtraneousDependenciesRule = (
   ...patterns: string[]
 ): Linter.RulesRecord => ({
   'import/no-extraneous-dependencies': [
+    // Avoid importing devDependencies in production code
     'error',
     { devDependencies: [...extraneousDependenciesPatterns, ...patterns] },
   ],
@@ -23,6 +24,7 @@ export const getImportExtensionsRule = (
   ...extensions: string[]
 ): Linter.RulesRecord => ({
   'import/extensions': [
+    // Avoid unnecessary file extensions in imports
     'error',
     'ignorePackages',
     getImportExtensionsRecord([...importExtensions, ...extensions]),

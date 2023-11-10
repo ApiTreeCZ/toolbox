@@ -10,6 +10,6 @@ export const styles = {
     '**/styles/*.tsx',
   ],
   rules: {
-    'no-magic-numbers': 'off',
+    'no-magic-numbers': 'off', // Allow magic numbers in styles (e.g. z-index, spacing, etc.
   },
 } satisfies Linter.ConfigOverride;

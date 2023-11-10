@@ -6,6 +6,6 @@ import {
 } from '../../utils';
 
 export const imports: Linter.RulesRecord = {
-  ...getImportExtensionsRule('.tsx'),
-  ...getExtraneousDependenciesRule('/stories/**/*'),
+  ...getImportExtensionsRule('.tsx'), // Avoid unnecessary `.tsx` extensions in imports
+  ...getExtraneousDependenciesRule('/stories/**/*'), // Allow importing devDependencies in Storybook stories
 };

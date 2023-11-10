@@ -11,7 +11,7 @@ export const tests: Linter.ConfigOverride[] = [
   {
     files: ['*.stories.tsx', '*.test.tsx'],
     rules: {
-      'react/jsx-props-no-spreading': 'off',
+      'react/jsx-props-no-spreading': 'off', // Allow spreading props in stories and tests
     },
   },
 ];
