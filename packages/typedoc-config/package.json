@@ -20,6 +20,7 @@
     "dist"
   ],
   "scripts": {
+    "prebuild": "rimraf dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
     "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
     "fix": "run-p ts format:fix lint:fix",
