@@ -47,12 +47,14 @@ You can customize the configuration with `mergeConfig` function:
 
 ```typescript
 import { base } from '@apitree.cz/vitest-config';
-import { mergeConfig } from 'vitest/config';
-import type { UserConfig } from 'vitest/config';
+import { defineConfig, mergeConfig } from 'vitest/config';
 
-export default mergeConfig(config, {
-  // project specific configuration
-} satisfies UserConfig);
+export default mergeConfig(
+  config,
+  defineConfig({
+    // project specific config
+  }),
+);
 ```
 
 > See [Options](https://vitest.dev/config/#options) documentation for config reference.
