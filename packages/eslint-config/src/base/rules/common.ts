@@ -16,10 +16,14 @@ export const common: Linter.RulesRecord = {
   'function-paren-newline': 'off', // Allow parens on same line as function name
   'guard-for-in': 'off', // Allow for-in without if statement
   'implicit-arrow-linebreak': 'off', // Allow implicit return in arrow functions
+  'max-classes-per-file': ['error', { ignoreExpressions: true, max: 3 }], // Allow multiple classes per file
   'no-confusing-arrow': 'off', // Do not guard against confusing arrow functions as we enforce parens
   'no-console': 'warn', // Warn against console.log
   'no-debugger': 'warn', // Warn against debugger
-  'no-magic-numbers': ['error', { ignore: [0, 1], ignoreArrayIndexes: true }], // Disallow magic numbers
+  'no-magic-numbers': [
+    'error',
+    { ignore: [-1, 0, 1], ignoreArrayIndexes: true },
+  ], // Disallow magic numbers
   'no-multiple-empty-lines': ['error', { max: 1 }], // Disallow multiple empty lines
   'no-nested-ternary': 'error', // Avoid nested ternary expressions
   'no-param-reassign': 'off', // Allow param reassignment

@@ -15,7 +15,7 @@ export const config = {
   plugins: ['react', 'react-hooks', 'storybook'],
   parserOptions: {
     ecmaFeatures: { jsx: true },
-    jsxPragma: null, // eslint-disable-line unicorn/no-null
+    jsxPragma: null,
   },
   rules,
   overrides,
