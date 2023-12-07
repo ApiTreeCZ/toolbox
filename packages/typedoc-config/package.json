@@ -35,8 +35,8 @@
     "typedoc-plugin-markdown": "^3.16.0"
   },
   "devDependencies": {
-    "typedoc": "^0.25.3",
-    "typescript": "^5.2.2"
+    "typedoc": "^0.25.4",
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "typedoc": "^0.25.3",
