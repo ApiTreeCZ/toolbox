@@ -22,7 +22,7 @@ export const common: Linter.RulesRecord = {
   'no-debugger': 'warn', // Warn against debugger
   'no-magic-numbers': [
     'error',
-    { ignore: [-1, 0, 1], ignoreArrayIndexes: true },
+    { ignore: [-1, 0, 1, 2], ignoreArrayIndexes: true },
   ], // Disallow magic numbers
   'no-multiple-empty-lines': ['error', { max: 1 }], // Disallow multiple empty lines
   'no-nested-ternary': 'error', // Avoid nested ternary expressions

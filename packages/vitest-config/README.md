@@ -50,7 +50,7 @@ import { base } from '@apitree.cz/vitest-config';
 import { defineConfig, mergeConfig } from 'vitest/config';
 
 export default mergeConfig(
-  config,
+  base,
   defineConfig({
     // project specific config
   }),
