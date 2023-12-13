@@ -1,5 +1,22 @@
 # @apitree.cz/vitest-config
 
+## 0.2.0
+
+### Minor Changes
+
+- 5c257f9: BREAKING: Restructure package exports for simpler usage.
+
+  Add `nestjs` configuration with CJS compatible build as Nest.js does not support ESM yet.
+
+- 3b6dd27: Require `@vitest/coverage-istanbul` as peer dependency to make sure the module is always installed with the package
+  requiring our Vitest config. This is needed for correct resolution of the coverage provider within `node_modules`
+  structure (especially in `pnpm` workspaces).
+
+### Patch Changes
+
+- 01c62f0: Enable cobertura and lcov coverage reports.
+- 74ebf71: Upgrade all dependencies to their latest versions.
+
 ## 0.1.0
 
 ### Minor Changes

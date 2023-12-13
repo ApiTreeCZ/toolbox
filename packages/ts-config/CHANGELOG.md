@@ -1,5 +1,13 @@
 # @apitree.cz/ts-config
 
+## 0.1.1
+
+### Patch Changes
+
+- 4ca0e1b: Enable `checkJs` for Next.js to have `next.config.cjs` type-checked by default.
+- 74ebf71: Upgrade all dependencies to their latest versions.
+- 86a2c7b: Add configuration for Nest.js
+
 ## 0.1.0
 
 ### Minor Changes
