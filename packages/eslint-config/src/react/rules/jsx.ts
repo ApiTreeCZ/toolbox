@@ -6,6 +6,7 @@ export const jsx: Linter.RulesRecord = {
     'error',
     { allow: 'as-needed', extensions: ['.tsx'] },
   ],
+  'react/jsx-key': 'error', // Require keys in iterators and map calls
   'react/jsx-no-leaked-render': ['error', { validStrategies: ['ternary'] }], // Avoid conditional renders with `&&` and `||`
   'react/jsx-sort-props': [
     // Sort props alphabetically
