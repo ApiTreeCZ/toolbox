@@ -21,9 +21,10 @@ export const common: Linter.RulesRecord = {
   'no-console': 'warn', // Warn against console.log
   'no-debugger': 'warn', // Warn against debugger
   'no-magic-numbers': [
+    // Disallow magic numbers except for -1, 0, 1, 2, 10, 100, 1000, 10_000
     'error',
-    { ignore: [-1, 0, 1, 2], ignoreArrayIndexes: true },
-  ], // Disallow magic numbers
+    { ignore: [-1, 0, 1, 2, 10, 100, 1000, 10_000], ignoreArrayIndexes: true },
+  ],
   'no-multiple-empty-lines': ['error', { max: 1 }], // Disallow multiple empty lines
   'no-nested-ternary': 'error', // Avoid nested ternary expressions
   'no-param-reassign': 'off', // Allow param reassignment
