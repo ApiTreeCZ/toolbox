@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.1.2
+
+### Patch Changes
+
+- e467a6f: Require JSX keys in interators and map calls.
+
 ## 0.1.1
 
 ### Patch Changes
