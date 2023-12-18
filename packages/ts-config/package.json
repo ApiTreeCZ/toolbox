@@ -20,8 +20,10 @@
   "files": [
     "app.json",
     "base.json",
+    "cjs-library.json",
     "library.json",
     "nestjs.json",
+    "nestjs-library.json",
     "nextjs.json"
   ],
   "scripts": {

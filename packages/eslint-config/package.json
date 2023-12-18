@@ -13,6 +13,7 @@
   "types": "./index.d.ts",
   "files": [
     "base.js",
+    "cjs.js",
     "dist",
     "index.js",
     "nestjs.js",
