@@ -34,6 +34,18 @@ Suitable for distributable `npm` packages (both Node.js and React).
 
 > **Note:** If you are using React, you should also add `"**/*.tsx"` to the `include` array.
 
+### CommonJS library
+
+Suitable for distributable `npm` packages (Node.js only).
+
+```json
+{
+  "extends": "@apitree.cz/ts-config/cjs-library",
+  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts"],
+  "exclude": ["dist", "node_modules"]
+}
+```
+
 ### App
 
 Suitable for stand-alone applications (both Node.js and React).
@@ -75,5 +87,17 @@ Suitable for Nest.js apps.
   "extends": "@apitree.cz/ts-config/nestjs",
   "include": [".eslintrc.js", "**/*.js", "**/*.ts"],
   "exclude": ["build", "node_modules"]
+}
+```
+
+### Nest.js Library
+
+Suitable for distributable `npm` packages consumed by Nest.js apps.
+
+```json
+{
+  "extends": "@apitree.cz/ts-config/nestjs-library",
+  "include": [".eslintrc.js", "**/*.js", "**/*.ts"],
+  "exclude": ["dist", "node_modules"]
 }
 ```

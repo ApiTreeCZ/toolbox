@@ -32,6 +32,18 @@ module.exports = {
 };
 ```
 
+### CommonJS
+
+```javascript
+module.exports = {
+  extends: '@apitree.cz/eslint-config/cjs',
+  parserOptions: {
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
+  },
+};
+```
+
 ### React
 
 ```javascript
