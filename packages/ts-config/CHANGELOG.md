@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.1.3
+
+### Patch Changes
+
+- b864f3d: Add missing files to be exposed from the package.
+
 ## 0.1.2
 
 ### Patch Changes
