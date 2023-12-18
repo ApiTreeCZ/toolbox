@@ -1,0 +1,7 @@
+{
+  "extends": "./cjs-library.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  }
+}
