@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.1.2
+
+### Patch Changes
+
+- eacf5be: Add CJS-compatible configs.
+
 ## 0.1.1
 
 ### Patch Changes

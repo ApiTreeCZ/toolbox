@@ -1,5 +1,13 @@
 # @apitree.cz/eslint-config
 
+## 0.1.3
+
+### Patch Changes
+
+- eacf5be: Add CJS-compatible configs.
+- 0edd953: Disable `@typescript-eslint/consistent-type-imports` for Nest.js. This is because many classes in Nest.js are both types
+  and values needed at runtime for evaluation.
+
 ## 0.1.2
 
 ### Patch Changes
