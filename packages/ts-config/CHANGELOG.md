@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.1.4
+
+### Patch Changes
+
+- d0eccb4: Add missing exports entries for CJS and Nest libraries.
+
 ## 0.1.3
 
 ### Patch Changes
