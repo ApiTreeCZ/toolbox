@@ -12,8 +12,10 @@
   "exports": {
     ".": "./base.json",
     "./app": "./app.json",
+    "./cjs-library": "./cjs-library.json",
     "./library": "./library.json",
     "./nestjs": "./nestjs.json",
+    "./nestjs-library": "./nestjs-library.json",
     "./nextjs": "./nextjs.json"
   },
   "main": "base.json",
