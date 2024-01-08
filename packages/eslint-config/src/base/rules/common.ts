@@ -11,7 +11,7 @@ export const common: Linter.RulesRecord = {
   'arrow-parens': ['error', 'always'], // Require parens around arrow function arguments
   'comma-dangle': 'off', // Allow dangling commas
   'consistent-return': 'off', // Allow implicit return in arrow functions
-  curly: ['error', 'multi-line'], // Require braces around multiline blocks
+  curly: ['error', 'all'], // Require braces around all blocks
   'default-case': 'off', // Allow switch statements without default
   'function-paren-newline': 'off', // Allow parens on same line as function name
   'guard-for-in': 'off', // Allow for-in without if statement
