@@ -34,10 +34,12 @@ pnpm install
 This monorepo is structured as follows:
 
 - `packages/`
+  - `cli/`: Contains the CLI for ApiTree projects.
   - `eslint-config/`: Contains the ESLint configurations.
   - `prettier-config/`: Contains the Prettier configuration.
   - `testing-library/`: Contains the React Testing Library setup.
   - `ts-config/`: Contains the TypeScript configurations.
+  - `ts-utils/`: Contains the TypeScript utility functions.
   - `typedoc-config/`: Contains the TypeDoc configuration.
   - `vitest-config/`: Contains the Vitest configurations.
 
