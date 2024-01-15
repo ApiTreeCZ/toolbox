@@ -46,6 +46,10 @@ export const action = async (options: ActionOptions) => {
       });
     }),
   );
+  if (sync.length === 0) {
+    // eslint-disable-next-line no-console
+    return console.log('No project references to sync.');
+  }
   const paths = await Promise.all(sync);
   await runHooks(config.hooks, paths.flat());
 };

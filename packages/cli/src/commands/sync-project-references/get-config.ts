@@ -1,5 +1,6 @@
 import { join, isAbsolute } from 'node:path';
 
+import { isNil } from '@apitree.cz/ts-utils';
 import deepmerge from 'deepmerge';
 import { pathExists } from 'path-exists';
 
@@ -16,8 +17,15 @@ const getConfigPath = (path: string) =>
 export const getConfig = async (path: string) => {
   const configPath = getConfigPath(path);
   if (await pathExists(configPath)) {
-    const config = (await import(configPath)) as typeof defaultConfig;
-    return deepmerge(defaultConfig, config);
+    const config = (await import(configPath)) as {
+      default?: typeof defaultConfig;
+    };
+    if (isNil(config.default)) {
+      throw new Error(`Config '${configPath}' does not have a default export.`);
+    }
+    return deepmerge(defaultConfig, config.default, {
+      arrayMerge: (_, source: unknown[]) => source,
+    });
   }
   return defaultConfig;
 };
