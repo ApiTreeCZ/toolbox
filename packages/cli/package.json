@@ -1,0 +1,48 @@
+{
+  "name": "@apitree.cz/cli",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ApiTreeCZ/toolbox",
+    "directory": "packages/cli"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "export": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./sync-project-references": {
+      "import": "./dist/commands/sync-project-references/index.js",
+      "types": "./dist/commands/sync-project-references/index.d.ts"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "apitree": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist tsconfig.build.tsbuildinfo",
+    "build": "tsc --build tsconfig.build.json",
+    "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "fix": "run-p ts format:fix lint:fix",
+    "format": "prettier --check \"./**/*.{json,md}\"",
+    "format:fix": "pnpm run format --write",
+    "lint": "eslint --cache --ext cjs,js,ts .",
+    "lint:fix": "pnpm run lint --fix",
+    "qa": "run-p ts format lint",
+    "ts": "tsc --build tsconfig.json"
+  },
+  "dependencies": {
+    "@apitree.cz/ts-utils": "workspace:*",
+    "commander": "^11.1.0",
+    "deepmerge": "^4.3.1",
+    "pkg-dir": "^8.0.0",
+    "ts-toolbelt": "^9.6.0"
+  }
+}
