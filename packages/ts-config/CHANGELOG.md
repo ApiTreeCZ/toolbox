@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.1.5
+
+### Patch Changes
+
+- d2ef64a: Use `nodenext` as module.
+
 ## 0.1.4
 
 ### Patch Changes
