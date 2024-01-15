@@ -23,6 +23,9 @@
     "prebuild": "rimraf dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
     "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "docs": "run-s docs:generate docs:format",
+    "docs:format": "prettier --write \"./docs/**/*\"",
+    "docs:generate": "typedoc",
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{json,md}\"",
     "format:fix": "pnpm run format --write",
@@ -30,5 +33,10 @@
     "lint:fix": "pnpm run lint --fix",
     "qa": "run-p ts format lint",
     "ts": "tsc --build tsconfig.json"
+  },
+  "devDependencies": {
+    "@apitree.cz/typedoc-config": "workspace:*",
+    "typedoc": "^0.25.4",
+    "typescript": "^5.3.3"
   }
 }

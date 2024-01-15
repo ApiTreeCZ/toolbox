@@ -18,4 +18,4 @@ pnpm add @apitree.cz/ts-utils
 
 ## Documentation
 
-- [API Reference](./docs)
+- [API Reference](./docs/README.md)

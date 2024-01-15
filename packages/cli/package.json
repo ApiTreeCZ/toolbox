@@ -9,16 +9,6 @@
   },
   "sideEffects": false,
   "type": "module",
-  "export": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./sync-project-references": {
-      "import": "./dist/commands/sync-project-references/index.js",
-      "types": "./dist/commands/sync-project-references/index.d.ts"
-    }
-  },
   "types": "./dist/index.d.ts",
   "bin": {
     "apitree": "./dist/index.js"
@@ -44,5 +34,15 @@
     "deepmerge": "^4.3.1",
     "pkg-dir": "^8.0.0",
     "ts-toolbelt": "^9.6.0"
+  },
+  "export": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./sync-project-references": {
+      "import": "./dist/commands/sync-project-references/index.js",
+      "types": "./dist/commands/sync-project-references/index.d.ts"
+    }
   }
 }
