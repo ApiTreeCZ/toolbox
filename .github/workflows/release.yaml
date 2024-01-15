@@ -43,7 +43,7 @@ jobs:
           pnpm run build
       - name: Setup npm registry
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$HOME/.npmrc"
-      - name: Canary release
+      - name: Snapshot release
         if: github.ref_name == 'develop'
         run: |
           pnpm changeset version --snapshot next
