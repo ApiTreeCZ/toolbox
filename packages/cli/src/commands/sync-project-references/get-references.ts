@@ -1,18 +1,21 @@
 import { join } from 'node:path';
 
 import { notNil } from '@apitree.cz/ts-utils';
+import type { Object } from 'ts-toolbelt';
 
 import type { getPackageDependencies } from './get-package-dependencies.js';
 import type { GetTargetBuildConfigProps } from './get-target-build-config.js';
 import { getTargetBuildConfig } from './get-target-build-config.js';
 import type { getWorkspaces } from './get-workspaces.js';
+import type {
+  SyncProjectReferencesConfig,
+  WorkspacePackageProps,
+} from './types.js';
 
 export interface GetReferencesProps
-  extends Pick<GetTargetBuildConfigProps, 'tsConfigs'> {
-  /**
-   * Workspace root directory (e.g. `./packages`).
-   */
-  directory: string;
+  extends Pick<GetTargetBuildConfigProps, 'tsConfigs'>,
+    Object.NonNullable<Pick<Required<SyncProjectReferencesConfig>, 'scope'>>,
+    Pick<WorkspacePackageProps, 'directory'> {
   /**
    * Object containing package type and list of its internal (scoped) dependencies.
    */
@@ -21,10 +24,6 @@ export interface GetReferencesProps
    * List of filtered workspaces (without the one currently being processed).
    */
   otherWorkspaces: Awaited<ReturnType<typeof getWorkspaces>>;
-  /**
-   * Resolved packages scope (e.g. `@apitree.cz`).
-   */
-  scope: string;
 }
 
 /**

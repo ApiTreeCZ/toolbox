@@ -1,22 +1,19 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-import { findPackageRoot } from './find-package-root.js';
+import type { Object as ObjectType } from 'ts-toolbelt';
 
-export interface GetPackageDependenciesProps {
-  /**
-   * Workspace root directory (e.g. `./packages`).
-   */
-  directory: string;
-  /**
-   * Resolved packages scope (e.g. `@apitree.cz`).
-   */
-  scope: string;
-  /**
-   * Workspace package name (e.g. `cli`).
-   */
-  workspacePackage: string;
-}
+import { PACKAGE_JSON } from './constants.js';
+import { getRoot } from './get-root.js';
+import type {
+  SyncProjectReferencesConfig,
+  WorkspacePackageProps,
+} from './types.js';
+
+export type GetPackageDependenciesProps = ObjectType.NonNullable<
+  Pick<Required<SyncProjectReferencesConfig>, 'scope'>
+> &
+  WorkspacePackageProps;
 
 /**
  * Returns object containing package type and list of its internal (scoped) dependencies.
@@ -26,14 +23,13 @@ export const getPackageDependencies = async ({
   scope,
   workspacePackage,
 }: GetPackageDependenciesProps) => {
-  const root = await findPackageRoot();
   const {
     dependencies = {},
     devDependencies = {},
     type = 'module',
   } = JSON.parse(
     await readFile(
-      join(root, directory, workspacePackage, 'package.json'),
+      join(getRoot(), directory, workspacePackage, PACKAGE_JSON),
       'utf8',
     ),
   ) as {

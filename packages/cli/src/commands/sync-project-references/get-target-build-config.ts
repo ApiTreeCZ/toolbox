@@ -3,14 +3,13 @@ import { join } from 'node:path';
 
 import type { Object } from 'ts-toolbelt';
 
-import { findPackageRoot } from './find-package-root.js';
-import type { SyncProjectReferencesTsConfigs } from './types.js';
+import { getRoot } from './get-root.js';
+import type {
+  SyncProjectReferencesTsConfigs,
+  WorkspacePackageProps,
+} from './types.js';
 
-export interface GetTargetBuildConfigProps {
-  /**
-   * Workspace directory (e.g. `./packages`).
-   */
-  directory: string;
+export interface GetTargetBuildConfigProps extends WorkspacePackageProps {
   /**
    * Configured package TS config names.
    */
@@ -21,10 +20,6 @@ export interface GetTargetBuildConfigProps {
    * Package target type (e.g. `module`).
    */
   type: string;
-  /**
-   * Package name (e.g. `cli`).
-   */
-  workspacePackage: string;
 }
 
 /**
@@ -37,12 +32,11 @@ export const getTargetBuildConfig = async ({
   workspacePackage,
 }: GetTargetBuildConfigProps) => {
   try {
-    const root = await findPackageRoot();
     const tsConfig = join(
       workspacePackage,
-      type === 'module' ? tsConfigs.esmBuild : tsConfigs.cjsBuild,
+      type === 'module' ? tsConfigs.esm : tsConfigs.cjs,
     );
-    await access(join(root, directory, tsConfig));
+    await access(join(getRoot(), directory, tsConfig));
     return tsConfig;
   } catch {
     return join(workspacePackage, tsConfigs.build);

@@ -26,12 +26,12 @@ export interface SyncProjectReferencesTsConfigs {
    * Name of the TS config file for CJS build (ambient modules only).
    * @defaultValue `'tsconfig.cjs.build.json'`
    */
-  cjsBuild?: string | undefined;
+  cjs?: string | undefined;
   /**
    * Name of the TS config file for ESM build (ambient modules only).
    * @defaultValue `'tsconfig.esm.build.json'`
    */
-  esmBuild?: string | undefined;
+  esm?: string | undefined;
 }
 
 export interface SyncProjectReferencesConfig {
@@ -48,4 +48,15 @@ export interface SyncProjectReferencesConfig {
    * Custom names for TS config files.
    */
   tsConfigs?: SyncProjectReferencesTsConfigs | undefined;
+}
+
+export interface WorkspacePackageProps {
+  /**
+   * Workspace root directory (e.g. `./packages`).
+   */
+  directory: string;
+  /**
+   * Workspace package name (e.g. `cli`).
+   */
+  workspacePackage: string;
 }

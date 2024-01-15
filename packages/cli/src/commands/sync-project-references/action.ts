@@ -1,13 +1,9 @@
-import childProcess from 'node:child_process';
-import { promisify } from 'node:util';
-
 import { getConfig } from './get-config.js';
 import { getPackageDependencies } from './get-package-dependencies.js';
 import { getReferences } from './get-references.js';
 import { getWorkspaces } from './get-workspaces.js';
+import { runHooks } from './run-hooks.js';
 import { updateTsConfigs } from './update-ts-configs.js';
-
-const exec = promisify(childProcess.exec);
 
 export interface ActionOptions {
   /**
@@ -55,8 +51,5 @@ export const action = async (options: ActionOptions) => {
     }),
   );
   const paths = await Promise.all(sync);
-  const afterSync = config.hooks.afterSync.map((hook) =>
-    exec(`${config.hooks.runner} ${hook} ${paths.flat().join(' ')}`),
-  );
-  await Promise.all(afterSync);
+  await runHooks(config.hooks, paths.flat());
 };

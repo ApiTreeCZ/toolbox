@@ -1,21 +1,15 @@
-import { access } from 'node:fs/promises';
 import { join } from 'node:path';
 
-import { findPackageRoot } from './find-package-root.js';
+import { pathExists } from 'path-exists';
 
-export interface GetExistingTsConfigPathProps {
-  /**
-   * Workspace root directory (e.g. `./packages`).
-   */
-  directory: string;
+import { getRoot } from './get-root.js';
+import type { WorkspacePackageProps } from './types.js';
+
+export interface GetExistingTsConfigPathProps extends WorkspacePackageProps {
   /**
    * TS config file name (e.g. `tsconfig.json`).
    */
   tsConfig: string;
-  /**
-   * Package name (e.g. `cli`).
-   */
-  workspacePackage: string;
 }
 
 /**
@@ -26,12 +20,7 @@ export const getExistingTsConfigPath = async ({
   tsConfig,
   workspacePackage,
 }: GetExistingTsConfigPathProps) => {
-  const root = await findPackageRoot();
-  const path = join(root, directory, workspacePackage, tsConfig);
-  try {
-    await access(path);
-    return path;
-  } catch {
-    return null;
-  }
+  const path = join(getRoot(), directory, workspacePackage, tsConfig);
+  const exists = await pathExists(path);
+  return exists ? path : undefined;
 };

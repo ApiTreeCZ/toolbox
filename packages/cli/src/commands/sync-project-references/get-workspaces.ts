@@ -1,13 +1,29 @@
+import type { Dirent } from 'node:fs';
 import { readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 
-import { findPackageRoot } from './find-package-root.js';
+import { notNil } from '@apitree.cz/ts-utils';
+import { pathExists } from 'path-exists';
+
+import { PACKAGE_JSON } from './constants.js';
+import { getRoot } from './get-root.js';
+
+const getValidPackages = async (dirents: Dirent[]) => {
+  const names = await Promise.all(
+    dirents.map(async (dirent) => {
+      if (await pathExists(join(dirent.path, PACKAGE_JSON))) {
+        return dirent.name;
+      }
+    }),
+  );
+  return names.filter(notNil);
+};
 
 /**
  * Returns list of workspaces with their root directory (e.g. `./packages`) and workspace folder names.
  */
 export const getWorkspaces = async () => {
-  const root = await findPackageRoot();
+  const root = getRoot();
   const packageJsonPath = join(root, 'package.json');
   const { workspaces = [] } = JSON.parse(
     await readFile(packageJsonPath, 'utf8'),
@@ -26,11 +42,7 @@ export const getWorkspaces = async () => {
       });
       return {
         directory,
-        packages: packages
-          .filter(
-            (dirent) => dirent.isDirectory() && !dirent.name.startsWith('.'),
-          )
-          .map((dirent) => dirent.name),
+        packages: await getValidPackages(packages),
       };
     }),
   );

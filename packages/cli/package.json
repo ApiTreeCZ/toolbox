@@ -1,7 +1,7 @@
 {
   "name": "@apitree.cz/cli",
   "version": "0.0.0",
-  "description": "",
+  "description": "Command line interface for ApiTree projects",
   "repository": {
     "type": "git",
     "url": "https://github.com/ApiTreeCZ/toolbox",
@@ -32,7 +32,7 @@
     "@apitree.cz/ts-utils": "workspace:*",
     "commander": "^11.1.0",
     "deepmerge": "^4.3.1",
-    "pkg-dir": "^8.0.0",
+    "path-exists": "^5.0.0",
     "ts-toolbelt": "^9.6.0"
   },
   "export": {

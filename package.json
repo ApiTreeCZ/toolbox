@@ -40,6 +40,7 @@
     "postts": "tsc --project tsconfig.json"
   },
   "devDependencies": {
+    "@apitree.cz/cli": "workspace:*",
     "@apitree.cz/eslint-config": "workspace:*",
     "@apitree.cz/prettier-config": "workspace:*",
     "@apitree.cz/ts-config": "workspace:*",

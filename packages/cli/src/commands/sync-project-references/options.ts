@@ -1,6 +1,8 @@
 import { Option } from 'commander';
 
+import { DEFAULT_CONFIG } from './constants.js';
+
 export const config = new Option(
   '-c --config <config>',
   'path to config file',
-).default('sync-project-references.config.js');
+).default(DEFAULT_CONFIG);
