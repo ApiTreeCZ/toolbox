@@ -1,1 +1,1 @@
-import './cli.js';
+export * from './commands/sync-project-references/types.js';

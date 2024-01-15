@@ -1,7 +1,7 @@
 import type { SyncProjectReferencesConfig } from './types.js';
 
 const defaultConfig = {
-  scope: '@apitree.cz',
+  scopes: ['@apitree.cz'],
   tsConfigs: {
     default: 'tsconfig.json',
     build: 'tsconfig.build.json',

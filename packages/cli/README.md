@@ -21,3 +21,31 @@ pnpm add --save-dev @apitree.cz/cli
 ```
 pnpm apitree --help
 ```
+
+### Commands
+
+- [`sync-project-references`](#sync-project-references)
+
+#### `sync-project-references`
+
+Synchronize monorepo project references in TS config files (multi-target builds supported).
+
+```bash
+pnpm apitree sync-project-references --help
+```
+
+##### Configuration
+
+You can configure the command with an optional config file (`sync-project-references.config.js` by default,
+pass `--config` option with custom path).
+
+```js
+/** @type {import('@apitree/cli').SyncProjectReferencesConfig} */
+const config = {
+  // ... config options
+};
+
+export default config;
+```
+
+See [config reference](./docs/interfaces/SyncProjectReferencesConfig.md) for more details.

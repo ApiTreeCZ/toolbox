@@ -36,14 +36,14 @@ export interface SyncProjectReferencesTsConfigs {
 
 export interface SyncProjectReferencesConfig {
   /**
-   * Packages scope to use for the project.
-   * @defaultValue `'@apitree.cz'`
-   */
-  scope?: string | undefined;
-  /**
    * Custom hooks to run as parts of the sync process.
    */
   hooks?: SyncProjectReferencesHooks | undefined;
+  /**
+   * Packages scope to use for the project.
+   * @defaultValue `'@apitree.cz'`
+   */
+  scopes?: string[] | undefined;
   /**
    * Custom names for TS config files.
    */

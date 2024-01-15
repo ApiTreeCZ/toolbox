@@ -11,15 +11,19 @@
   "type": "module",
   "types": "./dist/index.d.ts",
   "bin": {
-    "apitree": "./dist/index.js"
+    "apitree": "./bin/apitree.js"
   },
   "files": [
+    "bin",
     "dist"
   ],
   "scripts": {
     "prebuild": "rimraf dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
     "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "docs": "run-s docs:generate docs:format",
+    "docs:format": "prettier --write \"./docs/**/*\"",
+    "docs:generate": "typedoc",
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{json,md}\"",
     "format:fix": "pnpm run format --write",
@@ -35,14 +39,15 @@
     "path-exists": "^5.0.0",
     "ts-toolbelt": "^9.6.0"
   },
+  "devDependencies": {
+    "@apitree.cz/typedoc-config": "workspace:*",
+    "typedoc": "^0.25.4",
+    "typescript": "^5.3.3"
+  },
   "export": {
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
-    },
-    "./sync-project-references": {
-      "import": "./dist/commands/sync-project-references/index.js",
-      "types": "./dist/commands/sync-project-references/index.d.ts"
     }
   }
 }

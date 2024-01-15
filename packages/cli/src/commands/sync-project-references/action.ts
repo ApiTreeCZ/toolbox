@@ -10,18 +10,14 @@ export interface ActionOptions {
    * Path to config file (e.g. `./sync-project-references.config.js`).
    */
   config: string;
-  /**
-   * Packages scope (e.g. `@apitree.cz`).
-   */
-  scope: string;
 }
 
 export const action = async (options: ActionOptions) => {
-  console.log('apitree-cli → sync-project-references');
   const config = await getConfig(options.config);
-  const workspaces = await getWorkspaces();
+  const workspaces = await getWorkspaces(config.scopes);
   const sync = workspaces.flatMap(({ directory, packages }) =>
     packages.map(async (workspacePackage) => {
+      // eslint-disable-next-line no-console
       console.log(
         `Syncing project references for ${directory}/${workspacePackage}`,
       );
@@ -34,7 +30,7 @@ export const action = async (options: ActionOptions) => {
       const packageDependencies = await getPackageDependencies({
         directory,
         workspacePackage,
-        scope: config.scope,
+        scopes: config.scopes,
       });
       return updateTsConfigs({
         directory,
@@ -42,7 +38,7 @@ export const action = async (options: ActionOptions) => {
           directory,
           otherWorkspaces,
           packageDependencies,
-          scope: config.scope,
+          scopes: config.scopes,
           tsConfigs: config.tsConfigs,
         }),
         tsConfigs: Object.values(config.tsConfigs),

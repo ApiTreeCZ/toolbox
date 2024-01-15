@@ -14,7 +14,7 @@ import type {
 
 export interface GetReferencesProps
   extends Pick<GetTargetBuildConfigProps, 'tsConfigs'>,
-    Object.NonNullable<Pick<Required<SyncProjectReferencesConfig>, 'scope'>>,
+    Object.NonNullable<Pick<Required<SyncProjectReferencesConfig>, 'scopes'>>,
     Pick<WorkspacePackageProps, 'directory'> {
   /**
    * Object containing package type and list of its internal (scoped) dependencies.
@@ -33,12 +33,15 @@ export const getReferences = async ({
   directory,
   packageDependencies: { dependencies, type },
   otherWorkspaces,
-  scope,
+  scopes,
   tsConfigs,
 }: GetReferencesProps) => {
   const references = await Promise.all(
     dependencies.map(async (packageDependency) => {
-      const workspacePackage = packageDependency.replace(`${scope}/`, '');
+      const workspacePackage = packageDependency.replaceAll(
+        new RegExp(`^(${scopes.join('|')})/`, 'g'),
+        '',
+      );
       const workspace = otherWorkspaces.find(({ packages }) =>
         packages.includes(workspacePackage),
       );

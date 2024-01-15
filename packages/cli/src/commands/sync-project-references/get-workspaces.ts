@@ -5,24 +5,35 @@ import { join } from 'node:path';
 import { notNil } from '@apitree.cz/ts-utils';
 import { pathExists } from 'path-exists';
 
-import { PACKAGE_JSON } from './constants.js';
 import { getRoot } from './get-root.js';
 
-const getValidPackages = async (dirents: Dirent[]) => {
+const getValidPackages = async (dirents: Dirent[], scopes: string[]) => {
   const names = await Promise.all(
     dirents.map(async (dirent) => {
-      if (await pathExists(join(dirent.path, PACKAGE_JSON))) {
-        return dirent.name;
+      const packageJsonPath = join(dirent.path, dirent.name, 'package.json');
+      if (await pathExists(packageJsonPath)) {
+        const { name = '' } = JSON.parse(
+          await readFile(packageJsonPath, 'utf8'),
+        ) as {
+          name?: string;
+        };
+        if (scopes.some((scope) => name.startsWith(scope))) {
+          return name;
+        }
       }
     }),
   );
-  return names.filter(notNil);
+  return names
+    .filter(notNil)
+    .map((name) =>
+      name.replaceAll(new RegExp(`^(${scopes.join('|')})/`, 'g'), ''),
+    );
 };
 
 /**
  * Returns list of workspaces with their root directory (e.g. `./packages`) and workspace folder names.
  */
-export const getWorkspaces = async () => {
+export const getWorkspaces = async (scopes: string[]) => {
   const root = getRoot();
   const packageJsonPath = join(root, 'package.json');
   const { workspaces = [] } = JSON.parse(
@@ -42,7 +53,7 @@ export const getWorkspaces = async () => {
       });
       return {
         directory,
-        packages: await getValidPackages(packages),
+        packages: await getValidPackages(packages, scopes),
       };
     }),
   );

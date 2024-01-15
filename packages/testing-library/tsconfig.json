@@ -1,5 +1,6 @@
 {
   "extends": "@apitree.cz/ts-config/library",
   "include": [".eslintrc.cjs", "./*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["dist", "node_modules"]
+  "exclude": ["dist", "node_modules"],
+  "references": [{ "path": "../vitest-config/tsconfig.build.json" }]
 }

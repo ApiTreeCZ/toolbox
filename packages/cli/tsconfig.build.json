@@ -5,5 +5,9 @@
     "outDir": "./dist",
     "rootDir": "./src"
   },
-  "include": ["./src"]
+  "include": ["./src"],
+  "references": [
+    { "path": "../ts-utils/tsconfig.build.json" },
+    { "path": "../typedoc-config/tsconfig.build.json" }
+  ]
 }

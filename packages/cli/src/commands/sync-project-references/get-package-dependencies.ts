@@ -3,7 +3,6 @@ import { join } from 'node:path';
 
 import type { Object as ObjectType } from 'ts-toolbelt';
 
-import { PACKAGE_JSON } from './constants.js';
 import { getRoot } from './get-root.js';
 import type {
   SyncProjectReferencesConfig,
@@ -11,7 +10,7 @@ import type {
 } from './types.js';
 
 export type GetPackageDependenciesProps = ObjectType.NonNullable<
-  Pick<Required<SyncProjectReferencesConfig>, 'scope'>
+  Pick<Required<SyncProjectReferencesConfig>, 'scopes'>
 > &
   WorkspacePackageProps;
 
@@ -20,7 +19,7 @@ export type GetPackageDependenciesProps = ObjectType.NonNullable<
  */
 export const getPackageDependencies = async ({
   directory,
-  scope,
+  scopes,
   workspacePackage,
 }: GetPackageDependenciesProps) => {
   const {
@@ -29,7 +28,7 @@ export const getPackageDependencies = async ({
     type = 'module',
   } = JSON.parse(
     await readFile(
-      join(getRoot(), directory, workspacePackage, PACKAGE_JSON),
+      join(getRoot(), directory, workspacePackage, 'package.json'),
       'utf8',
     ),
   ) as {
@@ -42,6 +41,8 @@ export const getPackageDependencies = async ({
     dependencies: [
       ...Object.keys(dependencies),
       ...Object.keys(devDependencies),
-    ].filter((dependency) => dependency.startsWith(scope)),
+    ].filter((dependency) =>
+      scopes.some((scope) => dependency.startsWith(scope)),
+    ),
   };
 };

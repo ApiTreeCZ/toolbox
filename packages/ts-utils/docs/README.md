@@ -4,28 +4,28 @@
 
 ### Functions
 
-- [equals](undefined)
-- [isNil](undefined)
-- [notNil](undefined)
+- [equals](README.md#equals)
+- [isNil](README.md#isnil)
+- [notNil](README.md#notnil)
 
 ## Functions
 
 ### equals
 
-▸ **equals**(`a`, `b`): boolean
+▸ **equals**(`a`, `b`): `boolean`
 
 Strictly check if two values are equal.
 
 #### Parameters
 
-| Name | Type    |
-| :--- | :------ |
-| `a`  | unknown |
-| `b`  | unknown |
+| Name | Type      |
+| :--- | :-------- |
+| `a`  | `unknown` |
+| `b`  | `unknown` |
 
 #### Returns
 
-boolean
+`boolean`
 
 #### Defined in
 
@@ -47,9 +47,9 @@ Checks if value IS `null` or `undefined`. Works as a type guard.
 
 #### Parameters
 
-| Name    | Type                   |
-| :------ | :--------------------- |
-| `value` | undefined \| null \| T |
+| Name    | Type                         |
+| :------ | :--------------------------- |
+| `value` | `undefined` \| `null` \| `T` |
 
 #### Returns
 
@@ -77,7 +77,7 @@ Checks if value IS NOT `null` or `undefined`. Works as a type guard.
 
 | Name   | Type |
 | :----- | :--- |
-| `type` | T    |
+| `type` | `T`  |
 
 #### Returns
 

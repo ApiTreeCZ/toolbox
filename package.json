@@ -30,14 +30,15 @@
     "postlint": "eslint --cache \"./*.{cjs,js}\"",
     "lint:fix": "turbo run lint:fix",
     "postlint:fix": "pnpm run postlint --fix",
-    "prepare": "is-ci || run-p prepare:husky build",
-    "prepare:husky": "husky install",
     "postinstall": "check-dependency-version-consistency .",
     "qa": "turbo run qa",
     "postqa": "run-p postts postlint postformat",
-    "test": "turbo run test",
     "ts": "turbo run ts",
-    "postts": "tsc --project tsconfig.json"
+    "postts": "tsc --project tsconfig.json",
+    "prepare": "is-ci || run-s prepare:husky build sync-project-references",
+    "prepare:husky": "husky install",
+    "sync-project-references": "apitree sync-project-references",
+    "test": "turbo run test"
   },
   "devDependencies": {
     "@apitree.cz/cli": "workspace:*",
