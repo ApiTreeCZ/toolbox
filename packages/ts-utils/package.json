@@ -1,0 +1,34 @@
+{
+  "name": "@apitree.cz/ts-utils",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ApiTreeCZ/toolbox",
+    "directory": "packages/ts-utils"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist tsconfig.build.tsbuildinfo",
+    "build": "tsc --build tsconfig.build.json",
+    "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "fix": "run-p ts format:fix lint:fix",
+    "format": "prettier --check \"./**/*.{json,md}\"",
+    "format:fix": "pnpm run format --write",
+    "lint": "eslint --cache --ext cjs,js,ts .",
+    "lint:fix": "pnpm run lint --fix",
+    "qa": "run-p ts format lint",
+    "ts": "tsc --build tsconfig.json"
+  }
+}
