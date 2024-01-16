@@ -1,5 +1,12 @@
 # @apitree.cz/cli
 
+## 0.1.1
+
+### Patch Changes
+
+- 6729630: Add config validation with zod.
+- 0a53d08: Parse `config` option correctly and handle errors with output to user.
+
 ## 0.1.0
 
 ### Minor Changes
