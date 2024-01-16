@@ -8,7 +8,7 @@ export interface SyncProjectReferencesHooks {
    * Package manager runner to use for running the hooks.
    * @defaultValue `'pnpm'`
    */
-  runner?: 'npx' | 'pnpm' | 'yarn';
+  runner?: 'npx' | 'pnpm' | 'yarn' | undefined;
 }
 
 export interface SyncProjectReferencesTsConfigs {
