@@ -16,7 +16,7 @@ export interface GetConfigProps {
   config?: string | undefined;
 }
 
-const getConfigPath = async ({ config }: GetConfigProps) => {
+const getPath = async ({ config }: GetConfigProps) => {
   if (config) {
     const path = isAbsolute(config) ? config : join(getRoot(), config);
     if (await pathExists(path)) {
@@ -30,7 +30,7 @@ const getConfigPath = async ({ config }: GetConfigProps) => {
   }
 };
 
-const validateConfig = async (config: unknown, path: string) => {
+const validate = async (config: unknown, path: string) => {
   try {
     await configSchema.parseAsync(config);
   } catch (error) {
@@ -50,7 +50,7 @@ const validateConfig = async (config: unknown, path: string) => {
  * If the config file does not exist, returns default config.
  */
 export const getConfig = async (props: GetConfigProps) => {
-  const path = await getConfigPath(props);
+  const path = await getPath(props);
   if (path) {
     const config = (await import(path)) as {
       default?: typeof defaultConfig;
@@ -58,7 +58,7 @@ export const getConfig = async (props: GetConfigProps) => {
     if (isNil(config.default)) {
       throw new Error(`Config '${path}' does not have a default export.`);
     }
-    await validateConfig(config.default, path);
+    await validate(config.default, path);
     return deepmerge(defaultConfig, config.default, {
       arrayMerge: (_, source: unknown[]) => source,
     });
