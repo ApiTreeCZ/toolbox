@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@apitree.cz/ts-utils": "workspace:*",
+    "@commander-js/extra-typings": "^11.1.0",
     "commander": "^11.1.0",
     "deepmerge": "^4.3.1",
     "path-exists": "^5.0.0",

@@ -68,6 +68,9 @@ importers:
       '@apitree.cz/ts-utils':
         specifier: workspace:*
         version: link:../ts-utils
+      '@commander-js/extra-typings':
+        specifier: ^11.1.0
+        version: 11.1.0(commander@11.1.0)
       commander:
         specifier: ^11.1.0
         version: 11.1.0
@@ -683,6 +686,14 @@ packages:
       human-id: 1.0.2
       prettier: 2.8.8
     dev: true
+
+  /@commander-js/extra-typings@11.1.0(commander@11.1.0):
+    resolution: {integrity: sha512-GuvZ38d23H+7Tz2C9DhzCepivsOsky03s5NI+KCy7ke1FNUvsJ2oO47scQ9YaGGhgjgNW5OYYNSADmbjcSoIhw==}
+    peerDependencies:
+      commander: 11.1.x
+    dependencies:
+      commander: 11.1.0
+    dev: false
 
   /@commitlint/cli@18.4.4(@types/node@20.11.2)(typescript@5.3.3):
     resolution: {integrity: sha512-Ro3wIo//fV3XiV1EkdpHog6huaEyNcUAVrSmtgKqYM5g982wOWmP4FXvEDFwRMVgz878CNBvvCc33dMZ5AQJ/g==}

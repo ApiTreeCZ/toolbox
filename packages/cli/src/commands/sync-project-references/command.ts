@@ -1,9 +1,13 @@
-import { Command } from 'commander';
+import { Command } from '@commander-js/extra-typings';
 
-import { action } from './action.js';
+import { run } from '../../utils.js';
+
 import { config } from './options.js';
 
 export const command = new Command('sync-project-references')
   .description('sync TS project references in monorepo')
   .addOption(config)
-  .action(action);
+  .action(async ({ config }) => {
+    const { action } = await import('./action.js');
+    await run(action({ config }));
+  });

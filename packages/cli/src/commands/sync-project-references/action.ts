@@ -1,3 +1,6 @@
+import { logger } from '../../utils.js';
+
+import type { GetConfigProps } from './get-config.js';
 import { getConfig } from './get-config.js';
 import { getPackageDependencies } from './get-package-dependencies.js';
 import { getReferences } from './get-references.js';
@@ -5,20 +8,14 @@ import { getWorkspaces } from './get-workspaces.js';
 import { runHooks } from './run-hooks.js';
 import { updateTsConfigs } from './update-ts-configs.js';
 
-export interface ActionOptions {
-  /**
-   * Path to config file (e.g. `./sync-project-references.config.js`).
-   */
-  config: string;
-}
+export type ActionProps = GetConfigProps;
 
-export const action = async (options: ActionOptions) => {
-  const config = await getConfig(options.config);
+export const action = async (props: ActionProps) => {
+  const config = await getConfig(props);
   const workspaces = await getWorkspaces(config.scopes);
   const sync = workspaces.flatMap(({ directory, packages }) =>
     packages.map(async (workspacePackage) => {
-      // eslint-disable-next-line no-console
-      console.log(
+      logger.info(
         `Syncing project references for ${directory}/${workspacePackage}`,
       );
       const otherWorkspaces = workspaces.map(({ directory, packages }) => ({
@@ -47,8 +44,7 @@ export const action = async (options: ActionOptions) => {
     }),
   );
   if (sync.length === 0) {
-    // eslint-disable-next-line no-console
-    return console.log('No project references to sync.');
+    return logger.warn('No project references to sync.');
   }
   const paths = await Promise.all(sync);
   await runHooks(config.hooks, paths.flat());
