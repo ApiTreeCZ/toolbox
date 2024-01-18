@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/eslint-config",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "ESLint configuration for ApiTree projects.",
   "repository": {
     "type": "git",

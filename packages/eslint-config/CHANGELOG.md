@@ -1,5 +1,12 @@
 # @apitree.cz/eslint-config
 
+## 0.1.7
+
+### Patch Changes
+
+- aa757a5: Allow literal strings in test and stories JSX.
+- 2f25e1c: Update dependencies to latest versions.
+
 ## 0.1.6
 
 ### Patch Changes
