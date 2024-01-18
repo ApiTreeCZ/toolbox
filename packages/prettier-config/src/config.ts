@@ -1,6 +1,6 @@
-import type { Options } from 'prettier';
+import type { Config } from 'prettier';
 
-export const config: Options = {
+export const config: Config = {
   arrowParens: 'always',
   bracketSpacing: true,
   plugins: ['prettier-plugin-packagejson'],
@@ -9,4 +9,11 @@ export const config: Options = {
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
+  overrides: [
+    {
+      // https://github.com/prettier/prettier/issues/15956
+      files: '*.json',
+      options: { trailingComma: 'none' },
+    },
+  ],
 };
