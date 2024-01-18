@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.1.6
+
+### Patch Changes
+
+- 087a0c0: Add rules for FormatJS and `react-intl`.
+
 ## 0.1.5
 
 ### Patch Changes
