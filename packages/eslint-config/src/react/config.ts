@@ -12,7 +12,7 @@ export const config = {
     'plugin:react/jsx-runtime',
     'plugin:storybook/recommended',
   ],
-  plugins: ['react', 'react-hooks', 'storybook'],
+  plugins: ['formatjs', 'react', 'react-hooks', 'storybook'],
   parserOptions: {
     ecmaFeatures: { jsx: true },
     jsxPragma: null,
