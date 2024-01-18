@@ -32,7 +32,7 @@ pnpm add --save-dev @apitree.cz/testing-library @testing-library/react vitest
    import { createRenderers } from '@apitree.cz/testing-library';
 
    export * from '@apitree.cz/testing-library';
-   export * from '@testing-library/react';
+
    export const { render, renderHook } = createRenderers();
    ```
 
