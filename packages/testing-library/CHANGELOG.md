@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.2.2
+
+### Patch Changes
+
+- 2f3c656: Re-export everything from `@testing-library` packages.
+
 ## 0.2.1
 
 ### Patch Changes
