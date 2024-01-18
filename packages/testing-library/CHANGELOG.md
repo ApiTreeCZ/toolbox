@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.2.3
+
+### Patch Changes
+
+- e3848ea: Revert re-exports from `@testing-library` packages.
+
 ## 0.2.2
 
 ### Patch Changes
