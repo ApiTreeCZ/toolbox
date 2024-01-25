@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.1.8
+
+### Patch Changes
+
+- 5f9dd78: Extend base test rules in React test and stories rules.
+
 ## 0.1.7
 
 ### Patch Changes
