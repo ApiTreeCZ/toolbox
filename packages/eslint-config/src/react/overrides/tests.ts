@@ -18,6 +18,7 @@ export const tests: Linter.ConfigOverride[] = [
       '*.test.tsx',
     ],
     rules: {
+      ...base.rules, // Use same base rules in stories and tests
       'formatjs/no-literal-string-in-jsx': 'off', // Allow literal strings in JSX in stories and tests
       'react/jsx-props-no-spreading': 'off', // Allow spreading props in stories and tests
     },
