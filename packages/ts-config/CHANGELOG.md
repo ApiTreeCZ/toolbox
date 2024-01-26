@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.1.6
+
+### Patch Changes
+
+- d9aa0db: Keep comments in library build output as they mostly work as documentation.
+
 ## 0.1.5
 
 ### Patch Changes
