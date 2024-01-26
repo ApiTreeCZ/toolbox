@@ -5,6 +5,7 @@
     "jsx": "react-jsx",
     "composite": true,
     "declaration": true,
+    "removeComments": false,
     "sourceMap": true
   }
 }
