@@ -41,7 +41,7 @@ export interface SyncProjectReferencesConfig {
   hooks?: SyncProjectReferencesHooks | undefined;
   /**
    * Packages scope to use for the project.
-   * @defaultValue `'@apitree.cz'`
+   * @defaultValue `['@apitree.cz']`
    */
   scopes?: string[] | undefined;
   /**

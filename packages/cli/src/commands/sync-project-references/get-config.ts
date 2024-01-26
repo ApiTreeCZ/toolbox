@@ -6,7 +6,7 @@ import { pathExists } from 'path-exists';
 import { ZodError } from 'zod';
 
 import { configSchema } from './config-schema.js';
-import defaultConfig from './default-config.js';
+import * as defaultConfig from './default-config.js';
 import { getRoot } from './get-root.js';
 
 export interface GetConfigProps {
@@ -52,16 +52,14 @@ const validate = async (config: unknown, path: string) => {
 export const getConfig = async (props: GetConfigProps) => {
   const path = await getPath(props);
   if (path) {
-    const config = (await import(path)) as {
-      default?: typeof defaultConfig;
-    };
+    const config = (await import(path)) as typeof defaultConfig;
     if (isNil(config.default)) {
       throw new Error(`Config '${path}' does not have a default export.`);
     }
     await validate(config.default, path);
-    return deepmerge(defaultConfig, config.default, {
+    return deepmerge(defaultConfig.default, config.default, {
       arrayMerge: (_, source: unknown[]) => source,
     });
   }
-  return defaultConfig;
+  return defaultConfig.default;
 };
