@@ -1,10 +1,10 @@
 module.exports = {
-  extends: '.',
+  extends: './cjs',
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
   },
   rules: {
-    'unicorn/prefer-module': 'off',
+    'no-magic-numbers': 'off',
   },
 };

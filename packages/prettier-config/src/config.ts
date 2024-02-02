@@ -1,9 +1,10 @@
 import type { Config } from 'prettier';
 
-export const config: Config = {
+export const config = {
   arrowParens: 'always',
   bracketSpacing: true,
   plugins: ['prettier-plugin-packagejson'],
+  printWidth: 120,
   semi: true,
   singleQuote: true,
   tabWidth: 2,
@@ -16,4 +17,4 @@ export const config: Config = {
       options: { trailingComma: 'none' },
     },
   ],
-};
+} satisfies Config;

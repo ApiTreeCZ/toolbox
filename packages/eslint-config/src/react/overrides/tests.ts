@@ -10,13 +10,7 @@ export const tests: Linter.ConfigOverride[] = [
     rules: base.rules,
   },
   {
-    files: [
-      '**/stories/**/*.tsx',
-      '**/tests/**/*.tsx',
-      '*.spec.tsx',
-      '*.stories.tsx',
-      '*.test.tsx',
-    ],
+    files: ['**/stories/**/*.tsx', '**/tests/**/*.tsx', '*.spec.tsx', '*.stories.tsx', '*.test.tsx'],
     rules: {
       ...base.rules, // Use same base rules in stories and tests
       'formatjs/no-literal-string-in-jsx': 'off', // Allow literal strings in JSX in stories and tests

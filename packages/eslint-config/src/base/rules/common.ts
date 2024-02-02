@@ -17,6 +17,19 @@ export const common: Linter.RulesRecord = {
   'guard-for-in': 'off', // Allow for-in without if statement
   'implicit-arrow-linebreak': 'off', // Allow implicit return in arrow functions
   'max-classes-per-file': ['error', { ignoreExpressions: true, max: 3 }], // Allow multiple classes per file
+  'max-len': [
+    // Enforce max line length
+    'error',
+    120, // Characters per line
+    2, // Tab width
+    {
+      ignoreUrls: true, // Let URLs be as long as they need to be
+      ignoreComments: false, // Enforce max line length in comments
+      ignoreRegExpLiterals: true, // Let regex literals be as long as they need to be
+      ignoreStrings: true, // Let strings be as long as they need to be
+      ignoreTemplateLiterals: true, // Let template literals be as long as they need to be
+    },
+  ],
   'no-confusing-arrow': 'off', // Do not guard against confusing arrow functions as we enforce parens
   'no-console': 'warn', // Warn against console.log
   'no-debugger': 'warn', // Warn against debugger

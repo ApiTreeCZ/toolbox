@@ -1,8 +1,4 @@
-import type {
-  Queries,
-  RenderHookOptions,
-  RenderOptions,
-} from '@testing-library/react';
+import type { Queries, RenderHookOptions, RenderOptions } from '@testing-library/react';
 import { render, renderHook } from '@testing-library/react';
 import type { ReactElement } from 'react';
 

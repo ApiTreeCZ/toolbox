@@ -67,13 +67,7 @@ Suitable for Next.js apps.
 ```json
 {
   "extends": "@apitree.cz/ts-config/next",
-  "include": [
-    ".eslintrc.cjs",
-    "next-env.d.ts",
-    "**/*.js",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "include": [".eslintrc.cjs", "next-env.d.ts", "**/*.js", "**/*.ts", "**/*.tsx"],
   "exclude": [".next", "node_modules"]
 }
 ```

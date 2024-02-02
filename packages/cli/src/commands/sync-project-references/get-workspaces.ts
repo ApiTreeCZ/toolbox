@@ -12,9 +12,7 @@ const getValidPackages = async (dirents: Dirent[], scopes: string[]) => {
     dirents.map(async (dirent) => {
       const packageJsonPath = join(dirent.path, dirent.name, 'package.json');
       if (await pathExists(packageJsonPath)) {
-        const { name = '' } = JSON.parse(
-          await readFile(packageJsonPath, 'utf8'),
-        ) as {
+        const { name = '' } = JSON.parse(await readFile(packageJsonPath, 'utf8')) as {
           name?: string;
         };
         if (scopes.some((scope) => name.startsWith(scope))) {
@@ -23,11 +21,7 @@ const getValidPackages = async (dirents: Dirent[], scopes: string[]) => {
       }
     }),
   );
-  return names
-    .filter(notNil)
-    .map((name) =>
-      name.replaceAll(new RegExp(`^(${scopes.join('|')})/`, 'g'), ''),
-    );
+  return names.filter(notNil).map((name) => name.replaceAll(new RegExp(`^(${scopes.join('|')})/`, 'g'), ''));
 };
 
 /**
@@ -36,14 +30,10 @@ const getValidPackages = async (dirents: Dirent[], scopes: string[]) => {
 export const getWorkspaces = async (scopes: string[]) => {
   const root = getRoot();
   const packageJsonPath = join(root, 'package.json');
-  const { workspaces = [] } = JSON.parse(
-    await readFile(packageJsonPath, 'utf8'),
-  ) as {
+  const { workspaces = [] } = JSON.parse(await readFile(packageJsonPath, 'utf8')) as {
     workspaces: string[];
   };
-  const directories = workspaces.map((workspace) =>
-    workspace.replace('/*', ''),
-  );
+  const directories = workspaces.map((workspace) => workspace.replace('/*', ''));
   return Promise.all(
     directories.map(async (directory) => {
       const packages = await readdir(join(root, directory), {

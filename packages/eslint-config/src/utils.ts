@@ -10,9 +10,7 @@ const getImportExtensionsRecord = (extensions: string[]) => {
   return record;
 };
 
-export const getExtraneousDependenciesRule = (
-  ...patterns: string[]
-): Linter.RulesRecord => ({
+export const getExtraneousDependenciesRule = (...patterns: string[]): Linter.RulesRecord => ({
   'import/no-extraneous-dependencies': [
     // Avoid importing devDependencies in production code
     'error',
@@ -20,9 +18,7 @@ export const getExtraneousDependenciesRule = (
   ],
 });
 
-export const getImportExtensionsRule = (
-  ...extensions: string[]
-): Linter.RulesRecord => ({
+export const getImportExtensionsRule = (...extensions: string[]): Linter.RulesRecord => ({
   'import/extensions': [
     // Avoid unnecessary file extensions in imports
     'error',

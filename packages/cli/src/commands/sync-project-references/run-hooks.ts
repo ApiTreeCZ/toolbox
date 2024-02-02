@@ -7,12 +7,7 @@ import type { SyncProjectReferencesHooks } from './types.js';
 
 const exec = promisify(childProcess.exec);
 
-export const runHooks = async (
-  hooks: Object.NonNullable<Required<SyncProjectReferencesHooks>>,
-  paths: string[],
-) => {
+export const runHooks = async (hooks: Object.NonNullable<Required<SyncProjectReferencesHooks>>, paths: string[]) => {
   const { afterSync, runner } = hooks;
-  await Promise.all(
-    afterSync.map((hook) => exec(`${runner} ${hook} ${paths.join(' ')}`)),
-  );
+  await Promise.all(afterSync.map((hook) => exec(`${runner} ${hook} ${paths.join(' ')}`)));
 };

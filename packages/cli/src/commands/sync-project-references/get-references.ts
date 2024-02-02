@@ -7,10 +7,7 @@ import type { getPackageDependencies } from './get-package-dependencies.js';
 import type { GetTargetBuildConfigProps } from './get-target-build-config.js';
 import { getTargetBuildConfig } from './get-target-build-config.js';
 import type { getWorkspaces } from './get-workspaces.js';
-import type {
-  SyncProjectReferencesConfig,
-  WorkspacePackageProps,
-} from './types.js';
+import type { SyncProjectReferencesConfig, WorkspacePackageProps } from './types.js';
 
 export interface GetReferencesProps
   extends Pick<GetTargetBuildConfigProps, 'tsConfigs'>,
@@ -38,13 +35,8 @@ export const getReferences = async ({
 }: GetReferencesProps) => {
   const references = await Promise.all(
     dependencies.map(async (packageDependency) => {
-      const workspacePackage = packageDependency.replaceAll(
-        new RegExp(`^(${scopes.join('|')})/`, 'g'),
-        '',
-      );
-      const workspace = otherWorkspaces.find(({ packages }) =>
-        packages.includes(workspacePackage),
-      );
+      const workspacePackage = packageDependency.replaceAll(new RegExp(`^(${scopes.join('|')})/`, 'g'), '');
+      const workspace = otherWorkspaces.find(({ packages }) => packages.includes(workspacePackage));
       if (workspace) {
         const buildConfig = await getTargetBuildConfig({
           directory: workspace.directory,
@@ -53,12 +45,7 @@ export const getReferences = async ({
           workspacePackage,
         });
         return {
-          path: join(
-            directory === workspace.directory
-              ? '../'
-              : `../../${workspace.directory}`,
-            buildConfig,
-          ),
+          path: join(directory === workspace.directory ? '../' : `../../${workspace.directory}`, buildConfig),
         };
       }
     }),

@@ -7,11 +7,7 @@ import { rules } from './rules';
 
 export const config = {
   env: { browser: true },
-  extends: [
-    'plugin:react-hooks/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:storybook/recommended',
-  ],
+  extends: ['plugin:react-hooks/recommended', 'plugin:react/jsx-runtime', 'plugin:storybook/recommended'],
   plugins: ['formatjs', 'react', 'react-hooks', 'storybook'],
   parserOptions: {
     ecmaFeatures: { jsx: true },

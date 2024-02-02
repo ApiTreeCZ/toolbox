@@ -1,13 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "noEmit": false,
-    "outDir": "./dist",
-    "rootDir": "./src"
-  },
+  "compilerOptions": { "noEmit": false, "outDir": "./dist", "rootDir": "./src" },
   "include": ["./src"],
-  "references": [
-    { "path": "../ts-utils/tsconfig.build.json" },
-    { "path": "../typedoc-config/tsconfig.build.json" }
-  ]
+  "references": [{ "path": "../ts-utils/tsconfig.build.json" }, { "path": "../typedoc-config/tsconfig.build.json" }]
 }

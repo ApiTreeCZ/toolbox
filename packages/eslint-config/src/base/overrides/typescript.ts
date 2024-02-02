@@ -2,10 +2,7 @@ import type { Linter } from 'eslint';
 
 export const typescript = {
   files: ['*.ts'],
-  extends: [
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:@typescript-eslint/strict',
-  ],
+  extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking', 'plugin:@typescript-eslint/strict'],
   rules: {
     '@typescript-eslint/consistent-type-assertions': 'error', // Enforce consistent usage of type assertions
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'], // Prefer interface to type

@@ -27,12 +27,7 @@ export interface UpdateTsConfigsProps {
 /**
  * Updates references in all configured TS configs. Returns list of updated TS config paths.
  */
-export const updateTsConfigs = async ({
-  directory,
-  references,
-  tsConfigs,
-  workspacePackage,
-}: UpdateTsConfigsProps) => {
+export const updateTsConfigs = async ({ directory, references, tsConfigs, workspacePackage }: UpdateTsConfigsProps) => {
   const paths = await Promise.all(
     tsConfigs.map(async (tsConfig) => {
       const tsConfigPath = await getExistingTsConfigPath({
@@ -41,9 +36,7 @@ export const updateTsConfigs = async ({
         workspacePackage,
       });
       if (tsConfigPath) {
-        const tsConfigJson = JSON.parse(
-          await readFile(tsConfigPath, 'utf8'),
-        ) as { references?: typeof references };
+        const tsConfigJson = JSON.parse(await readFile(tsConfigPath, 'utf8')) as { references?: typeof references };
         tsConfigJson.references = references;
         await writeFile(tsConfigPath, JSON.stringify(tsConfigJson));
         return tsConfigPath;

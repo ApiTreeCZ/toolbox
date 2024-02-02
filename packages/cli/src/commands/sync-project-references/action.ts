@@ -15,14 +15,10 @@ export const action = async (props: ActionProps) => {
   const workspaces = await getWorkspaces(config.scopes);
   const sync = workspaces.flatMap(({ directory, packages }) =>
     packages.map(async (workspacePackage) => {
-      logger.info(
-        `Syncing project references for ${directory}/${workspacePackage}`,
-      );
+      logger.info(`Syncing project references for ${directory}/${workspacePackage}`);
       const otherWorkspaces = workspaces.map(({ directory, packages }) => ({
         directory,
-        packages: packages.filter(
-          (otherPackage) => otherPackage !== workspacePackage,
-        ),
+        packages: packages.filter((otherPackage) => otherPackage !== workspacePackage),
       }));
       const packageDependencies = await getPackageDependencies({
         directory,

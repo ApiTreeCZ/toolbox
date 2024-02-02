@@ -10,19 +10,13 @@ describe('createRenderers', () => {
     expect(renderHook).toBeTypeOf('function');
   });
   it('creates React Testing Library render function with a default wrapper', () => {
-    const defaultWrapper = ({ children }: PropsWithChildren) => (
-      <div data-testid="default-wrapper">{children}</div>
-    );
+    const defaultWrapper = ({ children }: PropsWithChildren) => <div data-testid="default-wrapper">{children}</div>;
     const { render } = createRenderers({ defaultWrapper });
     render(<div data-testid="render-content" />);
-    expect(screen.getByTestId('default-wrapper')).toContainElement(
-      screen.getByTestId('render-content'),
-    );
+    expect(screen.getByTestId('default-wrapper')).toContainElement(screen.getByTestId('render-content'));
   });
   it('creates React Testing Library renderHook function with a default wrapper', () => {
-    const defaultWrapper = ({ children }: PropsWithChildren) => (
-      <div data-testid="default-wrapper">{children}</div>
-    );
+    const defaultWrapper = ({ children }: PropsWithChildren) => <div data-testid="default-wrapper">{children}</div>;
     const { renderHook } = createRenderers({ defaultWrapper });
     renderHook(() => 'hook-content');
     expect(screen.getByTestId('default-wrapper')).toBeEmptyDOMElement();
