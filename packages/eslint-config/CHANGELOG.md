@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.1.9
+
+### Patch Changes
+
+- c31b74b: Enforce max line length of 120 characters.
+
 ## 0.1.8
 
 ### Patch Changes

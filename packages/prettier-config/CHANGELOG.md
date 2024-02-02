@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.1.3
+
+### Patch Changes
+
+- c31b74b: Enforce max line length of 120 characters.
+
 ## 0.1.2
 
 ### Patch Changes

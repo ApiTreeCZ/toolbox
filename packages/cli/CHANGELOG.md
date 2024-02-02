@@ -1,5 +1,12 @@
 # @apitree.cz/cli
 
+## 0.1.2
+
+### Patch Changes
+
+- d8c33e6: Refactor build configs utils.
+- e4c7d25: Use top-level await in entry point.
+
 ## 0.1.1
 
 ### Patch Changes
