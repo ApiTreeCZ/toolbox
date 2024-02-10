@@ -5,17 +5,13 @@ import type { Package } from '@manypkg/get-packages';
 
 import type { GetTargetBuildConfigProps } from './get-target-build-config.js';
 import { getTargetBuildConfig } from './get-target-build-config.js';
-import type { getWorkspaceDependencies } from './get-workspace-dependencies.js';
+import { getWorkspaceDependencies } from './get-workspace-dependencies.js';
 
 export interface GetReferencesProps extends Pick<GetTargetBuildConfigProps, 'tsConfigs'> {
   /**
    * Workspace package to check and update references for.
    */
   workspacePackage: Package;
-  /**
-   * Object containing package type and list of its workspace dependencies.
-   */
-  workspaceDependencies: Awaited<ReturnType<typeof getWorkspaceDependencies>>;
   /**
    * List of workspaces to search for package references.
    */
@@ -25,12 +21,8 @@ export interface GetReferencesProps extends Pick<GetTargetBuildConfigProps, 'tsC
 /**
  * Returns list of package references to be added to its TS config.
  */
-export const getReferences = async ({
-  tsConfigs,
-  workspaceDependencies: { dependencies, type },
-  workspacePackage,
-  workspaces,
-}: GetReferencesProps) => {
+export const getReferences = async ({ tsConfigs, workspacePackage, workspaces }: GetReferencesProps) => {
+  const { dependencies, type } = await getWorkspaceDependencies({ workspacePackage, workspaces });
   const references = await Promise.all(
     dependencies.map(async (dependency) => {
       const workspace = workspaces.find(({ packageJson }) => packageJson.name === dependency);

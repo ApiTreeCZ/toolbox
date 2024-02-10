@@ -35,7 +35,7 @@
     "postqa": "run-p postts postlint postformat",
     "ts": "turbo run ts",
     "postts": "tsc --project tsconfig.json",
-    "prepare": "is-ci || run-s prepare:husky build",
+    "prepare": "is-ci || run-s prepare:husky build sync-project-references",
     "prepare:husky": "husky install",
     "sync-project-references": "apitree sync-project-references",
     "test": "turbo run test"

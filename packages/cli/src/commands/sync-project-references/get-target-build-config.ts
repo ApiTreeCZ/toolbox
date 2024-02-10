@@ -1,4 +1,4 @@
-import { basename, join } from 'node:path';
+import { join } from 'node:path';
 
 import { pathExists } from 'path-exists';
 import type { Object } from 'ts-toolbelt';
@@ -24,10 +24,9 @@ export const getTargetBuildConfig = async ({
   tsConfigs,
   workspacePackage: { dir },
 }: GetTargetBuildConfigProps) => {
-  const workspaceName = basename(dir);
-  const tsConfig = join(workspaceName, type === 'module' ? tsConfigs.esm : tsConfigs.cjs);
+  const tsConfig = type === 'module' ? tsConfigs.esm : tsConfigs.cjs;
   if (await pathExists(join(dir, tsConfig))) {
     return tsConfig;
   }
-  return join(workspaceName, tsConfigs.build);
+  return tsConfigs.build;
 };

@@ -7,7 +7,6 @@ import { ZodError } from 'zod';
 
 import { configSchema } from './config-schema.js';
 import * as defaultConfig from './default-config.js';
-import { getRoot } from './get-root.js';
 
 export interface GetConfigProps {
   /**
@@ -28,7 +27,7 @@ const getPath = async ({ config, rootDir }: GetConfigProps) => {
     }
     throw new Error(`Config '${path}' does not exist.`);
   }
-  const fallback = join(getRoot(), 'sync-project-references.config.js');
+  const fallback = join(rootDir, 'sync-project-references.config.js');
   if (await pathExists(fallback)) {
     return fallback;
   }
