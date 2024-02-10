@@ -5,7 +5,6 @@
 ### Properties
 
 - [afterSync](SyncProjectReferencesHooks.md#aftersync)
-- [runner](SyncProjectReferencesHooks.md#runner)
 
 ## Properties
 
@@ -21,20 +20,4 @@ Hook called after the project references are synced.
 
 #### Defined in
 
-[commands/sync-project-references/types.ts:6](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L6)
-
----
-
-### runner
-
-• `Optional` **runner**: `"npx"` \| `"pnpm"` \| `"yarn"`
-
-Package manager runner to use for running the hooks.
-
-**`Default Value`**
-
-`'pnpm'`
-
-#### Defined in
-
-[commands/sync-project-references/types.ts:11](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L11)
+[commands/sync-project-references/types.ts:8](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L8)

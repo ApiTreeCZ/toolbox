@@ -4,29 +4,16 @@
 
 ### Properties
 
-- [directory](WorkspacePackageProps.md#directory)
 - [workspacePackage](WorkspacePackageProps.md#workspacepackage)
 
 ## Properties
 
-### directory
-
-• **directory**: `string`
-
-Workspace root directory (e.g. `./packages`).
-
-#### Defined in
-
-[commands/sync-project-references/types.ts:57](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L57)
-
----
-
 ### workspacePackage
 
-• **workspacePackage**: `string`
+• **workspacePackage**: `Package`
 
-Workspace package name (e.g. `cli`).
+Workspace package.
 
 #### Defined in
 
-[commands/sync-project-references/types.ts:61](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L61)
+[commands/sync-project-references/types.ts:49](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L49)

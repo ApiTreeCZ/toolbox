@@ -23,7 +23,7 @@ Name of the TS config file for build.
 
 #### Defined in
 
-[commands/sync-project-references/types.ts:24](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L24)
+[commands/sync-project-references/types.ts:21](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L21)
 
 ---
 
@@ -39,7 +39,7 @@ Name of the TS config file for CJS build (ambient modules only).
 
 #### Defined in
 
-[commands/sync-project-references/types.ts:29](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L29)
+[commands/sync-project-references/types.ts:26](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L26)
 
 ---
 
@@ -55,7 +55,7 @@ Name of the main TS config file.
 
 #### Defined in
 
-[commands/sync-project-references/types.ts:19](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L19)
+[commands/sync-project-references/types.ts:16](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L16)
 
 ---
 
@@ -71,4 +71,4 @@ Name of the TS config file for ESM build (ambient modules only).
 
 #### Defined in
 
-[commands/sync-project-references/types.ts:34](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L34)
+[commands/sync-project-references/types.ts:31](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L31)
