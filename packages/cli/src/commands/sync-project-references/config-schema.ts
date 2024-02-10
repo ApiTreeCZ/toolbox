@@ -6,10 +6,8 @@ export const configSchema = z.object({
   hooks: z
     .object({
       afterSync: z.array(z.string()).optional(),
-      runner: z.enum(['npx', 'pnpm', 'yarn']).optional(),
     })
     .optional(),
-  scopes: z.array(z.string()).optional(),
   tsConfigs: z
     .object({
       build: z.string().optional(),

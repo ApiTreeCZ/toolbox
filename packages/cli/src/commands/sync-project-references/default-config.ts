@@ -1,7 +1,6 @@
 import type { SyncProjectReferencesConfig } from './types.js';
 
 const defaultConfig = {
-  scopes: ['@apitree.cz'],
   tsConfigs: {
     default: 'tsconfig.json',
     build: 'tsconfig.build.json',
@@ -10,7 +9,6 @@ const defaultConfig = {
   },
   hooks: {
     afterSync: ['prettier --write'],
-    runner: 'pnpm',
   },
 } satisfies SyncProjectReferencesConfig;
 

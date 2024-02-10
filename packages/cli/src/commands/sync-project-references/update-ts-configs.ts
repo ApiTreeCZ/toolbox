@@ -4,16 +4,9 @@ import { notNil } from '@apitree.cz/ts-utils';
 
 import { getExistingTsConfigPath } from './get-existing-ts-config-path.js';
 import type { getReferences } from './get-references.js';
+import type { WorkspacePackageProps } from './types.js';
 
-export interface UpdateTsConfigsProps {
-  /**
-   * Workspace root directory (e.g. `./packages`).
-   */
-  directory: string;
-  /**
-   * Workspace package name (e.g. `cli`).
-   */
-  workspacePackage: string;
+export interface UpdateTsConfigsProps extends WorkspacePackageProps {
   /**
    * List of workspace package references.
    */
@@ -27,11 +20,10 @@ export interface UpdateTsConfigsProps {
 /**
  * Updates references in all configured TS configs. Returns list of updated TS config paths.
  */
-export const updateTsConfigs = async ({ directory, references, tsConfigs, workspacePackage }: UpdateTsConfigsProps) => {
+export const updateTsConfigs = async ({ references, tsConfigs, workspacePackage }: UpdateTsConfigsProps) => {
   const paths = await Promise.all(
     tsConfigs.map(async (tsConfig) => {
       const tsConfigPath = await getExistingTsConfigPath({
-        directory,
         tsConfig,
         workspacePackage,
       });

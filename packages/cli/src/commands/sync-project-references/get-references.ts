@@ -1,51 +1,47 @@
-import { join } from 'node:path';
+import { join, relative } from 'node:path';
 
 import { notNil } from '@apitree.cz/ts-utils';
-import type { Object } from 'ts-toolbelt';
+import type { Package } from '@manypkg/get-packages';
 
-import type { getPackageDependencies } from './get-package-dependencies.js';
 import type { GetTargetBuildConfigProps } from './get-target-build-config.js';
 import { getTargetBuildConfig } from './get-target-build-config.js';
-import type { getWorkspaces } from './get-workspaces.js';
-import type { SyncProjectReferencesConfig, WorkspacePackageProps } from './types.js';
+import type { getWorkspaceDependencies } from './get-workspace-dependencies.js';
 
-export interface GetReferencesProps
-  extends Pick<GetTargetBuildConfigProps, 'tsConfigs'>,
-    Object.NonNullable<Pick<Required<SyncProjectReferencesConfig>, 'scopes'>>,
-    Pick<WorkspacePackageProps, 'directory'> {
+export interface GetReferencesProps extends Pick<GetTargetBuildConfigProps, 'tsConfigs'> {
   /**
-   * Object containing package type and list of its internal (scoped) dependencies.
+   * Workspace package to check and update references for.
    */
-  packageDependencies: Awaited<ReturnType<typeof getPackageDependencies>>;
+  workspacePackage: Package;
   /**
-   * List of filtered workspaces (without the one currently being processed).
+   * Object containing package type and list of its workspace dependencies.
    */
-  otherWorkspaces: Awaited<ReturnType<typeof getWorkspaces>>;
+  workspaceDependencies: Awaited<ReturnType<typeof getWorkspaceDependencies>>;
+  /**
+   * List of workspaces to search for package references.
+   */
+  workspaces: Package[];
 }
 
 /**
  * Returns list of package references to be added to its TS config.
  */
 export const getReferences = async ({
-  directory,
-  packageDependencies: { dependencies, type },
-  otherWorkspaces,
-  scopes,
   tsConfigs,
+  workspaceDependencies: { dependencies, type },
+  workspacePackage,
+  workspaces,
 }: GetReferencesProps) => {
   const references = await Promise.all(
-    dependencies.map(async (packageDependency) => {
-      const workspacePackage = packageDependency.replaceAll(new RegExp(`^(${scopes.join('|')})/`, 'g'), '');
-      const workspace = otherWorkspaces.find(({ packages }) => packages.includes(workspacePackage));
+    dependencies.map(async (dependency) => {
+      const workspace = workspaces.find(({ packageJson }) => packageJson.name === dependency);
       if (workspace) {
         const buildConfig = await getTargetBuildConfig({
-          directory: workspace.directory,
           tsConfigs,
           type,
-          workspacePackage,
+          workspacePackage: workspace,
         });
         return {
-          path: join(directory === workspace.directory ? '../' : `../../${workspace.directory}`, buildConfig),
+          path: join(relative(workspacePackage.dir, workspace.dir), buildConfig),
         };
       }
     }),

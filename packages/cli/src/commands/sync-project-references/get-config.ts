@@ -14,11 +14,15 @@ export interface GetConfigProps {
    * Path to config file (e.g. `./sync-project-references.config.js`).
    */
   config?: string | undefined;
+  /**
+   * Root directory to search for the config file.
+   */
+  rootDir: string;
 }
 
-const getPath = async ({ config }: GetConfigProps) => {
+const getPath = async ({ config, rootDir }: GetConfigProps) => {
   if (config) {
-    const path = isAbsolute(config) ? config : join(getRoot(), config);
+    const path = isAbsolute(config) ? config : join(rootDir, config);
     if (await pathExists(path)) {
       return path;
     }

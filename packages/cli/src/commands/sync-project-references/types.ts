@@ -1,14 +1,11 @@
+import type { Package } from '@manypkg/get-packages';
+
 export interface SyncProjectReferencesHooks {
   /**
    * Hook called after the project references are synced.
    * @defaultValue `['prettier --write']`
    */
   afterSync?: string[] | undefined;
-  /**
-   * Package manager runner to use for running the hooks.
-   * @defaultValue `'pnpm'`
-   */
-  runner?: 'npx' | 'pnpm' | 'yarn' | undefined;
 }
 
 export interface SyncProjectReferencesTsConfigs {
@@ -40,11 +37,6 @@ export interface SyncProjectReferencesConfig {
    */
   hooks?: SyncProjectReferencesHooks | undefined;
   /**
-   * Packages scope to use for the project.
-   * @defaultValue `['@apitree.cz']`
-   */
-  scopes?: string[] | undefined;
-  /**
    * Custom names for TS config files.
    */
   tsConfigs?: SyncProjectReferencesTsConfigs | undefined;
@@ -52,11 +44,7 @@ export interface SyncProjectReferencesConfig {
 
 export interface WorkspacePackageProps {
   /**
-   * Workspace root directory (e.g. `./packages`).
+   * Workspace package.
    */
-  directory: string;
-  /**
-   * Workspace package name (e.g. `cli`).
-   */
-  workspacePackage: string;
+  workspacePackage: Package;
 }
