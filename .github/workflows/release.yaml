@@ -24,16 +24,16 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GIT_TOKEN }}
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: 8.10.0
       - name: Setup node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           cache: pnpm
           node-version: 20.9.0
       - name: Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           key: ${{ env.CACHE_KEY }}
           path: ${{ env.CACHE_PATH }}
