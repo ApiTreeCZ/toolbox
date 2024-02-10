@@ -46,11 +46,5 @@
     "@apitree.cz/typedoc-config": "workspace:*",
     "typedoc": "^0.25.4",
     "typescript": "^5.3.3"
-  },
-  "export": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
   }
 }
