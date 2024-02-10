@@ -1,5 +1,11 @@
 # @apitree.cz/cli
 
+## 0.2.0
+
+### Minor Changes
+
+- cc5458c: Refactor workspaces traversing with `@manypkg` tools. Remove obsolete config props.
+
 ## 0.1.2
 
 ### Patch Changes
