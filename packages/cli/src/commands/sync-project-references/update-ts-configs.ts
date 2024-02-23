@@ -24,7 +24,7 @@ export interface UpdateTsConfigsProps extends WorkspacePackageProps {
 export const updateTsConfigs = async ({ references, tsConfigs, workspacePackage }: UpdateTsConfigsProps) => {
   const entries = Object.entries(tsConfigs) as [keyof typeof tsConfigs, string][];
   const paths = await Promise.all(
-    entries.map(async ([, configFile]) => {
+    entries.map(async ([configType, configFile]) => {
       const tsConfigPath = await getExistingTsConfigPath({
         tsConfig: configFile,
         workspacePackage,
@@ -33,7 +33,9 @@ export const updateTsConfigs = async ({ references, tsConfigs, workspacePackage 
         const tsConfigJson = JSON.parse(await readFile(tsConfigPath, 'utf8')) as {
           references?: { path: string }[];
         };
-        tsConfigJson.references = references.map((reference) => reference.build ?? reference.default);
+        tsConfigJson.references = references.map(
+          (reference) => reference[configType] ?? reference.build ?? reference.default,
+        );
         await writeFile(tsConfigPath, JSON.stringify(tsConfigJson));
         return tsConfigPath;
       }

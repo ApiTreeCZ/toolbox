@@ -44,8 +44,10 @@ export const getReferences = async ({ tsConfigs, workspacePackage, workspaces }:
         };
         const build = getBuildConfig();
         return {
-          default: { path: join(relative(workspacePackage.dir, workspace.dir), defaultConfig) },
+          default: { path: join(relative(workspacePackage.dir, workspace.dir), build ?? defaultConfig) },
           build: build ? { path: join(relative(workspacePackage.dir, workspace.dir), build) } : undefined,
+          cjs: cjsConfig ? { path: join(relative(workspacePackage.dir, workspace.dir), cjsConfig) } : undefined,
+          esm: esmConfig ? { path: join(relative(workspacePackage.dir, workspace.dir), esmConfig) } : undefined,
         };
       }
     }),
