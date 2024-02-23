@@ -1,5 +1,11 @@
 # @apitree.cz/cli
 
+## 0.2.1
+
+### Patch Changes
+
+- 750be6d: Resolve CJS or ESM config based on reference target
+
 ## 0.2.0
 
 ### Minor Changes
