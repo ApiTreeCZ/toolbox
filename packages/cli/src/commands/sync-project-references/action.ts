@@ -22,7 +22,7 @@ export const action = async ({ config }: ActionProps) => {
         workspacePackage,
         workspaces,
       }),
-      tsConfigs: Object.values(tsConfigs),
+      tsConfigs,
       workspacePackage,
     });
   });

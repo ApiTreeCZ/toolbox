@@ -3,8 +3,8 @@ import { join, relative } from 'node:path';
 import { notNil } from '@apitree.cz/ts-utils';
 import type { Package } from '@manypkg/get-packages';
 
-import type { GetTargetBuildConfigProps } from './get-target-build-config.js';
-import { getTargetBuildConfig } from './get-target-build-config.js';
+import type { GetTargetBuildConfigProps } from './get-target-build-configs.js';
+import { getTargetBuildConfigs } from './get-target-build-configs.js';
 import { getWorkspaceDependencies } from './get-workspace-dependencies.js';
 
 export interface GetReferencesProps extends Pick<GetTargetBuildConfigProps, 'tsConfigs'> {
@@ -27,16 +27,28 @@ export const getReferences = async ({ tsConfigs, workspacePackage, workspaces }:
     dependencies.map(async (dependency) => {
       const workspace = workspaces.find(({ packageJson }) => packageJson.name === dependency);
       if (workspace) {
-        const buildConfig = await getTargetBuildConfig({
+        const {
+          default: defaultConfig,
+          build: buildConfig,
+          esm: esmConfig,
+          cjs: cjsConfig,
+        } = await getTargetBuildConfigs({
           tsConfigs,
-          type,
           workspacePackage: workspace,
         });
+        const getBuildConfig = () => {
+          if (type === 'module') {
+            return esmConfig ?? buildConfig;
+          }
+          return cjsConfig ?? buildConfig;
+        };
+        const build = getBuildConfig();
         return {
-          path: join(relative(workspacePackage.dir, workspace.dir), buildConfig),
+          default: { path: join(relative(workspacePackage.dir, workspace.dir), defaultConfig) },
+          build: build ? { path: join(relative(workspacePackage.dir, workspace.dir), build) } : undefined,
         };
       }
     }),
   );
-  return references.filter(notNil).sort((a, b) => a.path.localeCompare(b.path));
+  return references.filter(notNil).sort((a, b) => a.default.path.localeCompare(b.default.path));
 };

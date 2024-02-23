@@ -1,10 +1,11 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
 import { notNil } from '@apitree.cz/ts-utils';
+import type { Object as ObjectType } from 'ts-toolbelt';
 
 import { getExistingTsConfigPath } from './get-existing-ts-config-path.js';
 import type { getReferences } from './get-references.js';
-import type { WorkspacePackageProps } from './types.js';
+import type { SyncProjectReferencesTsConfigs, WorkspacePackageProps } from './types.js';
 
 export interface UpdateTsConfigsProps extends WorkspacePackageProps {
   /**
@@ -14,22 +15,25 @@ export interface UpdateTsConfigsProps extends WorkspacePackageProps {
   /**
    * List of configured TS config names to use for updating references.
    */
-  tsConfigs: string[];
+  tsConfigs: ObjectType.NonNullable<Required<SyncProjectReferencesTsConfigs>>;
 }
 
 /**
  * Updates references in all configured TS configs. Returns list of updated TS config paths.
  */
 export const updateTsConfigs = async ({ references, tsConfigs, workspacePackage }: UpdateTsConfigsProps) => {
+  const entries = Object.entries(tsConfigs) as [keyof typeof tsConfigs, string][];
   const paths = await Promise.all(
-    tsConfigs.map(async (tsConfig) => {
+    entries.map(async ([, configFile]) => {
       const tsConfigPath = await getExistingTsConfigPath({
-        tsConfig,
+        tsConfig: configFile,
         workspacePackage,
       });
       if (tsConfigPath) {
-        const tsConfigJson = JSON.parse(await readFile(tsConfigPath, 'utf8')) as { references?: typeof references };
-        tsConfigJson.references = references;
+        const tsConfigJson = JSON.parse(await readFile(tsConfigPath, 'utf8')) as {
+          references?: { path: string }[];
+        };
+        tsConfigJson.references = references.map((reference) => reference.build ?? reference.default);
         await writeFile(tsConfigPath, JSON.stringify(tsConfigJson));
         return tsConfigPath;
       }
