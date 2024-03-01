@@ -2,9 +2,12 @@ import type { Linter } from 'eslint';
 
 import { typescript as base } from '../../base/overrides/typescript';
 
-const [ts] = base;
+const [ts, dts] = base;
 
-export const typescript: Linter.ConfigOverride = {
-  ...ts,
-  files: [ts.files, '*.tsx'],
-};
+export const typescript = [
+  {
+    ...ts,
+    files: [ts.files, '*.tsx'],
+  },
+  dts,
+] satisfies Linter.ConfigOverride[];
