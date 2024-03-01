@@ -4,7 +4,7 @@ import { getExtraneousDependenciesRule, getImportExtensionsRule } from '../../ut
 
 export const imports: Linter.RulesRecord = {
   ...getImportExtensionsRule(),
-  ...getExtraneousDependenciesRule(),
+  ...getExtraneousDependenciesRule('/mock/**/*', '/mocks/**/*'), // Allow importing devDependencies in mock files
   'import/order': [
     // Sort and group imports by type
     'error',
