@@ -1,5 +1,12 @@
 # @apitree.cz/eslint-config
 
+## 0.1.10
+
+### Patch Changes
+
+- f2cafa5: Allow extraneous dependencies in mock files.
+- fbbf57c: Only allow `require()` in CJS files. Allow inconsistent type imports in `.d.ts` files.
+
 ## 0.1.9
 
 ### Patch Changes
