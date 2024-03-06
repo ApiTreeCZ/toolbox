@@ -1,7 +1,6 @@
 import { Command } from '@commander-js/extra-typings';
 
 import { run } from '../../utils.js';
-
 import { config } from './options.js';
 
 export const command = new Command('sync-project-references')

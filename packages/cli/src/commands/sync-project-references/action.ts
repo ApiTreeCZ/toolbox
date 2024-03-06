@@ -1,7 +1,6 @@
 import { relative } from 'node:path';
 
 import { logger } from '../../utils.js';
-
 import type { GetConfigProps } from './get-config.js';
 import { getConfig } from './get-config.js';
 import { getReferences } from './get-references.js';
