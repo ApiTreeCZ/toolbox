@@ -1,5 +1,17 @@
 # @apitree.cz/eslint-config
 
+## 0.2.0
+
+### Minor Changes
+
+- cca0e03: BREAKING: Adds @trivago/prettier-plugin-sort-imports which autosorts imports on Prettier format. This makes Eslint import/order redundant so it's removed.
+
+  This change may result in Prettier changing the import order in your projects as the configuration for Eslint import/order differs slightly from what prettier enforces.
+
+### Patch Changes
+
+- bc9afcb: Allow nested JSX components as props (preferably memoized).
+
 ## 0.1.10
 
 ### Patch Changes
