@@ -21,4 +21,5 @@ export const jsx: Linter.RulesRecord = {
     },
   ],
   'react/jsx-uses-react': 'off', // Avoid unnecessary React runtime import
+  'react/no-unstable-nested-components': ['error', { allowAsProps: true }], // Avoid nested components that are unstable, however, allow them as props (preferably memoized)
 };
