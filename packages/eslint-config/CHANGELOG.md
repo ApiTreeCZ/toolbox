@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.2.1
+
+### Patch Changes
+
+- f8b25fe: Revert added `@trivago/prettier-plugin-sort-imports` as it conflicts with `eslint-config-prettier` with no valuable error messages to debug.
+
 ## 0.2.0
 
 ### Minor Changes
