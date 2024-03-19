@@ -3,12 +3,7 @@ import type { Config } from 'prettier';
 export const config = {
   arrowParens: 'always',
   bracketSpacing: true,
-  plugins: ['prettier-plugin-packagejson', '@trivago/prettier-plugin-sort-imports'],
-  // Group by external libraries and local files
-  // TODO: load local import prefixes from tsconfig?
-  importOrder: ['^node:(.*)', '<THIRD_PARTY_MODULES>', '^[./]'],
-  // Separate import groups by newline
-  importOrderSeparation: true,
+  plugins: ['prettier-plugin-packagejson'],
   printWidth: 120,
   semi: true,
   singleQuote: true,

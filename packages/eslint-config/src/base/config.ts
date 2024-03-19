@@ -1,6 +1,7 @@
 import type { Linter } from 'eslint';
 
 import { importExtensions } from '../constants';
+
 import { overrides } from './overrides';
 import { rules } from './rules';
 
