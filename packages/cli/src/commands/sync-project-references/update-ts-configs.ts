@@ -36,7 +36,7 @@ export const updateTsConfigs = async ({ references, tsConfigs, workspacePackage 
         tsConfigJson.references = references.map(
           (reference) => reference[configType] ?? reference.build ?? reference.default,
         );
-        await writeFile(tsConfigPath, JSON.stringify(tsConfigJson));
+        await writeFile(tsConfigPath, JSON.stringify(tsConfigJson).replaceAll('\r\n', '\n'));
         return tsConfigPath;
       }
     }),
