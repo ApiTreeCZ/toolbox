@@ -6,6 +6,7 @@ import type { Package } from '@manypkg/get-packages';
 import type { GetTargetBuildConfigProps } from './get-target-build-configs.js';
 import { getTargetBuildConfigs } from './get-target-build-configs.js';
 import { getWorkspaceDependencies } from './get-workspace-dependencies.js';
+import { normalizePath } from './normalize-path.js';
 
 export interface GetReferencesProps extends Pick<GetTargetBuildConfigProps, 'tsConfigs'> {
   /**
@@ -44,10 +45,16 @@ export const getReferences = async ({ tsConfigs, workspacePackage, workspaces }:
         };
         const build = getBuildConfig();
         return {
-          default: { path: join(relative(workspacePackage.dir, workspace.dir), build ?? defaultConfig) },
-          build: build ? { path: join(relative(workspacePackage.dir, workspace.dir), build) } : undefined,
-          cjs: cjsConfig ? { path: join(relative(workspacePackage.dir, workspace.dir), cjsConfig) } : undefined,
-          esm: esmConfig ? { path: join(relative(workspacePackage.dir, workspace.dir), esmConfig) } : undefined,
+          default: { path: normalizePath(join(relative(workspacePackage.dir, workspace.dir), build ?? defaultConfig)) },
+          build: build
+            ? { path: normalizePath(join(relative(workspacePackage.dir, workspace.dir), build)) }
+            : undefined,
+          cjs: cjsConfig
+            ? { path: normalizePath(join(relative(workspacePackage.dir, workspace.dir), cjsConfig)) }
+            : undefined,
+          esm: esmConfig
+            ? { path: normalizePath(join(relative(workspacePackage.dir, workspace.dir), esmConfig)) }
+            : undefined,
         };
       }
     }),
