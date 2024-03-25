@@ -1,5 +1,12 @@
 # @apitree.cz/cli
 
+## 0.2.2
+
+### Patch Changes
+
+- c511e86: Normalize TS config references paths to use forward slashes on all platforms.
+- a982655: Replace CLRF with LF when writing to TS config.
+
 ## 0.2.1
 
 ### Patch Changes
