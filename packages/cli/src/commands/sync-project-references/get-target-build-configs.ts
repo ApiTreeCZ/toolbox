@@ -1,4 +1,4 @@
-import { join } from 'node:path';
+import path from 'node:path';
 
 import { pathExists } from 'path-exists';
 import type { Object } from 'ts-toolbelt';
@@ -16,9 +16,9 @@ export interface GetTargetBuildConfigProps extends WorkspacePackageProps {
  * Returns target TS build config path relative to workspace root.
  */
 export const getTargetBuildConfigs = async ({ tsConfigs, workspacePackage: { dir } }: GetTargetBuildConfigProps) => {
-  const buildPath = join(dir, tsConfigs.build);
-  const esmPath = join(dir, tsConfigs.esm);
-  const cjsPath = join(dir, tsConfigs.cjs);
+  const buildPath = path.join(dir, tsConfigs.build);
+  const esmPath = path.join(dir, tsConfigs.esm);
+  const cjsPath = path.join(dir, tsConfigs.cjs);
   return {
     default: tsConfigs.default,
     build: (await pathExists(buildPath)) ? tsConfigs.build : undefined,

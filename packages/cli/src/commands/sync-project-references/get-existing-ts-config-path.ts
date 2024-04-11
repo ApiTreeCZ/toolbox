@@ -1,4 +1,4 @@
-import { join } from 'node:path';
+import path from 'node:path';
 
 import { pathExists } from 'path-exists';
 
@@ -15,7 +15,7 @@ export interface GetExistingTsConfigPathProps extends WorkspacePackageProps {
  * Returns path to TS config file of a provided name if it exists.
  */
 export const getExistingTsConfigPath = async ({ tsConfig, workspacePackage }: GetExistingTsConfigPathProps) => {
-  const path = join(workspacePackage.dir, tsConfig);
-  const exists = await pathExists(path);
-  return exists ? path : undefined;
+  const configPath = path.join(workspacePackage.dir, tsConfig);
+  const exists = await pathExists(configPath);
+  return exists ? configPath : undefined;
 };

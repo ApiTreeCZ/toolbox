@@ -1,5 +1,5 @@
 import { readFile } from 'node:fs/promises';
-import { join } from 'node:path';
+import path from 'node:path';
 
 import type { Package } from '@manypkg/get-packages';
 
@@ -20,7 +20,7 @@ export const getWorkspaceDependencies = async ({ workspacePackage, workspaces }:
     dependencies = {},
     devDependencies = {},
     type = 'module',
-  } = JSON.parse(await readFile(join(workspacePackage.dir, 'package.json'), 'utf8')) as {
+  } = JSON.parse(await readFile(path.join(workspacePackage.dir, 'package.json'), 'utf8')) as {
     dependencies?: Record<string, string>;
     devDependencies?: Record<string, string>;
     type?: string;

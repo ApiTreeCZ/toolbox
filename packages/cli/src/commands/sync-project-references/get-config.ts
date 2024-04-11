@@ -1,4 +1,4 @@
-import { join, isAbsolute } from 'node:path';
+import path from 'node:path';
 
 import { isNil } from '@apitree.cz/ts-utils';
 import deepmerge from 'deepmerge';
@@ -21,13 +21,13 @@ export interface GetConfigProps {
 
 const getPath = async ({ config, rootDir }: GetConfigProps) => {
   if (config) {
-    const path = isAbsolute(config) ? config : join(rootDir, config);
-    if (await pathExists(path)) {
-      return path;
+    const configPath = path.isAbsolute(config) ? config : path.join(rootDir, config);
+    if (await pathExists(configPath)) {
+      return configPath;
     }
-    throw new Error(`Config '${path}' does not exist.`);
+    throw new Error(`Config '${configPath}' does not exist.`);
   }
-  const fallback = join(rootDir, 'sync-project-references.config.js');
+  const fallback = path.join(rootDir, 'sync-project-references.config.js');
   if (await pathExists(fallback)) {
     return fallback;
   }
@@ -53,13 +53,13 @@ const validate = async (config: unknown, path: string) => {
  * If the config file does not exist, returns default config.
  */
 export const getConfig = async (props: GetConfigProps) => {
-  const path = await getPath(props);
-  if (path) {
-    const config = (await import(path)) as typeof defaultConfig;
+  const configPath = await getPath(props);
+  if (configPath) {
+    const config = (await import(configPath)) as typeof defaultConfig;
     if (isNil(config.default)) {
-      throw new Error(`Config '${path}' does not have a default export.`);
+      throw new Error(`Config '${configPath}' does not have a default export.`);
     }
-    await validate(config.default, path);
+    await validate(config.default, configPath);
     return deepmerge(defaultConfig.default, config.default, {
       arrayMerge: (_, source: unknown[]) => source,
     });

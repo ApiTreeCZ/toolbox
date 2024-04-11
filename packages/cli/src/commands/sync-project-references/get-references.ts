@@ -1,4 +1,4 @@
-import { join, relative } from 'node:path';
+import path from 'node:path';
 
 import { notNil } from '@apitree.cz/ts-utils';
 import type { Package } from '@manypkg/get-packages';
@@ -45,15 +45,17 @@ export const getReferences = async ({ tsConfigs, workspacePackage, workspaces }:
         };
         const build = getBuildConfig();
         return {
-          default: { path: normalizePath(join(relative(workspacePackage.dir, workspace.dir), build ?? defaultConfig)) },
+          default: {
+            path: normalizePath(path.join(path.relative(workspacePackage.dir, workspace.dir), build ?? defaultConfig)),
+          },
           build: build
-            ? { path: normalizePath(join(relative(workspacePackage.dir, workspace.dir), build)) }
+            ? { path: normalizePath(path.join(path.relative(workspacePackage.dir, workspace.dir), build)) }
             : undefined,
           cjs: cjsConfig
-            ? { path: normalizePath(join(relative(workspacePackage.dir, workspace.dir), cjsConfig)) }
+            ? { path: normalizePath(path.join(path.relative(workspacePackage.dir, workspace.dir), cjsConfig)) }
             : undefined,
           esm: esmConfig
-            ? { path: normalizePath(join(relative(workspacePackage.dir, workspace.dir), esmConfig)) }
+            ? { path: normalizePath(path.join(path.relative(workspacePackage.dir, workspace.dir), esmConfig)) }
             : undefined,
         };
       }

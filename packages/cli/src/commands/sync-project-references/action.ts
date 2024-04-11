@@ -1,4 +1,4 @@
-import { relative } from 'node:path';
+import path from 'node:path';
 
 import { logger } from '../../utils.js';
 
@@ -15,7 +15,7 @@ export const action = async ({ config }: ActionProps) => {
   const { workspaces, rootDir } = await getWorkspaces();
   const { hooks, tsConfigs } = await getConfig({ config, rootDir });
   const sync = workspaces.flatMap(async (workspacePackage) => {
-    logger.info(`Syncing project references for ./${relative(rootDir, workspacePackage.dir)}`);
+    logger.info(`Syncing project references for ./${path.relative(rootDir, workspacePackage.dir)}`);
     return updateTsConfigs({
       references: await getReferences({
         tsConfigs,

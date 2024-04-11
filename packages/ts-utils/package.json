@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@apitree.cz/typedoc-config": "workspace:*",
-    "typedoc": "^0.25.4",
-    "typescript": "^5.3.3"
+    "typedoc": "^0.25.13",
+    "typescript": "^5.4.5"
   }
 }
