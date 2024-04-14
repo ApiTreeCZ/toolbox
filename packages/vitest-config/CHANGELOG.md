@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.2.2
+
+### Patch Changes
+
+- 0ee2f9c: Update dependencies to their latest supported versions.
+
 ## 0.2.1
 
 ### Patch Changes

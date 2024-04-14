@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.2.4
+
+### Patch Changes
+
+- 0ee2f9c: Update dependencies to their latest supported versions.
+
 ## 0.2.3
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @apitree.cz/cli
 
+## 0.2.3
+
+### Patch Changes
+
+- 0ee2f9c: Update dependencies to their latest supported versions.
+- Updated dependencies [0ee2f9c]
+  - @apitree.cz/ts-utils@0.1.1
+
 ## 0.2.2
 
 ### Patch Changes

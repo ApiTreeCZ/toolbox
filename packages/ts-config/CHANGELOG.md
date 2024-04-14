@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.1.7
+
+### Patch Changes
+
+- 0ee2f9c: Update dependencies to their latest supported versions.
+
 ## 0.1.6
 
 ### Patch Changes
