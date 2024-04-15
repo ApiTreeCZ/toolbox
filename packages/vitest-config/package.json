@@ -48,17 +48,17 @@
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "@swc/core": "^1.4.13",
+    "@swc/core": "^1.4.14",
     "@vitejs/plugin-react": "^4.2.1",
     "unplugin-swc": "^1.4.5",
     "vite": "^5.2.8"
   },
   "devDependencies": {
-    "@vitest/coverage-istanbul": "^1.4.0",
-    "vitest": "^1.4.0"
+    "@vitest/coverage-v8": "^1.5.0",
+    "vitest": "^1.5.0"
   },
   "peerDependencies": {
-    "@vitest/coverage-istanbul": "^1.4.0",
-    "vitest": "^1.4.0"
+    "@vitest/coverage-v8": "^1.5.0",
+    "vitest": "^1.5.0"
   }
 }
