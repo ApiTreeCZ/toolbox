@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.2.5
+
+### Patch Changes
+
+- 0c4450c: Bump dependencies to latest versions.
+
 ## 0.2.4
 
 ### Patch Changes

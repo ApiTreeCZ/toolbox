@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.2.3
+
+### Patch Changes
+
+- 0c4450c: Bump dependencies to latest versions.
+
 ## 0.2.2
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @apitree.cz/vitest-config
 
+## 0.3.0
+
+### Minor Changes
+
+- 0c4450c: Migrate coverage provider from `istanbul` to `v8`.
+
+### Patch Changes
+
+- 0c4450c: Bump dependencies to latest versions.
+
 ## 0.2.2
 
 ### Patch Changes
