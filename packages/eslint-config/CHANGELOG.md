@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.2.4
+
+### Patch Changes
+
+- 65534a6: Extend extraneous dependencies glob patterns to match all nested paths.
+
 ## 0.2.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.2.6
+
+### Patch Changes
+
+- 7f301b8: Fix `vitest` peer dep version.
+
 ## 0.2.5
 
 ### Patch Changes
