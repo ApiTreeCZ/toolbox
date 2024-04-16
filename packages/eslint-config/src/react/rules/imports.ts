@@ -4,5 +4,5 @@ import { getExtraneousDependenciesRule, getImportExtensionsRule } from '../../ut
 
 export const imports: Linter.RulesRecord = {
   ...getImportExtensionsRule('.tsx'), // Avoid unnecessary `.tsx` extensions in imports
-  ...getExtraneousDependenciesRule('/mock/**/*', '/mocks/**/*', '/stories/**/*'), // Allow importing devDependencies in Storybook stories
+  ...getExtraneousDependenciesRule('**/mock/**/*', '**/mocks/**/*', '**/stories/**/*'), // Allow importing devDependencies in Storybook stories
 };
