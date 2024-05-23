@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.3.0
+
+### Minor Changes
+
+- 6642489: Switch `react-hooks/exhaustive-deps` rule from warning to error.
+
 ## 0.2.4
 
 ### Patch Changes
