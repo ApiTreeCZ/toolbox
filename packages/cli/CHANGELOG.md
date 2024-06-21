@@ -1,5 +1,12 @@
 # @apitree.cz/cli
 
+## 0.2.4
+
+### Patch Changes
+
+- d46f8fd: Upgrade all dependencies to their latest compatible versions.
+  - @apitree.cz/ts-utils@0.1.1
+
 ## 0.2.3
 
 ### Patch Changes

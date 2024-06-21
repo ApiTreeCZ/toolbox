@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.2.7
+
+### Patch Changes
+
+- d46f8fd: Upgrade all dependencies to their latest compatible versions.
+
 ## 0.2.6
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/typedoc-config",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "TypeDoc configuration for ApiTree projects.",
   "repository": {
     "type": "git",

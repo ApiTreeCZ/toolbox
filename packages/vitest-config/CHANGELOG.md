@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.3.1
+
+### Patch Changes
+
+- d46f8fd: Upgrade all dependencies to their latest compatible versions.
+
 ## 0.3.0
 
 ### Minor Changes
