@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.2.0
+
+### Minor Changes
+
+- f5d8724: Update `compilerOptions.target` to `es2017` in `nextjs.json` (default in [create-next-app](https://github.com/vercel/next.js/blob/canary/packages/create-next-app/templates/default/ts/tsconfig.json#L3)).
+
 ## 0.1.7
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/ts-config",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "TypeScript configuration for ApiTree projects.",
   "repository": {
     "type": "git",
