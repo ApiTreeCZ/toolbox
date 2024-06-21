@@ -34,13 +34,13 @@
   },
   "dependencies": {
     "@apitree.cz/ts-utils": "workspace:*",
-    "@commander-js/extra-typings": "^12.0.1",
+    "@commander-js/extra-typings": "^12.1.0",
     "@manypkg/get-packages": "^2.2.1",
-    "commander": "^12.0.0",
+    "commander": "^12.1.0",
     "deepmerge": "^4.3.1",
     "path-exists": "^5.0.0",
     "ts-toolbelt": "^9.6.0",
-    "zod": "^3.22.4"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@apitree.cz/typedoc-config": "workspace:*",
