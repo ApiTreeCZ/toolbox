@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.3.2
+
+### Patch Changes
+
+- a275aad: Extend rules for Next.js App Router.
+
 ## 0.3.1
 
 ### Patch Changes
