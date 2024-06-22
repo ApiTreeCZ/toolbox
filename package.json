@@ -32,7 +32,7 @@
     "lint:fix": "turbo run lint:fix",
     "postlint:fix": "pnpm run postlint --fix",
     "prepare": "is-ci || run-s prepare:husky build sync-project-references",
-    "prepare:husky": "husky install",
+    "prepare:husky": "husky",
     "qa": "turbo run qa",
     "postqa": "run-p postts postlint postformat",
     "sync-project-references": "apitree sync-project-references",
