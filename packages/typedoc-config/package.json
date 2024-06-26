@@ -32,14 +32,14 @@
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "typedoc-plugin-markdown": "^4.0.3"
+    "typedoc-plugin-markdown": "^4.1.0"
   },
   "devDependencies": {
-    "typedoc": "^0.25.13",
-    "typescript": "^5.4.5"
+    "typedoc": "^0.26.2",
+    "typescript": "^5.5.2"
   },
   "peerDependencies": {
-    "typedoc": "^0.25.13",
-    "typescript": "^5.4.5"
+    "typedoc": "^0.26.2",
+    "typescript": "^5.5.2"
   }
 }
