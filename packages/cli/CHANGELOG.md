@@ -1,5 +1,13 @@
 # @apitree.cz/cli
 
+## 0.2.5
+
+### Patch Changes
+
+- 78cdd8f: Update TypeScript to `v5.5`.
+- Updated dependencies [78cdd8f]
+  - @apitree.cz/ts-utils@0.1.2
+
 ## 0.2.4
 
 ### Patch Changes

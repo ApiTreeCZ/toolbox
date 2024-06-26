@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.2.8
+
+### Patch Changes
+
+- 78cdd8f: Update TypeScript to `v5.5`.
+
 ## 0.2.7
 
 ### Patch Changes

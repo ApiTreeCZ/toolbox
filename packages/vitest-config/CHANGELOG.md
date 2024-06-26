@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.3.2
+
+### Patch Changes
+
+- 78cdd8f: Update TypeScript to `v5.5`.
+
 ## 0.3.1
 
 ### Patch Changes

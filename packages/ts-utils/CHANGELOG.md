@@ -1,5 +1,11 @@
 # @apitree.cz/ts-utils
 
+## 0.1.2
+
+### Patch Changes
+
+- 78cdd8f: Update TypeScript to `v5.5`.
+
 ## 0.1.1
 
 ### Patch Changes

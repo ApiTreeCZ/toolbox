@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.2.4
+
+### Patch Changes
+
+- 78cdd8f: Update TypeScript to `v5.5`.
+
 ## 0.2.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.1.4
+
+### Patch Changes
+
+- 78cdd8f: Update TypeScript to `v5.5`.
+
 ## 0.1.3
 
 ### Patch Changes
