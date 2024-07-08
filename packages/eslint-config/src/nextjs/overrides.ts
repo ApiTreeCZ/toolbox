@@ -32,4 +32,10 @@ export const overrides = [
       'react/jsx-props-no-spreading': 'off', // Allow spreading props in Next.js App layouts, _app.tsx and _document.tsx
     },
   },
+  {
+    files: 'src/**/actions.ts',
+    rules: {
+      '@typescript-eslint/require-await': 'off', // Next.js Server Actions must be async but don't need to await
+    },
+  },
 ] satisfies Linter.ConfigOverride[];
