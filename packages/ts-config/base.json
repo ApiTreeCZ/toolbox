@@ -12,7 +12,7 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "noEmit": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": false,
     "removeComments": true,
     "resolveJsonModule": true,
