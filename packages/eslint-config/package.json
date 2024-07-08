@@ -18,7 +18,8 @@
     "index.js",
     "nestjs.js",
     "nextjs.js",
-    "react.js"
+    "react.js",
+    "storybook.js"
   ],
   "scripts": {
     "prebuild": "rimraf dist tsconfig.build.tsbuildinfo",
