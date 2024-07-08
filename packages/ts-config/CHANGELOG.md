@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.2.2
+
+### Patch Changes
+
+- 5c63e98: Disable `noUnusedLocals` compiler option as this is checked by `eslint`.
+
 ## 0.2.1
 
 ### Patch Changes

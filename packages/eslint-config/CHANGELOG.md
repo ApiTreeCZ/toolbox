@@ -1,5 +1,14 @@
 # @apitree.cz/eslint-config
 
+## 0.3.4
+
+### Patch Changes
+
+- 3d1c365: Allow `async` Next.js Server Actions without `await`.
+- 9840d3d: Extend allowed dev dependencies pattern for `import/no-extraneous-dependencies` rule.
+- 3e58360: Include `typescript` base rules in strict overrides.
+- ea23f9a: Add `storybook` config designed for Storybook app configuration.
+
 ## 0.3.3
 
 ### Patch Changes
