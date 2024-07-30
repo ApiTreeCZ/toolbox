@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.1.5
+
+### Patch Changes
+
+- b8f1877: Update all dependencies to latest compatible versions.
+
 ## 0.1.4
 
 ### Patch Changes

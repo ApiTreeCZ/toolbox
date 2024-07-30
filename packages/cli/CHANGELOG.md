@@ -1,5 +1,13 @@
 # @apitree.cz/cli
 
+## 0.2.6
+
+### Patch Changes
+
+- b8f1877: Update all dependencies to latest compatible versions.
+- Updated dependencies [b8f1877]
+  - @apitree.cz/ts-utils@0.1.3
+
 ## 0.2.5
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/cli",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Command line interface for ApiTree projects",
   "repository": {
     "type": "git",

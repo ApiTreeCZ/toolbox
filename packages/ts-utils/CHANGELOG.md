@@ -1,5 +1,11 @@
 # @apitree.cz/ts-utils
 
+## 0.1.3
+
+### Patch Changes
+
+- b8f1877: Update all dependencies to latest compatible versions.
+
 ## 0.1.2
 
 ### Patch Changes

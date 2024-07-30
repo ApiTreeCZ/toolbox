@@ -1,5 +1,15 @@
 # @apitree.cz/vitest-config
 
+## 0.4.0
+
+### Minor Changes
+
+- b8f1877: Migrate to Vitest `v2`.
+
+### Patch Changes
+
+- b8f1877: Update all dependencies to latest compatible versions.
+
 ## 0.3.2
 
 ### Patch Changes
