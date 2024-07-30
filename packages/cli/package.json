@@ -35,7 +35,7 @@
   "dependencies": {
     "@apitree.cz/ts-utils": "workspace:*",
     "@commander-js/extra-typings": "^12.1.0",
-    "@manypkg/get-packages": "^2.2.1",
+    "@manypkg/get-packages": "^2.2.2",
     "commander": "^12.1.0",
     "deepmerge": "^4.3.1",
     "path-exists": "^5.0.0",
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@apitree.cz/typedoc-config": "workspace:*",
-    "typedoc": "^0.26.2",
-    "typescript": "^5.5.2"
+    "typedoc": "^0.26.5",
+    "typescript": "^5.5.4"
   }
 }

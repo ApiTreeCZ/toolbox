@@ -38,7 +38,7 @@
     "qa": "pnpm run format lint"
   },
   "devDependencies": {
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.4"
   },
   "peerDependencies": {
     "typescript": "^5.5.2"
