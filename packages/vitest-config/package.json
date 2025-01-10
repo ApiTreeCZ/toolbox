@@ -36,9 +36,9 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf dist tsconfig.build.tsbuildinfo",
+    "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
-    "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{json,md}\"",
     "format:fix": "pnpm run format --write",
@@ -48,17 +48,17 @@
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "@swc/core": "^1.7.3",
-    "@vitejs/plugin-react": "^4.3.1",
+    "@swc/core": "^1.10.7",
+    "@vitejs/plugin-react": "^4.3.4",
     "unplugin-swc": "^1.5.1",
-    "vite": "^5.3.5"
+    "vite": "^5.4.11"
   },
   "devDependencies": {
-    "@vitest/coverage-v8": "^2.0.4",
-    "vitest": "^2.0.4"
+    "@vitest/coverage-v8": "^2.1.8",
+    "vitest": "^2.1.8"
   },
   "peerDependencies": {
-    "@vitest/coverage-v8": "^2.0.4",
-    "vitest": "^2.0.4"
+    "@vitest/coverage-v8": "^2.1.8",
+    "vitest": "^2.1.8"
   }
 }

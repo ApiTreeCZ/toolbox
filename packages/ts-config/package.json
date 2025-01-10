@@ -29,7 +29,7 @@
     "nextjs.json"
   ],
   "scripts": {
-    "cleanup": "rimraf .eslintcache .turbo node_modules",
+    "cleanup": "del .eslintcache .turbo node_modules",
     "fix": "run-p format:fix lint:fix",
     "format": "prettier --check \"./**/*.{json,md}\"",
     "format:fix": "pnpm run format --write",
@@ -38,9 +38,9 @@
     "qa": "pnpm run format lint"
   },
   "devDependencies": {
-    "typescript": "^5.5.4"
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "typescript": "^5.5.2"
+    "typescript": "^5.7.3"
   }
 }

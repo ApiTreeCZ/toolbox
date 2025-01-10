@@ -18,9 +18,9 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf dist tsconfig.build.tsbuildinfo",
+    "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
-    "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
     "docs": "run-s docs:generate docs:format",
     "docs:format": "prettier --write \"./docs/**/*\"",
     "docs:generate": "typedoc",
@@ -34,17 +34,17 @@
   },
   "dependencies": {
     "@apitree.cz/ts-utils": "workspace:*",
-    "@commander-js/extra-typings": "^12.1.0",
+    "@commander-js/extra-typings": "^13.0.0",
     "@manypkg/get-packages": "^2.2.2",
-    "commander": "^12.1.0",
+    "commander": "^13.0.0",
     "deepmerge": "^4.3.1",
     "path-exists": "^5.0.0",
     "ts-toolbelt": "^9.6.0",
-    "zod": "^3.23.8"
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@apitree.cz/typedoc-config": "workspace:*",
-    "typedoc": "^0.26.5",
-    "typescript": "^5.5.4"
+    "typedoc": "^0.27.6",
+    "typescript": "^5.7.3"
   }
 }

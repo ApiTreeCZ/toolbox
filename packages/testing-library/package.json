@@ -28,9 +28,9 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf dist tsconfig.build.tsbuildinfo",
+    "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
-    "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{json,md}\"",
     "format:fix": "pnpm run format --write",
@@ -43,24 +43,24 @@
   },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/user-event": "^14.5.1",
-    "jsdom": "^24.1.1"
+    "jsdom": "^26.0.0"
   },
   "devDependencies": {
     "@apitree.cz/vitest-config": "workspace:*",
-    "@testing-library/react": "^16.0.0",
+    "@testing-library/react": "^16.1.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@vitest/coverage-v8": "^2.0.4",
+    "@vitest/coverage-v8": "^2.1.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "vitest": "^2.0.4"
+    "vitest": "^2.1.8"
   },
   "peerDependencies": {
-    "@testing-library/react": "^16.0.0",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
-    "vitest": "^2.0.4"
+    "@testing-library/react": "^16.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vitest": "^2.1.8"
   }
 }

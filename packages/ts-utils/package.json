@@ -20,9 +20,9 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf dist tsconfig.build.tsbuildinfo",
+    "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
-    "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
     "docs": "run-s docs:generate docs:format",
     "docs:format": "prettier --write \"./docs/**/*\"",
     "docs:generate": "typedoc",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@apitree.cz/typedoc-config": "workspace:*",
-    "typedoc": "^0.26.5",
-    "typescript": "^5.5.4"
+    "typedoc": "^0.27.6",
+    "typescript": "^5.7.3"
   }
 }

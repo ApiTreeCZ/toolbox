@@ -20,9 +20,9 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf dist tsconfig.build.tsbuildinfo",
+    "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
-    "cleanup": "rimraf .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{json,md}\"",
     "format:fix": "pnpm run format --write",
@@ -32,14 +32,14 @@
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "typedoc-plugin-markdown": "^4.2.3"
+    "typedoc-plugin-markdown": "^4.4.1"
   },
   "devDependencies": {
-    "typedoc": "^0.26.5",
-    "typescript": "^5.5.4"
+    "typedoc": "^0.27.6",
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "typedoc": "^0.26.2",
-    "typescript": "^5.5.2"
+    "typedoc": "^0.27.6",
+    "typescript": "^5.7.3"
   }
 }

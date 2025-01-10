@@ -20,6 +20,21 @@ pnpm add --save-dev @apitree.cz/ts-config typescript
 
 Add one of the following configurations to your `tsconfig.json`:
 
+### Base
+
+Suitable for general TypeScript projects.
+
+```json
+{
+  "extends": "@apitree.cz/ts-config",
+  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts"],
+  "exclude": ["build", "node_modules"]
+}
+```
+
+> **Note:** This configuration can be also used in monorepo root, however, be sure to change `include` array to only
+> check the root files and not nested workspaces as each should have its own `tsconfig.json`.
+
 ### Library
 
 Suitable for distributable `npm` packages (both Node.js and React).
@@ -48,17 +63,15 @@ Suitable for distributable `npm` packages (Node.js only).
 
 ### App
 
-Suitable for stand-alone applications (both Node.js and React).
+Suitable for SPAs (React).
 
 ```json
 {
   "extends": "@apitree.cz/ts-config/app",
-  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts"],
+  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts", "**/*.tsx"],
   "exclude": ["build", "node_modules"]
 }
 ```
-
-> **Note:** If you are using React, you should also add `"**/*.tsx"` to the `include` array.
 
 ### Next.js
 
