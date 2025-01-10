@@ -1,5 +1,12 @@
 # @apitree.cz/ts-config
 
+## 0.2.4
+
+### Patch Changes
+
+- 98ca41b: Extend `app.json` with preferred React apps compiler options.
+- 98ca41b: Upgrade all dependencies to latest compatible.
+
 ## 0.2.3
 
 ### Patch Changes

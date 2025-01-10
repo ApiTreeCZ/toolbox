@@ -1,5 +1,13 @@
 # @apitree.cz/cli
 
+## 0.2.7
+
+### Patch Changes
+
+- 98ca41b: Upgrade all dependencies to latest compatible.
+- Updated dependencies [98ca41b]
+  - @apitree.cz/ts-utils@0.1.4
+
 ## 0.2.6
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.2.6
+
+### Patch Changes
+
+- 98ca41b: Upgrade all dependencies to latest compatible.
+
 ## 0.2.5
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.1.6
+
+### Patch Changes
+
+- 98ca41b: Upgrade all dependencies to latest compatible.
+
 ## 0.1.5
 
 ### Patch Changes

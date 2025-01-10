@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.3.6
+
+### Patch Changes
+
+- 98ca41b: Upgrade all dependencies to latest compatible.
+
 ## 0.3.5
 
 ### Patch Changes

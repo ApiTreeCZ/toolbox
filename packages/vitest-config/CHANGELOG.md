@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.4.1
+
+### Patch Changes
+
+- 98ca41b: Upgrade all dependencies to latest compatible.
+
 ## 0.4.0
 
 ### Minor Changes

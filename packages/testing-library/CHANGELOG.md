@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.3.1
+
+### Patch Changes
+
+- 98ca41b: Upgrade all dependencies to latest compatible.
+
 ## 0.3.0
 
 ### Minor Changes

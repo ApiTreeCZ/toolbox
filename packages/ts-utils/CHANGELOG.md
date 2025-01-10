@@ -1,5 +1,11 @@
 # @apitree.cz/ts-utils
 
+## 0.1.4
+
+### Patch Changes
+
+- 98ca41b: Upgrade all dependencies to latest compatible.
+
 ## 0.1.3
 
 ### Patch Changes
