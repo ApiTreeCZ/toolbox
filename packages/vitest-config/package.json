@@ -55,10 +55,17 @@
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^2.1.8",
+    "jsdom": "^26.0.0",
     "vitest": "^2.1.8"
   },
   "peerDependencies": {
     "@vitest/coverage-v8": "^2.1.8",
+    "jsdom": "^26.0.0",
     "vitest": "^2.1.8"
+  },
+  "peerDependenciesMeta": {
+    "jsdom": {
+      "optional": true
+    }
   }
 }

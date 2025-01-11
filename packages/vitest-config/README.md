@@ -32,10 +32,12 @@ export { base as default } from '@apitree.cz/vitest-config';
 export { react as default } from '@apitree.cz/vitest-config';
 ```
 
+> ⚠️ You will also need to install `jsdom` for React configuration to work.
+
 ### Nest.js
 
-⚠️ _Nest.js projects are CJS by default. This configuration needs to be placed in `vitest.config.mjs` to interpret it as
-ESM. If your project, however, is ESM, you can place the configuration in `vitest.config.ts` as usual._
+> ⚠️ Nest.js projects are CJS by default. This configuration needs to be placed in `vitest.config.mjs` to interpret it
+> as ESM. If your project, however, is ESM, you can place the configuration in `vitest.config.ts` as usual.
 
 ```typescript
 export { nestjs as default } from '@apitree.cz/vitest-config';
