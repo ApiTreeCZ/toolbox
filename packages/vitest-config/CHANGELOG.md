@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.4.2
+
+### Patch Changes
+
+- f1ddfa4: Add missing `jsdom` peer dep.
+
 ## 0.4.1
 
 ### Patch Changes
