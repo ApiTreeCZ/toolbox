@@ -1,7 +1,6 @@
 {
   "extends": "@apitree.cz/ts-config/library",
-  "compilerOptions": { "module": "CommonJS", "moduleResolution": "node" },
-  "include": [".eslintrc.js", "index.d.ts", "./*.js", "src/**/*"],
+  "include": ["**/*.js", "**/*.ts"],
   "exclude": ["dist", "node_modules"],
   "references": []
 }

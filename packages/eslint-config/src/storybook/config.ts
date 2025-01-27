@@ -1,7 +1,10 @@
 import type { Linter } from 'eslint';
-
-import { rules } from './rules';
+import { getExtraneousDependenciesRule } from '../utils.js';
 
 export const config = {
-  rules,
+  rules: {
+    ...getExtraneousDependenciesRule('**/config/**/*'),
+    'react/jsx-props-no-spreading': 'off',
+    'unicorn/prefer-module': 'off',
+  },
 } satisfies Linter.Config;

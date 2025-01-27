@@ -8,18 +8,35 @@
     "directory": "packages/eslint-config"
   },
   "sideEffects": false,
-  "type": "commonjs",
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./base": {
+      "import": "./dist/base/config.js",
+      "types": "./dist/base/config.d.ts"
+    },
+    "./nestjs": {
+      "import": "./dist/nestjs/config.js",
+      "types": "./dist/nestjs/config.d.ts"
+    },
+    "./nextjs": {
+      "import": "./dist/nextjs/config.js",
+      "types": "./dist/nextjs/config.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react/config.js",
+      "types": "./dist/react/config.d.ts"
+    },
+    "./storybook": {
+      "import": "./dist/storybook/config.js",
+      "types": "./dist/storybook/config.d.ts"
+    }
+  },
   "files": [
-    "base.js",
-    "cjs.js",
-    "dist",
-    "index.js",
-    "nestjs.js",
-    "nextjs.js",
-    "react.js",
-    "storybook.js"
+    "dist"
   ],
   "scripts": {
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
@@ -28,44 +45,46 @@
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{json,md}\"",
     "format:fix": "pnpm run format --write",
-    "lint": "eslint --cache --ext js,ts .",
+    "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "qa": "run-p ts format lint",
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^15.1.4",
-    "@types/eslint": "^8.56.11",
-    "@typescript-eslint/eslint-plugin": "^8.19.1",
-    "@typescript-eslint/parser": "^8.19.1",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-config-turbo": "^2.3.3",
+    "@eslint/eslintrc": "^3.2.0",
+    "@next/eslint-plugin-next": "^15.1.6",
+    "@types/eslint": "^9.6.1",
+    "@typescript-eslint/parser": "^8.22.0",
+    "@vitest/eslint-plugin": "^1.1.25",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-config-turbo": "^2.3.4",
     "eslint-import-resolver-typescript": "^3.7.0",
-    "eslint-plugin-formatjs": "4.13.3",
+    "eslint-plugin-formatjs": "^5.2.13",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest-dom": "^5.5.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-mdx": "^3.1.5",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react": "^7.37.3",
-    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-storybook": "^0.11.2",
     "eslint-plugin-testing-library": "^7.1.1",
     "eslint-plugin-unicorn": "^56.0.1",
     "eslint-plugin-unused-imports": "^4.1.4",
-    "eslint-plugin-vitest": "^0.5.4",
-    "vitest": "^2.1.8"
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.22.0",
+    "vitest": "^3.0.4"
   },
   "devDependencies": {
-    "eslint": "^8.57.1",
+    "@types/eslint__eslintrc": "^2.1.2",
+    "eslint": "^9.19.0",
     "prettier": "^3.4.2",
-    "react": "^18.3.1",
+    "react": "^19.0.0",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "eslint": "^8.57.1",
-    "react": "^18.3.1"
+    "eslint": "^9.19.0",
+    "react": "^19.0.0"
   },
   "peerDependenciesMeta": {
     "react": {

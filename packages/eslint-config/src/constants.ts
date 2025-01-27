@@ -1,5 +1,4 @@
 export const extraneousDependenciesPatterns = [
-  '**/*.config.cjs',
   '**/*.config.js',
   '**/*.config.mjs',
   '**/*.config.ts',
@@ -10,4 +9,4 @@ export const extraneousDependenciesPatterns = [
   '**/vite.config.ts',
 ] as const;
 
-export const importExtensions = ['.cjs', '.js', '.ts'] as const;
+export const importExtensions = ['.js', '.ts'] as const;

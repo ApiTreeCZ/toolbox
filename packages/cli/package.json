@@ -27,7 +27,7 @@
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{json,md}\"",
     "format:fix": "pnpm run format --write",
-    "lint": "eslint --cache --ext cjs,js,ts .",
+    "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "qa": "run-p ts format lint",
     "ts": "tsc --build tsconfig.json"

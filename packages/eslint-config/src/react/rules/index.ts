@@ -1,13 +1,8 @@
-import { common } from './common';
-import { formatjs } from './formatjs';
-import { hooks } from './hooks';
-import { imports } from './imports';
-import { jsx } from './jsx';
-
-export const rules = {
-  ...common,
-  ...formatjs,
-  ...hooks,
-  ...imports,
-  ...jsx,
-};
+export * from './common.js';
+export * from './formatjs.js';
+export * from './hooks.js';
+export * from './imports.js';
+export * from './mdx.js';
+export * from './jsx.js';
+export * from './styles.js';
+export * from './tests.js';
