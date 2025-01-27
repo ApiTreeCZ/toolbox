@@ -12,21 +12,18 @@
   "exports": {
     ".": "./base.json",
     "./app": "./app.json",
-    "./cjs-library": "./cjs-library.json",
     "./library": "./library.json",
     "./nestjs": "./nestjs.json",
-    "./nestjs-library": "./nestjs-library.json",
-    "./nextjs": "./nextjs.json"
+    "./nextjs": "./nextjs.json",
+    "./node": "./node.json"
   },
-  "main": "base.json",
   "files": [
     "app.json",
     "base.json",
-    "cjs-library.json",
     "library.json",
     "nestjs.json",
-    "nestjs-library.json",
-    "nextjs.json"
+    "nextjs.json",
+    "node.json"
   ],
   "scripts": {
     "cleanup": "del .eslintcache .turbo node_modules",

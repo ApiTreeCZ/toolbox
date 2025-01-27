@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint';
 
-import { extraneousDependenciesPatterns, importExtensions } from './constants';
+import { extraneousDependenciesPatterns, importExtensions } from './constants.js';
 
 const getImportExtensionsRecord = (extensions: string[]) => {
   const record: Record<string, 'never'> = {};

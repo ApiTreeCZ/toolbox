@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint';
 
-import { getExtraneousDependenciesRule, getImportExtensionsRule } from '../../utils';
+import { getExtraneousDependenciesRule, getImportExtensionsRule } from '../../utils.js';
 
 export const imports: Linter.RulesRecord = {
   ...getImportExtensionsRule(),
