@@ -16,10 +16,8 @@ Powered by [Turbo](https://turbo.build/repo/docs)
 
 ### Prerequisites
 
-- node.js `>=20`
-- pnpm `>=8`
-
-> **Note:** This repository contains [pure ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) packages.
+- node.js `v22`
+- pnpm `v10`
 
 ### Installation
 
