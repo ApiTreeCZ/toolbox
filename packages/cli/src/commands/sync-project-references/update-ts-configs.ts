@@ -3,6 +3,8 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { notNil } from '@apitree.cz/ts-utils';
 import type { Object as ObjectType } from 'ts-toolbelt';
 
+import { logger } from '../../utils.js';
+
 import { getExistingTsConfigPath } from './get-existing-ts-config-path.js';
 import type { getReferences } from './get-references.js';
 import type { SyncProjectReferencesTsConfigs, WorkspacePackageProps } from './types.js';
@@ -29,17 +31,26 @@ export const updateTsConfigs = async ({ references, tsConfigs, workspacePackage 
         tsConfig: configFile,
         workspacePackage,
       });
+
       if (tsConfigPath) {
-        const tsConfigJson = JSON.parse(await readFile(tsConfigPath, 'utf8')) as {
-          references?: { path: string }[];
-        };
+        let tsConfigJson = {} as { references?: { path: string }[] };
+
+        try {
+          tsConfigJson = JSON.parse(await readFile(tsConfigPath, 'utf8')) as typeof tsConfigJson;
+        } catch (error) {
+          logger.error(`Error reading TS config file: ${tsConfigPath}`, error);
+          return;
+        }
+
         tsConfigJson.references = references.map(
           (reference) => reference[configType] ?? reference.build ?? reference.default,
         );
+
         await writeFile(tsConfigPath, JSON.stringify(tsConfigJson).replaceAll('\r\n', '\n'));
         return tsConfigPath;
       }
     }),
   );
+
   return paths.filter(notNil);
 };

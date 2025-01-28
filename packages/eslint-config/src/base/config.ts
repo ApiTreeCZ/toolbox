@@ -31,6 +31,7 @@ export const config: ConfigArray = tsEslint.config(
       '**/node_modules/**/*',
       '**/out/**/*',
       '**/public/**/*',
+      '**/storybook-static/**/*',
     ],
   },
   eslint.configs.recommended,
