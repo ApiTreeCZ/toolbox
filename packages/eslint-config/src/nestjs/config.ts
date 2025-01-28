@@ -1,19 +1,19 @@
 import { FlatCompat } from '@eslint/eslintrc';
 
 const compat = new FlatCompat({
-  baseDirectory: process.cwd(),
+  baseDirectory: import.meta.dirname,
 });
 
-export const config = compat.config({
+export const [config] = compat.config({
   overrides: [
     {
-      files: ['src/**/models/**/*.ts'],
+      files: ['**/src/**/models/**/*.ts'],
       rules: {
         'import/no-cycle': 'off', // Allow circular dependencies in models as they might reference each other
       },
     },
     {
-      files: ['src/**/*.ts'],
+      files: ['**/src/**/*.ts'],
       rules: {
         'class-methods-use-this': 'off', // Allow class methods that don't use `this` keyword
         'no-empty-function': ['error', { allow: ['constructors'] }], // Allow empty constructors for Nest classes

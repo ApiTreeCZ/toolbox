@@ -1,10 +1,10 @@
 import { FlatCompat } from '@eslint/eslintrc';
 
 const compat = new FlatCompat({
-  baseDirectory: process.cwd(),
+  baseDirectory: import.meta.dirname,
 });
 
-export const config = compat.config({
+export const [config] = compat.config({
   extends: ['plugin:@next/next/recommended'],
   plugins: ['@next/next'],
   settings: {
@@ -14,13 +14,13 @@ export const config = compat.config({
   },
   overrides: [
     {
-      files: ['next-env.d.ts'],
+      files: ['**/next-env.d.ts'],
       rules: {
         'unicorn/prevent-abbreviations': 'off', // next-env.d.ts is a Next.js convention
       },
     },
     {
-      files: ['src/app/**/*.ts', 'app/**/*.tsx', 'src/pages/**/*.ts', 'src/pages/**/*.tsx'],
+      files: ['**/src/app/**/*.ts', '**/src/app/**/*.tsx', '**/src/pages/**/*.ts', '**/src/pages/**/*.tsx'],
       rules: {
         'react/function-component-definition': [
           // Allow components as function declarations in Next.js App and Page components for shorthand default exports
@@ -33,19 +33,19 @@ export const config = compat.config({
       },
     },
     {
-      files: ['src/app/**/layout.tsx', 'src/**/layouts/**/*.tsx'],
+      files: ['**/src/app/**/layout.tsx', '**/src/**/layouts/**/*.tsx'],
       rules: {
         '@next/next/no-head-element': 'off', // Allow <head/> element in Next.js App layouts
       },
     },
     {
-      files: ['src/**/layouts/**/*.tsx', 'src/pages/_app.tsx', 'src/pages/_document.tsx'],
+      files: ['**/src/**/layouts/**/*.tsx', '**/src/pages/_app.tsx', '**/src/pages/_document.tsx'],
       rules: {
         'react/jsx-props-no-spreading': 'off', // Allow spreading props in Next.js App layouts, _app.tsx and _document.tsx
       },
     },
     {
-      files: ['src/**/actions.ts'],
+      files: ['**/src/**/actions.ts'],
       rules: {
         '@typescript-eslint/require-await': 'off', // Next.js Server Actions must be async but don't need to await
       },
