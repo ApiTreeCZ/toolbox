@@ -5,7 +5,7 @@ export const common: Linter.RulesRecord = {
     // Prefer arrow functions for React components and avoid unnamed components with function expressions
     'error',
     {
-      namedComponents: ['arrow-function'],
+      namedComponents: ['arrow-function', 'function-declaration'],
       unnamedComponents: 'function-expression',
     },
   ],
