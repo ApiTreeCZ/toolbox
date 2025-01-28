@@ -39,7 +39,17 @@ export const config = [
     },
   },
   {
-    files: ['**/styles.ts', '**/styles.tsx', '**/*.styles.ts', '**/*.styles.tsx', '**/styles/*.ts', '**/styles/*.tsx'],
+    files: [
+      '**/*.style.ts',
+      '**/*.style.tsx',
+      '**/*.styles.ts',
+      '**/*.styles.tsx',
+      '**/style.ts',
+      '**/styles.ts',
+      '**/styles.tsx',
+      '**/styles/*.ts',
+      '**/styles/*.tsx',
+    ],
     rules: rules.styles,
   },
   {
