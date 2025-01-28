@@ -43,23 +43,24 @@ export const config = [
     rules: rules.styles,
   },
   {
-    files: ['**/tests/**/*.tsx', '**/*.spec.tsx', '**/*.test.tsx'],
+    files: ['**/*.spec.tsx', '**/*.test.tsx', '**/*.tests.tsx', '**/test/**/*.tsx', '**/tests/**/*.tsx'],
     ...jestDom.configs['flat/recommended'],
   },
   {
     files: [
+      '**/*.spec.tsx',
+      '**/*.stories.tsx',
+      '**/*.test.tsx',
+      '**/*.tests.tsx',
       '**/mock/**/*.tsx',
       '**/mocks/**/*.tsx',
       '**/stories/**/*.tsx',
       '**/tests/**/*.tsx',
-      '**/*.spec.tsx',
-      '**/*.stories.tsx',
-      '**/*.test.tsx',
     ],
     plugins: {
       vitest,
     },
-    rules: rules.tests,
+    rules: { ...vitest.configs.recommended.rules, ...rules.tests },
   },
   {
     files: ['**/*.mdx'],

@@ -79,6 +79,7 @@ export const config: ConfigArray = tsEslint.config(
     files: [
       '**/*.spec.ts',
       '**/*.test.ts',
+      '**/*.tests.ts',
       '**/mock/**/*.ts',
       '**/mocks/**/*.ts',
       '**/test/**/*.ts',
