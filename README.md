@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://github.com/ApiTreeCZ">
-<img alt="ApiTree s.r.o." src="https://www.apitree.cz/static/images/logo-header.svg" width="120" />
+<img alt="ApiTree s.r.o." src="https://github.com/ApiTreeCZ/toolbox/public/apitree.png?v=2025-01-28" width="201" />
 </a>
 
 # Toolbox
