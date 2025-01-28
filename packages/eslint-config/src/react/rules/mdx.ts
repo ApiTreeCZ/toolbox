@@ -1,4 +1,4 @@
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 export const mdx: Linter.RulesRecord = {
   'react/jsx-filename-extension': 'off', // Allow .mdx files to contain JSX

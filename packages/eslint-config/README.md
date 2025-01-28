@@ -18,64 +18,53 @@ pnpm add --save-dev @apitree.cz/eslint-config eslint
 
 ## Usage
 
-Use one of the following configurations in your `.eslintrc.cjs`:
+Use one of the following configurations in your repository's root `eslint.config.js` file.
 
 ### Base
 
 ```javascript
-module.exports = {
-  extends: '@apitree.cz',
-  parserOptions: {
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
-  },
-};
-```
-
-### CommonJS
-
-```javascript
-module.exports = {
-  extends: '@apitree.cz/eslint-config/cjs',
-  parserOptions: {
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
-  },
-};
+export { base as default } from '@apitree.cz/eslint-config';
 ```
 
 ### React
 
 ```javascript
-module.exports = {
-  extends: '@apitree.cz/eslint-config/react',
-  parserOptions: {
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
-  },
-};
+import { base, react } from '@apitree.cz/eslint-config';
+
+export default [...base, ...react];
 ```
 
 ### Next.js
 
+Next.js configuration requires to specify the path to the app(s).
+
 ```javascript
-module.exports = {
-  extends: '@apitree.cz/eslint-config/nextjs',
-  parserOptions: {
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
+import { base, react, nextjs } from '@apitree.cz/eslint-config';
+
+export default [
+  ...base,
+  ...react,
+  {
+    files: ['apps/*/<next-js-app-name>/**/*'],
+    // or `files: ['**/*.{ts,tsx}']` in single-app repo
+    ...nextjs,
   },
-};
+];
 ```
 
 ### Nest.js
 
+Nest.js configuration requires to specify the path to the app(s).
+
 ```javascript
-module.exports = {
-  extends: '@apitree.cz/eslint-config/nestjs',
-  parserOptions: {
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
+import { base, nestjs } from '@apitree.cz/eslint-config';
+
+export default [
+  ...base,
+  {
+    files: ['apps/*/<nest-js-app-name>/**/*'],
+    // or `files: ['**/*.ts']` in single-app repo
+    ...nestjs,
   },
-};
+];
 ```

@@ -32,7 +32,7 @@
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
-    "qa": "pnpm run format lint"
+    "qa": "run-p format lint"
   },
   "devDependencies": {
     "typescript": "^5.7.3"
