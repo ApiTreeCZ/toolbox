@@ -13,12 +13,12 @@ export const unicorn: Linter.RulesRecord = {
           arguments: false,
         },
         dev: {
-          development: false,
           developer: false,
+          development: false,
         },
         docs: {
-          documents: false,
           documentation: false,
+          documents: false,
         },
         params: {
           parameters: false,

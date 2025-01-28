@@ -1,15 +1,17 @@
 declare module 'eslint-plugin-import' {
-  import { Linter } from 'eslint';
+  import type { ESLint } from 'eslint';
 
-  export default {
+  declare const plugin: ESLint.Plugin & {
     flatConfigs: {
-      recommended: Linter.Config,
-    },
+      recommended: ESLint.Linter.Config;
+      typescript: ESLint.Linter.Config;
+    };
   };
+  export default plugin;
 }
 
 declare module 'eslint-plugin-react-hooks' {
-  import { ESLint } from 'eslint';
+  import type { ESLint } from 'eslint';
 
   declare const plugin: ESLint.Plugin;
   export default plugin;

@@ -1,5 +1,7 @@
 import type { Linter } from 'eslint';
 
+const lineLength = 120;
+
 export const common: Linter.RulesRecord = {
   'array-callback-return': [
     'error',
@@ -20,11 +22,11 @@ export const common: Linter.RulesRecord = {
   'max-len': [
     // Enforce max line length
     'error',
-    120, // Characters per line
+    lineLength, // Characters per line
     2, // Tab width
     {
       ignoreUrls: true, // Let URLs be as long as they need to be
-      ignoreComments: false, // Enforce max line length in comments
+      ignoreComments: true, // Allow comments to be as long as they need to be
       ignoreRegExpLiterals: true, // Let regex literals be as long as they need to be
       ignoreStrings: true, // Let strings be as long as they need to be
       ignoreTemplateLiterals: true, // Let template literals be as long as they need to be

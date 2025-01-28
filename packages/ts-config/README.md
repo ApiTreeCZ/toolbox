@@ -27,13 +27,25 @@ Suitable for general TypeScript projects.
 ```json
 {
   "extends": "@apitree.cz/ts-config",
-  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts"],
+  "include": ["**/*.js", "**/*.ts"],
   "exclude": ["build", "node_modules"]
 }
 ```
 
 > **Note:** This configuration can be also used in monorepo root, however, be sure to change `include` array to only
 > check the root files and not nested workspaces as each should have its own `tsconfig.json`.
+
+### Node
+
+Suitable for Node.js services and apps.
+
+```json
+{
+  "extends": "@apitree.cz/ts-config/node",
+  "include": ["**/*.js", "**/*.ts"],
+  "exclude": ["build", "node_modules"]
+}
+```
 
 ### Library
 
@@ -42,21 +54,7 @@ Suitable for distributable `npm` packages (both Node.js and React).
 ```json
 {
   "extends": "@apitree.cz/ts-config/library",
-  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts"],
-  "exclude": ["dist", "node_modules"]
-}
-```
-
-> **Note:** If you are using React, you should also add `"**/*.tsx"` to the `include` array.
-
-### CommonJS library
-
-Suitable for distributable `npm` packages (Node.js only).
-
-```json
-{
-  "extends": "@apitree.cz/ts-config/cjs-library",
-  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts"],
+  "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
   "exclude": ["dist", "node_modules"]
 }
 ```
@@ -68,7 +66,7 @@ Suitable for SPAs (React).
 ```json
 {
   "extends": "@apitree.cz/ts-config/app",
-  "include": [".eslintrc.cjs", "**/*.js", "**/*.ts", "**/*.tsx"],
+  "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
   "exclude": ["build", "node_modules"]
 }
 ```
@@ -80,7 +78,7 @@ Suitable for Next.js apps.
 ```json
 {
   "extends": "@apitree.cz/ts-config/next",
-  "include": [".eslintrc.cjs", "next-env.d.ts", "**/*.js", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.js", "**/*.ts", "**/*.tsx"],
   "exclude": [".next", "node_modules"]
 }
 ```
@@ -92,19 +90,7 @@ Suitable for Nest.js apps.
 ```json
 {
   "extends": "@apitree.cz/ts-config/nestjs",
-  "include": [".eslintrc.js", "**/*.js", "**/*.ts"],
+  "include": ["**/*.js", "**/*.ts"],
   "exclude": ["build", "node_modules"]
-}
-```
-
-### Nest.js Library
-
-Suitable for distributable `npm` packages consumed by Nest.js apps.
-
-```json
-{
-  "extends": "@apitree.cz/ts-config/nestjs-library",
-  "include": [".eslintrc.js", "**/*.js", "**/*.ts"],
-  "exclude": ["dist", "node_modules"]
 }
 ```

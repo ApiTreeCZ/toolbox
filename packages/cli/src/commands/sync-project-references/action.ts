@@ -27,7 +27,8 @@ export const action = async ({ config }: ActionProps) => {
     });
   });
   if (sync.length === 0) {
-    return logger.warn('No project references to sync.');
+    logger.warn('No project references to sync.');
+    return;
   }
   const paths = await Promise.all(sync);
   await runHooks(hooks, paths.flat());
