@@ -63,7 +63,10 @@ export const config = [
   },
   {
     files: ['**/*.mdx'],
-    rules: { ...mdx.configs.flat.rules, ...mdx.configs.flatCodeBlocks.rules, ...rules.mdx },
+    plugins: {
+      mdx,
+    },
     processor: mdx.createRemarkProcessor({ lintCodeBlocks: true }),
+    rules: { ...mdx.configs.flat.rules, ...mdx.configs.flatCodeBlocks.rules, ...rules.mdx },
   },
 ] satisfies Linter.Config[];
