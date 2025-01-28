@@ -45,7 +45,10 @@ export const config: ConfigArray = tsEslint.config(
       unicorn,
     },
     languageOptions: {
-      globals: globals.builtin,
+      globals: {
+        ...globals.builtin,
+        ...globals.node,
+      },
       parser: tsEslintParser,
       parserOptions: {
         ecmaVersion: 'latest',
