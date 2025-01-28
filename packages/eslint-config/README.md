@@ -22,11 +22,15 @@ Use one of the following configurations in your repository's root `eslint.config
 
 ### Base
 
+Suitable for general TypeScript projects.
+
 ```javascript
 export { base as default } from '@apitree.cz/eslint-config';
 ```
 
 ### React
+
+Necessary for React (JSX/MDX) projects.
 
 ```javascript
 import { base, react } from '@apitree.cz/eslint-config';
@@ -41,16 +45,10 @@ Next.js configuration requires to specify the path to the app(s).
 ```javascript
 import { base, react, nextjs } from '@apitree.cz/eslint-config';
 
-export default [
-  ...base,
-  ...react,
-  {
-    files: ['apps/*/<next-js-app-name>/**/*'],
-    // or `files: ['**/*.{ts,tsx}']` in single-app repo
-    ...nextjs,
-  },
-];
+export default [...base, ...react, ...nextjs(['apps/<nextjs-app>'])];
 ```
+
+> Omit the apps array if you have a single Next.js app repository (no monorepo).
 
 ### Nest.js
 
@@ -59,12 +57,17 @@ Nest.js configuration requires to specify the path to the app(s).
 ```javascript
 import { base, nestjs } from '@apitree.cz/eslint-config';
 
-export default [
-  ...base,
-  {
-    files: ['apps/*/<nest-js-app-name>/**/*'],
-    // or `files: ['**/*.ts']` in single-app repo
-    ...nestjs,
-  },
-];
+export default [...base, ...nestjs(['apps/<nestjs-app>'])];
+```
+
+> Omit the apps array if you have a single Nest.js app repository (no monorepo).
+
+### Storybook
+
+Necessary for projects containing Storybook instance.
+
+```javascript
+import { base, react, storybook } from '@apitree.cz/eslint-config';
+
+export default [...base, ...react, ...storybook];
 ```
