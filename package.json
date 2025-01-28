@@ -13,9 +13,6 @@
     "Vít Rozsíval <vit.rozsival@apitree.cz"
   ],
   "type": "module",
-  "workspaces": [
-    "./packages/*"
-  ],
   "scripts": {
     "build": "turbo run build --no-daemon",
     "cleanup": "turbo run cleanup --no-daemon",
