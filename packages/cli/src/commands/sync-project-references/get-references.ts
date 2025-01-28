@@ -23,39 +23,23 @@ export interface GetReferencesProps extends Pick<GetTargetBuildConfigProps, 'tsC
  * Returns list of package references to be added to its TS config.
  */
 export const getReferences = async ({ tsConfigs, workspacePackage, workspaces }: GetReferencesProps) => {
-  const { dependencies, type } = await getWorkspaceDependencies({ workspacePackage, workspaces });
+  const { dependencies } = await getWorkspaceDependencies({ workspacePackage, workspaces });
   const references = await Promise.all(
     dependencies.map(async (dependency) => {
       const workspace = workspaces.find(({ packageJson }) => packageJson.name === dependency);
       if (workspace) {
-        const {
-          default: defaultConfig,
-          build: buildConfig,
-          esm: esmConfig,
-          cjs: cjsConfig,
-        } = await getTargetBuildConfigs({
+        const { default: defaultConfig, build: buildConfig } = await getTargetBuildConfigs({
           tsConfigs,
           workspacePackage: workspace,
         });
-        const getBuildConfig = () => {
-          if (type === 'module') {
-            return esmConfig ?? buildConfig;
-          }
-          return cjsConfig ?? buildConfig;
-        };
-        const build = getBuildConfig();
         return {
           default: {
-            path: normalizePath(path.join(path.relative(workspacePackage.dir, workspace.dir), build ?? defaultConfig)),
+            path: normalizePath(
+              path.join(path.relative(workspacePackage.dir, workspace.dir), buildConfig ?? defaultConfig),
+            ),
           },
-          build: build
-            ? { path: normalizePath(path.join(path.relative(workspacePackage.dir, workspace.dir), build)) }
-            : undefined,
-          cjs: cjsConfig
-            ? { path: normalizePath(path.join(path.relative(workspacePackage.dir, workspace.dir), cjsConfig)) }
-            : undefined,
-          esm: esmConfig
-            ? { path: normalizePath(path.join(path.relative(workspacePackage.dir, workspace.dir), esmConfig)) }
+          build: buildConfig
+            ? { path: normalizePath(path.join(path.relative(workspacePackage.dir, workspace.dir), buildConfig)) }
             : undefined,
         };
       }

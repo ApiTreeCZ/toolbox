@@ -17,12 +17,8 @@ export interface GetTargetBuildConfigProps extends WorkspacePackageProps {
  */
 export const getTargetBuildConfigs = async ({ tsConfigs, workspacePackage: { dir } }: GetTargetBuildConfigProps) => {
   const buildPath = path.join(dir, tsConfigs.build);
-  const esmPath = path.join(dir, tsConfigs.esm);
-  const cjsPath = path.join(dir, tsConfigs.cjs);
   return {
     default: tsConfigs.default,
     build: (await pathExists(buildPath)) ? tsConfigs.build : undefined,
-    esm: (await pathExists(esmPath)) ? tsConfigs.esm : undefined,
-    cjs: (await pathExists(cjsPath)) ? tsConfigs.cjs : undefined,
   };
 };

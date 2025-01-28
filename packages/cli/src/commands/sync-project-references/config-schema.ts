@@ -12,9 +12,7 @@ export const configSchema = z
     tsConfigs: z
       .object({
         build: z.string().optional(),
-        cjs: z.string().optional(),
         default: z.string().optional(),
-        esm: z.string().optional(),
       })
       .optional(),
   })

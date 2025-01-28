@@ -19,16 +19,6 @@ export interface SyncProjectReferencesTsConfigs {
    * @defaultValue `'tsconfig.build.json'`
    */
   build?: string | undefined;
-  /**
-   * Name of the TS config file for CJS build (ambient modules only).
-   * @defaultValue `'tsconfig.cjs.build.json'`
-   */
-  cjs?: string | undefined;
-  /**
-   * Name of the TS config file for ESM build (ambient modules only).
-   * @defaultValue `'tsconfig.esm.build.json'`
-   */
-  esm?: string | undefined;
 }
 
 export interface SyncProjectReferencesConfig {
