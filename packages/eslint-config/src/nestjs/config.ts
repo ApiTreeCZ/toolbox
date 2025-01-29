@@ -11,6 +11,13 @@ export const config = (apps = ['.']): Linter.Config[] => [
     files: apps.map((app) => `${app}/src/**/*.ts`),
     rules: {
       'class-methods-use-this': 'off', // Allow class methods that don't use `this` keyword
+      'lines-between-class-members': [
+        // Enforce empty lines between class methods
+        'error',
+        {
+          enforce: [{ blankLine: 'always', prev: 'method', next: 'method' }],
+        },
+      ],
       'no-empty-function': ['error', { allow: ['constructors'] }], // Allow empty constructors for Nest classes
       '@typescript-eslint/consistent-type-imports': 'off', // Allow types being imported without `type` keyword as Nest.js services and models are ambiguous
       '@typescript-eslint/no-extraneous-class': [
