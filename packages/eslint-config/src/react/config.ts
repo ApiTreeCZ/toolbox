@@ -70,7 +70,7 @@ export const config = [
     plugins: {
       vitest,
     },
-    rules: { ...vitest.configs.recommended.rules, ...rules.tests },
+    rules: { ...vitest.configs.recommended.rules, ...baseRules.tests, ...rules.tests },
   },
   {
     files: ['**/*.mdx'],
