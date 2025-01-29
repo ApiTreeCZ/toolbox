@@ -49,7 +49,7 @@ Suitable for Node.js services and apps.
 
 ### Library
 
-Suitable for distributable `npm` packages (both Node.js and React).
+Suitable for distributable `npm` packages (framework-agnostic).
 
 ```json
 {
