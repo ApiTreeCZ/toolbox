@@ -9,6 +9,7 @@ export const common: Linter.RulesRecord = {
       unnamedComponents: 'function-expression',
     },
   ],
+  'react/no-danger': 'error', // Avoid using dangerouslySetInnerHTML
   'react/prop-types': 'off', // Prefer TypeScript prop types
   'react/react-in-jsx-scope': 'off', // Don't require React import in JSX files
   'react/require-default-props': 'off', // Prefer TypeScript prop types
