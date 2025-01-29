@@ -13,30 +13,25 @@ import * as rules from './rules/index.js';
 
 export const config = [
   {
-    files: ['**/*.tsx'],
-    plugins: {
-      formatjs,
-      react,
-      'react-hooks': reactHooks,
-    },
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: { jsx: true },
-      },
-      globals: globals.browser,
-    },
+    files: ['**/*.{mdx,tsx}'],
+    plugins: { react },
     rules: {
-      ...baseRules.typescript,
       ...react.configs.flat.recommended.rules,
       ...react.configs.flat['jsx-runtime'].rules,
       ...rules.common,
-      ...rules.formatjs,
-      ...rules.hooks,
       ...rules.jsx,
     },
-    settings: {
-      react: { version: 'detect' },
+    settings: { react: { version: 'detect' } },
+  },
+  { files: ['**/*.{ts,tsx}'], plugins: { formatjs }, rules: { ...baseRules.typescript, ...rules.formatjs } },
+  {
+    files: ['**/*.{mdx,ts,tsx}'],
+    languageOptions: {
+      globals: globals.browser,
+      parserOptions: { ecmaFeatures: { jsx: true } },
     },
+    plugins: { 'react-hooks': reactHooks },
+    rules: rules.hooks,
   },
   {
     files: [
@@ -74,10 +69,13 @@ export const config = [
   },
   {
     files: ['**/*.mdx'],
-    plugins: {
-      mdx,
-    },
+    languageOptions: mdx.configs.flat.languageOptions as Linter.LanguageOptions,
+    plugins: { mdx },
     processor: mdx.createRemarkProcessor({ lintCodeBlocks: true }),
-    rules: { ...mdx.configs.flat.rules, ...mdx.configs.flatCodeBlocks.rules, ...rules.mdx },
+    rules: { ...mdx.configs.flat.rules, ...rules.mdx },
+  },
+  {
+    ...mdx.configs.flatCodeBlocks,
+    files: ['**/*.mdx/*'],
   },
 ] satisfies Linter.Config[];

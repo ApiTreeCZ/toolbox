@@ -1,7 +1,9 @@
 import type { Linter } from 'eslint';
 
 export const mdx: Linter.RulesRecord = {
-  'react/jsx-filename-extension': 'off', // Allow .mdx files to contain JSX
-  'react/jsx-sort-props': 'off', // Props sorting with MDX parser does not work as expected (props are sorted but values are not)
-  'react/self-closing-comp': 'off', // MDX parser wrongly converts some non-void elements to self-closing and removes their children
+  'react/jsx-filename-extension': [
+    // Allow JSX in MDX files
+    'error',
+    { allow: 'as-needed', extensions: ['.mdx'] },
+  ],
 };
