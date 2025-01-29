@@ -18,7 +18,7 @@ export const config = (apps = ['.']): Linter.Config[] => [
           enforce: [{ blankLine: 'always', prev: 'method', next: 'method' }],
         },
       ],
-      'no-empty-function': ['error', { allow: ['constructors'] }], // Allow empty constructors for Nest classes
+      'no-empty-function': ['error', { allow: ['asyncMethods', 'constructors', 'methods'] }], // Allow decorated constructors and methods to be empty
       '@typescript-eslint/consistent-type-imports': 'off', // Allow types being imported without `type` keyword as Nest.js services and models are ambiguous
       '@typescript-eslint/no-extraneous-class': [
         // Allow classes that are used as Nest decorators
