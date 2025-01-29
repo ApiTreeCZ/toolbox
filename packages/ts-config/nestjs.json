@@ -1,9 +1,10 @@
 {
-  "extends": "./app",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "nodenext",
-    "moduleResolution": "nodenext"
-  }
+    "sourceMap": true
+  },
+  "ts-node": { "esm": true, "experimentalResolver": true, "files": true, "transpileOnly": true }
 }
