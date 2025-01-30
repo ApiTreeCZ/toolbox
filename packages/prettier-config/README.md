@@ -23,3 +23,9 @@ Add the following configuration to your `prettier.config.js`:
 ```javascript
 export { config as default } from '@apitree.cz/prettier-config';
 ```
+
+## IntelliJ (JetBrains) IDE Setup
+
+Go to `Settings` > `Languages & Frameworks` > `JavaScript` > `Prettier` and set the following:
+
+<img alt="IntelliJ Prettier Setup" src="./intellij-prettier-setup.png" width="730" />

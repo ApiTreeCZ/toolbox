@@ -71,3 +71,15 @@ import { base, react, storybook } from '@apitree.cz/eslint-config';
 
 export default [...base, ...react, ...storybook];
 ```
+
+# IntelliJ (JetBrains) IDE Setup
+
+In order to have our `typescript-eslint` configuration working in monorepos with IntelliJ IDEs, go to `Settings` >
+`Languages & Frameworks` > `JavaScript` > `Code Quality Tools` > `ESLint` and set the following:
+
+<img alt="IntelliJ ESLint Flat Config Setup" src="./intellij-eslint-setup.png" width="730" />
+
+Extend the `Working directories` pattern with any other workspace directories you have.
+
+> If your project is not a monorepo, simply use `Automatic ESLint configuration` option and only specify the
+> `Run for files` pattern.
