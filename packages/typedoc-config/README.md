@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://github.com/ApiTreeCZ">
-<img alt="ApiTree s.r.o." src="../../public/apitree.png" width="201" />
+<img alt="ApiTree s.r.o." src="../../public/apitree-logo.png" width="308" />
 </a>
 
 # TypeDoc Config
