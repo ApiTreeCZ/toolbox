@@ -3,10 +3,11 @@ name: Test
 on:
   push:
     branches:
-      - ${{ github.event.repository.default_branch }}
+      - '*'
   pull_request:
     branches:
-      - ${{ github.event.repository.default_branch }}
+      - develop
+      - main
 
 env:
   CACHE_KEY: ${{ github.sha }}-${{ github.run_number }}-${{ github.run_attempt }}
