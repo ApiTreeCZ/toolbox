@@ -15,8 +15,7 @@
   },
   "files": [
     "bin",
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "prebuild": "del dist tsconfig.build.tsbuildinfo",

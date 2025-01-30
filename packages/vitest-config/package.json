@@ -33,8 +33,7 @@
   },
   "types": "./dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
