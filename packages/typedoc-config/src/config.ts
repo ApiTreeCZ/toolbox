@@ -3,7 +3,7 @@ import type { TypeDocOptions } from 'typedoc';
 const base = {
   entryPoints: ['./src/index.ts'],
   githubPages: false,
-  gitRevision: 'develop',
+  gitRevision: 'main',
   out: './docs',
   plugin: ['typedoc-plugin-markdown'],
   readme: 'none',
