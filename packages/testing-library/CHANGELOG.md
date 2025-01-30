@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.5.1
+
+### Patch Changes
+
+- 60edd6c: Exclude `src` from npm package.
+
 ## 0.5.0
 
 ### Minor Changes

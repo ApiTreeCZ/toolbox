@@ -1,5 +1,12 @@
 # @apitree.cz/cli
 
+## 0.3.2
+
+### Patch Changes
+
+- 60edd6c: Exclude `src` from npm package.
+  - @apitree.cz/ts-utils@0.1.6
+
 ## 0.3.1
 
 ### Patch Changes

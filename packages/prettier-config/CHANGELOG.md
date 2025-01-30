@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.2.9
+
+### Patch Changes
+
+- 60edd6c: Exclude `src` from npm package.
+
 ## 0.2.8
 
 ### Patch Changes

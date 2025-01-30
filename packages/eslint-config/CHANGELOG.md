@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.4.2
+
+### Patch Changes
+
+- 60edd6c: Exclude `src` from npm package.
+
 ## 0.4.1
 
 ### Patch Changes
