@@ -10,6 +10,13 @@ overrides:
 importers:
 
   .:
+    dependencies:
+      is-ci:
+        specifier: ^4.1.0
+        version: 4.1.0
+      npm-run-all2:
+        specifier: ^7.0.2
+        version: 7.0.2
     devDependencies:
       '@apitree.cz/cli':
         specifier: workspace:*
@@ -33,7 +40,7 @@ importers:
         specifier: ^19.6.0
         version: 19.6.0
       '@manypkg/cli':
-        specifier: 0.23.0
+        specifier: ^0.23.0
         version: 0.23.0
       '@types/node':
         specifier: ^22.12.0
@@ -50,15 +57,9 @@ importers:
       husky-check-email:
         specifier: ^0.0.7
         version: 0.0.7
-      is-ci:
-        specifier: ^4.1.0
-        version: 4.1.0
       lint-staged:
         specifier: ^15.4.3
         version: 15.4.3
-      npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
       prettier:
         specifier: ^3.4.2
         version: 3.4.2

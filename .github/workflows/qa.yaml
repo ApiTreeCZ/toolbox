@@ -28,6 +28,16 @@ jobs:
         uses: ./.github/actions/setup
       - name: Run commitlint
         run: pnpm commitlint --from=${{ github.sha }}
+  manypkg:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Run manypkg
+        run: pnpm manypkg check
   eslint:
     needs: setup
     runs-on: ubuntu-latest

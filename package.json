@@ -23,7 +23,7 @@
     "format:fix": "turbo run format:fix --no-daemon --parallel",
     "postformat": "prettier --check \"./*.{json,md,yaml}\" \".github/**/*.yaml\"",
     "postformat:fix": "pnpm run postformat --write",
-    "postinstall": "manypkg check",
+    "postinstall": "is-ci || manypkg check",
     "lint": "turbo run lint --no-daemon",
     "lint:fix": "turbo run lint:fix --no-daemon",
     "postlint": "eslint --cache ./*.js",
@@ -38,6 +38,10 @@
     "ts": "turbo run ts --no-daemon",
     "postts": "tsc --project tsconfig.json"
   },
+  "dependencies": {
+    "is-ci": "^4.1.0",
+    "npm-run-all2": "^7.0.2"
+  },
   "devDependencies": {
     "@apitree.cz/cli": "workspace:*",
     "@apitree.cz/eslint-config": "workspace:*",
@@ -46,15 +50,13 @@
     "@changesets/cli": "^2.27.12",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
-    "@manypkg/cli": "0.23.0",
+    "@manypkg/cli": "^0.23.0",
     "@types/node": "^22.12.0",
     "del-cli": "^6.0.0",
     "eslint": "^9.19.0",
     "husky": "^9.1.7",
     "husky-check-email": "^0.0.7",
-    "is-ci": "^4.1.0",
     "lint-staged": "^15.4.3",
-    "npm-run-all2": "^7.0.2",
     "prettier": "^3.4.2",
     "turbo": "^2.3.4",
     "typescript": "^5.7.3"
@@ -71,5 +73,10 @@
     "overrides": {
       "eslint": "9.19.0"
     }
+  },
+  "manypkg": {
+    "ignoredRules": [
+      "ROOT_HAS_PROD_DEPENDENCIES"
+    ]
   }
 }
