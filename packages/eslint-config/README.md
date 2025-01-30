@@ -72,7 +72,7 @@ import { base, react, storybook } from '@apitree.cz/eslint-config';
 export default [...base, ...react, ...storybook];
 ```
 
-# IntelliJ (JetBrains) IDE Setup
+## IntelliJ (JetBrains) IDE Setup
 
 In order to have our `typescript-eslint` configuration working in monorepos with IntelliJ IDEs, go to `Settings` >
 `Languages & Frameworks` > `JavaScript` > `Code Quality Tools` > `ESLint` and set the following:
