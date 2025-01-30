@@ -35,13 +35,13 @@ Suitable for general TypeScript projects.
 > **Note:** This configuration can be also used in monorepo root, however, be sure to change `include` array to only
 > check the root files and not nested workspaces as each should have its own `tsconfig.json`.
 
-### Node
+### Node.js
 
 Suitable for Node.js services and apps.
 
 ```json
 {
-  "extends": "@apitree.cz/ts-config/node",
+  "extends": "@apitree.cz/ts-config/nodejs",
   "include": ["**/*.js", "**/*.ts"],
   "exclude": ["build", "node_modules"]
 }

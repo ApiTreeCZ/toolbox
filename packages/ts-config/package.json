@@ -15,7 +15,7 @@
     "./library": "./library.json",
     "./nestjs": "./nestjs.json",
     "./nextjs": "./nextjs.json",
-    "./node": "./node.json"
+    "./nodejs": "./nodejs.json"
   },
   "files": [
     "app.json",
@@ -23,7 +23,7 @@
     "library.json",
     "nestjs.json",
     "nextjs.json",
-    "node.json"
+    "nodejs.json"
   ],
   "scripts": {
     "cleanup": "del .eslintcache .turbo node_modules",
