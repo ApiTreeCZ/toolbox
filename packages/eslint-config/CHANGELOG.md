@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.5.1
+
+### Patch Changes
+
+- d6d2ea4: Allow abbreviations in `.d.ts` files (often auto-generated).
+
 ## 0.5.0
 
 ### Minor Changes
