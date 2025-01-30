@@ -1,5 +1,15 @@
 # @apitree.cz/testing-library
 
+## 0.5.0
+
+### Minor Changes
+
+- c487799: Simplify peer deps with `pnpm` setup.
+
+### Patch Changes
+
+- e3bc9c4: Add `src` to npm package for sourcemaps resolutions.
+
 ## 0.4.0
 
 ### Minor Changes

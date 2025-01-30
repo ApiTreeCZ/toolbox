@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.1.8
+
+### Patch Changes
+
+- e3bc9c4: Add `src` to npm package for sourcemaps resolutions.
+
 ## 0.1.7
 
 ### Patch Changes

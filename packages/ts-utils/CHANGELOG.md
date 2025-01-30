@@ -1,5 +1,11 @@
 # @apitree.cz/ts-utils
 
+## 0.1.6
+
+### Patch Changes
+
+- e3bc9c4: Add `src` to npm package for sourcemaps resolutions.
+
 ## 0.1.5
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.2.8
+
+### Patch Changes
+
+- e3bc9c4: Add `src` to npm package for sourcemaps resolutions.
+
 ## 0.2.7
 
 ### Patch Changes

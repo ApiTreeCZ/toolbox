@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.4.1
+
+### Patch Changes
+
+- e3bc9c4: Add `src` to npm package for sourcemaps resolutions.
+
 ## 0.4.0
 
 ### Minor Changes
