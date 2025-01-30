@@ -17,7 +17,7 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
       - name: Build packages
-        run: pnpm run build:packages
+        run: pnpm run build
   commitlint:
     needs: setup
     runs-on: ubuntu-latest
