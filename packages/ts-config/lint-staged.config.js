@@ -1,4 +1,4 @@
 export default {
-  './**/.{cjs,js}': 'eslint --cache --fix',
-  './**/*.{json,md}': 'prettier --write',
+  './**/.js': 'eslint --cache --fix',
+  './**/*.{js,json,md}': 'prettier --write',
 };

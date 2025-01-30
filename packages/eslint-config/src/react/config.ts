@@ -1,5 +1,6 @@
 import vitest from '@vitest/eslint-plugin';
 import type { Linter } from 'eslint';
+import prettier from 'eslint-config-prettier';
 import formatjs from 'eslint-plugin-formatjs';
 import jestDom from 'eslint-plugin-jest-dom';
 import mdx from 'eslint-plugin-mdx';
@@ -78,4 +79,5 @@ export const config = [
     ...mdx.configs.flatCodeBlocks,
     files: ['**/*.mdx/*'],
   },
+  prettier,
 ] satisfies Linter.Config[];

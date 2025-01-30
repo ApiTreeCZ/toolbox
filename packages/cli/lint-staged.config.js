@@ -1,4 +1,5 @@
 export default {
-  './**/.{cjs,js,ts}': 'eslint --cache --fix',
-  './**/*.{json,md}': 'prettier --write',
+  './**/*.{js,ts}': 'eslint --cache --fix',
+  './**/*.{js,json,md,ts}': 'prettier --write',
+  './**/*.ts': [() => 'tsc --build tsconfig.json'],
 };

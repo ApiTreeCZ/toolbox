@@ -28,7 +28,7 @@
     "docs:format": "prettier --write \"./docs/**/*\"",
     "docs:generate": "typedoc",
     "fix": "run-p ts format:fix lint:fix",
-    "format": "prettier --check \"./**/*.{json,md}\"",
+    "format": "prettier --check \"./**/*.{js,json,md,ts}\"",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",

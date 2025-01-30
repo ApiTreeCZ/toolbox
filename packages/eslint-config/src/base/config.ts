@@ -1,8 +1,7 @@
 import eslint from '@eslint/js';
 import vitest from '@vitest/eslint-plugin';
-import type { Linter } from 'eslint';
-import imports from 'eslint-plugin-import';
-import prettier from 'eslint-plugin-prettier/recommended';
+import prettier from 'eslint-config-prettier';
+import * as imports from 'eslint-plugin-import';
 import turbo from 'eslint-plugin-turbo';
 import unicorn from 'eslint-plugin-unicorn';
 import unusedImports from 'eslint-plugin-unused-imports';
@@ -35,9 +34,8 @@ export const config: ConfigArray = tsEslint.config(
     ],
   },
   eslint.configs.recommended,
-  prettier,
   {
-    extends: [imports.flatConfigs.recommended, imports.flatConfigs.typescript] as Linter.Config[],
+    extends: [imports.flatConfigs.recommended, imports.flatConfigs.typescript],
     plugins: {
       '@typescript-eslint': tsEslintPlugin,
       'unused-imports': unusedImports,
@@ -100,4 +98,5 @@ export const config: ConfigArray = tsEslint.config(
     files: ['**/*.d.ts'],
     rules: rules.dts,
   },
+  prettier,
 );

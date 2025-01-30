@@ -9,7 +9,7 @@ export const typescript: Linter.RulesRecord = {
   '@typescript-eslint/no-unsafe-declaration-merging': 'error', // Guard declaration merging against unsafe usage
   '@typescript-eslint/no-unused-vars': 'off', // Guarded by eslint-plugin-unused-imports
   '@typescript-eslint/no-use-before-define': 'error', // Disallow usage of variables before their declaration
-  // Enforce template literal expressions to be of string type
+  // Enforce template literal expressions to be of string type or safely cast to string (no complex types)
   '@typescript-eslint/restrict-template-expressions': [
     'error',
     { allowBoolean: true, allowNumber: true, allowNullish: true },

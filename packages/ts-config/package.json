@@ -28,7 +28,7 @@
   "scripts": {
     "cleanup": "del .eslintcache .turbo node_modules",
     "fix": "run-p format:fix lint:fix",
-    "format": "prettier --check \"./**/*.{json,md}\"",
+    "format": "prettier --check \"./**/*.{js,json,md}\"",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",

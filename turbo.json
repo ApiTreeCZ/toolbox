@@ -11,23 +11,29 @@
     },
     "fix": {
       "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js", "../../prettier.config.js"],
       "outputs": [".eslintcache", "tsconfig.buildinfo"]
     },
     "lint": {
       "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
       "outputs": [".eslintcache"]
     },
     "lint:fix": {
+      "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
       "outputs": [".eslintchache"]
     },
     "format": {
+      "inputs": ["$TURBO_DEFAULT$", "../../prettier.config.js"],
       "outputs": []
     },
     "format:fix": {
+      "inputs": ["$TURBO_DEFAULT$", "../../prettier.config.js"],
       "outputs": []
     },
     "qa": {
       "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js", "../../prettier.config.js"],
       "outputs": [".eslintcache", "tsconfig.buildinfo"]
     },
     "test": {
