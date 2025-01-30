@@ -44,6 +44,9 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
+      husky-check-email:
+        specifier: ^0.0.7
+        version: 0.0.7
       is-ci:
         specifier: ^4.1.0
         version: 4.1.0
@@ -2405,6 +2408,11 @@ packages:
   human-signals@5.0.0:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
+
+  husky-check-email@0.0.7:
+    resolution: {integrity: sha512-pjDmAWrgOhQC0KPOuT0RizdE0q2QlQMPirJ1/dYrQdOQd3Ht10V6yDuEm3JVGM5cGdcT0n2HgwUq5qDKvSjyFA==}
+    engines: {node: '>=8'}
+    hasBin: true
 
   husky@9.1.7:
     resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
@@ -6745,6 +6753,8 @@ snapshots:
   human-id@1.0.2: {}
 
   human-signals@5.0.0: {}
+
+  husky-check-email@0.0.7: {}
 
   husky@9.1.7: {}
 

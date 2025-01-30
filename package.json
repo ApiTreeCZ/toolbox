@@ -51,6 +51,7 @@
     "del-cli": "^6.0.0",
     "eslint": "^9.19.0",
     "husky": "^9.1.7",
+    "husky-check-email": "^0.0.7",
     "is-ci": "^4.1.0",
     "lint-staged": "^15.4.3",
     "npm-run-all2": "^7.0.2",
