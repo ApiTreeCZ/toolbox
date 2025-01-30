@@ -3,77 +3,29 @@ name: QA
 on:
   push:
     branches:
-      - '*'
+      - main
   pull_request:
     branches:
-      - develop
       - main
-
-env:
-  CACHE_KEY: ${{ github.sha }}-${{ github.run_number }}-${{ github.run_attempt }}
-  CACHE_PATH: ./*
 
 jobs:
   setup:
     runs-on: ubuntu-latest
-    outputs:
-      node-version: ${{ steps.set-node-version.outputs.node-version }}
-      pnpm-version: ${{ steps.set-pnpm-version.outputs.pnpm-version }}
-    strategy:
-      matrix:
-        node-version:
-          - 22.13.0
-        pnpm-version:
-          - 10.0.0
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup pnpm v${{ matrix.pnpm-version }}
-        uses: pnpm/action-setup@v4
-        with:
-          version: ${{ matrix.pnpm-version }}
-      - name: Setup node.js v${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          cache: pnpm
-          node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile --prefer-offline
+      - name: Setup
+        uses: ./.github/actions/setup
       - name: Build packages
-        run: pnpm run build
-      - name: Cache setup
-        uses: actions/cache@v4
-        id: cache-setup
-        with:
-          key: ${{ env.CACHE_KEY }}
-          path: ${{ env.CACHE_PATH }}
-      - name: Set node-version
-        id: set-node-version
-        run: echo "node-version=${{ matrix.node-version }}" >> $GITHUB_OUTPUT
-      - name: Set pnpm-version
-        id: set-pnpm-version
-        run: echo "pnpm-version=${{ matrix.pnpm-version }}" >> $GITHUB_OUTPUT
+        run: pnpm run build:packages
   commitlint:
     needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: ${{ needs.setup.outputs.pnpm-version }}
-      - name: Setup node.js
-        uses: actions/setup-node@v4
-        with:
-          cache: pnpm
-          node-version: ${{ needs.setup.outputs.node-version }}
-      - name: Restore setup
-        uses: actions/cache@v4
-        id: restore-setup
-        with:
-          key: ${{ env.CACHE_KEY }}
-          path: ${{ env.CACHE_PATH }}
+      - name: Setup
+        uses: ./.github/actions/setup
       - name: Run commitlint
         run: pnpm commitlint --from=${{ github.sha }}
   eslint:
@@ -82,21 +34,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: ${{ needs.setup.outputs.pnpm-version }}
-      - name: Setup node.js
-        uses: actions/setup-node@v4
-        with:
-          cache: pnpm
-          node-version: ${{ needs.setup.outputs.node-version }}
-      - name: Restore setup
-        uses: actions/cache@v4
-        id: restore-setup
-        with:
-          key: ${{ env.CACHE_KEY }}
-          path: ${{ env.CACHE_PATH }}
+      - name: Setup
+        uses: ./.github/actions/setup
       - name: Run eslint
         run: pnpm run lint
   tsc:
@@ -105,21 +44,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: ${{ needs.setup.outputs.pnpm-version }}
-      - name: Setup node.js
-        uses: actions/setup-node@v4
-        with:
-          cache: pnpm
-          node-version: ${{ needs.setup.outputs.node-version }}
-      - name: Restore setup
-        uses: actions/cache@v4
-        id: restore-setup
-        with:
-          key: ${{ env.CACHE_KEY }}
-          path: ${{ env.CACHE_PATH }}
+      - name: Setup
+        uses: ./.github/actions/setup
       - name: Run tsc
         run: pnpm run ts
   prettier:
@@ -128,20 +54,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: ${{ needs.setup.outputs.pnpm-version }}
-      - name: Setup node.js
-        uses: actions/setup-node@v4
-        with:
-          cache: pnpm
-          node-version: ${{ needs.setup.outputs.node-version }}
-      - name: Restore setup
-        uses: actions/cache@v4
-        id: restore-setup
-        with:
-          key: ${{ env.CACHE_KEY }}
-          path: ${{ env.CACHE_PATH }}
+      - name: Setup
+        uses: ./.github/actions/setup
       - name: Run prettier
         run: pnpm run format

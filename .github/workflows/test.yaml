@@ -19,23 +19,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.0.0
-      - name: Setup node.js
-        uses: actions/setup-node@v4
-        with:
-          cache: pnpm
-          node-version: 22.13.0
-      - name: Cache
-        uses: actions/cache@v3
-        with:
-          key: ${{ env.CACHE_KEY }}
-          path: ${{ env.CACHE_PATH }}
-      - name: Build
-        run: |
-          pnpm install --frozen-lockfile --prefer-offline
-          pnpm run build
+      - name: Setup
+        uses: ./.github/actions/setup
       - name: Run tests
         run: pnpm run test

@@ -1,0 +1,26 @@
+name: Setup
+description: Setup monorepo for CI
+
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 10.0.0
+    - name: Setup node.js
+      uses: actions/setup-node@v4
+      with:
+        cache: pnpm
+        node-version: 22.13.0
+    - name: Cache
+      uses: actions/cache@v4
+      with:
+        key: ${{ github.sha }}-${{ github.run_number }}-${{ github.run_attempt }}
+        path: |
+          ./*
+          !./**/.env
+          !./.github/**/*
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile --prefer-offline
+      shell: bash
