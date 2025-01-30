@@ -96,4 +96,8 @@ export const config: ConfigArray = tsEslint.config(
       ...rules.tests,
     },
   },
+  {
+    files: ['**/*.d.ts'],
+    rules: rules.dts,
+  },
 );

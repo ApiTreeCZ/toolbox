@@ -21,12 +21,6 @@ export const config = (apps = ['.']): Linter.Config[] => {
   return [
     next,
     {
-      files: apps.map((app) => `${app}/next-env.d.ts`),
-      rules: {
-        'unicorn/prevent-abbreviations': 'off', // next-env.d.ts is a Next.js convention
-      },
-    },
-    {
       files: apps.map((app) => [`${app}/src/**/layout.tsx`, `${app}/src/**/layouts/**/*.tsx`]).flat(),
       rules: {
         '@next/next/no-head-element': 'off', // Allow <head/> element in Next.js App layouts

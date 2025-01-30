@@ -11,7 +11,6 @@ export const extraneousDependenciesPatterns = [
   '**/test/**/*',
   '**/tests/**/*',
   '**/types/*.d.ts',
-  '**/vite.config.ts',
 ] as const;
 
 export const importExtensions = ['.ts', '.tsx'] as const;
