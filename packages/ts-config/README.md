@@ -20,29 +20,29 @@ pnpm add --save-dev @apitree.cz/ts-config typescript
 
 Add one of the following configurations to your `tsconfig.json`:
 
-### Base
+### Root
 
-Suitable for general TypeScript projects.
+Suitable for monorepo root.
 
 ```json
 {
   "extends": "@apitree.cz/ts-config",
-  "include": ["**/*.js", "**/*.ts"],
-  "exclude": ["build", "node_modules"]
+  "include": ["./*.js", "./*.ts"],
+  "exclude": ["node_modules"]
 }
 ```
 
-> **Note:** This configuration can be also used in monorepo root, however, be sure to change `include` array to only
-> check the root files and not nested workspaces as each should have its own `tsconfig.json`.
+> ⚠️ Do not use this configuration in monorepo workspaces or single-package repositories. Pick one of the following
+> configurations instead.
 
-### Node.js
+### App
 
-Suitable for Node.js services and apps.
+Suitable for React SPAs.
 
 ```json
 {
-  "extends": "@apitree.cz/ts-config/nodejs",
-  "include": ["**/*.js", "**/*.ts"],
+  "extends": "@apitree.cz/ts-config/app",
+  "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
   "exclude": ["build", "node_modules"]
 }
 ```
@@ -59,13 +59,13 @@ Suitable for distributable `npm` packages (framework-agnostic).
 }
 ```
 
-### App
+### Node.js
 
-Suitable for SPAs (React).
+Suitable for Node.js services and apps.
 
 ```json
 {
-  "extends": "@apitree.cz/ts-config/app",
+  "extends": "@apitree.cz/ts-config/nodejs",
   "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
   "exclude": ["build", "node_modules"]
 }
@@ -78,8 +78,8 @@ Suitable for Next.js apps.
 ```json
 {
   "extends": "@apitree.cz/ts-config/nextjs",
-  "include": ["next-env.d.ts", "**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": [".next", "node_modules"]
+  "include": [".next/types/**/*.ts", "./*.js", "./*.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
 }
 ```
 
