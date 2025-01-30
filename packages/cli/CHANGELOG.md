@@ -1,5 +1,16 @@
 # @apitree.cz/cli
 
+## 0.4.0
+
+### Minor Changes
+
+- b14adad: Bump packages
+
+### Patch Changes
+
+- Updated dependencies [b14adad]
+  - @apitree.cz/ts-utils@0.2.0
+
 ## 0.3.2
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/ts-utils",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "TypeScript utility functions for ApiTree projects.",
   "repository": {
     "type": "git",

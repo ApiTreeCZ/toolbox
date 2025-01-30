@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.7.0
+
+### Minor Changes
+
+- b14adad: Bump packages
+
 ## 0.6.2
 
 ### Patch Changes

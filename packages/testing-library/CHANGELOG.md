@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.6.0
+
+### Minor Changes
+
+- b14adad: Bump packages
+
 ## 0.5.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.2.0
+
+### Minor Changes
+
+- b14adad: Bump packages
+
 ## 0.1.9
 
 ### Patch Changes

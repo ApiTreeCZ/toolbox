@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.5.0
+
+### Minor Changes
+
+- b14adad: Bump packages
+
 ## 0.4.2
 
 ### Patch Changes

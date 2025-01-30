@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.4.0
+
+### Minor Changes
+
+- b14adad: Bump packages
+
 ## 0.3.0
 
 ### Minor Changes
