@@ -28,4 +28,4 @@ export { config as default } from '@apitree.cz/prettier-config';
 
 Go to `Settings` > `Languages & Frameworks` > `JavaScript` > `Prettier` and set the following:
 
-<img alt="IntelliJ Prettier Setup" src="./intellij-prettier-setup.png" width="730" />
+<img alt="IntelliJ Prettier Setup" src="../../public/intellij-prettier-setup.png" width="730" />

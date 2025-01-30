@@ -77,7 +77,7 @@ export default [...base, ...react, ...storybook];
 In order to have our `typescript-eslint` configuration working in monorepos with IntelliJ IDEs, go to `Settings` >
 `Languages & Frameworks` > `JavaScript` > `Code Quality Tools` > `ESLint` and set the following:
 
-<img alt="IntelliJ ESLint Flat Config Setup" src="./intellij-eslint-setup.png" width="730" />
+<img alt="IntelliJ ESLint Flat Config Setup" src="../../public/intellij-eslint-setup.png" width="730" />
 
 Extend the `Working directories` pattern with any other workspace directories you have.
 
