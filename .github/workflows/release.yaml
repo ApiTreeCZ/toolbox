@@ -3,9 +3,14 @@ name: Release
 on:
   push:
     branches:
-      - develop
       - main
   workflow_dispatch:
+    inputs:
+      stable:
+        description: 'Release stable version'
+        required: false
+        default: false
+        type: boolean
 
 env:
   CACHE_KEY: ${{ github.sha }}-${{ github.run_number }}-${{ github.run_attempt }}
@@ -16,7 +21,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    name: release:${{ github.ref_name == 'main' && 'main' || 'develop' }}
+    name: release:${{ inputs.stable == true && 'stable' || 'snapshot' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,38 +35,29 @@ jobs:
       - name: Setup npm registry
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$HOME/.npmrc"
       - name: Snapshot release
-        if: github.ref_name == 'develop'
+        if: inputs.stable == false
         run: |
           pnpm changeset version --snapshot next
           pnpm changeset publish --tag next --no-git-tag
       - name: Stable release
-        if: github.ref_name == 'main'
+        if: inputs.stable == true
         run: |
           pnpm changeset version
           pnpm changeset publish --no-git-tag
           pnpm install
       - name: Commit changes
-        if: github.ref_name == 'main'
+        if: inputs.stable == true
         run: |
           git config user.name "GitHub Actions"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
           git diff-index --quiet HEAD || git commit -m "chore: release [skip ci]"
       - name: Create git tags
-        if: github.ref_name == 'main'
+        if: inputs.stable == true
         run: |
           pnpm changeset tag
       - name: Push changes
-        if: github.ref_name == 'main'
+        if: inputs.stable == true
         run: |
           git push origin main
           git push origin main --tags
-      - name: Rebase develop onto main
-        if: github.ref_name == 'main'
-        run: |
-          git checkout main
-          git pull
-          git checkout develop
-          git pull
-          git rebase main
-          git push
