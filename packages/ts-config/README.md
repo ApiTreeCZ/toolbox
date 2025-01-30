@@ -33,7 +33,7 @@ Suitable for monorepo root.
 ```
 
 > ⚠️ Do not use this configuration in monorepo workspaces or single-package repositories. Pick one of the following
-> configurations instead.
+> instead.
 
 ### App
 
