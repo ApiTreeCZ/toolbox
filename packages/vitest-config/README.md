@@ -18,7 +18,7 @@ In a `pnpm` monorepo, add the following to your root `.npmrc` file:
 public-hoist-pattern[]=*vitest*
 ```
 
-Then, install the package:
+Then, install the package inside a specific workspace:
 
 ```bash
 pnpm add --save-dev @apitree.cz/vitest-config vitest
@@ -26,7 +26,10 @@ pnpm add --save-dev @apitree.cz/vitest-config vitest
 
 ## Usage
 
-Use one of the following configurations in your `vitest.config.ts`:
+Use one of the following configurations in your `vitest.config.ts`.
+
+> ⚠️ Avoid using [Vitest Workspace](https://vitest.dev/guide/workspace#workspace), prefer defining the configuration in
+> each package.
 
 ### Base
 

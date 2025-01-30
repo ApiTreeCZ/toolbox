@@ -18,7 +18,7 @@ In a `pnpm` monorepo, add the following to your root `.npmrc` file:
 public-hoist-pattern[]=*eslint*
 ```
 
-Then, install the package:
+Then, install the package in your repository root:
 
 ```bash
 pnpm add --save-dev @apitree.cz/eslint-config eslint
