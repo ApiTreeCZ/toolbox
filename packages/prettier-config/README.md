@@ -12,16 +12,16 @@
 
 ## Installation
 
-In a `pnpm` monorepo, add the following to your root `.npmrc` file:
+```bash
+pnpm add --save-dev @apitree.cz/prettier-config prettier
+```
+
+### Monorepos
+
+Prior to the installation, add the following to your repository root `.npmrc`:
 
 ```
 public-hoist-pattern[]=*prettier*
-```
-
-Then, install the package in your repository root:
-
-```bash
-pnpm add --save-dev @apitree.cz/prettier-config prettier
 ```
 
 ## Usage
@@ -32,8 +32,16 @@ Add the following configuration to your `prettier.config.js`:
 export { config as default } from '@apitree.cz/prettier-config';
 ```
 
-## IntelliJ (JetBrains) IDE Setup
+## IntelliJ IDE Setup
 
-Go to `Settings` > `Languages & Frameworks` > `JavaScript` > `Prettier` and set the following:
+Following IntelliJ IDEs setup is recommended for the best developer experience:
 
 <img alt="IntelliJ Prettier Setup" src="../../public/intellij-prettier-setup.png" width="730" />
+
+### Recommended Values
+
+#### Run for files
+
+```
+{**/*,*}.{css,ejs,graphql,html,js,json,md,mdx,ts,tsx,yml,yaml}
+```

@@ -1,9 +1,10 @@
 import viteReact from '@vitejs/plugin-react';
 import { defineConfig } from 'vitest/config';
 
-import { coverage } from './constants.js';
+import { build, coverage } from './constants.js';
 
 export const react = defineConfig({
+  ...build,
   plugins: [viteReact()],
   test: {
     environment: 'jsdom',

@@ -12,16 +12,16 @@
 
 ## Installation
 
-In a `pnpm` monorepo, add the following to your root `.npmrc` file:
+```bash
+pnpm add --save-dev @apitree.cz/eslint-config eslint
+```
+
+### Monorepos
+
+Prior to the installation, add the following to your repository root `.npmrc`:
 
 ```
 public-hoist-pattern[]=*eslint*
-```
-
-Then, install the package in your repository root:
-
-```bash
-pnpm add --save-dev @apitree.cz/eslint-config eslint
 ```
 
 ## Usage
@@ -80,14 +80,27 @@ import { base, react, storybook } from '@apitree.cz/eslint-config';
 export default [...base, ...react, ...storybook];
 ```
 
-## IntelliJ (JetBrains) IDE Setup
+## IntelliJ IDE Setup
 
-In order to have our `typescript-eslint` configuration working in monorepos with IntelliJ IDEs, go to `Settings` >
-`Languages & Frameworks` > `JavaScript` > `Code Quality Tools` > `ESLint` and set the following:
+In order to have our `typescript-eslint` configuration working in monorepos with IntelliJ IDEs use the following setup:
 
 <img alt="IntelliJ ESLint Flat Config Setup" src="../../public/intellij-eslint-setup.png" width="730" />
 
 Extend the `Working directories` pattern with any other workspace directories you have.
 
-> If your project is not a monorepo, simply use `Automatic ESLint configuration` option and only specify the
-> `Run for files` pattern.
+If your project is not a monorepo, simply use `Automatic ESLint configuration` option and only specify the
+`Run for files` pattern.
+
+### Recommended Values
+
+#### Working directories
+
+```
+apps/*;packages/*;
+```
+
+#### Run for files
+
+```
+{**/*,*}.{js,ts,tsx}
+```
