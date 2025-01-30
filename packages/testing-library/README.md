@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree.cz/testing-library @testing-library/react vitest
+pnpm add --save-dev @apitree.cz/testing-library @testing-library/react react react-dom
 ```
 
 ## Usage

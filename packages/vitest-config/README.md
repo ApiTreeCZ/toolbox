@@ -12,8 +12,16 @@
 
 ## Installation
 
+In a `pnpm` monorepo, add the following to your root `.npmrc` file:
+
+```
+public-hoist-pattern[]=*vitest*
+```
+
+Then, install the package:
+
 ```bash
-pnpm add --save-dev @apitree.cz/vitest-config @vitest/coverage-v8 vitest
+pnpm add --save-dev @apitree.cz/vitest-config vitest
 ```
 
 ## Usage
@@ -35,9 +43,6 @@ export { react as default } from '@apitree.cz/vitest-config';
 > ⚠️ You will also need to install `jsdom` for React configuration to work.
 
 ### Nest.js
-
-> ⚠️ Nest.js projects are CJS by default. This configuration needs to be placed in `vitest.config.mjs` to interpret it
-> as ESM. If your project, however, is ESM, you can place the configuration in `vitest.config.ts` as usual.
 
 ```typescript
 export { nestjs as default } from '@apitree.cz/vitest-config';
