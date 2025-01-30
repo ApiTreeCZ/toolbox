@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.6.2
+
+### Patch Changes
+
+- 946d443: Avoid tests output noise and only log Vite build errors that are fatal.
+
 ## 0.6.1
 
 ### Patch Changes
