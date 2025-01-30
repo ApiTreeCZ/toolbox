@@ -1,5 +1,17 @@
 # @apitree.cz/cli
 
+## 0.3.0
+
+### Minor Changes
+
+- 9d318b9: BREAKING: Drop CJS configs support completely.
+
+### Patch Changes
+
+- 5c46be6: Upgrade dependencies to latest version.
+- Updated dependencies [5c46be6]
+  - @apitree.cz/ts-utils@0.1.5
+
 ## 0.2.7
 
 ### Patch Changes

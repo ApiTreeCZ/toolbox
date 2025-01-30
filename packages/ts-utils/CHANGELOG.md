@@ -1,5 +1,11 @@
 # @apitree.cz/ts-utils
 
+## 0.1.5
+
+### Patch Changes
+
+- 5c46be6: Upgrade dependencies to latest version.
+
 ## 0.1.4
 
 ### Patch Changes

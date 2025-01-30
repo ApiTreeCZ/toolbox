@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.1.7
+
+### Patch Changes
+
+- 5c46be6: Upgrade dependencies to latest version.
+
 ## 0.1.6
 
 ### Patch Changes

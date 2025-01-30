@@ -1,5 +1,21 @@
 # @apitree.cz/eslint-config
 
+## 0.4.0
+
+### Minor Changes
+
+- 5c46be6: BREAKING:
+
+  - migrate to `eslint@9` and flat config
+  - migrate to `react@19`
+  - drop CJS support completely
+
+  This package is now pure ESM.-
+
+### Patch Changes
+
+- 5c46be6: Upgrade dependencies to latest version.
+
 ## 0.3.6
 
 ### Patch Changes

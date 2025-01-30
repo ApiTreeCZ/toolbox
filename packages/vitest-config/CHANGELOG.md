@@ -1,5 +1,15 @@
 # @apitree.cz/vitest-config
 
+## 0.5.0
+
+### Minor Changes
+
+- 5c46be6: BREAKING: Migrate to `vitest@3`.
+
+### Patch Changes
+
+- 5c46be6: Upgrade dependencies to latest version.
+
 ## 0.4.2
 
 ### Patch Changes

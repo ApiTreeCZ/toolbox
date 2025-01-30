@@ -1,5 +1,17 @@
 # @apitree.cz/ts-config
 
+## 0.3.0
+
+### Minor Changes
+
+- 5c46be6: BREAKING: Drop CJS support completely.
+
+  Added `node` config for Node.js services and apps.
+
+### Patch Changes
+
+- 5c46be6: Upgrade dependencies to latest version.
+
 ## 0.2.4
 
 ### Patch Changes

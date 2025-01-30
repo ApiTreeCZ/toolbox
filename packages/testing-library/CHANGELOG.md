@@ -1,5 +1,15 @@
 # @apitree.cz/testing-library
 
+## 0.4.0
+
+### Minor Changes
+
+- 5c46be6: BREAKING: Migrate to `react@19` and `vitest@3`.
+
+### Patch Changes
+
+- 5c46be6: Upgrade dependencies to latest version.
+
 ## 0.3.1
 
 ### Patch Changes
