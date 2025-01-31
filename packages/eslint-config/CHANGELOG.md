@@ -1,5 +1,12 @@
 # @apitree.cz/eslint-config
 
+## 0.5.3
+
+### Patch Changes
+
+- fb2c1ca: Add package keywords.
+- fb2c1ca: Add `monorepo` rule set allowing extraneous imports in `lint-staged.config.js` and `typedoc.config.js`.
+
 ## 0.5.2
 
 ### Patch Changes

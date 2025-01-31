@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.7.1
+
+### Patch Changes
+
+- fb2c1ca: Add package keywords.
+
 ## 0.7.0
 
 ### Minor Changes

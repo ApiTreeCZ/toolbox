@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.4.1
+
+### Patch Changes
+
+- fb2c1ca: Add package keywords.
+
 ## 0.4.0
 
 ### Minor Changes

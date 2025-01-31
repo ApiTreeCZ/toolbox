@@ -1,5 +1,11 @@
 # @apitree.cz/ts-utils
 
+## 0.2.1
+
+### Patch Changes
+
+- fb2c1ca: Add package keywords.
+
 ## 0.2.0
 
 ### Minor Changes

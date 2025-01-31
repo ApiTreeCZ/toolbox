@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/vitest-config",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Vitest configuration for ApiTree projects.",
   "keywords": [
     "apitree",

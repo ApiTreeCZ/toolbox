@@ -1,5 +1,13 @@
 # @apitree.cz/cli
 
+## 0.4.1
+
+### Patch Changes
+
+- fb2c1ca: Add package keywords.
+- Updated dependencies [fb2c1ca]
+  - @apitree.cz/ts-utils@0.2.1
+
 ## 0.4.0
 
 ### Minor Changes
