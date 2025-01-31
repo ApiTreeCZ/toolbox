@@ -21,7 +21,7 @@
     "postfix": "run-p postts postformat:fix postlint:fix",
     "format": "turbo run format --no-daemon --parallel",
     "format:fix": "turbo run format:fix --no-daemon --parallel",
-    "postformat": "prettier --check \"./*.{js,json,md,yaml}\" \".changeset/**/*.md\" \".github/**/*.yaml\"",
+    "postformat": "prettier --ignore-path .prettierignore --check \"./*.{js,json,md,yaml}\" \".changeset/**/*.md\" \".github/**/*.yaml\"",
     "postformat:fix": "pnpm run postformat --write",
     "postinstall": "is-ci || manypkg check",
     "lint": "turbo run lint --no-daemon",
