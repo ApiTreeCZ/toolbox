@@ -106,5 +106,5 @@ apps/*;packages/*;
 #### Run for files
 
 ```
-{**/*,*}.{js,ts,tsx}
+{**/*,*}.{js,mdx,ts,tsx}
 ```
