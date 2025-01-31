@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.5.5
+
+### Patch Changes
+
+- c8e3ea8: Update recommended `Run for files` pattern.
+
 ## 0.5.4
 
 ### Patch Changes
