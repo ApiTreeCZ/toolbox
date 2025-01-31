@@ -6,6 +6,8 @@
 
 # TypeDoc Config
 
+![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Ftypedoc-config)
+
 ### [TypeDoc](https://typedoc.org) configuration for ApiTree projects
 
 </div>

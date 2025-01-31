@@ -6,6 +6,8 @@
 
 # TS Config
 
+![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Fts-config)
+
 ### [TypeScript](https://typescriptlang.org) configuration for ApiTree projects
 
 </div>

@@ -6,6 +6,8 @@
 
 # Testing Library
 
+![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Ftesting-library)
+
 ### [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) setup for [Vitest](https://vitest.dev) in ApiTree projects.
 
 </div>

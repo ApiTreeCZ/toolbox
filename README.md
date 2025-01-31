@@ -6,13 +6,9 @@
 
 # Toolbox
 
-<div align="center">
-
 [![QA](https://github.com/ApiTreeCZ/toolbox/actions/workflows/qa.yaml/badge.svg)](https://github.com/ApiTreeCZ/toolbox/actions/workflows/qa.yaml)
 [![Test](https://github.com/ApiTreeCZ/toolbox/actions/workflows/test.yaml/badge.svg)](https://github.com/ApiTreeCZ/toolbox/actions/workflows/test.yaml)
 [![Release](https://github.com/ApiTreeCZ/toolbox/actions/workflows/release.yaml/badge.svg)](https://github.com/ApiTreeCZ/toolbox/actions/workflows/release.yaml)
-
-</div>
 
 ### Shared configurations and utilities for ApiTree projects
 

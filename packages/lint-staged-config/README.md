@@ -6,6 +6,8 @@
 
 # Lint-staged Config
 
+![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Flint-staged-config)
+
 ### [Lint-staged](https://github.com/lint-staged/lint-staged) configuration for ApiTree projects
 
 </div>

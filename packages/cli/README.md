@@ -6,6 +6,8 @@
 
 # CLI
 
+![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Fcli)
+
 ### Command line interface for ApiTree projects
 
 </div>

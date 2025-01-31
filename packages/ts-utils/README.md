@@ -6,6 +6,8 @@
 
 # TS Utils
 
+![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Fts-utils)
+
 ### [TypeScript](https://www.typescriptlang.org/) utility functions for ApiTree projects
 
 </div>

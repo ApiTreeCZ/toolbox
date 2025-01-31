@@ -6,6 +6,8 @@
 
 # Vitest Config
 
+![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Fvitest-config)
+
 ### [Vitest](https://vitest.dev) configuration for ApiTree projects
 
 </div>
