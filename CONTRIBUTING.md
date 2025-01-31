@@ -9,7 +9,7 @@ step-by-step guide on how to contribute:
 
 ### 1. Create a Feature Branch
 
-To work on a new feature or fix, create a new branch from the `develop` branch. Name your branch descriptively.
+To work on a new feature or fix, create a new branch from the `main` branch. Name your branch descriptively.
 
 ```bash
 git checkout -b feature/my-feature
@@ -36,9 +36,9 @@ When your work is ready for review, push your branch to the main repository and 
 Reviewers will assess your PR for code quality, adherence to coding standards, and functional correctness. They may
 request changes or provide feedback. Make necessary adjustments to address these comments.
 
-### 5. Merge to `develop`
+### 5. Merge to `main`
 
-Once your PR is approved, a maintainer will merge it into the `develop` branch.
+Once your PR is approved, a maintainer will merge it into the `main` branch.
 
 ## Conventional Commits and Changesets
 
