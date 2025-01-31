@@ -6,6 +6,14 @@
 
 # Toolbox
 
+<div align="center">
+
+[![QA](https://github.com/ApiTreeCZ/toolbox/actions/workflows/qa.yaml/badge.svg)](https://github.com/ApiTreeCZ/toolbox/actions/workflows/qa.yaml)
+[![Test](https://github.com/ApiTreeCZ/toolbox/actions/workflows/test.yaml/badge.svg)](https://github.com/ApiTreeCZ/toolbox/actions/workflows/test.yaml)
+[![Release](https://github.com/ApiTreeCZ/toolbox/actions/workflows/release.yaml/badge.svg)](https://github.com/ApiTreeCZ/toolbox/actions/workflows/release.yaml)
+
+</div>
+
 ### Shared configurations and utilities for ApiTree projects
 
 Powered by [Turbo](https://turbo.build/repo/docs)
@@ -34,6 +42,7 @@ This monorepo is structured as follows:
 - `packages/`
   - `cli/`: Contains the CLI for ApiTree projects.
   - `eslint-config/`: Contains the ESLint configurations.
+  - `lint-staged-config/`: Contains the lint-staged configuration.
   - `prettier-config/`: Contains the Prettier configuration.
   - `testing-library/`: Contains the React Testing Library setup.
   - `ts-config/`: Contains the TypeScript configurations.
