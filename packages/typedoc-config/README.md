@@ -18,6 +18,8 @@
 pnpm add --save-dev @apitree.cz/typedoc-config typedoc typescript
 ```
 
+In a monorepo, install the package in the root, then create configs in each workspace.
+
 ## Usage
 
 Add the following configuration to your `typedoc.config.js`:
@@ -25,9 +27,6 @@ Add the following configuration to your `typedoc.config.js`:
 ```javascript
 export { config as default } from '@apitree.cz/typedoc-config';
 ```
-
-In a monorepo, keep everything installed in the root only and create a config for each workspace you want to have
-documented.
 
 ### Custom Entry Points
 

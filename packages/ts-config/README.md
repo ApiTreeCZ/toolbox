@@ -18,6 +18,8 @@
 pnpm add --save-dev @apitree.cz/ts-config typescript
 ```
 
+In a monorepo, install the package in the root, then create configs in each workspace.
+
 ## Usage
 
 Add one of the following configurations to your `tsconfig.json`:

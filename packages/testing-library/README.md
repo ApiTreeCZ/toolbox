@@ -18,6 +18,8 @@
 pnpm add --save-dev @apitree.cz/testing-library @testing-library/react
 ```
 
+In a monorepo, install and use the package in each workspace.
+
 ## Usage
 
 1. Setup [Vitest for React](../vitest-config/README.md#react) with `@apitree.cz/vitest-config`.

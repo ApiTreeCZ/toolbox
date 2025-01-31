@@ -26,6 +26,8 @@ Prior to the installation, add the following to your repository root `.npmrc`:
 public-hoist-pattern[]=*eslint*
 ```
 
+Install and use the package in the root only.
+
 ## Usage
 
 Use one of the following configurations in your repository's root `eslint.config.js` file.

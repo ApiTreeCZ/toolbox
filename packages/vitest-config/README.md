@@ -26,6 +26,8 @@ Prior to the installation, add the following to your repository root `.npmrc`:
 public-hoist-pattern[]=*vitest*
 ```
 
+Install and use the package in each workspace.
+
 ## Usage
 
 Use one of the following configurations in your `vitest.config.ts`:

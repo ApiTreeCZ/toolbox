@@ -26,6 +26,8 @@ Prior to the installation, add the following to your repository root `.npmrc`:
 public-hoist-pattern[]=*prettier*
 ```
 
+Install and use the package in the root only.
+
 ## Usage
 
 Add the following configuration to your `prettier.config.js`:
