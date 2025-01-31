@@ -10,7 +10,7 @@
   "license": "MIT",
   "author": "ApiTree s.r.o. <info@apitree.cz>",
   "contributors": [
-    "Vít Rozsíval <vit.rozsival@apitree.cz"
+    "Vít Rozsíval <vit.rozsival@apitree.cz>"
   ],
   "type": "module",
   "scripts": {
