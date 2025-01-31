@@ -1,4 +1,1 @@
-export default {
-  './**/.js': 'eslint --cache --fix',
-  './**/*.{js,json,md}': 'prettier --write',
-};
+export { workspace as default } from '@apitree.cz/lint-staged-config';

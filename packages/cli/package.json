@@ -1,7 +1,12 @@
 {
   "name": "@apitree.cz/cli",
   "version": "0.4.0",
-  "description": "Command line interface for ApiTree projects",
+  "description": "Command line interface for ApiTree projects.",
+  "keywords": [
+    "apitree",
+    "cli",
+    "sync-project-references"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ApiTreeCZ/toolbox",
@@ -43,8 +48,6 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@apitree.cz/typedoc-config": "workspace:*",
-    "typedoc": "^0.27.6",
     "typescript": "^5.7.3"
   }
 }

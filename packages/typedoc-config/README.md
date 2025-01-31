@@ -24,7 +24,8 @@ Add the following configuration to your `typedoc.config.js`:
 export { config as default } from '@apitree.cz/typedoc-config';
 ```
 
-Then, run `pnpm typedoc` to generate the documentation.
+In a monorepo, keep everything installed in the root only and create a config for each workspace you want to have
+documented.
 
 ### Custom Entry Points
 

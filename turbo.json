@@ -9,6 +9,10 @@
     "cleanup": {
       "cache": false
     },
+    "docs": {
+      "dependsOn": ["^build"],
+      "outputs": ["docs/**/*"]
+    },
     "fix": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js", "../../prettier.config.js"],

@@ -98,5 +98,9 @@ export const config: ConfigArray = tsEslint.config(
     files: ['**/*.d.ts'],
     rules: rules.dts,
   },
+  {
+    files: ['**/lint-staged.config.js', '**/typedoc.config.js'],
+    rules: rules.monorepo,
+  },
   prettier,
 );

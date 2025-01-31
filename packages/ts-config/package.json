@@ -2,6 +2,11 @@
   "name": "@apitree.cz/ts-config",
   "version": "0.4.0",
   "description": "TypeScript configuration for ApiTree projects.",
+  "keywords": [
+    "apitree",
+    "typescript",
+    "config"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ApiTreeCZ/toolbox",

@@ -24,12 +24,18 @@ importers:
       '@apitree.cz/eslint-config':
         specifier: workspace:*
         version: link:packages/eslint-config
+      '@apitree.cz/lint-staged-config':
+        specifier: workspace:*
+        version: link:packages/lint-staged-config
       '@apitree.cz/prettier-config':
         specifier: workspace:*
         version: link:packages/prettier-config
       '@apitree.cz/ts-config':
         specifier: workspace:*
         version: link:packages/ts-config
+      '@apitree.cz/typedoc-config':
+        specifier: workspace:*
+        version: link:packages/typedoc-config
       '@changesets/cli':
         specifier: ^2.27.12
         version: 2.27.12
@@ -66,6 +72,9 @@ importers:
       turbo:
         specifier: ^2.3.4
         version: 2.3.4
+      typedoc:
+        specifier: ^0.27.6
+        version: 0.27.6(typescript@5.7.3)
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
@@ -97,12 +106,6 @@ importers:
         specifier: ^3.24.1
         version: 3.24.1
     devDependencies:
-      '@apitree.cz/typedoc-config':
-        specifier: workspace:*
-        version: link:../typedoc-config
-      typedoc:
-        specifier: ^0.27.6
-        version: 0.27.6(typescript@5.7.3)
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
@@ -195,6 +198,12 @@ importers:
         specifier: ^5.7.3
         version: 5.7.3
 
+  packages/lint-staged-config:
+    devDependencies:
+      lint-staged:
+        specifier: ^15.4.3
+        version: 15.4.3
+
   packages/prettier-config:
     dependencies:
       prettier-plugin-packagejson:
@@ -251,17 +260,7 @@ importers:
         specifier: ^5.7.3
         version: 5.7.3
 
-  packages/ts-utils:
-    devDependencies:
-      '@apitree.cz/typedoc-config':
-        specifier: workspace:*
-        version: link:../typedoc-config
-      typedoc:
-        specifier: ^0.27.6
-        version: 0.27.6(typescript@5.7.3)
-      typescript:
-        specifier: ^5.7.3
-        version: 5.7.3
+  packages/ts-utils: {}
 
   packages/typedoc-config:
     dependencies:

@@ -1,19 +1,16 @@
 {
-  "name": "@apitree.cz/vitest-config",
-  "version": "0.7.0",
-  "description": "Vitest configuration for ApiTree projects.",
+  "name": "@apitree.cz/lint-staged-config",
+  "version": "0.0.0",
+  "description": "Lint-staged configuration for ApiTree projects.",
   "keywords": [
     "apitree",
-    "vitest",
-    "config",
-    "nodejs",
-    "react",
-    "nestjs"
+    "lint-staged",
+    "config"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ApiTreeCZ/toolbox",
-    "directory": "packages/vitest-config"
+    "directory": "packages/lint-staged-config"
   },
   "sideEffects": false,
   "type": "module",
@@ -21,22 +18,6 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
-    },
-    "./base": {
-      "import": "./dist/base.js",
-      "types": "./dist/base.d.ts"
-    },
-    "./constants": {
-      "import": "./dist/constants.js",
-      "types": "./dist/constants.d.ts"
-    },
-    "./nestjs": {
-      "import": "./dist/nestjs.js",
-      "types": "./dist/nestjs.d.ts"
-    },
-    "./react": {
-      "import": "./dist/react.js",
-      "types": "./dist/react.d.ts"
     }
   },
   "types": "./dist/index.d.ts",
@@ -55,23 +36,14 @@
     "qa": "run-p ts format lint",
     "ts": "tsc --build tsconfig.json"
   },
-  "dependencies": {
-    "@swc/core": "^1.10.11",
-    "@vitejs/plugin-react": "^4.3.4",
-    "@vitest/coverage-v8": "^3.0.4",
-    "unplugin-swc": "^1.5.1",
-    "vite": "^6.0.11"
-  },
   "devDependencies": {
-    "jsdom": "^26.0.0",
-    "vitest": "^3.0.4"
+    "lint-staged": "^15.4.3"
   },
   "peerDependencies": {
-    "jsdom": "^26.0.0",
-    "vitest": "^3.0.4"
+    "lint-staged": "^15.4.3"
   },
   "peerDependenciesMeta": {
-    "jsdom": {
+    "lint-staged": {
       "optional": true
     }
   }

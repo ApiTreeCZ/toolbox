@@ -2,6 +2,12 @@
   "name": "@apitree.cz/eslint-config",
   "version": "0.5.2",
   "description": "ESLint configuration for ApiTree projects.",
+  "keywords": [
+    "apitree",
+    "eslint",
+    "config",
+    "esm"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ApiTreeCZ/toolbox",

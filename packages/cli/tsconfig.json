@@ -1,6 +1,6 @@
 {
   "extends": "@apitree.cz/ts-config/library",
-  "include": ["./*.js", "bin/**/*", "src/**/*"],
+  "include": ["**/*.js", "**/*.ts"],
   "exclude": ["dist", "node_modules"],
-  "references": [{ "path": "../ts-utils/tsconfig.build.json" }, { "path": "../typedoc-config/tsconfig.build.json" }]
+  "references": [{ "path": "../ts-utils/tsconfig.build.json" }]
 }

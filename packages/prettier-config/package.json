@@ -2,6 +2,11 @@
   "name": "@apitree.cz/prettier-config",
   "version": "0.3.0",
   "description": "Prettier configuration for ApiTree projects.",
+  "keywords": [
+    "apitree",
+    "prettier",
+    "config"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ApiTreeCZ/toolbox",

@@ -2,6 +2,11 @@
   "name": "@apitree.cz/typedoc-config",
   "version": "0.2.0",
   "description": "TypeDoc configuration for ApiTree projects.",
+  "keywords": [
+    "apitree",
+    "typedoc",
+    "config"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ApiTreeCZ/toolbox",

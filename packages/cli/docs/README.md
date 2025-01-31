@@ -1,8 +1,10 @@
+**@apitree.cz/cli**
+
+---
+
 # @apitree.cz/cli
 
-## Table of contents
-
-### Interfaces
+## Interfaces
 
 - [SyncProjectReferencesConfig](interfaces/SyncProjectReferencesConfig.md)
 - [SyncProjectReferencesHooks](interfaces/SyncProjectReferencesHooks.md)

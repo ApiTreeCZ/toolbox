@@ -1,19 +1,17 @@
+[**@apitree.cz/cli**](../README.md)
+
+---
+
 # Interface: WorkspacePackageProps
 
-## Table of contents
-
-### Properties
-
-- [workspacePackage](WorkspacePackageProps.md#workspacepackage)
+Defined in: [types.ts:35](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L35)
 
 ## Properties
 
 ### workspacePackage
 
-• **workspacePackage**: `Package`
+> **workspacePackage**: `Package`
+
+Defined in: [types.ts:39](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L39)
 
 Workspace package.
-
-#### Defined in
-
-[commands/sync-project-references/types.ts:49](https://github.com/ApiTreeCZ/toolbox/blob/develop/packages/cli/src/commands/sync-project-references/types.ts#L49)
