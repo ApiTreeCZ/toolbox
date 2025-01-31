@@ -6,7 +6,7 @@
 
 # Prettier Config
 
-![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Fprettier-config)
+[![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Fprettier-config)](https://www.npmjs.com/package/@apitree.cz/prettier-config)
 
 ### [Prettier](https://prettier.io) configuration for ApiTree projects
 

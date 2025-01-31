@@ -6,7 +6,7 @@
 
 # TS Config
 
-![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Fts-config)
+[![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Fts-config)](https://www.npmjs.com/package/@apitree.cz/ts-config)
 
 ### [TypeScript](https://typescriptlang.org) configuration for ApiTree projects
 

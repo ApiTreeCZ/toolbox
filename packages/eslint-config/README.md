@@ -6,7 +6,7 @@
 
 # ESLint Config
 
-![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Feslint-config)
+[![NPM Version](https://img.shields.io/npm/v/%40apitree.cz%2Feslint-config)](https://www.npmjs.com/package/@apitree.cz/eslint-config)
 
 ### [ESLint](https://eslint.org) configuration for ApiTree projects
 
