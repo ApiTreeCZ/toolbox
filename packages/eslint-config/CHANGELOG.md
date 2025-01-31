@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.5.6
+
+### Patch Changes
+
+- 70fd0fa: Add link to npm package page.
+
 ## 0.5.5
 
 ### Patch Changes

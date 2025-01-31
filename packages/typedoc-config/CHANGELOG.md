@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.2.3
+
+### Patch Changes
+
+- 70fd0fa: Add link to npm package page.
+
 ## 0.2.2
 
 ### Patch Changes

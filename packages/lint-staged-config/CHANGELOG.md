@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 0.1.2
+
+### Patch Changes
+
+- 70fd0fa: Add link to npm package page.
+
 ## 0.1.1
 
 ### Patch Changes

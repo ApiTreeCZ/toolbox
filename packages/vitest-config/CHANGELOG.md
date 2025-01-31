@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.7.3
+
+### Patch Changes
+
+- 70fd0fa: Add link to npm package page.
+
 ## 0.7.2
 
 ### Patch Changes

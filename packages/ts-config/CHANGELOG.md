@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.4.4
+
+### Patch Changes
+
+- 70fd0fa: Add link to npm package page.
+
 ## 0.4.3
 
 ### Patch Changes

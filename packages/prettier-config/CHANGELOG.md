@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.3.3
+
+### Patch Changes
+
+- 70fd0fa: Add link to npm package page.
+
 ## 0.3.2
 
 ### Patch Changes

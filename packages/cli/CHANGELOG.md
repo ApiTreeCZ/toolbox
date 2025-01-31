@@ -1,5 +1,13 @@
 # @apitree.cz/cli
 
+## 0.4.4
+
+### Patch Changes
+
+- 70fd0fa: Add link to npm package page.
+- Updated dependencies [70fd0fa]
+  - @apitree.cz/ts-utils@0.2.3
+
 ## 0.4.3
 
 ### Patch Changes

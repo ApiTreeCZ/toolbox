@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.6.3
+
+### Patch Changes
+
+- 70fd0fa: Add link to npm package page.
+
 ## 0.6.2
 
 ### Patch Changes
