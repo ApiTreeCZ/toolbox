@@ -30,7 +30,7 @@ pnpm apitree --help
 
 #### `sync-project-references`
 
-Synchronize monorepo project references in TS config files (multi-target builds supported).
+Synchronize monorepo project references in TS config files.
 
 ```bash
 pnpm apitree sync-project-references --help
@@ -39,7 +39,7 @@ pnpm apitree sync-project-references --help
 ##### Configuration
 
 You can configure the command with an optional config file (`sync-project-references.config.js` by default,
-pass `--config` option with custom path).
+use `--config` to customize).
 
 ```js
 /** @type {import('@apitree/cli').SyncProjectReferencesConfig} */

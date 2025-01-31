@@ -5,7 +5,8 @@
   "keywords": [
     "apitree",
     "typescript",
-    "config"
+    "config",
+    "esm"
   ],
   "repository": {
     "type": "git",
