@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.5.2
+
+### Patch Changes
+
+- 330e3a0: Remove `eslint-plugin-prettier` in favor of `prettier` directly (only `eslint-config-prettier` overrides are applied).
+
 ## 0.5.1
 
 ### Patch Changes
