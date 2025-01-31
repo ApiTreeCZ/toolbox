@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.5.4
+
+### Patch Changes
+
+- 3fa15b2: Bump pnpm and node.js
+
 ## 0.5.3
 
 ### Patch Changes

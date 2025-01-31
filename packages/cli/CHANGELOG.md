@@ -1,5 +1,13 @@
 # @apitree.cz/cli
 
+## 0.4.3
+
+### Patch Changes
+
+- 3fa15b2: Bump pnpm and node.js
+- Updated dependencies [3fa15b2]
+  - @apitree.cz/ts-utils@0.2.2
+
 ## 0.4.2
 
 ### Patch Changes

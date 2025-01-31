@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.7.2
+
+### Patch Changes
+
+- 3fa15b2: Bump pnpm and node.js
+
 ## 0.7.1
 
 ### Patch Changes

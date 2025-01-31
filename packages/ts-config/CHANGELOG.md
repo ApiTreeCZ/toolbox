@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.4.3
+
+### Patch Changes
+
+- 3fa15b2: Bump pnpm and node.js
+
 ## 0.4.2
 
 ### Patch Changes

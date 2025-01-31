@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.6.2
+
+### Patch Changes
+
+- 3fa15b2: Bump pnpm and node.js
+
 ## 0.6.1
 
 ### Patch Changes

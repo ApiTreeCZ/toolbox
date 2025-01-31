@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.2.2
+
+### Patch Changes
+
+- 3fa15b2: Bump pnpm and node.js
+
 ## 0.2.1
 
 ### Patch Changes
