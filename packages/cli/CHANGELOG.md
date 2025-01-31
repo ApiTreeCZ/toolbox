@@ -1,5 +1,11 @@
 # @apitree.cz/cli
 
+## 0.4.2
+
+### Patch Changes
+
+- 67f8f37: Bump package.
+
 ## 0.4.1
 
 ### Patch Changes
