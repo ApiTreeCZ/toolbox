@@ -84,12 +84,12 @@
   },
   "devDependencies": {
     "@types/eslint__eslintrc": "^2.1.2",
-    "eslint": "9.19.0",
+    "eslint": "^9.19.0",
     "react": "^19.0.0",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "eslint": "9.19.0",
+    "eslint": "^9.19.0",
     "react": "^19.0.0"
   },
   "peerDependenciesMeta": {
