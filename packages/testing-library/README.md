@@ -15,7 +15,7 @@
 ## Installation
 
 ```bash
-pnpm add --save-dev @apitree.cz/testing-library @testing-library/react
+pnpm add --save-dev @apitree.cz/testing-library @testing-library/react vitest
 ```
 
 In a monorepo, install and use the package in each workspace.

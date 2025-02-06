@@ -9,8 +9,11 @@ export interface CreateRenderersProps {
   defaultWrapper?: RenderOptions['wrapper'] | undefined;
 }
 
+/**
+ * Create custom component and hook renderers that use a default wrapper.
+ */
 export const createRenderers = ({
-  defaultWrapper = function defaultWrapper({ children }) {
+  defaultWrapper = function DefaultWrapper({ children }) {
     return children;
   },
 }: CreateRenderersProps = {}) => {
@@ -25,6 +28,7 @@ export const createRenderers = ({
     const { wrapper = defaultWrapper } = options ?? {};
     return render<Q, Container, BaseElement>(ui, { ...options, wrapper });
   };
+
   const customRenderHook = <
     Result,
     Props,
@@ -41,6 +45,7 @@ export const createRenderers = ({
       wrapper,
     });
   };
+
   return { render: customRender, renderHook: customRenderHook };
 };
 
