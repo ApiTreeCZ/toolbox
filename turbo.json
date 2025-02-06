@@ -18,6 +18,10 @@
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js", "../../prettier.config.js"],
       "outputs": [".eslintcache", "tsconfig.buildinfo"]
     },
+    "//#fix:root": {
+      "dependsOn": ["^build"],
+      "outputs": [".eslintcache", "tsconfig.buildinfo"]
+    },
     "lint": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
@@ -27,6 +31,13 @@
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
       "outputs": [".eslintchache"]
     },
+    "//#lint:root": {
+      "dependsOn": ["^build"],
+      "outputs": [".eslintcache"]
+    },
+    "//#lint:root:fix": {
+      "outputs": [".eslintcache"]
+    },
     "format": {
       "inputs": ["$TURBO_DEFAULT$", "../../prettier.config.js"],
       "outputs": []
@@ -35,10 +46,25 @@
       "inputs": ["$TURBO_DEFAULT$", "../../prettier.config.js"],
       "outputs": []
     },
+    "//#format:root": {
+      "outputs": []
+    },
+    "//#format:root:fix": {
+      "outputs": []
+    },
     "qa": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js", "../../prettier.config.js"],
       "outputs": [".eslintcache", "tsconfig.buildinfo"]
+    },
+    "//#qa:root": {
+      "dependsOn": ["^build"],
+      "outputs": [".eslintcache", "tsconfig.buildinfo"]
+    },
+    "//#sync-project-references": {
+      "dependsOn": ["^build"],
+      "inputs": ["packages/*/package.json"],
+      "outputs": ["packages/*/tsconfig.json", "packages/*/tsconfig.build.json"]
     },
     "test": {
       "dependsOn": ["^build"],
@@ -49,6 +75,10 @@
       "outputs": ["coverage/**/*"]
     },
     "ts": {
+      "dependsOn": ["^build"],
+      "outputs": ["tsconfig.tsbuildinfo"]
+    },
+    "//#ts:root": {
       "dependsOn": ["^build"],
       "outputs": ["tsconfig.tsbuildinfo"]
     }

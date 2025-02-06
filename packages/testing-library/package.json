@@ -61,7 +61,7 @@
     "@types/react-dom": "^19.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "vitest": "^3.0.4"
+    "vitest": "^3.0.5"
   },
   "peerDependencies": {
     "@testing-library/react": "^16.2.0",
