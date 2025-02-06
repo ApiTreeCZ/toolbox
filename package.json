@@ -78,7 +78,7 @@
       "esbuild"
     ],
     "overrides": {
-      "eslint": "9.19.0"
+      "eslint": "^9.19.0"
     }
   },
   "manypkg": {
