@@ -62,7 +62,6 @@
       "outputs": [".eslintcache", "tsconfig.buildinfo"]
     },
     "//#sync-project-references": {
-      "dependsOn": ["^build"],
       "inputs": ["packages/*/package.json"],
       "outputs": ["packages/*/tsconfig.json", "packages/*/tsconfig.build.json"]
     },
