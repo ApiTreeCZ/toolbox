@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.3.4
+
+### Patch Changes
+
+- afc1fba: Update dependencies to latest versions. Include critical security fixes.
+
 ## 0.3.3
 
 ### Patch Changes

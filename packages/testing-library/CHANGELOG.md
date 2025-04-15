@@ -1,5 +1,12 @@
 # @apitree.cz/testing-library
 
+## 0.6.4
+
+### Patch Changes
+
+- a0b15d9: Add `vitest` to peer deps.
+- afc1fba: Update dependencies to latest versions. Include critical security fixes.
+
 ## 0.6.3
 
 ### Patch Changes

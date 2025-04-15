@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 0.1.3
+
+### Patch Changes
+
+- afc1fba: Update dependencies to latest versions. Include critical security fixes.
+
 ## 0.1.2
 
 ### Patch Changes

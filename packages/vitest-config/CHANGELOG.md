@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.7.4
+
+### Patch Changes
+
+- afc1fba: Update dependencies to latest versions. Include critical security fixes.
+
 ## 0.7.3
 
 ### Patch Changes

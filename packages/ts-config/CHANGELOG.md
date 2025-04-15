@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.4.5
+
+### Patch Changes
+
+- afc1fba: Update dependencies to latest versions. Include critical security fixes.
+
 ## 0.4.4
 
 ### Patch Changes

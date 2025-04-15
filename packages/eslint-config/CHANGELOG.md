@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.5.7
+
+### Patch Changes
+
+- afc1fba: Update dependencies to latest versions. Include critical security fixes.
+
 ## 0.5.6
 
 ### Patch Changes

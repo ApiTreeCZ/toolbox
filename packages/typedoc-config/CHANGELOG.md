@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.2.4
+
+### Patch Changes
+
+- afc1fba: Update dependencies to latest versions. Include critical security fixes.
+
 ## 0.2.3
 
 ### Patch Changes
