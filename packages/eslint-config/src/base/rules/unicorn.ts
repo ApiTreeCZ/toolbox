@@ -32,6 +32,9 @@ export const unicorn: Linter.RulesRecord = {
         ref: {
           reference: false,
         },
+        utils: {
+          utilities: false,
+        },
       },
     },
   ],

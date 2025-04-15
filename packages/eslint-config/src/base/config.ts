@@ -86,9 +86,7 @@ export const config: ConfigArray = tsEslint.config(
       '**/test/**/*.ts',
       '**/tests/**/*.ts',
     ],
-    plugins: {
-      vitest,
-    },
+    plugins: { vitest },
     rules: {
       ...vitest.configs.recommended.rules,
       ...rules.tests,

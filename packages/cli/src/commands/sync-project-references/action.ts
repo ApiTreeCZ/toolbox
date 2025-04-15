@@ -30,6 +30,6 @@ export const action = async ({ config }: ActionProps) => {
     logger.warn('No project references to sync.');
     return;
   }
-  const paths = await Promise.all(sync);
-  await runHooks(hooks, paths.flat());
+  const paths = (await Promise.all(sync)).flat();
+  await runHooks(hooks, paths);
 };

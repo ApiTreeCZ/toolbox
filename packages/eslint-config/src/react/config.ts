@@ -3,7 +3,7 @@ import type { Linter } from 'eslint';
 import prettier from 'eslint-config-prettier';
 import formatjs from 'eslint-plugin-formatjs';
 import jestDom from 'eslint-plugin-jest-dom';
-import mdx from 'eslint-plugin-mdx';
+import * as mdx from 'eslint-plugin-mdx';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
@@ -63,9 +63,7 @@ export const config = [
       '**/stories/**/*.tsx',
       '**/tests/**/*.tsx',
     ],
-    plugins: {
-      vitest,
-    },
+    plugins: { vitest },
     rules: { ...vitest.configs.recommended.rules, ...baseRules.tests, ...rules.tests },
   },
   {
