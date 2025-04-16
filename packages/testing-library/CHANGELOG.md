@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.7.0
+
+### Minor Changes
+
+- fcd5cd5: Remove dependency on `@testing-library/user-event`. Our package should not enforce any specific version for `user-event`, it creates unnecessary complexity in the dependency tree.
+
 ## 0.6.4
 
 ### Patch Changes
