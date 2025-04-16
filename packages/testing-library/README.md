@@ -35,7 +35,6 @@ In a monorepo, install and use the package in each workspace.
    ```typescript jsx
    import { createRenderers } from '@apitree.cz/testing-library';
 
-   export * from '@apitree.cz/testing-library';
    export * from '@testing-library/react';
    export const { render, renderHook } = createRenderers();
    ```
