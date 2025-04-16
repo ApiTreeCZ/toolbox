@@ -51,4 +51,3 @@ export const createRenderers = ({
 
 export { queries, screen } from '@testing-library/dom';
 export { render, renderHook } from '@testing-library/react';
-export { userEvent } from '@testing-library/user-event';
