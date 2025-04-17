@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.5.8
+
+### Patch Changes
+
+- 9aa1dda: Add `util` to allowed abbreviations
+
 ## 0.5.7
 
 ### Patch Changes
