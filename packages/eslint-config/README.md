@@ -86,22 +86,11 @@ export default [...base, ...react, ...storybook];
 
 ## IntelliJ IDE Setup
 
-In order to have our `typescript-eslint` configuration working in monorepos with IntelliJ IDEs use the following setup:
+Following IntelliJ IDEs setup is recommended for the best developer experience:
 
 <img alt="IntelliJ ESLint Flat Config Setup" src="../../public/intellij-eslint-setup.png" width="730" />
 
-Extend the `Working directories` pattern with any other workspace directories you have.
-
-If your project is not a monorepo, simply use `Automatic ESLint configuration` option and only specify the
-`Run for files` pattern.
-
 ### Recommended Values
-
-#### Working directories
-
-```
-apps/*;packages/*;
-```
 
 #### Run for files
 
