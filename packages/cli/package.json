@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@apitree.cz/ts-utils": "workspace:*",
-    "@commander-js/extra-typings": "^13.1.0",
+    "@commander-js/extra-typings": "^14.0.0",
     "@manypkg/get-packages": "^2.2.2",
     "commander": "^13.1.0",
     "deepmerge": "^4.3.1",
