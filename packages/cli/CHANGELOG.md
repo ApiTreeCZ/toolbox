@@ -1,5 +1,11 @@
 # @apitree.cz/cli
 
+## 0.4.6
+
+### Patch Changes
+
+- 06693e7: Update all dependencies to their latest version.
+
 ## 0.4.5
 
 ### Patch Changes

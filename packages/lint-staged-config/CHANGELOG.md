@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 0.1.4
+
+### Patch Changes
+
+- 06693e7: Update all dependencies to their latest version.
+
 ## 0.1.3
 
 ### Patch Changes

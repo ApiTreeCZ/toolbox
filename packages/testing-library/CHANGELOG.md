@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.7.1
+
+### Patch Changes
+
+- 06693e7: Update all dependencies to their latest version.
+
 ## 0.7.0
 
 ### Minor Changes
