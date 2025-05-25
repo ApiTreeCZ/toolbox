@@ -1,5 +1,15 @@
 # @apitree.cz/eslint-config
 
+## 0.6.0
+
+### Minor Changes
+
+- a5f20fc: BREAKING:
+
+  - enforce object shorthand syntax everywhere
+  - prefer array and object destructuring (except for references)
+  - require destructuring assignment in React component props
+
 ## 0.5.9
 
 ### Patch Changes
