@@ -50,4 +50,25 @@ export const common: Linter.RulesRecord = {
   'no-shadow': 'off', // Allow variables shadowing
   'no-use-before-define': 'off', // Guarded by @typescript-eslint/no-use-before-define
   'no-warning-comments': ['warn', { terms: ['fixme', 'todo'] }], // Warn against fixme and todo comments
+  'object-shorthand': [
+    // Enforce object shorthand syntax
+    'error',
+    'always',
+    {
+      avoidExplicitReturnArrows: true,
+      avoidQuotes: true,
+      ignoreConstructors: false,
+    },
+  ],
+  'prefer-destructuring': [
+    // Prefer destructuring over accessing properties directly (except for references)
+    'error',
+    {
+      array: true,
+      object: true,
+    },
+    {
+      enforceForRenamedProperties: false,
+    },
+  ],
 };

@@ -1,6 +1,12 @@
 import type { Linter } from 'eslint';
 
 export const common: Linter.RulesRecord = {
+  'react/destructuring-assignment': [
+    // Enforce destructuring assignment for React component props
+    'error',
+    'always',
+    { destructureInSignature: 'always', ignoreClassFields: false },
+  ],
   'react/function-component-definition': [
     // Prefer arrow functions for React components and avoid unnamed components with function expressions
     'error',
