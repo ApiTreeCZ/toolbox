@@ -76,8 +76,16 @@
       "dependsOn": ["^build"],
       "outputs": []
     },
+    "@apitree.cz/eslint-config#test": {
+      "dependsOn": ["^build", "build"],
+      "outputs": []
+    },
     "test:coverage": {
       "dependsOn": ["^build"],
+      "outputs": ["coverage/**/*"]
+    },
+    "@apitree.cz/eslint-config#test:coverage": {
+      "dependsOn": ["^build", "build"],
       "outputs": ["coverage/**/*"]
     },
     "ts": {
