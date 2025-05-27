@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 0.2.0
+
+### Minor Changes
+
+- 905769a: Migrate to `lint-staged@16`.
+
 ## 0.1.4
 
 ### Patch Changes

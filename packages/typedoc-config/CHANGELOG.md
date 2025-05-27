@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.2.6
+
+### Patch Changes
+
+- 905769a: Bump dependencies to latest versions.
+
 ## 0.2.5
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.7.2
+
+### Patch Changes
+
+- 905769a: Bump dependencies to latest versions.
+
 ## 0.7.1
 
 ### Patch Changes

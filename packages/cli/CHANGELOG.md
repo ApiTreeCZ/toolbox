@@ -1,5 +1,11 @@
 # @apitree.cz/cli
 
+## 0.4.7
+
+### Patch Changes
+
+- 905769a: Bump dependencies to latest versions.
+
 ## 0.4.6
 
 ### Patch Changes
