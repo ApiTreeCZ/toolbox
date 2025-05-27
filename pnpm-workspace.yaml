@@ -1,2 +1,13 @@
+autoInstallPeers: false
+
+enablePrePostScripts: true
+
 packages:
   - packages/*
+
+publicHoistPattern:
+  - '*eslint*'
+  - '*prettier*'
+  - '*vitest*'
+
+strictPeerDependencies: true
