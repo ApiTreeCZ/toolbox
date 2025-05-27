@@ -1,5 +1,6 @@
 import eslint from '@eslint/js';
 import vitest from '@vitest/eslint-plugin';
+import type { Linter } from 'eslint';
 import prettier from 'eslint-config-prettier';
 import * as imports from 'eslint-plugin-import';
 import turbo from 'eslint-plugin-turbo';
@@ -11,13 +12,12 @@ import tsEslint, {
   parser as tsEslintParser,
   plugin as tsEslintPlugin,
 } from 'typescript-eslint';
-import type { ConfigArray } from 'typescript-eslint';
 
 import { importExtensions } from '../constants.js';
 
 import * as rules from './rules/index.js';
 
-export const config: ConfigArray = tsEslint.config(
+export const config = tsEslint.config(
   {
     ignores: [
       '.idea/**/*',
@@ -101,4 +101,4 @@ export const config: ConfigArray = tsEslint.config(
     rules: rules.monorepo,
   },
   prettier,
-);
+) as Linter.Config[];

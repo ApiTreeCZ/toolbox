@@ -61,7 +61,7 @@ export const common: Linter.RulesRecord = {
     },
   ],
   'prefer-destructuring': [
-    // Prefer destructuring over accessing properties directly (except for references)
+    // Prefer destructuring over accessing properties directly (except for renamed properties)
     'error',
     {
       array: true,
