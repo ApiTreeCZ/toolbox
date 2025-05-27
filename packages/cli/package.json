@@ -39,13 +39,13 @@
   },
   "dependencies": {
     "@apitree.cz/ts-utils": "workspace:*",
-    "@commander-js/extra-typings": "^13.1.0",
-    "@manypkg/get-packages": "^2.2.2",
-    "commander": "^13.1.0",
+    "@commander-js/extra-typings": "^14.0.0",
+    "@manypkg/get-packages": "^3.0.0",
+    "commander": "^14.0.0",
     "deepmerge": "^4.3.1",
     "path-exists": "^5.0.0",
     "ts-toolbelt": "^9.6.0",
-    "zod": "^3.25.28"
+    "zod": "^3.25.30"
   },
   "devDependencies": {
     "typescript": "^5.8.3"

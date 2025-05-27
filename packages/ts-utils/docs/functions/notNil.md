@@ -12,7 +12,9 @@ Checks if value IS NOT `null` or `undefined`. Works as a type guard.
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 

@@ -40,7 +40,7 @@
     "typedoc-plugin-markdown": "^4.6.3"
   },
   "devDependencies": {
-    "typedoc": "^0.28.4",
+    "typedoc": "^0.28.5",
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
