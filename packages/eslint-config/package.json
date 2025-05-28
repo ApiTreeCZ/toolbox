@@ -74,7 +74,7 @@
     "eslint-plugin-mdx": "^3.4.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-storybook": "^0.12.0",
+    "eslint-plugin-storybook": "^9.0.0",
     "eslint-plugin-testing-library": "^7.2.2",
     "eslint-plugin-turbo": "^2.5.3",
     "eslint-plugin-unicorn": "^59.0.1",
