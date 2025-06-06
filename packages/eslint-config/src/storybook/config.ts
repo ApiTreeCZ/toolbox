@@ -1,8 +1,12 @@
 import type { Linter } from 'eslint';
 import storybook from 'eslint-plugin-storybook';
 
+function esModuleInterop<Import extends { default: unknown }>(cjs: Import) {
+  return cjs as Import['default'];
+}
+
 export const config = [
-  ...storybook.configs['flat/recommended'],
+  ...esModuleInterop(storybook).configs['flat/recommended'],
   {
     files: ['**/.storybook/**/*', '**/storybook/**/*'],
     rules: {
