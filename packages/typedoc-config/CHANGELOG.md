@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.2.7
+
+### Patch Changes
+
+- bf64f67: Update dependencies to latest patch.
+
 ## 0.2.6
 
 ### Patch Changes

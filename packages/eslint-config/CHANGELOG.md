@@ -1,5 +1,12 @@
 # @apitree.cz/eslint-config
 
+## 0.6.2
+
+### Patch Changes
+
+- bf64f67: Update dependencies to latest patch.
+- bf64f67: Add `react/self-closing-comp`. Migrate `storybook` to `v9`.
+
 ## 0.6.1
 
 ### Patch Changes

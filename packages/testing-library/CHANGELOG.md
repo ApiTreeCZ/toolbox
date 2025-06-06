@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.7.3
+
+### Patch Changes
+
+- bf64f67: Update dependencies to latest patch.
+
 ## 0.7.2
 
 ### Patch Changes

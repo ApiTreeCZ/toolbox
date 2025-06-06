@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.7.6
+
+### Patch Changes
+
+- bf64f67: Update dependencies to latest patch.
+
 ## 0.7.5
 
 ### Patch Changes

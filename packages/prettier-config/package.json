@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/prettier-config",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Prettier configuration for ApiTree projects.",
   "keywords": [
     "apitree",

@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.3.6
+
+### Patch Changes
+
+- bf64f67: Update dependencies to latest patch.
+
 ## 0.3.5
 
 ### Patch Changes

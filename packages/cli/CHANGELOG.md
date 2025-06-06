@@ -1,5 +1,11 @@
 # @apitree.cz/cli
 
+## 0.4.8
+
+### Patch Changes
+
+- bf64f67: Update dependencies to latest patch.
+
 ## 0.4.7
 
 ### Patch Changes
