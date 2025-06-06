@@ -46,8 +46,9 @@ Necessary for React (JSX/MDX) projects.
 
 ```javascript
 import { base, react } from '@apitree.cz/eslint-config';
+import { defineConfig } from 'eslint/config';
 
-export default [...base, ...react];
+export default defineConfig(base, react);
 ```
 
 ### Next.js
@@ -56,8 +57,9 @@ Next.js configuration requires to specify the path to the app(s).
 
 ```javascript
 import { base, react, nextjs } from '@apitree.cz/eslint-config';
+import { defineConfig } from 'eslint/config';
 
-export default [...base, ...react, ...nextjs(['apps/<nextjs-app>'])];
+export default defineConfig(base, react, nextjs(['apps/<nextjs-app>']));
 ```
 
 > Omit the apps array if you have a single Next.js app repository (no monorepo).
@@ -68,8 +70,9 @@ Nest.js configuration requires to specify the path to the app(s).
 
 ```javascript
 import { base, nestjs } from '@apitree.cz/eslint-config';
+import { defineConfig } from 'eslint/config';
 
-export default [...base, ...nestjs(['apps/<nestjs-app>'])];
+export default defineConfig(base, nestjs(['apps/<nestjs-app>']));
 ```
 
 > Omit the apps array if you have a single Nest.js app repository (no monorepo).
@@ -80,8 +83,9 @@ Necessary for projects containing Storybook instance.
 
 ```javascript
 import { base, react, storybook } from '@apitree.cz/eslint-config';
+import { defineConfig } from 'eslint/config';
 
-export default [...base, ...react, ...storybook];
+export default defineConfig(base, react, storybook);
 ```
 
 ## IntelliJ IDE Setup
