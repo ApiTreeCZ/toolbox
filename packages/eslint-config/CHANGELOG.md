@@ -1,5 +1,12 @@
 # @apitree.cz/eslint-config
 
+## 0.6.3
+
+### Patch Changes
+
+- 5f1d388: Enforce Rules of Hooks (closes [#70](https://github.com/ApiTreeCZ/toolbox/issues/70)).
+- ad74157: Enforce `kebab-case` for filenames (closes [#69](https://github.com/ApiTreeCZ/toolbox/issues/69)).
+
 ## 0.6.2
 
 ### Patch Changes
