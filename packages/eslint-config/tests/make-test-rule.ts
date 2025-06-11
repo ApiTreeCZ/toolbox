@@ -52,7 +52,12 @@ export const makeTestRule =
       baseConfig.plugins = plugins;
     }
 
-    const linter = new ESLint({ baseConfig, cache: false });
+    const linter = new ESLint({
+      baseConfig,
+      cache: false,
+      // Filenames in tests are generic placeholders, casing is irrelevant
+      ruleFilter: ({ ruleId }) => ruleId !== 'unicorn/filename-case',
+    });
 
     expect(reports.length, 'At least one rule report must be specified for the test').toBeGreaterThanOrEqual(1);
     const [{ messages }] = await linter.lintText(code.trimStart());

@@ -1,10 +1,11 @@
 import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 import { describe, test } from 'vitest';
 
 import { common } from '../../src/react/rules/index.js';
 import { makeTestRule } from '../make-test-rule.js';
 
-const testRule = makeTestRule(common, { react });
+const testRule = makeTestRule(common, { react, 'react-hooks': reactHooks });
 
 describe('react/common', () => {
   test(
