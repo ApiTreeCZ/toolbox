@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.6.4
+
+### Patch Changes
+
+- ad6e963: Allow explicit return arrow functions in object shorthands.
+
 ## 0.6.3
 
 ### Patch Changes
