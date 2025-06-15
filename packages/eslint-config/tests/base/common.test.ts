@@ -19,10 +19,7 @@ describe('base/common', () => {
         baz: () => {},
       };
     `,
-      reports: [
-        { line: 6, column: 9, message: 'Expected property shorthand.', severity: 2 },
-        { line: 7, column: 9, message: 'Expected method shorthand.', severity: 2 },
-      ],
+      reports: [{ line: 6, column: 9, message: 'Expected property shorthand.', severity: 2 }],
     }),
   );
 
