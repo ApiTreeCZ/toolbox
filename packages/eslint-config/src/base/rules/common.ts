@@ -55,7 +55,7 @@ export const common: Linter.RulesRecord = {
     'error',
     'always',
     {
-      avoidExplicitReturnArrows: true,
+      avoidExplicitReturnArrows: false,
       avoidQuotes: true,
       ignoreConstructors: false,
     },
