@@ -10,6 +10,7 @@ export const imports: Linter.RulesRecord = {
     'ignorePackages',
     getImportExtensionsRecord(importExtensions),
   ],
+  'import/no-cycle': 'error', // Disallow circular dependencies between modules
   'import/no-extraneous-dependencies': [
     // Avoid importing devDependencies in production code
     'error',
