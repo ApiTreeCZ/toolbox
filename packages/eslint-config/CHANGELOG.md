@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.6.5
+
+### Patch Changes
+
+- 9080138: Forbid circular dependencies between modules.
+
 ## 0.6.4
 
 ### Patch Changes
