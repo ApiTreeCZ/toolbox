@@ -78,4 +78,4 @@ export const config = [
     files: ['**/*.mdx/*'],
   },
   prettier,
-] satisfies Linter.Config[];
+] as Linter.Config[];

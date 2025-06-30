@@ -37,7 +37,6 @@
 ### Minor Changes
 
 - a5f20fc: BREAKING:
-
   - enforce object shorthand syntax everywhere
   - prefer array and object destructuring (except for references)
   - require destructuring assignment in React component props
@@ -120,7 +119,6 @@
 ### Minor Changes
 
 - 5c46be6: BREAKING:
-
   - migrate to `eslint@9` and flat config
   - migrate to `react@19`
   - drop CJS support completely
@@ -282,7 +280,6 @@
 - 74ebf71: Upgrade all dependencies to their latest versions.
 - 455cfcd: Move `vitest` to direct dependencies as `eslint-plugin-vitest` needs it.
 - 7a585e4: Changed rules:
-
   - allow `null` values in our codebase
   - allow abbreviations in tests
   - extend allowed magic numbers with `-1`
@@ -292,7 +289,6 @@
 - 32797f4: Allow `2` in list of magic numbers.
 - e523288: Extend React style files pattern with `styles` directories to apply `no-magic-numbers` override there.
 - 2fde165: Rules updates:
-
   - disallow nested ternary expressions completely
   - allow `null` values for Nest.js apps as backend often needs `null` for DB queries and DTOs
   - put callbacks at the end of JSX element props
