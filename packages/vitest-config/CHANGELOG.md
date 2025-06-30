@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.7.7
+
+### Patch Changes
+
+- 6dcc467: Bump deps to latest.
+
 ## 0.7.6
 
 ### Patch Changes

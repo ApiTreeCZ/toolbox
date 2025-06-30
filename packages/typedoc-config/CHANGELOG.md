@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.2.8
+
+### Patch Changes
+
+- 6dcc467: Bump deps to latest.
+
 ## 0.2.7
 
 ### Patch Changes

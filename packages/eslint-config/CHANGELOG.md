@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.6.6
+
+### Patch Changes
+
+- 6dcc467: Bump deps to latest.
+
 ## 0.6.5
 
 ### Patch Changes

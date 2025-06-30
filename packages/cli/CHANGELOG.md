@@ -1,5 +1,11 @@
 # @apitree.cz/cli
 
+## 0.4.9
+
+### Patch Changes
+
+- 6dcc467: Bump deps to latest.
+
 ## 0.4.8
 
 ### Patch Changes

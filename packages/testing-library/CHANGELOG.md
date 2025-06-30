@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.7.4
+
+### Patch Changes
+
+- 6dcc467: Bump deps to latest.
+
 ## 0.7.3
 
 ### Patch Changes

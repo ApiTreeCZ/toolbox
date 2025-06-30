@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.3.7
+
+### Patch Changes
+
+- 6dcc467: Bump deps to latest.
+
 ## 0.3.6
 
 ### Patch Changes
