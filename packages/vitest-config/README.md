@@ -18,12 +18,13 @@
 pnpm add --save-dev @apitree.cz/vitest-config vitest
 ```
 
-### Monorepos
+### PNPM Monorepos
 
-Prior to the installation, add the following to your repository root `.npmrc`:
+Prior to the installation, add the following to your repository root `pnpm-workspace.yaml`:
 
-```
-public-hoist-pattern[]=*vitest*
+```yaml
+publicHoistPattern:
+  - '*vitest*'
 ```
 
 Install and use the package in each workspace.

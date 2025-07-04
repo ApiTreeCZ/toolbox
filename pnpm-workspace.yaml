@@ -2,6 +2,8 @@ autoInstallPeers: false
 
 enablePrePostScripts: true
 
+engineStrict: true
+
 packages:
   - packages/*
 
