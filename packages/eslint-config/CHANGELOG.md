@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.6.7
+
+### Patch Changes
+
+- 07e25fa: Extend list of allowed abbreviations for convenience.
+
 ## 0.6.6
 
 ### Patch Changes
