@@ -17,9 +17,19 @@ export const unicorn: Linter.RulesRecord = {
           developer: false,
           development: false,
         },
+        doc: {
+          documentation: false,
+          document: false,
+        },
         docs: {
           documentation: false,
           documents: false,
+        },
+        fn: {
+          function: false,
+        },
+        param: {
+          parameter: false,
         },
         params: {
           parameters: false,
@@ -32,6 +42,9 @@ export const unicorn: Linter.RulesRecord = {
         },
         ref: {
           reference: false,
+        },
+        refs: {
+          references: false,
         },
         util: {
           utility: false,
