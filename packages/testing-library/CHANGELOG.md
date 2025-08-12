@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.7.5
+
+### Patch Changes
+
+- c969ba1: Update dependencies to latest compatible versions.
+
 ## 0.7.4
 
 ### Patch Changes

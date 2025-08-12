@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.2.9
+
+### Patch Changes
+
+- c969ba1: Update dependencies to latest compatible versions.
+
 ## 0.2.8
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 0.2.2
+
+### Patch Changes
+
+- c969ba1: Update dependencies to latest compatible versions.
+
 ## 0.2.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/cli
 
+## 0.4.10
+
+### Patch Changes
+
+- c969ba1: Update dependencies to latest compatible versions.
+
 ## 0.4.9
 
 ### Patch Changes

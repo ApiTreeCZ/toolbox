@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.3.8
+
+### Patch Changes
+
+- c969ba1: Update dependencies to latest compatible versions.
+
 ## 0.3.7
 
 ### Patch Changes
