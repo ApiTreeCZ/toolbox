@@ -37,10 +37,10 @@
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "typedoc-plugin-markdown": "^4.7.0"
+    "typedoc-plugin-markdown": "^4.8.1"
   },
   "devDependencies": {
-    "typedoc": "^0.28.7",
+    "typedoc": "^0.28.10",
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
