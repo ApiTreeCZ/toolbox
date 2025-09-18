@@ -35,6 +35,6 @@ jobs:
           git config user.name "renovate[bot]"
           git config user.email "29139614+renovate[bot]@users.noreply.github.com"
           git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-          git add .changeset/**/*.md
+          git add .changeset
           git commit -m "chore(renovate): add changeset" || echo "No changes to commit"
           git push
