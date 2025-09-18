@@ -24,11 +24,14 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
       - name: Generate Changeset for Renovate
-        run: SKIP_COMMIT=TRUE pnpx @scaleway/changesets-renovate
+        # language=bash
+        run: |
+          SKIP_COMMIT=TRUE pnpx @scaleway/changesets-renovate
+          pnpm prettier --write .changeset/**/*.md
       - name: Commit and Push Changeset
         uses: EndBug/add-and-commit@v9.1.4
         with:
           add: '.changeset/**'
           default_author: 'github_actions'
-          message: 'chore: update changeset for renovate'
+          message: 'chore(renovate): add changeset'
           github_token: ${{ secrets.GITHUB_TOKEN }}
