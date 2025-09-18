@@ -1,23 +1,20 @@
 import eslint from '@eslint/js';
 import vitest from '@vitest/eslint-plugin';
-import type { Linter } from 'eslint';
+import { defineConfig } from 'eslint/config';
 import prettier from 'eslint-config-prettier';
 import * as imports from 'eslint-plugin-import';
 import turbo from 'eslint-plugin-turbo';
 import unicorn from 'eslint-plugin-unicorn';
 import unusedImports from 'eslint-plugin-unused-imports';
 import globals from 'globals';
-import tsEslint, {
-  configs as tsEslintConfigs,
-  parser as tsEslintParser,
-  plugin as tsEslintPlugin,
-} from 'typescript-eslint';
+import { configs as tsEslintConfigs, parser as tsEslintParser, plugin as tsEslintPlugin } from 'typescript-eslint';
 
 import { importExtensions } from '../constants.js';
+import { assertPlugin } from '../utils.js';
 
 import * as rules from './rules/index.js';
 
-export const config = tsEslint.config(
+export const config = defineConfig(
   {
     ignores: [
       '.idea/**/*',
@@ -39,7 +36,7 @@ export const config = tsEslint.config(
     plugins: {
       '@typescript-eslint': tsEslintPlugin,
       'unused-imports': unusedImports,
-      turbo,
+      turbo: assertPlugin(turbo),
       unicorn,
     },
     languageOptions: {
@@ -86,7 +83,7 @@ export const config = tsEslint.config(
       '**/test/**/*.ts',
       '**/tests/**/*.ts',
     ],
-    plugins: { vitest },
+    plugins: { vitest: assertPlugin(vitest) },
     rules: {
       ...vitest.configs.recommended.rules,
       ...rules.tests,
@@ -101,4 +98,4 @@ export const config = tsEslint.config(
     rules: rules.monorepo,
   },
   prettier,
-) as Linter.Config[];
+);
