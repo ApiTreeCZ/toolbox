@@ -1,0 +1,30 @@
+name: Changesets Renovate
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  changesets-renovate:
+    if: ${{ github.actor == 'renovate[bot]' && startsWith(github.ref_name, 'renovate/') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Generate Changeset for Renovate
+        run: SKIP_COMMIT=TRUE changesets-renovate
+      - name: Commit and Push Changeset
+        uses: EndBug/add-and-commit@v9.1.4
+        with:
+          add: '.changeset/**'
+          default_author: 'github_actions'
+          message: 'chore: update changeset for renovate'
+          pull: '--rebase'
+          push: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
