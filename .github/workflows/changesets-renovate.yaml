@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   changesets-renovate:
-    if: ${{ github.actor == 'renovate' && startsWith(github.ref_name, 'renovate/') }}
+    if: ${{ github.actor == 'renovate[bot]' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
