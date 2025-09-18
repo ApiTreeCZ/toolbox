@@ -1,9 +1,12 @@
 name: Changesets Renovate
 
 on:
-  pull_request:
-    branches:
-      - main
+  merge_group:
+  pull_request_target:
+    paths:
+      - '**/package.json'
+      - '**/pnpm-lock.yaml'
+      - '.github/**/*.yaml'
 
 permissions:
   contents: write
@@ -15,6 +18,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+          ref: ${{ github.head_ref }}
       - name: Setup
         uses: ./.github/actions/setup
       - name: Generate Changeset for Renovate
