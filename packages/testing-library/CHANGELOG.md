@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.7.6
+
+### Patch Changes
+
+- 55270e5: Upgrade dependencies to latest versions.
+
 ## 0.7.5
 
 ### Patch Changes
