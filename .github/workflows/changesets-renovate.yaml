@@ -27,6 +27,7 @@ jobs:
         # language=bash
         run: |
           SKIP_COMMIT=TRUE pnpx @scaleway/changesets-renovate
+          pnpm turbo run build --filter @apitree.cz/prettier-config
           pnpm prettier --write .changeset/**/*.md
       - name: Commit and Push Changeset
         uses: EndBug/add-and-commit@v9.1.4
