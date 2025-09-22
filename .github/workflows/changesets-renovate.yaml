@@ -24,9 +24,21 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
       - name: Generate Changeset for Renovate
+        env:
+          SKIP_COMMIT: TRUE
         # language=bash
         run: |
-          SKIP_COMMIT=TRUE pnpx @scaleway/changesets-renovate
+          # Skip if the only package.json file changed is the root one
+          CHANGED_PACKAGE_JSONS=$(git diff --name-only "origin/$GITHUB_BASE_REF...HEAD" -- 'package.json' 'packages/*/package.json')
+          WORKSPACE_PACKAGE_JSONS=$(echo "$CHANGED_PACKAGE_JSONS" | grep -v '^package\.json$' || echo "")
+
+          if [ -z "$WORKSPACE_PACKAGE_JSONS" ]; then
+            echo "Only root package.json changed, skipping changeset generation"
+            exit 0
+          fi
+
+          # Generate changeset
+          pnpx @scaleway/changesets-renovate
           pnpm turbo run build --filter @apitree.cz/prettier-config
           pnpm prettier --write .changeset/**/*.md
       - name: Commit and Push Changeset
