@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.6.10
+
+### Patch Changes
+
+- 5cf53c7: Upgrade dependencies to latest versions
+
 ## 0.6.9
 
 ### Patch Changes
