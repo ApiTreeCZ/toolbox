@@ -54,7 +54,7 @@ export default defineConfig(base, react);
 
 ### Next.js
 
-Next.js configuration requires to specify the path to the app(s).
+Next.js configuration requires specifying path to app(s).
 
 ```javascript
 import { base, react, nextjs } from '@apitree.cz/eslint-config';
@@ -67,7 +67,7 @@ export default defineConfig(base, react, nextjs(['apps/<nextjs-app>']));
 
 ### Nest.js
 
-Nest.js configuration requires to specify the path to the app(s).
+Nest.js configuration requires specifying path to app(s).
 
 ```javascript
 import { base, nestjs } from '@apitree.cz/eslint-config';
@@ -97,8 +97,12 @@ Following IntelliJ IDEs setup is recommended for the best developer experience:
 
 ### Recommended Values
 
+#### ✅ Automatic ESLint configuration
+
 #### Run for files
 
 ```
 {**/*,*}.{js,mdx,ts,tsx}
 ```
+
+#### ✅ Run eslint --fix on save

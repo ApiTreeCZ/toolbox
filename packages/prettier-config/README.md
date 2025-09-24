@@ -45,8 +45,12 @@ Following IntelliJ IDEs setup is recommended for the best developer experience:
 
 ### Recommended Values
 
+#### ✅ Automatic Prettier configuration
+
 #### Run for files
 
 ```
 {**/*,*}.{css,ejs,graphql,html,js,json,md,mdx,ts,tsx,yml,yaml}
 ```
+
+#### ✅ Run on save
