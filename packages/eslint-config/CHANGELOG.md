@@ -1,5 +1,12 @@
 # @apitree.cz/eslint-config
 
+## 0.6.11
+
+### Patch Changes
+
+- 3f508b5: Upgrade dependencies to latest versions.
+- 68f878e: Updated dependency `eslint-plugin-react-hooks` to `^6.0.0`.
+
 ## 0.6.10
 
 ### Patch Changes

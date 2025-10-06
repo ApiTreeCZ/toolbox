@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.7.11
+
+### Patch Changes
+
+- 3f508b5: Upgrade dependencies to latest versions.
+
 ## 0.7.10
 
 ### Patch Changes

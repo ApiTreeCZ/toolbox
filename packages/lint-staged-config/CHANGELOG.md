@@ -1,5 +1,12 @@
 # @apitree.cz/lint-staged-config
 
+## 0.2.3
+
+### Patch Changes
+
+- 3f508b5: Introduce `library` config for workspaces with distributable packages.
+- 3f508b5: Upgrade dependencies to latest versions.
+
 ## 0.2.2
 
 ### Patch Changes

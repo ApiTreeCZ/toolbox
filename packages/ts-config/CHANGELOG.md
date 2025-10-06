@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.4.6
+
+### Patch Changes
+
+- 3f508b5: Upgrade dependencies to latest versions.
+
 ## 0.4.5
 
 ### Patch Changes
