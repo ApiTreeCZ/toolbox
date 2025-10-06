@@ -63,6 +63,46 @@ Suitable for distributable `npm` packages (framework-agnostic).
 }
 ```
 
+#### WebStorm Settings in PNPM Monorepos
+
+In order for WebStorm to correctly resolve paths for internal packages in PNPM monorepos, separate your configuration into:
+
+`tsconfig.lib.json`
+
+```json
+{
+  "extends": "@apitree.cz/ts-config/library",
+  "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
+  "exclude": ["dist", "node_modules"]
+}
+```
+
+`tsconfig.json`
+
+```json
+{
+  "extends": "./tsconfig.lib.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist"
+  },
+  "include": ["./src"]
+}
+```
+
+> 🧠 Do not forget to use the `tsconfig.lib.json` in your general type-check script.
+
+If your package also contains other non-src files (e.g. `tests`, `scripts`, etc.), create a separate `tsconfig.json` in each of those folders:
+
+```json
+{
+  "extends": "../tsconfig.lib.json",
+  "compilerOptions": {
+    "rootDir": ".."
+  }
+}
+```
+
 ### Node.js
 
 Suitable for Node.js services and apps.

@@ -34,6 +34,14 @@ Then, create a `lint-staged.config.js` file in each workspace:
 export { workspace as default } from '@apitree.cz/lint-staged-config';
 ```
 
+If the workspace contains a distributable package (aka library), use the following configuration instead:
+
+```js
+export { library as default } from '@apitree.cz/lint-staged-config';
+```
+
+> See the [WebStorm Settings in PNPM Monorepos](../ts-config/README.md#webstorm-settings-in-pnpm-monorepos) section in `@apitree.cz/ts-config` for further information.
+
 ### Single-package repos
 
 Install the package and create a `lint-staged.config.js` file in the root of your project:
