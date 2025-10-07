@@ -46,9 +46,7 @@ Suitable for React SPAs.
 ```json
 {
   "extends": "@apitree.cz/ts-config/app",
-  "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["build", "node_modules"],
-  "references": []
+  "exclude": ["build", "node_modules"]
 }
 ```
 
@@ -59,9 +57,7 @@ Suitable for distributable `npm` packages (framework-agnostic).
 ```json
 {
   "extends": "@apitree.cz/ts-config/library",
-  "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["dist", "node_modules"],
-  "references": []
+  "exclude": ["dist", "node_modules"]
 }
 ```
 
@@ -74,9 +70,7 @@ In order for WebStorm to correctly resolve paths for internal libraries in monor
 ```json
 {
   "extends": "@apitree.cz/ts-config/library",
-  "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["dist", "node_modules"],
-  "references": []
+  "exclude": ["dist", "node_modules"]
 }
 ```
 
@@ -89,9 +83,6 @@ In order for WebStorm to correctly resolve paths for internal libraries in monor
     "rootDir": "./src",
     "outDir": "./dist"
   },
-  "include": ["./src"],
-  "files": [],
-  "references": []
 }
 ```
 
@@ -103,8 +94,6 @@ In order for WebStorm to correctly resolve paths for internal libraries in monor
 {
   "extends": "./tsconfig.json",
   "compilerOptions": { "noEmit": false },
-  "files": [],
-  "references": []
 }
 ```
 
@@ -121,8 +110,6 @@ If your package also contains other non-src directories (e.g. `tests`, `scripts`
 
 This is necessary for both WebStorm and CLI `typescript-eslint` to correctly type-check and lint all files in your package.
 
-> ⚠️ Non-src root files, such as `vitest.config.ts`, should be explicitly included in `files` array of `tsconfig.json`. When emitting build, omit them using `files: []` in `tsconfig.build.json`.
-
 ### Node.js
 
 Suitable for Node.js services and apps.
@@ -130,9 +117,7 @@ Suitable for Node.js services and apps.
 ```json
 {
   "extends": "@apitree.cz/ts-config/nodejs",
-  "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
   "exclude": ["build", "node_modules"],
-  "references": []
 }
 ```
 
@@ -143,7 +128,7 @@ Suitable for Next.js apps.
 ```json
 {
   "extends": "@apitree.cz/ts-config/nextjs",
-  "include": [".next/types/**/*.ts", "**/*.js", "**/*.ts", "**/*.tsx"],
+  "include": [".next/types/**/*.ts", "**/*"],
   "exclude": [".next/**/*.js", "node_modules"],
   "references": []
 }
@@ -156,7 +141,6 @@ Suitable for Nest.js apps.
 ```json
 {
   "extends": "@apitree.cz/ts-config/nestjs",
-  "include": ["**/*.js", "**/*.ts"],
   "exclude": ["build", "node_modules"],
   "references": []
 }
