@@ -34,6 +34,8 @@ Then, create a `lint-staged.config.js` file in each workspace:
 export { workspace as default } from '@apitree.cz/lint-staged-config';
 ```
 
+#### Workspaces with distributable packages
+
 If the workspace contains a distributable package (aka library), use the following configuration instead:
 
 ```js

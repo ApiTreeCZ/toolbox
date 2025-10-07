@@ -63,9 +63,9 @@ Suitable for distributable `npm` packages (framework-agnostic).
 }
 ```
 
-#### WebStorm Settings in PNPM Monorepos
+#### WebStorm Settings in Monorepos
 
-In order for WebStorm to correctly resolve paths for internal packages in PNPM monorepos, separate your configuration into:
+In order for WebStorm to correctly resolve paths for internal libraries in monorepos, separate your configuration into:
 
 `tsconfig.lib.json`
 
@@ -90,7 +90,7 @@ In order for WebStorm to correctly resolve paths for internal packages in PNPM m
 }
 ```
 
-> 🧠 Do not forget to use the `tsconfig.lib.json` in your general type-check script.
+> 🧠 Use `tsconfig.lib.json` as target config for your general type-check or [TypeDoc](../typedoc-config/README.md) scripts in lib's `package.json`.
 
 If your package also contains other non-src files (e.g. `tests`, `scripts`, etc.), create a separate `tsconfig.json` in each of those folders:
 
