@@ -11,6 +11,9 @@ on:
 env:
   CACHE_KEY: ${{ github.sha }}-${{ github.run_number }}-${{ github.run_attempt }}
   CACHE_PATH: ./*
+  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_REMOTE_CACHE_SIGNATURE_KEY: ${{ secrets.TURBO_REMOTE_CACHE_SIGNATURE_KEY }}
 
 jobs:
   test:
