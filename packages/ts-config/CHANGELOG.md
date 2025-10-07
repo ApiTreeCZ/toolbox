@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.4.8
+
+### Patch Changes
+
+- d3e5e31: Simplify default configs
+
 ## 0.4.7
 
 ### Patch Changes
