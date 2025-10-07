@@ -121,7 +121,7 @@ If your package also contains other non-src directories (e.g. `tests`, `scripts`
 
 This is necessary for both WebStorm and CLI `typescript-eslint` to correctly type-check and lint all files in your package.
 
-> ⚠️ Non-src root files, such as `vitest.config.ts`, should be explicitly included in `files` array of the root `tsconfig.json`. When emitting build, omit the using `files: []` in build config (e.g. `tsconfig.build.json`).
+> ⚠️ Non-src root files, such as `vitest.config.ts`, should be explicitly included in `files` array of `tsconfig.json`. When emitting build, omit them using `files: []` in `tsconfig.build.json`.
 
 ### Node.js
 
