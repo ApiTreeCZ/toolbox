@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.4.7
+
+### Patch Changes
+
+- e8fb7ba: Improves docs on monorepo internal libs
+
 ## 0.4.6
 
 ### Patch Changes

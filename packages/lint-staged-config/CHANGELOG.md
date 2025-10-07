@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 0.2.4
+
+### Patch Changes
+
+- e8fb7ba: Improves docs on monorepo internal libs
+
 ## 0.2.3
 
 ### Patch Changes

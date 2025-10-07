@@ -1,5 +1,12 @@
 # @apitree.cz/cli
 
+## 0.4.11
+
+### Patch Changes
+
+- 2193709: Sync references for `tsconfig.lib.json` too.
+- 661d264: Run hooks with `execa` and auto-detected package manager.
+
 ## 0.4.10
 
 ### Patch Changes
