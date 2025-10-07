@@ -1,7 +1,5 @@
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": { "rootDir": "./src", "outDir": "./dist" },
-  "include": ["./src"],
-  "files": ["vitest.config.ts"],
   "references": [{ "path": "../vitest-config/tsconfig.build.json" }]
 }

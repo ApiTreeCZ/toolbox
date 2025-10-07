@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": { "noEmit": false },
-  "files": [],
+  "include": ["./src"],
   "references": [{ "path": "../ts-utils/tsconfig.build.json" }]
 }

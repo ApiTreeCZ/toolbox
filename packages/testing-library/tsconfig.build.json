@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": { "noEmit": false },
-  "files": [],
+  "include": ["./src"],
   "references": [{ "path": "../vitest-config/tsconfig.build.json" }]
 }

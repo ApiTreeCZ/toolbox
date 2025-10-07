@@ -82,7 +82,7 @@ In order for WebStorm to correctly resolve paths for internal libraries in monor
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist"
-  },
+  }
 }
 ```
 
@@ -94,6 +94,7 @@ In order for WebStorm to correctly resolve paths for internal libraries in monor
 {
   "extends": "./tsconfig.json",
   "compilerOptions": { "noEmit": false },
+  "include": ["./src"]
 }
 ```
 
@@ -117,7 +118,7 @@ Suitable for Node.js services and apps.
 ```json
 {
   "extends": "@apitree.cz/ts-config/nodejs",
-  "exclude": ["build", "node_modules"],
+  "exclude": ["build", "node_modules"]
 }
 ```
 
@@ -129,8 +130,7 @@ Suitable for Next.js apps.
 {
   "extends": "@apitree.cz/ts-config/nextjs",
   "include": [".next/types/**/*.ts", "**/*"],
-  "exclude": [".next/**/*.js", "node_modules"],
-  "references": []
+  "exclude": [".next/**/*.js", "node_modules"]
 }
 ```
 
@@ -141,7 +141,6 @@ Suitable for Nest.js apps.
 ```json
 {
   "extends": "@apitree.cz/ts-config/nestjs",
-  "exclude": ["build", "node_modules"],
-  "references": []
+  "exclude": ["build", "node_modules"]
 }
 ```
