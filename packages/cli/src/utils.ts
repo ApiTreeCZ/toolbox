@@ -1,9 +1,4 @@
-import childProcess from 'node:child_process';
-import { promisify } from 'node:util';
-
 import { program } from '@commander-js/extra-typings';
-
-export const exec = promisify(childProcess.exec);
 
 /* eslint-disable no-console */
 export const logger = {
