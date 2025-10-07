@@ -8,7 +8,5 @@ export const runHooks = async (hooks: Object.NonNullable<Required<SyncProjectRef
   const { tool } = await findRoot(process.cwd());
   const { afterSync } = hooks;
 
-  await Promise.all(
-    afterSync.map((hook) => execa(tool, [...hook.split(' '), ...paths], { cwd: process.cwd(), stdio: 'inherit' })),
-  );
+  await Promise.all(afterSync.map((hook) => execa(tool, [...hook.split(' '), ...paths])));
 };
