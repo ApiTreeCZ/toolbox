@@ -4,6 +4,9 @@ enablePrePostScripts: true
 
 engineStrict: true
 
+overrides:
+  eslint: '9.37.0'
+
 packages:
   - packages/*
 
