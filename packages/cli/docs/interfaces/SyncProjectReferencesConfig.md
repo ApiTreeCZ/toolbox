@@ -4,7 +4,7 @@
 
 # Interface: SyncProjectReferencesConfig
 
-Defined in: [types.ts:24](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L24)
+Defined in: [types.ts:29](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L29)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [types.ts:24](https://github.com/ApiTreeCZ/toolbox/blob/main/package
 
 > `optional` **hooks**: [`SyncProjectReferencesHooks`](SyncProjectReferencesHooks.md)
 
-Defined in: [types.ts:28](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L28)
+Defined in: [types.ts:33](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L33)
 
 Custom hooks to run as parts of the sync process.
 
@@ -22,6 +22,6 @@ Custom hooks to run as parts of the sync process.
 
 > `optional` **tsConfigs**: [`SyncProjectReferencesTsConfigs`](SyncProjectReferencesTsConfigs.md)
 
-Defined in: [types.ts:32](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L32)
+Defined in: [types.ts:37](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L37)
 
 Custom names for TS config files.

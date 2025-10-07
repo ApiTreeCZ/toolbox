@@ -25,17 +25,17 @@
   "scripts": {
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
-    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo tsconfig.lib.tsbuildinfo dist node_modules",
     "docs": "run-s docs:generate docs:format",
     "docs:format": "prettier --write \"./docs/**/*\"",
-    "docs:generate": "typedoc",
+    "docs:generate": "typedoc --tsconfig tsconfig.lib.json",
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{js,json,md,ts}\"",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "qa": "run-p ts format lint",
-    "ts": "tsc --build tsconfig.json"
+    "ts": "tsc --build tsconfig.lib.json"
   },
   "dependencies": {
     "@apitree.cz/ts-utils": "workspace:*",

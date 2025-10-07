@@ -47,7 +47,7 @@
   "scripts": {
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
-    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo tsconfig.lib.tsbuildinfo coverage dist node_modules",
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{js,json,md,ts}\"",
     "format:fix": "pnpm run format --write",
@@ -56,7 +56,7 @@
     "qa": "run-p ts format lint",
     "test": "vitest --run",
     "test:coverage": "pnpm run test --coverage",
-    "ts": "tsc --build tsconfig.json"
+    "ts": "tsc --build tsconfig.lib.json"
   },
   "dependencies": {
     "@eslint/core": "^0.16.0 ",

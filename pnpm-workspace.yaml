@@ -4,6 +4,11 @@ enablePrePostScripts: true
 
 engineStrict: true
 
+onlyBuiltDependencies:
+  - '@swc/core'
+  - 'esbuild'
+  - 'unrs-resolver'
+
 overrides:
   eslint: '9.37.0'
 

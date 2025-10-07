@@ -4,7 +4,7 @@
 
 # Interface: WorkspacePackageProps
 
-Defined in: [types.ts:35](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L35)
+Defined in: [types.ts:40](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L40)
 
 ## Properties
 
@@ -12,6 +12,6 @@ Defined in: [types.ts:35](https://github.com/ApiTreeCZ/toolbox/blob/main/package
 
 > **workspacePackage**: `Package`
 
-Defined in: [types.ts:39](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L39)
+Defined in: [types.ts:44](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L44)
 
 Workspace package.

@@ -1,1 +1,1 @@
-export { workspace as default } from './dist/index.js';
+export { library as default } from './dist/index.js';

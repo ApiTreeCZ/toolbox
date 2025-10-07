@@ -47,7 +47,8 @@ Suitable for React SPAs.
 {
   "extends": "@apitree.cz/ts-config/app",
   "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["build", "node_modules"]
+  "exclude": ["build", "node_modules"],
+  "references": []
 }
 ```
 
@@ -59,7 +60,8 @@ Suitable for distributable `npm` packages (framework-agnostic).
 {
   "extends": "@apitree.cz/ts-config/library",
   "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["dist", "node_modules"]
+  "exclude": ["dist", "node_modules"],
+  "references": []
 }
 ```
 
@@ -73,7 +75,8 @@ In order for WebStorm to correctly resolve paths for internal libraries in monor
 {
   "extends": "@apitree.cz/ts-config/library",
   "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["dist", "node_modules"]
+  "exclude": ["dist", "node_modules"],
+  "references": []
 }
 ```
 
@@ -86,13 +89,26 @@ In order for WebStorm to correctly resolve paths for internal libraries in monor
     "rootDir": "./src",
     "outDir": "./dist"
   },
-  "include": ["./src"]
+  "include": ["./src"],
+  "files": [],
+  "references": []
 }
 ```
 
-> 🧠 Use `tsconfig.lib.json` as target config for your general type-check or [TypeDoc](../typedoc-config/README.md) scripts in lib's `package.json`.
+> 🧠 Use `tsconfig.lib.json` as target config for your CLI type-check and [TypeDoc](../typedoc-config/README.md) scripts in lib's `package.json`.
 
-If your package also contains other non-src files (e.g. `tests`, `scripts`, etc.), create a separate `tsconfig.json` in each of those folders:
+`tsconfig.build.json`
+
+```json
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "noEmit": false },
+  "files": [],
+  "references": []
+}
+```
+
+If your package also contains other non-src directories (e.g. `tests`, `scripts`, etc.), create a separate `tsconfig.json` in each of those folders:
 
 ```json
 {
@@ -103,6 +119,10 @@ If your package also contains other non-src files (e.g. `tests`, `scripts`, etc.
 }
 ```
 
+This is necessary for both WebStorm and CLI `typescript-eslint` to correctly type-check and lint all files in your package.
+
+> ⚠️ Non-src root files, such as `vitest.config.ts`, should be explicitly included in `files` array of the root `tsconfig.json`. When emitting build, omit the using `files: []` in build config (e.g. `tsconfig.build.json`).
+
 ### Node.js
 
 Suitable for Node.js services and apps.
@@ -111,7 +131,8 @@ Suitable for Node.js services and apps.
 {
   "extends": "@apitree.cz/ts-config/nodejs",
   "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": ["build", "node_modules"]
+  "exclude": ["build", "node_modules"],
+  "references": []
 }
 ```
 
@@ -123,7 +144,8 @@ Suitable for Next.js apps.
 {
   "extends": "@apitree.cz/ts-config/nextjs",
   "include": [".next/types/**/*.ts", "**/*.js", "**/*.ts", "**/*.tsx"],
-  "exclude": [".next/**/*.js", "node_modules"]
+  "exclude": [".next/**/*.js", "node_modules"],
+  "references": []
 }
 ```
 
@@ -135,6 +157,7 @@ Suitable for Nest.js apps.
 {
   "extends": "@apitree.cz/ts-config/nestjs",
   "include": ["**/*.js", "**/*.ts"],
-  "exclude": ["build", "node_modules"]
+  "exclude": ["build", "node_modules"],
+  "references": []
 }
 ```

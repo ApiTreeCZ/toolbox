@@ -47,8 +47,8 @@ export const config = defineConfig(
       parser: tsEslintParser,
       parserOptions: {
         ecmaVersion: 'latest',
-        project: `${process.cwd()}/tsconfig.json`,
         projectService: true,
+        tsconfigRootDir: process.cwd(),
         sourceType: 'module',
       },
     },

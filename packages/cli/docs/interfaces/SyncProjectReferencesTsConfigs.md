@@ -33,3 +33,17 @@ Name of the main TS config file.
 #### Default Value
 
 `'tsconfig.json'`
+
+---
+
+### lib?
+
+> `optional` **lib**: `string`
+
+Defined in: [types.ts:26](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L26)
+
+Name of the TS config file for distributable libraries.
+
+#### Default Value
+
+`'tsconfig.lib.json'`

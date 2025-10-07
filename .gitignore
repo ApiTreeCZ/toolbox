@@ -12,6 +12,7 @@ node_modules
 .turbo
 tsconfig.tsbuildinfo
 tsconfig.build.tsbuildinfo
+tsconfig.lib.tsbuildinfo
 
 # Builds
 /packages/*/dist
