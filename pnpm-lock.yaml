@@ -171,7 +171,7 @@ importers:
         version: 9.1.10(eslint@9.37.0(jiti@2.6.0))(storybook@9.1.10(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.9(@types/node@22.18.8)(jiti@2.6.0)(yaml@2.8.1)))(typescript@5.9.3)
       eslint-plugin-testing-library:
         specifier: ^7.12.0
-        version: 7.12.0(eslint@9.37.0(jiti@2.6.0))(typescript@5.9.3)
+        version: 7.13.1(eslint@9.37.0(jiti@2.6.0))(typescript@5.9.3)
       eslint-plugin-turbo:
         specifier: ^2.5.5
         version: 2.5.8(eslint@9.37.0(jiti@2.6.0))(turbo@2.5.8)
@@ -2206,8 +2206,8 @@ packages:
       eslint: 9.37.0
       storybook: ^9.1.10
 
-  eslint-plugin-testing-library@7.12.0:
-    resolution: {integrity: sha512-fHvdS0E89hcnh1RY+A+QmJ7qwzhT+Mfi285CbYWH/b+o37DlU3qkfJIgejgF55prWRPWB+McZdXqJX5CidOvKg==}
+  eslint-plugin-testing-library@7.13.1:
+    resolution: {integrity: sha512-y56YvbFc3Tm4zNHjaZsbXLo15JHlPkvonOwqX9avACi/TrvknT8cMyJ6T5KJq0ExrlJjH8gIPE6wCloohMYPIQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0, pnpm: ^9.14.0}
     peerDependencies:
       eslint: 9.37.0
@@ -6635,7 +6635,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-testing-library@7.12.0(eslint@9.37.0(jiti@2.6.0))(typescript@5.9.3):
+  eslint-plugin-testing-library@7.13.1(eslint@9.37.0(jiti@2.6.0))(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/scope-manager': 8.46.0
       '@typescript-eslint/utils': 8.46.0(eslint@9.37.0(jiti@2.6.0))(typescript@5.9.3)
