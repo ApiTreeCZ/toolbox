@@ -105,7 +105,8 @@ If your package also contains other non-src directories (e.g. `tests`, `scripts`
   "extends": "../tsconfig.lib.json",
   "compilerOptions": {
     "rootDir": ".."
-  }
+  },
+  "include": ["../**/*"]
 }
 ```
 

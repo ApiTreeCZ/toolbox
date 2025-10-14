@@ -1,5 +1,1 @@
-{
-  "extends": "@apitree.cz/ts-config/library",
-  "exclude": ["dist", "node_modules"],
-  "references": []
-}
+{ "extends": "@apitree.cz/ts-config/library", "exclude": ["dist", "node_modules"], "references": [] }

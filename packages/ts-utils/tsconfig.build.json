@@ -1,6 +1,1 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": { "noEmit": false },
-  "include": ["./src"],
-  "references": []
-}
+{ "extends": "./tsconfig.json", "compilerOptions": { "noEmit": false }, "include": ["./src"], "references": [] }
