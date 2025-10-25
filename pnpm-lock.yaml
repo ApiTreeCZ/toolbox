@@ -86,7 +86,7 @@ importers:
         version: link:../ts-utils
       '@commander-js/extra-typings':
         specifier: ^14.0.0
-        version: 14.0.0(commander@14.0.1)
+        version: 14.0.0(commander@14.0.2)
       '@manypkg/find-root':
         specifier: ^3.1.0
         version: 3.1.0
@@ -95,7 +95,7 @@ importers:
         version: 3.1.0
       commander:
         specifier: ^14.0.0
-        version: 14.0.1
+        version: 14.0.2
       deepmerge:
         specifier: ^4.3.1
         version: 4.3.1
@@ -2021,6 +2021,10 @@ packages:
 
   commander@14.0.1:
     resolution: {integrity: sha512-2JkV3gUZUVrbNA+1sjBOYLsMZ5cEEl8GTFP2a4AVz5hvasAMCQ1D2l2le/cX+pV4N6ZU17zjUahLpIXRrnWL8A==}
+    engines: {node: '>=20'}
+
+  commander@14.0.2:
+    resolution: {integrity: sha512-TywoWNNRbhoD0BXs1P3ZEScW8W5iKrnbithIl0YH+uCmBd0QpPOA8yc82DS3BIE5Ma6FnBVUsJ7wVUDz4dvOWQ==}
     engines: {node: '>=20'}
 
   compare-func@2.0.0:
@@ -5035,9 +5039,9 @@ snapshots:
       human-id: 4.1.1
       prettier: 2.8.8
 
-  '@commander-js/extra-typings@14.0.0(commander@14.0.1)':
+  '@commander-js/extra-typings@14.0.0(commander@14.0.2)':
     dependencies:
-      commander: 14.0.1
+      commander: 14.0.2
 
   '@commitlint/cli@20.1.0(@types/node@22.18.12)(typescript@5.9.3)':
     dependencies:
@@ -6513,6 +6517,8 @@ snapshots:
   colorette@2.0.20: {}
 
   commander@14.0.1: {}
+
+  commander@14.0.2: {}
 
   compare-func@2.0.0:
     dependencies:
