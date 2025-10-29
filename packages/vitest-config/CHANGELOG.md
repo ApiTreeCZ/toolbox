@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.7.12
+
+### Patch Changes
+
+- 9cfe9a3: Upgrade dependencies to latest compatible version
+
 ## 0.7.11
 
 ### Patch Changes

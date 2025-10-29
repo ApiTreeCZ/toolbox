@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.7.7
+
+### Patch Changes
+
+- 9cfe9a3: Upgrade dependencies to latest compatible version
+
 ## 0.7.6
 
 ### Patch Changes
