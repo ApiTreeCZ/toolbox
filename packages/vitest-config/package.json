@@ -56,15 +56,15 @@
     "ts": "tsc --build tsconfig.lib.json"
   },
   "dependencies": {
-    "@swc/core": "^1.13.3",
+    "@swc/core": "^1.14.0",
     "@vitejs/plugin-react": "^5.0.0",
-    "@vitest/coverage-v8": "^4.0.0",
+    "@vitest/coverage-v8": "^4.0.5",
     "unplugin-swc": "^1.5.5",
-    "vite": "^7.1.10"
+    "vite": "^7.1.12"
   },
   "devDependencies": {
     "jsdom": "^27.0.0",
-    "vitest": "^4.0.0"
+    "vitest": "^4.0.5"
   },
   "peerDependencies": {
     "jsdom": "^26.0.0 || ^27.0.0",

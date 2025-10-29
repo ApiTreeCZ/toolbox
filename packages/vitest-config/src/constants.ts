@@ -7,7 +7,6 @@ export const build = {
 } satisfies ViteUserConfig;
 
 export const coverage = {
-  all: true,
   provider: 'v8',
   reporter: ['cobertura', 'html', 'lcovonly', 'text'],
 } satisfies CoverageOptions;

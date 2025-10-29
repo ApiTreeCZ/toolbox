@@ -2,7 +2,7 @@ import eslint from '@eslint/js';
 import vitest from '@vitest/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 import prettier from 'eslint-config-prettier';
-import * as imports from 'eslint-plugin-import';
+import imports from 'eslint-plugin-import';
 import turbo from 'eslint-plugin-turbo';
 import unicorn from 'eslint-plugin-unicorn';
 import unusedImports from 'eslint-plugin-unused-imports';
@@ -28,6 +28,7 @@ export const config = defineConfig(
       '**/out/**/*',
       '**/public/**/*',
       '**/storybook-static/**/*',
+      '**/temp/**/*',
     ],
   },
   eslint.configs.recommended,
@@ -60,7 +61,10 @@ export const config = defineConfig(
     settings: {
       'import/extensions': importExtensions,
       'import/resolver': {
-        typescript: true,
+        typescript: {
+          alwaysTryTypes: true,
+          project: process.cwd(),
+        },
       },
     },
   },

@@ -1,3 +1,4 @@
+import type { Linter } from 'eslint';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import { describe, test } from 'vitest';
@@ -5,7 +6,7 @@ import { describe, test } from 'vitest';
 import { common } from '../../src/react/rules/index.js';
 import { makeTestRule } from '../make-test-rule.js';
 
-const testRule = makeTestRule(common, { react, 'react-hooks': reactHooks });
+const testRule = makeTestRule(common, { react, 'react-hooks': reactHooks } as Linter.Config['plugins']);
 
 describe('react/common', () => {
   test(
