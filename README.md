@@ -20,7 +20,7 @@ Powered by [Turbo](https://turbo.build/repo/docs)
 
 ### Prerequisites
 
-- node.js `v22`
+- node.js `v24`
 - pnpm `v10`
 
 ### Installation

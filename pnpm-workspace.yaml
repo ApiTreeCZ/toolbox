@@ -9,9 +9,6 @@ onlyBuiltDependencies:
   - 'esbuild'
   - 'unrs-resolver'
 
-overrides:
-  eslint: '9.37.0'
-
 packages:
   - packages/*
 
