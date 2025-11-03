@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.8.0
+
+### Minor Changes
+
+- 066f863: Require `vitest@^4`
+
 ## 0.7.7
 
 ### Patch Changes

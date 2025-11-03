@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.7.0
+
+### Minor Changes
+
+- 066f863: Migrate to `storybook@^10`
+
 ## 0.6.13
 
 ### Patch Changes

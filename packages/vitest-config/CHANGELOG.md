@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.8.0
+
+### Minor Changes
+
+- 066f863: Require `vitest@^4` and `jsdom@^27`
+
 ## 0.7.12
 
 ### Patch Changes
