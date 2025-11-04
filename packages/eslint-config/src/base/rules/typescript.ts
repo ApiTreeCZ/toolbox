@@ -15,5 +15,4 @@ export const typescript: Linter.RulesRecord = {
     { allowBoolean: true, allowNumber: true, allowNullish: true },
   ],
   '@typescript-eslint/sort-type-constituents': 'error', // Sort union or intersection type members alphabetically
-  '@typescript-eslint/unified-signatures': 'off', // FIXME: https://github.com/typescript-eslint/typescript-eslint/issues/11732
 };
