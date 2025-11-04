@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.7.1
+
+### Patch Changes
+
+- a1854ea: Upgrade `eslint` to `9.39.1`
+
 ## 0.7.0
 
 ### Minor Changes

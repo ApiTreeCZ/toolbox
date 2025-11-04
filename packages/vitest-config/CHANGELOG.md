@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.8.1
+
+### Patch Changes
+
+- 74c29f7: Upgrade `@swc/core` to `1.15.0`
+
 ## 0.8.0
 
 ### Minor Changes
