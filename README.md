@@ -29,6 +29,7 @@ Powered by [Turbo](https://turbo.build/repo/docs)
 git clone git@github.com:ApiTreeCZ/toolbox.git
 cd toolbox
 pnpm install
+pnpm run setup
 ```
 
 ### Workspaces
