@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.8.1
+
+### Patch Changes
+
+- a756ef1: Bump deps
+
 ## 0.8.0
 
 ### Minor Changes
