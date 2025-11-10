@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.7.3
+
+### Patch Changes
+
+- a13208b: Extend extraneous deps pattern
+
 ## 0.7.2
 
 ### Patch Changes

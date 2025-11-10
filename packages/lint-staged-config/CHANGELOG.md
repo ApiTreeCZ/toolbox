@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 0.2.5
+
+### Patch Changes
+
+- 0c936d1: Extend root patterns to check
+
 ## 0.2.4
 
 ### Patch Changes
