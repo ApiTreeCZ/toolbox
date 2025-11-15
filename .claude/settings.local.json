@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for package in cli eslint-config lint-staged-config prettier-config testing-library ts-config ts-utils typedoc-config vitest-config)",
+      "Bash(do echo \"=== $package ===\" ls -la /Users/vitrozsival/projects/apitree/toolbox/packages/$package)",
+      "Bash(cat:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
