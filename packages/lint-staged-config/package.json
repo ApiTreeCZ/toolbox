@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/lint-staged-config",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Lint-staged configuration for ApiTree projects.",
   "keywords": [
     "apitree",

@@ -1,5 +1,12 @@
 # @apitree.cz/lint-staged-config
 
+## 0.2.6
+
+### Patch Changes
+
+- e9c8e28: Lint and format JS, JSON and MD files in `.github` dir.
+- e9c8e28: Extend special dirs with `.claude`
+
 ## 0.2.5
 
 ### Patch Changes
