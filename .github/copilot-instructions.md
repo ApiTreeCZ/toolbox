@@ -83,6 +83,7 @@ describe('functionName', () => {
 ```
 
 For React components:
+
 ```typescript
 import { render, screen } from '@apitree.cz/testing-library';
 
@@ -120,6 +121,7 @@ Every package should have consistent scripts in package.json:
 Each package needs three tsconfig files:
 
 **tsconfig.json** - Main config for IDE:
+
 ```json
 {
   "extends": "@apitree.cz/ts-config/library.json",
@@ -129,6 +131,7 @@ Each package needs three tsconfig files:
 ```
 
 **tsconfig.lib.json** - Type checking without emit:
+
 ```json
 {
   "extends": "./tsconfig.json",
@@ -137,6 +140,7 @@ Each package needs three tsconfig files:
 ```
 
 **tsconfig.build.json** - Build configuration:
+
 ```json
 {
   "extends": "./tsconfig.json",
@@ -196,6 +200,7 @@ chore(deps): update vitest to v4.0.9
 ## Import Order
 
 Organize imports in this order:
+
 1. Node.js built-ins
 2. External dependencies
 3. Internal workspace packages
