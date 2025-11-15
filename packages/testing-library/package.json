@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/testing-library",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "React Testing Library setup for Vitest in ApiTree projects.",
   "keywords": [
     "apitree",

@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.7.5
+
+### Patch Changes
+
+- 06af938: Bump deps to latest compat
+
 ## 0.7.4
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/cli
 
+## 0.4.13
+
+### Patch Changes
+
+- 06af938: Bump deps to latest compat
+
 ## 0.4.12
 
 ### Patch Changes

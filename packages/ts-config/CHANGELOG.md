@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.4.9
+
+### Patch Changes
+
+- 06af938: Bump deps to latest compat
+
 ## 0.4.8
 
 ### Patch Changes

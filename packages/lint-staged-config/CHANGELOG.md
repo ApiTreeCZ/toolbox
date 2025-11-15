@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 0.2.7
+
+### Patch Changes
+
+- 06af938: Bump deps to latest compat
+
 ## 0.2.6
 
 ### Patch Changes

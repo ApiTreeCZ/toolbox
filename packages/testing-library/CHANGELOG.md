@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.8.2
+
+### Patch Changes
+
+- 06af938: Bump deps to latest compat
+
 ## 0.8.1
 
 ### Patch Changes

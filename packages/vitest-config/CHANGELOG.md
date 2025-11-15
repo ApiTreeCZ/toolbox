@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.8.3
+
+### Patch Changes
+
+- 06af938: Bump deps to latest compat
+
 ## 0.8.2
 
 ### Patch Changes
