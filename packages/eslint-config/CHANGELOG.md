@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.7.4
+
+### Patch Changes
+
+- dfe2ab7: Updated dependency `@eslint/core` to `^1.0.0`.
+
 ## 0.7.3
 
 ### Patch Changes
