@@ -19,3 +19,6 @@ tsconfig.lib.tsbuildinfo
 
 # Coverage
 /packages/*/coverage
+
+# Claude
+/.claude/settings.local.json
