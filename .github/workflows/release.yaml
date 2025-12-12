@@ -35,23 +35,26 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GIT_TOKEN }}
-      - name: Setup
+
+      - name: Setup project
         uses: ./.github/actions/setup
+
       - name: Build
         run: pnpm run build
-      - name: Setup npm registry
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$HOME/.npmrc"
+
       - name: Snapshot release
         if: inputs.stable == false
         run: |
           pnpm changeset version --snapshot next
           pnpm changeset publish --tag next --no-git-tag
+
       - name: Stable release
         if: inputs.stable == true
         run: |
           pnpm changeset version
           pnpm changeset publish --no-git-tag
           pnpm install
+
       - name: Commit changes
         if: inputs.stable == true
         run: |
@@ -59,10 +62,12 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
           git diff-index --quiet HEAD || git commit -m "chore: release [skip ci]"
+
       - name: Create git tags
         if: inputs.stable == true
         run: |
           pnpm changeset tag
+
       - name: Push changes
         if: inputs.stable == true
         run: |

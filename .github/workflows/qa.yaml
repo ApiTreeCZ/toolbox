@@ -19,57 +19,74 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup
+
+      - name: Setup project
         uses: ./.github/actions/setup
+
       - name: Build packages
         run: pnpm run build
+
   commitlint:
     needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup
+
+      - name: Setup project
         uses: ./.github/actions/setup
+
       - name: Run commitlint
         run: pnpm commitlint --from=${{ github.sha }}
+
   manypkg:
     needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup
+
+      - name: Setup project
         uses: ./.github/actions/setup
+
       - name: Run manypkg
         run: pnpm manypkg check
+
   eslint:
     needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup
+
+      - name: Setup project
         uses: ./.github/actions/setup
+
       - name: Run eslint
         run: pnpm run lint
+
   tsc:
     needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup
+
+      - name: Setup project
         uses: ./.github/actions/setup
+
       - name: Run tsc
         run: pnpm run ts
+
   prettier:
     needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup
+
+      - name: Setup project
         uses: ./.github/actions/setup
+
       - name: Run prettier
         run: pnpm run format

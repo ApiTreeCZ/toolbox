@@ -21,8 +21,10 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ github.head_ref }}
-      - name: Setup
+
+      - name: Setup project
         uses: ./.github/actions/setup
+
       - name: Generate Changeset for Renovate
         env:
           SKIP_COMMIT: TRUE
@@ -41,6 +43,7 @@ jobs:
           pnpx @scaleway/changesets-renovate
           pnpm turbo run build --filter @apitree.cz/prettier-config
           pnpm prettier --write .changeset/**/*.md
+
       - name: Commit and Push Changeset
         # language=bash
         run: |
