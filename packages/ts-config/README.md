@@ -31,7 +31,7 @@ Suitable for monorepo root.
 ```json
 {
   "extends": "@apitree.cz/ts-config",
-  "include": ["./*.js", "./*.ts"],
+  "include": ["./*.js", "./*.ts", "./packages/*/*.config.js", "./packages/*/*.config.ts"],
   "exclude": ["node_modules"]
 }
 ```
@@ -61,40 +61,30 @@ Suitable for distributable `npm` packages (framework-agnostic).
 }
 ```
 
-#### WebStorm Settings in Monorepos
+#### Configuration in Monorepos
 
-In order for WebStorm to correctly resolve paths for internal libraries in monorepos, separate your configuration into:
+In order for your IDE and tools to correctly resolve paths for internal libraries in monorepos, separate your configuration into:
 
-`tsconfig.lib.json`
+`tsconfig.json` - Main configuration for type checking:
 
 ```json
 {
   "extends": "@apitree.cz/ts-config/library",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist"
+  },
+  "include": ["./src"],
   "exclude": ["dist", "node_modules"]
 }
 ```
 
-`tsconfig.json`
-
-```json
-{
-  "extends": "./tsconfig.lib.json",
-  "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist"
-  }
-}
-```
-
-> 🧠 Use `tsconfig.lib.json` as target config for your CLI type-check and [TypeDoc](../typedoc-config/README.md) scripts in lib's `package.json`.
-
-`tsconfig.build.json`
+`tsconfig.build.json` - Build configuration (inherits from tsconfig.json):
 
 ```json
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": { "noEmit": false },
-  "include": ["./src"]
+  "compilerOptions": { "noEmit": false }
 }
 ```
 
@@ -102,15 +92,15 @@ If your package also contains other non-src directories (e.g. `tests`, `scripts`
 
 ```json
 {
-  "extends": "../tsconfig.lib.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
     "rootDir": ".."
   },
-  "include": ["../**/*"]
+  "include": [".."]
 }
 ```
 
-This is necessary for both WebStorm and CLI `typescript-eslint` to correctly type-check and lint all files in your package.
+This is necessary for both your IDE and CLI `typescript-eslint` to correctly type-check and lint all files in your package.
 
 ### Node.js
 

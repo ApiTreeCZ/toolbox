@@ -34,15 +34,7 @@ Then, create a `lint-staged.config.js` file in each workspace:
 export { workspace as default } from '@apitree.cz/lint-staged-config';
 ```
 
-#### Workspaces with distributable packages
-
-If the workspace contains a distributable package (aka library), use the following configuration instead:
-
-```js
-export { library as default } from '@apitree.cz/lint-staged-config';
-```
-
-> See the [WebStorm Settings in PNPM Monorepos](../ts-config/README.md#webstorm-settings-in-pnpm-monorepos) section in `@apitree.cz/ts-config` for further information.
+> **Note:** The `library` export was previously recommended for workspaces with distributable packages but is now deprecated. Use `workspace` for all workspace configurations.
 
 ### Single-package repos
 

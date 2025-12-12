@@ -1,5 +1,0 @@
-{
-  "extends": "@apitree.cz/ts-config/library",
-  "exclude": ["coverage", "dist", "node_modules"],
-  "references": [{ "path": "../vitest-config/tsconfig.build.json" }]
-}

@@ -111,45 +111,34 @@ Every package should have consistent scripts in package.json:
     "qa": "run-p ts format lint",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "ts": "tsc --build tsconfig.lib.json"
+    "ts": "tsc --build tsconfig.json"
   }
 }
 ```
 
 ## TypeScript Configuration Files
 
-Each package needs three tsconfig files:
+Each package needs two tsconfig files:
 
-**tsconfig.json** - Main config for IDE:
+**tsconfig.json** - Main config for type checking:
 
 ```json
 {
-  "extends": "@apitree.cz/ts-config/library.json",
-  "include": [],
-  "references": [{ "path": "./tsconfig.lib.json" }]
+  "extends": "@apitree.cz/ts-config/library",
+  "compilerOptions": { "rootDir": "./src", "outDir": "./dist" },
+  "include": ["./src"],
+  "exclude": ["dist", "node_modules"],
+  "references": []
 }
 ```
 
-**tsconfig.lib.json** - Type checking without emit:
+**tsconfig.build.json** - Build configuration (inherits from tsconfig.json):
 
 ```json
 {
   "extends": "./tsconfig.json",
-  "include": ["src/**/*", "tests/**/*"]
-}
-```
-
-**tsconfig.build.json** - Build configuration:
-
-```json
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "noEmit": false,
-    "rootDir": "./src",
-    "outDir": "./dist"
-  },
-  "include": ["src/**/*"]
+  "compilerOptions": { "noEmit": false },
+  "references": []
 }
 ```
 

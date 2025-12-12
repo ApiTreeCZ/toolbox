@@ -19,24 +19,24 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./base": {
-      "import": "./dist/base.js",
-      "types": "./dist/base.d.ts"
+      "types": "./dist/base.d.ts",
+      "import": "./dist/base.js"
     },
     "./constants": {
-      "import": "./dist/constants.js",
-      "types": "./dist/constants.d.ts"
+      "types": "./dist/constants.d.ts",
+      "import": "./dist/constants.js"
     },
     "./nestjs": {
-      "import": "./dist/nestjs.js",
-      "types": "./dist/nestjs.d.ts"
+      "types": "./dist/nestjs.d.ts",
+      "import": "./dist/nestjs.js"
     },
     "./react": {
-      "import": "./dist/react.js",
-      "types": "./dist/react.d.ts"
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js"
     }
   },
   "types": "./dist/index.d.ts",
@@ -46,25 +46,25 @@
   "scripts": {
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
-    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo tsconfig.lib.tsbuildinfo dist node_modules",
+    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{js,json,md,ts}\"",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "qa": "run-p ts format lint",
-    "ts": "tsc --build tsconfig.lib.json"
+    "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "@swc/core": "^1.15.2",
-    "@vitejs/plugin-react": "^5.1.1",
-    "@vitest/coverage-v8": "^4.0.9",
-    "unplugin-swc": "^1.5.8",
-    "vite": "^7.2.2"
+    "@swc/core": "^1.15.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "@vitest/coverage-v8": "^4.0.15",
+    "unplugin-swc": "^1.5.9",
+    "vite": "^7.2.7"
   },
   "devDependencies": {
-    "jsdom": "^27.2.0",
-    "vitest": "^4.0.9"
+    "jsdom": "^27.3.0",
+    "vitest": "^4.0.15"
   },
   "peerDependencies": {
     "jsdom": "^27.0.0",

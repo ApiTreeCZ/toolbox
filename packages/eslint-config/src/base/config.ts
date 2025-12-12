@@ -48,7 +48,9 @@ export const config = defineConfig(
       parser: tsEslintParser,
       parserOptions: {
         ecmaVersion: 'latest',
-        projectService: true,
+        projectService: {
+          allowDefaultProject: ['lint-staged.config.js', 'typedoc.config.js', 'vitest.config.ts'],
+        },
         tsconfigRootDir: process.cwd(),
         sourceType: 'module',
       },

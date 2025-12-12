@@ -105,11 +105,10 @@ Internal dependencies use workspace protocol:
 
 ### TypeScript Configuration Pattern
 
-Each package has three TypeScript config files:
+Each package has two TypeScript config files:
 
-- `tsconfig.json` - Main config (references lib for type checking)
-- `tsconfig.build.json` - Build config with `noEmit: false`, includes src files
-- `tsconfig.lib.json` - Library config (extends from ts-config package)
+- `tsconfig.json` - Main config (extends from ts-config package, used for type checking)
+- `tsconfig.build.json` - Build config with `noEmit: false` (inherits from tsconfig.json)
 
 **Configuration hierarchy:**
 
@@ -137,7 +136,7 @@ build → tsc --build tsconfig.build.json
 ├── outputs: dist/**, tsconfig.build.tsbuildinfo
 └── dependsOn: ^build (dependencies first)
 
-ts → tsc --build tsconfig.lib.json
+ts → tsc --build tsconfig.json
 ├── Type checking without emission
 └── Faster feedback loop
 ```

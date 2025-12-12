@@ -1,5 +1,5 @@
 {
   "extends": "@apitree.cz/ts-config",
-  "include": ["./*.js", "./*.ts"],
+  "include": ["./*.js", "./*.ts", "./packges/*/*.config.js", "./packages/*/*.config.ts"],
   "exclude": ["node_modules"]
 }

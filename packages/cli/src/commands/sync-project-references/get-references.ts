@@ -41,7 +41,6 @@ export const getReferences = async ({ tsConfigs, workspacePackage, workspaces }:
           build: buildConfig
             ? { path: normalizePath(path.join(path.relative(workspacePackage.dir, workspace.dir), buildConfig)) }
             : undefined,
-          lib: undefined,
         };
       }
     }),

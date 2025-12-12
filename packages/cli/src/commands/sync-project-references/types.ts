@@ -19,11 +19,6 @@ export interface SyncProjectReferencesTsConfigs {
    * @defaultValue `'tsconfig.build.json'`
    */
   build?: string | undefined;
-  /**
-   * Name of the TS config file for distributable libraries.
-   * @defaultValue `'tsconfig.lib.json'`
-   */
-  lib?: string | undefined;
 }
 
 export interface SyncProjectReferencesConfig {

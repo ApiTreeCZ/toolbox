@@ -1,1 +1,7 @@
-{ "extends": "./tsconfig.lib.json", "compilerOptions": { "rootDir": "./src", "outDir": "./dist" }, "references": [] }
+{
+  "extends": "@apitree.cz/ts-config/library",
+  "compilerOptions": { "rootDir": "./src", "outDir": "./dist" },
+  "include": ["./src"],
+  "exclude": ["dist", "node_modules"],
+  "references": []
+}

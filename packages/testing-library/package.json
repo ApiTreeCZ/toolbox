@@ -18,16 +18,16 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./setup": {
-      "import": "./dist/setup.js",
-      "types": "./dist/setup.d.ts"
+      "types": "./dist/setup.d.ts",
+      "import": "./dist/setup.js"
     },
     "./testing-library": {
-      "import": "./dist/testing-library.js",
-      "types": "./dist/testing-library.d.ts"
+      "types": "./dist/testing-library.d.ts",
+      "import": "./dist/testing-library.js"
     }
   },
   "types": "./dist/index.d.ts",
@@ -37,7 +37,7 @@
   "scripts": {
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
-    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo tsconfig.lib.tsbuildinfo coverage dist node_modules",
+    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo coverage dist node_modules",
     "fix": "run-p ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{js,json,md,ts,tsx}\"",
     "format:fix": "pnpm run format --write",
@@ -46,21 +46,21 @@
     "qa": "run-p ts format lint",
     "test": "vitest --run",
     "test:coverage": "pnpm run test --coverage",
-    "ts": "tsc --build tsconfig.lib.json"
+    "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
-    "jsdom": "^27.2.0"
+    "jsdom": "^27.3.0"
   },
   "devDependencies": {
     "@apitree.cz/vitest-config": "workspace:*",
     "@testing-library/react": "^16.3.0",
-    "@types/react": "^19.2.5",
+    "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "vitest": "^4.0.9"
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "vitest": "^4.0.15"
   },
   "peerDependencies": {
     "@testing-library/react": "^16.2.0",

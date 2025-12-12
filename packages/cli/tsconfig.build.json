@@ -1,6 +1,5 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": { "noEmit": false },
-  "include": ["./src"],
   "references": [{ "path": "../ts-utils/tsconfig.build.json" }]
 }
