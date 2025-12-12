@@ -19,14 +19,11 @@ env:
   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
   TURBO_REMOTE_CACHE_SIGNATURE_KEY: ${{ secrets.TURBO_REMOTE_CACHE_SIGNATURE_KEY }}
 
-permissions:
-  contents: read
-  id-token: write
-
 jobs:
   release:
     permissions:
       contents: write
+      id-token: write
     runs-on: ubuntu-latest
     name: release:${{ inputs.stable == true && 'stable' || 'snapshot' }}
     steps:
