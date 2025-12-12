@@ -1,5 +1,20 @@
 # @apitree.cz/lint-staged-config
 
+## 1.0.0
+
+### Major Changes
+
+- 90699c2: Remove `library` export
+
+  The `library` export has been removed as it is now identical to the `workspace` export. Use `workspace` instead for all workspace configurations.
+
+  **Breaking change:**
+
+  ```diff
+  - export { library as default } from '@apitree.cz/lint-staged-config';
+  + export { workspace as default } from '@apitree.cz/lint-staged-config';
+  ```
+
 ## 0.2.7
 
 ### Patch Changes

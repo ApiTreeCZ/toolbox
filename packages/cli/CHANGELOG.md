@@ -1,5 +1,20 @@
 # @apitree.cz/cli
 
+## 0.5.0
+
+### Minor Changes
+
+- 90699c2: Remove `lib` configuration option from sync-project-references
+
+  The `lib` property has been removed from the `SyncProjectReferencesTsConfigs` interface and default configuration. This option was never actually used by the CLI and has been deprecated in favor of a simpler two-config pattern (tsconfig.json and tsconfig.build.json).
+
+  If you have custom configuration that references `tsConfigs.lib`, you can safely remove it as it had no effect.
+
+### Patch Changes
+
+- Updated dependencies [90699c2]
+  - @apitree.cz/ts-utils@0.2.4
+
 ## 0.4.13
 
 ### Patch Changes
