@@ -1,5 +1,4 @@
 ---
-'apitree.cz-toolbox': patch
 '@apitree.cz/eslint-config': patch
 '@apitree.cz/testing-library': patch
 '@apitree.cz/vitest-config': patch
