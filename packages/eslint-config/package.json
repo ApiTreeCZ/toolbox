@@ -84,12 +84,10 @@
     "typescript-eslint": "^8.49.0"
   },
   "devDependencies": {
-    "@apitree.cz/vitest-config": "workspace:*",
     "eslint": "^9.39.1",
     "react": "^19.2.3",
     "storybook": "^10.1.7",
-    "typescript": "^5.9.3",
-    "vitest": "^4.0.15"
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "eslint": "^9.39.0",

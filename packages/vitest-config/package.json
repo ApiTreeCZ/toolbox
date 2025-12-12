@@ -58,19 +58,23 @@
   "dependencies": {
     "@swc/core": "^1.15.3",
     "@vitejs/plugin-react": "^5.1.2",
-    "@vitest/coverage-v8": "^4.0.15",
     "unplugin-swc": "^1.5.9",
     "vite": "^7.2.7"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^4.0.15",
     "jsdom": "^27.3.0",
     "vitest": "^4.0.15"
   },
   "peerDependencies": {
+    "@vitest/coverage-v8": "^4.0.15",
     "jsdom": "^27.0.0",
     "vitest": "^4.0.0"
   },
   "peerDependenciesMeta": {
+    "@vitest/coverage-v8": {
+      "optional": true
+    },
     "jsdom": {
       "optional": true
     }

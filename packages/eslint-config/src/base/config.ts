@@ -49,7 +49,7 @@ export const config = defineConfig(
       parserOptions: {
         ecmaVersion: 'latest',
         projectService: {
-          allowDefaultProject: ['lint-staged.config.js', 'typedoc.config.js', 'vitest.config.ts'],
+          allowDefaultProject: ['lint-staged.config.js', 'typedoc.config.js', 'vitest.config.js'],
         },
         tsconfigRootDir: process.cwd(),
         sourceType: 'module',
@@ -100,7 +100,7 @@ export const config = defineConfig(
     rules: rules.dts,
   },
   {
-    files: ['**/lint-staged.config.js', '**/typedoc.config.js'],
+    files: ['**/lint-staged.config.js', '**/typedoc.config.js', '**/vitest.config.js'],
     rules: rules.monorepo,
   },
   prettier,

@@ -31,7 +31,7 @@ Suitable for monorepo root.
 ```json
 {
   "extends": "@apitree.cz/ts-config",
-  "include": ["./*.js", "./*.ts", "./packages/*/*.config.js", "./packages/*/*.config.ts"],
+  "include": ["./*.js", "./*.ts", "./github/scripts/**/*.js", "./packages/*/*.config.js"],
   "exclude": ["node_modules"]
 }
 ```

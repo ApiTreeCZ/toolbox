@@ -33,6 +33,9 @@ importers:
       '@apitree.cz/typedoc-config':
         specifier: workspace:*
         version: link:packages/typedoc-config
+      '@apitree.cz/vitest-config':
+        specifier: ^0.8.4
+        version: 0.8.4(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(vitest@4.0.15)(yaml@2.8.2)
       '@changesets/cli':
         specifier: ^2.29.8
         version: 2.29.8(@types/node@24.10.3)
@@ -48,6 +51,12 @@ importers:
       '@types/node':
         specifier: ^24.10.3
         version: 24.10.3
+      '@vitest/coverage-v8':
+        specifier: ^4.0.15
+        version: 4.0.15(vitest@4.0.15)
+      '@vitest/ui':
+        specifier: ^4.0.15
+        version: 4.0.15(vitest@4.0.15)
       del-cli:
         specifier: ^7.0.0
         version: 7.0.0
@@ -75,6 +84,9 @@ importers:
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
+      vitest:
+        specifier: ^4.0.15
+        version: 4.0.15(@types/node@24.10.3)(@vitest/ui@4.0.15)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
 
   packages/cli:
     dependencies:
@@ -132,7 +144,7 @@ importers:
         version: 8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       '@vitest/eslint-plugin':
         specifier: ^1.5.2
-        version: 1.5.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.15(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2))
+        version: 1.5.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.15)
       eslint-config-prettier:
         specifier: ^10.1.8
         version: 10.1.8(eslint@9.39.1(jiti@2.6.1))
@@ -185,9 +197,6 @@ importers:
         specifier: ^8.49.0
         version: 8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
     devDependencies:
-      '@apitree.cz/vitest-config':
-        specifier: workspace:*
-        version: link:../vitest-config
       eslint:
         specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
@@ -200,9 +209,6 @@ importers:
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
-      vitest:
-        specifier: ^4.0.15
-        version: 4.0.15(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
 
   packages/lint-staged-config:
     devDependencies:
@@ -235,9 +241,6 @@ importers:
         specifier: ^27.3.0
         version: 27.3.0(postcss@8.5.6)
     devDependencies:
-      '@apitree.cz/vitest-config':
-        specifier: workspace:*
-        version: link:../vitest-config
       '@testing-library/react':
         specifier: ^16.3.0
         version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -255,7 +258,7 @@ importers:
         version: 19.2.3(react@19.2.3)
       vitest:
         specifier: ^4.0.15
-        version: 4.0.15(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+        version: 4.0.15(@types/node@24.10.3)(@vitest/ui@4.0.15)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
 
   packages/ts-config:
     devDependencies:
@@ -286,9 +289,6 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^5.1.2
         version: 5.1.2(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(yaml@2.8.2))
-      '@vitest/coverage-v8':
-        specifier: ^4.0.15
-        version: 4.0.15(vitest@4.0.15(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2))
       unplugin-swc:
         specifier: ^1.5.9
         version: 1.5.9(@swc/core@1.15.3)(rollup@4.53.3)
@@ -296,12 +296,15 @@ importers:
         specifier: ^7.2.7
         version: 7.2.7(@types/node@24.10.3)(jiti@2.6.1)(yaml@2.8.2)
     devDependencies:
+      '@vitest/coverage-v8':
+        specifier: ^4.0.15
+        version: 4.0.15(vitest@4.0.15)
       jsdom:
         specifier: ^27.3.0
         version: 27.3.0(postcss@8.5.6)
       vitest:
         specifier: ^4.0.15
-        version: 4.0.15(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+        version: 4.0.15(@types/node@24.10.3)(@vitest/ui@4.0.15)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
 
 packages:
 
@@ -310,6 +313,15 @@ packages:
 
   '@adobe/css-tools@4.4.4':
     resolution: {integrity: sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg==}
+
+  '@apitree.cz/vitest-config@0.8.4':
+    resolution: {integrity: sha512-8fwvepbpgeTQ4FADfjBbq0mxufbssZ2v2Ui4PA1wvGMbg/7wuwdTpA/4ooxqJeJP+ujVyOYIUWcZmYKjy9kv5A==}
+    peerDependencies:
+      jsdom: ^27.0.0
+      vitest: ^4.0.0
+    peerDependenciesMeta:
+      jsdom:
+        optional: true
 
   '@asamuzakjp/css-color@4.1.0':
     resolution: {integrity: sha512-9xiBAtLn4aNsa4mDnpovJvBn72tNEIACyvlqaNJ+ADemR+yeMJWnBudOi2qGDviJa7SwcDOU/TRh5dnET7qk0w==}
@@ -1093,6 +1105,9 @@ packages:
     resolution: {integrity: sha512-c83qWb22rNRuB0UaVCI0uRPNRr8Z0FWnEIvT47jiHAmOIUHbBOg5XvV7pM5x+rKn9HRpjxquDbXYSXr3fAKFcw==}
     engines: {node: '>=12'}
 
+  '@polka/url@1.0.0-next.29':
+    resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
+
   '@rolldown/pluginutils@1.0.0-beta.53':
     resolution: {integrity: sha512-vENRlFU4YbrwVqNDZ7fLvy+JR1CRkyr01jhSiDpE1u6py3OMzQfztQU2jxykW3ALNxO4kSlqIDeYyD0Y9RcQeQ==}
 
@@ -1665,6 +1680,11 @@ packages:
 
   '@vitest/spy@4.0.15':
     resolution: {integrity: sha512-+EIjOJmnY6mIfdXtE/bnozKEvTC4Uczg19yeZ2vtCz5Yyb0QQ31QWVQ8hswJ3Ysx/K2EqaNsVanjr//2+P3FHw==}
+
+  '@vitest/ui@4.0.15':
+    resolution: {integrity: sha512-sxSyJMaKp45zI0u+lHrPuZM1ZJQ8FaVD35k+UxVrha1yyvQ+TZuUYllUixwvQXlB7ixoDc7skf3lQPopZIvaQw==}
+    peerDependencies:
+      vitest: 4.0.15
 
   '@vitest/utils@3.2.4':
     resolution: {integrity: sha512-fB2V0JFrQSMsCo9HiSq3Ezpdv4iYaXRG1Sx8edX3MwxfyNn83mKiGzOcH+Fkxt4MHxr3y42fQi1oeAInqgX2QA==}
@@ -2516,6 +2536,9 @@ packages:
     peerDependenciesMeta:
       picomatch:
         optional: true
+
+  fflate@0.8.2:
+    resolution: {integrity: sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==}
 
   figures@6.1.0:
     resolution: {integrity: sha512-d+l3qxjSesT4V7v2fh+QnmFnUWv9lSpjarhShNTgBOfA0ttejbQUAlHLitbjkoRiDulW0OPoQPYIGhIC8ohejg==}
@@ -3403,6 +3426,10 @@ packages:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
 
+  mrmime@2.0.1:
+    resolution: {integrity: sha512-Y3wQdFg2Va6etvQ5I82yUhGdsKrcYox6p7FfL1LbK2J4V01F9TGlepTIhnK24t7koZibmg82KGglhA1XK5IsLQ==}
+    engines: {node: '>=10'}
+
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
@@ -3970,6 +3997,10 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
+  sirv@3.0.2:
+    resolution: {integrity: sha512-2wcC/oGxHis/BoHkkPwldgiPSYcpZK3JU28WoMVv55yHJgcZ8rlXvuG9iZggz+sU1d4bRgIGASwyWqjxu3FM0g==}
+    engines: {node: '>=18'}
+
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
@@ -4194,6 +4225,10 @@ packages:
   to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
+
+  totalist@3.0.1:
+    resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
+    engines: {node: '>=6'}
 
   tough-cookie@6.0.0:
     resolution: {integrity: sha512-kXuRi1mtaKMrsLUxz3sQYvVl37B0Ns6MzfrtV5DvJceE9bPyspOqk9xxv7XbZWcfLWbFmm997vl83qUWVJA64w==}
@@ -4643,6 +4678,33 @@ snapshots:
   '@acemir/cssom@0.9.29': {}
 
   '@adobe/css-tools@4.4.4': {}
+
+  '@apitree.cz/vitest-config@0.8.4(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(vitest@4.0.15)(yaml@2.8.2)':
+    dependencies:
+      '@swc/core': 1.15.3
+      '@vitejs/plugin-react': 5.1.2(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(yaml@2.8.2))
+      '@vitest/coverage-v8': 4.0.15(vitest@4.0.15)
+      unplugin-swc: 1.5.9(@swc/core@1.15.3)(rollup@4.53.3)
+      vite: 7.2.7(@types/node@24.10.3)(jiti@2.6.1)(yaml@2.8.2)
+      vitest: 4.0.15(@types/node@24.10.3)(@vitest/ui@4.0.15)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+    optionalDependencies:
+      jsdom: 27.3.0(postcss@8.5.6)
+    transitivePeerDependencies:
+      - '@swc/helpers'
+      - '@types/node'
+      - '@vitest/browser'
+      - jiti
+      - less
+      - lightningcss
+      - rollup
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - tsx
+      - yaml
 
   '@asamuzakjp/css-color@4.1.0':
     dependencies:
@@ -5508,6 +5570,8 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
+  '@polka/url@1.0.0-next.29': {}
+
   '@rolldown/pluginutils@1.0.0-beta.53': {}
 
   '@rollup/pluginutils@5.3.0(rollup@4.53.3)':
@@ -5969,7 +6033,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-v8@4.0.15(vitest@4.0.15(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2))':
+  '@vitest/coverage-v8@4.0.15(vitest@4.0.15)':
     dependencies:
       '@bcoe/v8-coverage': 1.0.2
       '@vitest/utils': 4.0.15
@@ -5982,18 +6046,18 @@ snapshots:
       obug: 2.1.1
       std-env: 3.10.0
       tinyrainbow: 3.0.3
-      vitest: 4.0.15(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+      vitest: 4.0.15(@types/node@24.10.3)(@vitest/ui@4.0.15)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/eslint-plugin@1.5.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.15(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2))':
+  '@vitest/eslint-plugin@1.5.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.15)':
     dependencies:
       '@typescript-eslint/scope-manager': 8.49.0
       '@typescript-eslint/utils': 8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       eslint: 9.39.1(jiti@2.6.1)
     optionalDependencies:
       typescript: 5.9.3
-      vitest: 4.0.15(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+      vitest: 4.0.15(@types/node@24.10.3)(@vitest/ui@4.0.15)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -6046,6 +6110,17 @@ snapshots:
       tinyspy: 4.0.4
 
   '@vitest/spy@4.0.15': {}
+
+  '@vitest/ui@4.0.15(vitest@4.0.15)':
+    dependencies:
+      '@vitest/utils': 4.0.15
+      fflate: 0.8.2
+      flatted: 3.3.3
+      pathe: 2.0.3
+      sirv: 3.0.2
+      tinyglobby: 0.2.15
+      tinyrainbow: 3.0.3
+      vitest: 4.0.15(@types/node@24.10.3)(@vitest/ui@4.0.15)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
 
   '@vitest/utils@3.2.4':
     dependencies:
@@ -7128,6 +7203,8 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.3
 
+  fflate@0.8.2: {}
+
   figures@6.1.0:
     dependencies:
       is-unicode-supported: 2.1.0
@@ -8179,6 +8256,8 @@ snapshots:
 
   mri@1.2.0: {}
 
+  mrmime@2.0.1: {}
+
   ms@2.1.3: {}
 
   nano-spawn@2.0.0: {}
@@ -8778,6 +8857,12 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
+  sirv@3.0.2:
+    dependencies:
+      '@polka/url': 1.0.0-next.29
+      mrmime: 2.0.1
+      totalist: 3.0.1
+
   slash@3.0.0: {}
 
   slash@5.1.0: {}
@@ -9018,6 +9103,8 @@ snapshots:
   to-regex-range@5.0.1:
     dependencies:
       is-number: 7.0.0
+
+  totalist@3.0.1: {}
 
   tough-cookie@6.0.0:
     dependencies:
@@ -9342,7 +9429,7 @@ snapshots:
       jiti: 2.6.1
       yaml: 2.8.2
 
-  vitest@4.0.15(@types/node@24.10.3)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2):
+  vitest@4.0.15(@types/node@24.10.3)(@vitest/ui@4.0.15)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2):
     dependencies:
       '@vitest/expect': 4.0.15
       '@vitest/mocker': 4.0.15(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(yaml@2.8.2))
@@ -9366,6 +9453,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.10.3
+      '@vitest/ui': 4.0.15(vitest@4.0.15)
       jsdom: 27.3.0(postcss@8.5.6)
     transitivePeerDependencies:
       - jiti

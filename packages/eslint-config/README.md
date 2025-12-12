@@ -18,14 +18,7 @@
 pnpm add --save-dev @apitree.cz/eslint-config eslint
 ```
 
-### PNPM Monorepos
-
-Prior to the installation, add the following to your repository root `pnpm-workspace.yaml`:
-
-```yaml
-publicHoistPattern:
-  - '*eslint*'
-```
+### Monorepos
 
 Install and use the package in the root only.
 

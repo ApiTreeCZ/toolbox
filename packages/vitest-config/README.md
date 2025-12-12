@@ -18,20 +18,19 @@
 pnpm add --save-dev @apitree.cz/vitest-config vitest
 ```
 
-### PNPM Monorepos
+If you want to collect code coverage, you also need to install `v8` provider:
 
-Prior to the installation, add the following to your repository root `pnpm-workspace.yaml`:
-
-```yaml
-publicHoistPattern:
-  - '*vitest*'
+```bash
+pnpm add --save-dev @vitest/coverage-v8
 ```
 
-Install and use the package in each workspace.
+### Monorepos
+
+Install the package in the root only, use it in multiple workspaces (see [Vitest Projects](#vitest-projects)).
 
 ## Usage
 
-Use one of the following configurations in your `vitest.config.ts`:
+Use one of the following configurations in your `vitest.config.ts`.
 
 ### Base
 
@@ -70,3 +69,39 @@ export default mergeConfig(
 ```
 
 > See [Options](https://vitest.dev/config/#options) documentation for config reference.
+
+### Vitest Projects
+
+You can also use the configurations as a base for multiple [Vitest Projects](https://vitest.dev/guide/projects.html) in a monorepo setup.
+
+Start by defining root `vitest.config.ts`:
+
+```typescript
+import { defineConfig, mergeConfig } from 'vitest/config';
+
+export default defineConfig({
+  test: {
+    root: import.meta.dirname,
+    projects: ['apps*/', 'packages/*'],
+  },
+});
+```
+
+Then, in each project, create `vitest.config.js` defining specific preset (e.g. `apps/react-app/vitest.config.js` for an app that requires React preset):
+
+```javascript
+import { react } from '@apitree.cz/vitest-config';
+import { defineProject } from 'vitest/config';
+
+export default defineProject(react);
+```
+
+Assuming the app is named `@apitree.cz/react-app`, you can run Vitest for this project only:
+
+```bash
+# From monorepo root
+pnpm vitest --project @apitree.cz/react-app --run
+
+# From apps/react-app
+pnpm vitest --run
+```

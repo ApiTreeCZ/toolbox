@@ -3,7 +3,7 @@ import type { Config } from 'prettier';
 export const config = {
   arrowParens: 'always',
   bracketSpacing: true,
-  plugins: ['prettier-plugin-packagejson'],
+  plugins: [import.meta.resolve('prettier-plugin-packagejson')],
   printWidth: 120,
   semi: true,
   singleQuote: true,

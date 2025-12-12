@@ -18,14 +18,7 @@
 pnpm add --save-dev @apitree.cz/prettier-config prettier
 ```
 
-### PNPM Monorepos
-
-Prior to the installation, add the following to your repository root `pnpm-workspace.yaml`:
-
-```yaml
-publicHoistPattern:
-  - '*prettier*'
-```
+### Monorepos
 
 Install and use the package in the root only.
 
