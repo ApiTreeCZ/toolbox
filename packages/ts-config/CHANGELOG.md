@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.4.11
+
+### Patch Changes
+
+- 93aa1fc: docs: update README files with improved documentation
+
 ## 0.4.10
 
 ### Patch Changes

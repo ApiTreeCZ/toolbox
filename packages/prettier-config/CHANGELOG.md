@@ -1,5 +1,12 @@
 # @apitree.cz/prettier-config
 
+## 0.3.11
+
+### Patch Changes
+
+- 93aa1fc: fix: use import.meta.resolve for ESM plugin resolution
+- 93aa1fc: docs: update README files with improved documentation
+
 ## 0.3.10
 
 ### Patch Changes
