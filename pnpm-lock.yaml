@@ -35,7 +35,7 @@ importers:
         version: link:packages/typedoc-config
       '@apitree.cz/vitest-config':
         specifier: ^0.8.5
-        version: 0.8.5(@types/node@24.10.4)(@vitest/coverage-v8@4.0.16(vitest@4.0.16))(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(vitest@4.0.16)(yaml@2.8.2)
+        version: 0.8.5(@types/node@24.10.4)(@vitest/coverage-v8@4.0.16(vitest@4.0.16))(jiti@2.6.1)(jsdom@27.4.0)(vitest@4.0.16)(yaml@2.8.2)
       '@changesets/cli':
         specifier: ^2.29.8
         version: 2.29.8(@types/node@24.10.4)
@@ -86,7 +86,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^4.0.16
-        version: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+        version: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.4.0)(yaml@2.8.2)
 
   packages/cli:
     dependencies:
@@ -150,7 +150,7 @@ importers:
         version: 10.1.8(eslint@9.39.2(jiti@2.6.1))
       eslint-config-turbo:
         specifier: ^2.6.3
-        version: 2.6.3(eslint@9.39.2(jiti@2.6.1))(turbo@2.6.3)
+        version: 2.6.3(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.3)
       eslint-import-resolver-typescript:
         specifier: ^4.4.4
         version: 4.4.4(eslint-plugin-import@2.32.0)(eslint@9.39.2(jiti@2.6.1))
@@ -183,7 +183,7 @@ importers:
         version: 7.15.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-turbo:
         specifier: ^2.6.3
-        version: 2.6.3(eslint@9.39.2(jiti@2.6.1))(turbo@2.6.3)
+        version: 2.6.3(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.3)
       eslint-plugin-unicorn:
         specifier: ^62.0.0
         version: 62.0.0(eslint@9.39.2(jiti@2.6.1))
@@ -239,7 +239,7 @@ importers:
         version: 6.9.1
       jsdom:
         specifier: ^27.3.0
-        version: 27.3.0(postcss@8.5.6)
+        version: 27.4.0
     devDependencies:
       '@testing-library/react':
         specifier: ^16.3.1
@@ -258,7 +258,7 @@ importers:
         version: 19.2.3(react@19.2.3)
       vitest:
         specifier: ^4.0.16
-        version: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+        version: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.4.0)(yaml@2.8.2)
 
   packages/ts-config:
     devDependencies:
@@ -301,15 +301,15 @@ importers:
         version: 4.0.16(vitest@4.0.16)
       jsdom:
         specifier: ^27.3.0
-        version: 27.3.0(postcss@8.5.6)
+        version: 27.4.0
       vitest:
         specifier: ^4.0.16
-        version: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+        version: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.4.0)(yaml@2.8.2)
 
 packages:
 
-  '@acemir/cssom@0.9.29':
-    resolution: {integrity: sha512-G90x0VW+9nW4dFajtjCoT+NM0scAfH9Mb08IcjgFHYbfiL/lU04dTF9JuVOi3/OH+DJCQdcIseSXkdCB9Ky6JA==}
+  '@acemir/cssom@0.9.30':
+    resolution: {integrity: sha512-9CnlMCI0LmCIq0olalQqdWrJHPzm0/tw3gzOA9zJSgvFX7Xau3D24mAGa4BtwxwY69nsuJW6kQqqCzf/mEcQgg==}
 
   '@adobe/css-tools@4.4.4':
     resolution: {integrity: sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg==}
@@ -326,8 +326,8 @@ packages:
       jsdom:
         optional: true
 
-  '@asamuzakjp/css-color@4.1.0':
-    resolution: {integrity: sha512-9xiBAtLn4aNsa4mDnpovJvBn72tNEIACyvlqaNJ+ADemR+yeMJWnBudOi2qGDviJa7SwcDOU/TRh5dnET7qk0w==}
+  '@asamuzakjp/css-color@4.1.1':
+    resolution: {integrity: sha512-B0Hv6G3gWGMn0xKJ0txEi/jM5iFpT3MfDxmhZFb4W047GvytCf1DHQ1D69W3zHI4yWe2aTZAA0JnbMZ7Xc8DuQ==}
 
   '@asamuzakjp/dom-selector@6.7.6':
     resolution: {integrity: sha512-hBaJER6A9MpdG3WgdlOolHmbOYvSk46y7IQN/1+iqiCuUu6iWdQrs9DGKF8ocqsEqWujWf/V7b7vaDgiUmIvUg==}
@@ -579,11 +579,9 @@ packages:
     peerDependencies:
       '@csstools/css-tokenizer': ^3.0.4
 
-  '@csstools/css-syntax-patches-for-csstree@1.0.14':
-    resolution: {integrity: sha512-zSlIxa20WvMojjpCSy8WrNpcZ61RqfTfX3XTaOeVlGJrt/8HF3YbzgFZa01yTbT4GWQLwfTcC3EB8i3XnB647Q==}
+  '@csstools/css-syntax-patches-for-csstree@1.0.23':
+    resolution: {integrity: sha512-YEmgyklR6l/oKUltidNVYdjSmLSW88vMsKx0pmiS3r71s8ZZRpd8A0Yf0U+6p/RzElmMnPBv27hNWjDQMSZRtQ==}
     engines: {node: '>=18'}
-    peerDependencies:
-      postcss: ^8.4
 
   '@csstools/css-tokenizer@3.0.4':
     resolution: {integrity: sha512-Vd/9EVDiu6PPJt9yAh6roZP6El1xHrdvIVGjyBsHR0RYwNHgL7FJPyIIW4fANJNG6FtyZfvlRPpFI4ZM/lubvw==}
@@ -795,6 +793,15 @@ packages:
   '@eslint/plugin-kit@0.4.1':
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@exodus/bytes@1.8.0':
+    resolution: {integrity: sha512-8JPn18Bcp8Uo1T82gR8lh2guEOa5KKU/IEKvvdp0sgmi7coPBWf1Doi1EXsGZb2ehc8ym/StJCjffYV+ne7sXQ==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
+    peerDependencies:
+      '@exodus/crypto': ^1.0.0-rc.4
+    peerDependenciesMeta:
+      '@exodus/crypto':
+        optional: true
 
   '@formatjs/ecma402-abstract@3.0.2':
     resolution: {integrity: sha512-WKK+XW3+RQfjOcrgBIMrXCw6Z8dKjjt0FecHLHHiYdsxcwkv4M5LVXaghk92H+wuYC0NLma61gjpLBRS2Jvbzg==}
@@ -1878,8 +1885,8 @@ packages:
   css.escape@1.5.1:
     resolution: {integrity: sha512-YUifsXXuknHlUsmlgyY0PKzgPOr7/FjCePfHNt0jxm83wHZi44VDMQ7/fGNkjY3/jV1MC+1CmZbaHzugyeRtpg==}
 
-  cssstyle@5.3.4:
-    resolution: {integrity: sha512-KyOS/kJMEq5O9GdPnaf82noigg5X5DYn0kZPJTaAsCUaBizp6Xa1y9D4Qoqf/JazEXWuruErHgVXwjN5391ZJw==}
+  cssstyle@5.3.7:
+    resolution: {integrity: sha512-7D2EPVltRrsTkhpQmksIu+LxeWAIEk6wRDMJ1qljlv+CKHJM+cJLlfhWIzNA44eAsHXSNe3+vO6DW1yCYx8SuQ==}
     engines: {node: '>=20'}
 
   csstype@3.2.3:
@@ -2574,9 +2581,9 @@ packages:
     resolution: {integrity: sha512-puUZAUKT5m8Zzvs72XWy3HtvVbTWljRE66cP60bxJzAqf2DgICo7lYTY2IHUmLnNpjYvw5bvmoHvPc0QO2a62w==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
-  html-encoding-sniffer@4.0.0:
-    resolution: {integrity: sha512-Y22oTqIU4uuPgEemfz7NDJz6OeKf12Lsu+QC+s3BVpda64lTiMYCyGwg5ki4vFxkMwQdeZDl2adZoqUgdFuTgQ==}
-    engines: {node: '>=18'}
+  html-encoding-sniffer@6.0.0:
+    resolution: {integrity: sha512-CV9TW3Y3f8/wT0BRFc1/KAVQ3TUHiXmaAb6VW9vtiMFf7SLoMd1PdAc4W3KFOFETBJUb90KatHqlsZMWV+R9Gg==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
 
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
@@ -2606,10 +2613,6 @@ packages:
     resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
     engines: {node: '>=18'}
     hasBin: true
-
-  iconv-lite@0.6.3:
-    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
-    engines: {node: '>=0.10.0'}
 
   iconv-lite@0.7.1:
     resolution: {integrity: sha512-2Tth85cXwGFHfvRgZWszZSvdo+0Xsqmw8k8ZwxScfcBneNUraK+dxRxRm24nszx80Y0TVio8kKLt5sLE7ZCLlw==}
@@ -2908,8 +2911,8 @@ packages:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
 
-  jsdom@27.3.0:
-    resolution: {integrity: sha512-GtldT42B8+jefDUC4yUKAvsaOrH7PDHmZxZXNgF2xMmymjUbRYJvpAybZAKEmXDGTM0mCsz8duOa4vTm5AY2Kg==}
+  jsdom@27.4.0:
+    resolution: {integrity: sha512-mjzqwWRD9Y1J1KUi7W97Gja1bwOOM5Ug0EZ6UDK3xS7j7mndrkwozHtSblfomlzyB4NepioNt+B2sOSzczVgtQ==}
     engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
     peerDependencies:
       canvas: ^3.0.0
@@ -4103,8 +4106,18 @@ packages:
     cpu: [x64]
     os: [darwin]
 
+  turbo-darwin-64@2.7.3:
+    resolution: {integrity: sha512-aZHhvRiRHXbJw1EcEAq4aws1hsVVUZ9DPuSFaq9VVFAKCup7niIEwc22glxb7240yYEr1vLafdQ2U294Vcwz+w==}
+    cpu: [x64]
+    os: [darwin]
+
   turbo-darwin-arm64@2.6.3:
     resolution: {integrity: sha512-MwVt7rBKiOK7zdYerenfCRTypefw4kZCue35IJga9CH1+S50+KTiCkT6LBqo0hHeoH2iKuI0ldTF2a0aB72z3w==}
+    cpu: [arm64]
+    os: [darwin]
+
+  turbo-darwin-arm64@2.7.3:
+    resolution: {integrity: sha512-CkVrHSq+Bnhl9sX2LQgqQYVfLTWC2gvI74C4758OmU0djfrssDKU9d4YQF0AYXXhIIRZipSXfxClQziIMD+EAg==}
     cpu: [arm64]
     os: [darwin]
 
@@ -4113,8 +4126,18 @@ packages:
     cpu: [x64]
     os: [linux]
 
+  turbo-linux-64@2.7.3:
+    resolution: {integrity: sha512-GqDsCNnzzr89kMaLGpRALyigUklzgxIrSy2pHZVXyifgczvYPnLglex78Aj3T2gu+T3trPPH2iJ+pWucVOCC2Q==}
+    cpu: [x64]
+    os: [linux]
+
   turbo-linux-arm64@2.6.3:
     resolution: {integrity: sha512-MterpZQmjXyr4uM7zOgFSFL3oRdNKeflY7nsjxJb2TklsYqiu3Z9pQ4zRVFFH8n0mLGna7MbQMZuKoWqqHb45w==}
+    cpu: [arm64]
+    os: [linux]
+
+  turbo-linux-arm64@2.7.3:
+    resolution: {integrity: sha512-NdCDTfIcIo3dWjsiaAHlxu5gW61Ed/8maah1IAF/9E3EtX0aAHNiBMbuYLZaR4vRJ7BeVkYB6xKWRtdFLZ0y3g==}
     cpu: [arm64]
     os: [linux]
 
@@ -4123,13 +4146,27 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  turbo-windows-64@2.7.3:
+    resolution: {integrity: sha512-7bVvO987daXGSJVYBoG8R4Q+csT1pKIgLJYZevXRQ0Hqw0Vv4mKme/TOjYXs9Qb1xMKh51Tb3bXKDbd8/4G08g==}
+    cpu: [x64]
+    os: [win32]
+
   turbo-windows-arm64@2.6.3:
     resolution: {integrity: sha512-dDHVKpSeukah3VsI/xMEKeTnV9V9cjlpFSUs4bmsUiLu3Yv2ENlgVEZv65wxbeE0bh0jjpmElDT+P1KaCxArQQ==}
     cpu: [arm64]
     os: [win32]
 
+  turbo-windows-arm64@2.7.3:
+    resolution: {integrity: sha512-nTodweTbPmkvwMu/a55XvjMsPtuyUSC+sV7f/SR57K36rB2I0YG21qNETN+00LOTUW9B3omd8XkiXJkt4kx/cw==}
+    cpu: [arm64]
+    os: [win32]
+
   turbo@2.6.3:
     resolution: {integrity: sha512-bf6YKUv11l5Xfcmg76PyWoy/e2vbkkxFNBGJSnfdSXQC33ZiUfutYh6IXidc5MhsnrFkWfdNNLyaRk+kHMLlwA==}
+    hasBin: true
+
+  turbo@2.7.3:
+    resolution: {integrity: sha512-+HjKlP4OfYk+qzvWNETA3cUO5UuK6b5MSc2UJOKyvBceKucQoQGb2g7HlC2H1GHdkfKrk4YF1VPvROkhVZDDLQ==}
     hasBin: true
 
   type-check@0.4.0:
@@ -4377,16 +4414,12 @@ packages:
   walk-up-path@3.0.1:
     resolution: {integrity: sha512-9YlCL/ynK3CTlrSRrDxZvUauLzAswPCrsaCgilqFevUYpeEW0/3ScEjaa3kbW/T0ghhkEr7mv+fpjqn1Y1YuTA==}
 
-  webidl-conversions@8.0.0:
-    resolution: {integrity: sha512-n4W4YFyz5JzOfQeA8oN7dUYpR+MBP3PIUsn2jLjWXwK5ASUzt0Jc/A5sAUZoCYFJRGF0FBKJ+1JjN43rNdsQzA==}
+  webidl-conversions@8.0.1:
+    resolution: {integrity: sha512-BMhLD/Sw+GbJC21C/UgyaZX41nPt8bUTg+jWyDeg7e7YN4xOM05YPSIXceACnXVtqyEw/LMClUQMtMZ+PGGpqQ==}
     engines: {node: '>=20'}
 
   webpack-virtual-modules@0.6.2:
     resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
-
-  whatwg-encoding@3.1.1:
-    resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
-    engines: {node: '>=18'}
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -4460,6 +4493,18 @@ packages:
       utf-8-validate:
         optional: true
 
+  ws@8.19.0:
+    resolution: {integrity: sha512-blAT2mjOEIi0ZzruJfIhb3nps74PRWTCz1IjglWEEpQl5XS/UNama6u2/rjFkDDouqr4L67ry+1aGIALViWjDg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
   wsl-utils@0.1.0:
     resolution: {integrity: sha512-h3Fbisa2nKGPxCpm89Hk33lBLsnaGBvctQopaBSOW/uIs6FTe1ATyAnKFJrzVs9vpGdsTe73WF3V4lIsk4Gacw==}
     engines: {node: '>=18'}
@@ -4517,20 +4562,20 @@ packages:
 
 snapshots:
 
-  '@acemir/cssom@0.9.29': {}
+  '@acemir/cssom@0.9.30': {}
 
   '@adobe/css-tools@4.4.4': {}
 
-  '@apitree.cz/vitest-config@0.8.5(@types/node@24.10.4)(@vitest/coverage-v8@4.0.16(vitest@4.0.16))(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(vitest@4.0.16)(yaml@2.8.2)':
+  '@apitree.cz/vitest-config@0.8.5(@types/node@24.10.4)(@vitest/coverage-v8@4.0.16(vitest@4.0.16))(jiti@2.6.1)(jsdom@27.4.0)(vitest@4.0.16)(yaml@2.8.2)':
     dependencies:
       '@swc/core': 1.15.7
       '@vitejs/plugin-react': 5.1.2(vite@7.3.0(@types/node@24.10.4)(jiti@2.6.1)(yaml@2.8.2))
       unplugin-swc: 1.5.9(@swc/core@1.15.7)(rollup@4.53.5)
       vite: 7.3.0(@types/node@24.10.4)(jiti@2.6.1)(yaml@2.8.2)
-      vitest: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+      vitest: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.4.0)(yaml@2.8.2)
     optionalDependencies:
       '@vitest/coverage-v8': 4.0.16(vitest@4.0.16)
-      jsdom: 27.3.0(postcss@8.5.6)
+      jsdom: 27.4.0
     transitivePeerDependencies:
       - '@swc/helpers'
       - '@types/node'
@@ -4547,7 +4592,7 @@ snapshots:
       - tsx
       - yaml
 
-  '@asamuzakjp/css-color@4.1.0':
+  '@asamuzakjp/css-color@4.1.1':
     dependencies:
       '@csstools/css-calc': 2.1.4(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)
       '@csstools/css-color-parser': 3.1.0(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)
@@ -4957,9 +5002,7 @@ snapshots:
     dependencies:
       '@csstools/css-tokenizer': 3.0.4
 
-  '@csstools/css-syntax-patches-for-csstree@1.0.14(postcss@8.5.6)':
-    dependencies:
-      postcss: 8.5.6
+  '@csstools/css-syntax-patches-for-csstree@1.0.23': {}
 
   '@csstools/css-tokenizer@3.0.4': {}
 
@@ -5106,6 +5149,8 @@ snapshots:
     dependencies:
       '@eslint/core': 0.17.0
       levn: 0.4.1
+
+  '@exodus/bytes@1.8.0': {}
 
   '@formatjs/ecma402-abstract@3.0.2':
     dependencies:
@@ -5809,7 +5854,7 @@ snapshots:
       obug: 2.1.1
       std-env: 3.10.0
       tinyrainbow: 3.0.3
-      vitest: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+      vitest: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.4.0)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -5820,7 +5865,7 @@ snapshots:
       eslint: 9.39.2(jiti@2.6.1)
     optionalDependencies:
       typescript: 5.9.3
-      vitest: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+      vitest: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.4.0)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -5883,7 +5928,7 @@ snapshots:
       sirv: 3.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vitest: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2)
+      vitest: 4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.4.0)(yaml@2.8.2)
 
   '@vitest/utils@3.2.4':
     dependencies:
@@ -6249,13 +6294,12 @@ snapshots:
 
   css.escape@1.5.1: {}
 
-  cssstyle@5.3.4(postcss@8.5.6):
+  cssstyle@5.3.7:
     dependencies:
-      '@asamuzakjp/css-color': 4.1.0
-      '@csstools/css-syntax-patches-for-csstree': 1.0.14(postcss@8.5.6)
+      '@asamuzakjp/css-color': 4.1.1
+      '@csstools/css-syntax-patches-for-csstree': 1.0.23
       css-tree: 3.1.0
-    transitivePeerDependencies:
-      - postcss
+      lru-cache: 11.2.4
 
   csstype@3.2.3: {}
 
@@ -6556,11 +6600,11 @@ snapshots:
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
 
-  eslint-config-turbo@2.6.3(eslint@9.39.2(jiti@2.6.1))(turbo@2.6.3):
+  eslint-config-turbo@2.6.3(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.3):
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
-      eslint-plugin-turbo: 2.6.3(eslint@9.39.2(jiti@2.6.1))(turbo@2.6.3)
-      turbo: 2.6.3
+      eslint-plugin-turbo: 2.6.3(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.3)
+      turbo: 2.7.3
 
   eslint-import-context@0.1.9(unrs-resolver@1.11.1):
     dependencies:
@@ -6765,11 +6809,11 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-turbo@2.6.3(eslint@9.39.2(jiti@2.6.1))(turbo@2.6.3):
+  eslint-plugin-turbo@2.6.3(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.3):
     dependencies:
       dotenv: 16.0.3
       eslint: 9.39.2(jiti@2.6.1)
-      turbo: 2.6.3
+      turbo: 2.7.3
 
   eslint-plugin-unicorn@62.0.0(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
@@ -7148,9 +7192,11 @@ snapshots:
     dependencies:
       lru-cache: 10.4.3
 
-  html-encoding-sniffer@4.0.0:
+  html-encoding-sniffer@6.0.0:
     dependencies:
-      whatwg-encoding: 3.1.1
+      '@exodus/bytes': 1.8.0
+    transitivePeerDependencies:
+      - '@exodus/crypto'
 
   html-escaper@2.0.2: {}
 
@@ -7175,10 +7221,6 @@ snapshots:
   husky-check-email@0.0.8: {}
 
   husky@9.1.7: {}
-
-  iconv-lite@0.6.3:
-    dependencies:
-      safer-buffer: 2.1.2
 
   iconv-lite@0.7.1:
     dependencies:
@@ -7451,14 +7493,15 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  jsdom@27.3.0(postcss@8.5.6):
+  jsdom@27.4.0:
     dependencies:
-      '@acemir/cssom': 0.9.29
+      '@acemir/cssom': 0.9.30
       '@asamuzakjp/dom-selector': 6.7.6
-      cssstyle: 5.3.4(postcss@8.5.6)
+      '@exodus/bytes': 1.8.0
+      cssstyle: 5.3.7
       data-urls: 6.0.0
       decimal.js: 10.6.0
-      html-encoding-sniffer: 4.0.0
+      html-encoding-sniffer: 6.0.0
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
       is-potential-custom-element-name: 1.0.1
@@ -7467,15 +7510,14 @@ snapshots:
       symbol-tree: 3.2.4
       tough-cookie: 6.0.0
       w3c-xmlserializer: 5.0.0
-      webidl-conversions: 8.0.0
-      whatwg-encoding: 3.1.1
+      webidl-conversions: 8.0.1
       whatwg-mimetype: 4.0.0
       whatwg-url: 15.1.0
-      ws: 8.18.3
+      ws: 8.19.0
       xml-name-validator: 5.0.0
     transitivePeerDependencies:
+      - '@exodus/crypto'
       - bufferutil
-      - postcss
       - supports-color
       - utf-8-validate
 
@@ -8868,19 +8910,37 @@ snapshots:
   turbo-darwin-64@2.6.3:
     optional: true
 
+  turbo-darwin-64@2.7.3:
+    optional: true
+
   turbo-darwin-arm64@2.6.3:
+    optional: true
+
+  turbo-darwin-arm64@2.7.3:
     optional: true
 
   turbo-linux-64@2.6.3:
     optional: true
 
+  turbo-linux-64@2.7.3:
+    optional: true
+
   turbo-linux-arm64@2.6.3:
+    optional: true
+
+  turbo-linux-arm64@2.7.3:
     optional: true
 
   turbo-windows-64@2.6.3:
     optional: true
 
+  turbo-windows-64@2.7.3:
+    optional: true
+
   turbo-windows-arm64@2.6.3:
+    optional: true
+
+  turbo-windows-arm64@2.7.3:
     optional: true
 
   turbo@2.6.3:
@@ -8891,6 +8951,15 @@ snapshots:
       turbo-linux-arm64: 2.6.3
       turbo-windows-64: 2.6.3
       turbo-windows-arm64: 2.6.3
+
+  turbo@2.7.3:
+    optionalDependencies:
+      turbo-darwin-64: 2.7.3
+      turbo-darwin-arm64: 2.7.3
+      turbo-linux-64: 2.7.3
+      turbo-linux-arm64: 2.7.3
+      turbo-windows-64: 2.7.3
+      turbo-windows-arm64: 2.7.3
 
   type-check@0.4.0:
     dependencies:
@@ -9163,7 +9232,7 @@ snapshots:
       jiti: 2.6.1
       yaml: 2.8.2
 
-  vitest@4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(yaml@2.8.2):
+  vitest@4.0.16(@types/node@24.10.4)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.4.0)(yaml@2.8.2):
     dependencies:
       '@vitest/expect': 4.0.16
       '@vitest/mocker': 4.0.16(vite@7.3.0(@types/node@24.10.4)(jiti@2.6.1)(yaml@2.8.2))
@@ -9188,7 +9257,7 @@ snapshots:
     optionalDependencies:
       '@types/node': 24.10.4
       '@vitest/ui': 4.0.16(vitest@4.0.16)
-      jsdom: 27.3.0(postcss@8.5.6)
+      jsdom: 27.4.0
     transitivePeerDependencies:
       - jiti
       - less
@@ -9208,20 +9277,16 @@ snapshots:
 
   walk-up-path@3.0.1: {}
 
-  webidl-conversions@8.0.0: {}
+  webidl-conversions@8.0.1: {}
 
   webpack-virtual-modules@0.6.2: {}
-
-  whatwg-encoding@3.1.1:
-    dependencies:
-      iconv-lite: 0.6.3
 
   whatwg-mimetype@4.0.0: {}
 
   whatwg-url@15.1.0:
     dependencies:
       tr46: 6.0.0
-      webidl-conversions: 8.0.0
+      webidl-conversions: 8.0.1
 
   which-boxed-primitive@1.1.1:
     dependencies:
@@ -9302,6 +9367,8 @@ snapshots:
       strip-ansi: 7.1.2
 
   ws@8.18.3: {}
+
+  ws@8.19.0: {}
 
   wsl-utils@0.1.0:
     dependencies:
