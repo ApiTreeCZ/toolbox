@@ -47,23 +47,23 @@
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
     "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
-    "fix": "run-p ts format:fix lint:fix",
+    "fix": "turbo run ts format:fix lint:fix --no-daemon",
     "format": "prettier --check \"./**/*.{js,json,md,ts}\"",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
-    "qa": "run-p ts format lint",
+    "qa": "turbo run ts format lint --no-daemon",
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "@swc/core": "^1.15.7",
+    "@swc/core": "^1.15.8",
     "@vitejs/plugin-react": "^5.1.2",
     "unplugin-swc": "^1.5.9",
-    "vite": "^7.3.0"
+    "vite": "^7.3.1"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^4.0.16",
-    "jsdom": "^27.3.0",
+    "jsdom": "^27.4.0",
     "vitest": "^4.0.16"
   },
   "peerDependencies": {

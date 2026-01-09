@@ -28,12 +28,12 @@
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
     "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
-    "fix": "run-p ts format:fix lint:fix",
+    "fix": "turbo rub ts format:fix lint:fix --no-daemon",
     "format": "prettier --check \"./**/*.{js,json,md,ts}\"",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
-    "qa": "run-p ts format lint",
+    "qa": "turbo run ts format lint --no-daemon",
     "ts": "tsc --build tsconfig.json"
   },
   "devDependencies": {

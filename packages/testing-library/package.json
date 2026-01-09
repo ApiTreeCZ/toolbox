@@ -38,12 +38,12 @@
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
     "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo coverage dist node_modules",
-    "fix": "run-p ts format:fix lint:fix",
+    "fix": "turbo run ts format:fix lint:fix --no-daemon",
     "format": "prettier --check \"./**/*.{js,json,md,ts,tsx}\"",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
-    "qa": "run-p ts format lint",
+    "qa": "turbo run ts format lint --no-daemon",
     "test": "vitest --run",
     "test:coverage": "pnpm run test --coverage",
     "ts": "tsc --build tsconfig.json"
@@ -51,7 +51,7 @@
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
-    "jsdom": "^27.3.0"
+    "jsdom": "^27.4.0"
   },
   "devDependencies": {
     "@testing-library/react": "^16.3.1",

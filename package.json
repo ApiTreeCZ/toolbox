@@ -18,13 +18,13 @@
     "cleanup": "turbo run cleanup --no-daemon",
     "postcleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo node_modules",
     "docs": "turbo run docs --no-daemon",
-    "fix": "turbo run fix fix:root --no-daemon",
-    "fix:root": "run-p ts format:root:fix lint:root:fix",
+    "fix": "turbo run ts ts:root format:fix format:root:fix lint:fix lint:root:fix --no-daemon",
+    "fix:root": "turbo run ts format:root:fix lint:root:fix --no-daemon",
     "format": "turbo run format format:root --no-daemon --parallel",
     "format:fix": "turbo run format:fix format:root:fix --no-daemon --parallel",
     "format:root": "prettier --ignore-path .prettierignore --check \"./*.{js,json,md,ts,yaml}\" \".changeset/**/*.md\" \".claude/**/*.{json,md}\" \".github/**/*.{js,json,md,yml,yaml}\"",
     "format:root:fix": "pnpm run format:root --write",
-    "postinstall": "is-ci || run-s postinstall:check postinstall:husky postinstall:cli postinstall:sync",
+    "postinstall": "pnpx is-ci || pnpx concurrently --kill-others-on-fail --max-processes 1 --prefix-colors auto \"pnpm run postinstall:check\" \"pnpm run postinstall:husky\" \"pnpm run postinstall:cli\" \"pnpm run postinstall:sync\"",
     "lint": "turbo run lint lint:root --no-daemon",
     "lint:fix": "turbo run lint:fix lint:root:fix --no-daemon",
     "lint:root": "eslint --cache \"./*.js\" \"./*.ts\"",
@@ -33,8 +33,8 @@
     "postinstall:cli": "turbo build --filter=\"./packages/cli\"",
     "postinstall:husky": "husky",
     "postinstall:sync": "turbo run sync-project-references --no-daemon",
-    "qa": "turbo run qa qa:root --no-daemon",
-    "qa:root": "run-p ts:root lint:root format:root",
+    "qa": "turbo run ts ts:root format format:root lint lint:root --no-daemon",
+    "qa:root": "turbo run ts:root lint:root format:root --no-daemon",
     "setup": "is-ci || pnpm run build",
     "sync-project-references": "apitree sync-project-references",
     "test": "turbo run test --no-daemon",
@@ -42,10 +42,6 @@
     "test:ui": "vitest --ui",
     "ts": "turbo run ts ts:root --no-daemon",
     "ts:root": "tsc --project tsconfig.json"
-  },
-  "dependencies": {
-    "is-ci": "^4.1.0",
-    "npm-run-all2": "^8.0.4"
   },
   "devDependencies": {
     "@apitree.cz/cli": "workspace:*",
@@ -56,8 +52,8 @@
     "@apitree.cz/typedoc-config": "workspace:*",
     "@apitree.cz/vitest-config": "^0.8.5",
     "@changesets/cli": "^2.29.8",
-    "@commitlint/cli": "^20.2.0",
-    "@commitlint/config-conventional": "^20.2.0",
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
     "@manypkg/cli": "^0.25.1",
     "@types/node": "^24.10.3",
     "@vitest/coverage-v8": "^4.0.16",
@@ -68,18 +64,13 @@
     "husky-check-email": "^0.0.8",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
-    "turbo": "^2.6.3",
+    "turbo": "^2.7.3",
     "typedoc": "^0.28.15",
     "typescript": "^5.9.3",
     "vitest": "^4.0.16"
   },
-  "packageManager": "pnpm@10.26.0",
+  "packageManager": "pnpm@10.27.0",
   "engines": {
     "node": "24.x"
-  },
-  "manypkg": {
-    "ignoredRules": [
-      "ROOT_HAS_PROD_DEPENDENCIES"
-    ]
   }
 }
