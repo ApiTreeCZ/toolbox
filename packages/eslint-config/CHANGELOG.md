@@ -1,5 +1,12 @@
 # @apitree.cz/eslint-config
 
+## 0.7.8
+
+### Patch Changes
+
+- da56c03: Update ESLint and plugin dependencies
+- 8fbb050: Bump deps to latest compatible versions
+
 ## 0.7.7
 
 ### Patch Changes

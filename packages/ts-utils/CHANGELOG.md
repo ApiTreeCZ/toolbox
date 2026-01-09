@@ -1,5 +1,11 @@
 # @apitree.cz/ts-utils
 
+## 0.2.5
+
+### Patch Changes
+
+- 8fbb050: Bump deps to latest compatible versions
+
 ## 0.2.4
 
 ### Patch Changes

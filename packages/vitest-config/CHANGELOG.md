@@ -1,5 +1,12 @@
 # @apitree.cz/vitest-config
 
+## 0.8.6
+
+### Patch Changes
+
+- da56c03: Update Vitest and SWC dependencies
+- 8fbb050: Bump deps to latest compatible versions
+
 ## 0.8.5
 
 ### Patch Changes

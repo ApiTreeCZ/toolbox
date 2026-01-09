@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.3.12
+
+### Patch Changes
+
+- 8fbb050: Bump deps to latest compatible versions
+
 ## 0.3.11
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @apitree.cz/typedoc-config
 
+## 0.2.12
+
+### Patch Changes
+
+- 08d18a0: Ensure MD plugin is correctly resolved in monorepos
+- 8fbb050: Bump deps to latest compatible versions
+
 ## 0.2.11
 
 ### Patch Changes

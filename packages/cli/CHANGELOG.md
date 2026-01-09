@@ -1,5 +1,13 @@
 # @apitree.cz/cli
 
+## 0.5.1
+
+### Patch Changes
+
+- 8fbb050: Bump deps to latest compatible versions
+- Updated dependencies [8fbb050]
+  - @apitree.cz/ts-utils@0.2.5
+
 ## 0.5.0
 
 ### Minor Changes

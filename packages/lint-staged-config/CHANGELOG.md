@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 1.0.1
+
+### Patch Changes
+
+- 8fbb050: Bump deps to latest compatible versions
+
 ## 1.0.0
 
 ### Major Changes

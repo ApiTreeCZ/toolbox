@@ -1,5 +1,12 @@
 # @apitree.cz/testing-library
 
+## 0.8.5
+
+### Patch Changes
+
+- 8fbb050: Bump deps to latest compatible versions
+- da56c03: Update testing library dependencies
+
 ## 0.8.4
 
 ### Patch Changes
