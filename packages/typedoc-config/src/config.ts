@@ -5,7 +5,7 @@ const base = {
   githubPages: false,
   gitRevision: 'main',
   out: './docs',
-  plugin: ['typedoc-plugin-markdown'],
+  plugin: [import.meta.resolve('typedoc-plugin-markdown')],
   readme: 'none',
 } satisfies Partial<TypeDocOptions>;
 
