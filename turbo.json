@@ -16,79 +16,53 @@
       "dependsOn": ["^build"],
       "outputs": ["docs/**/*"]
     },
-    "fix": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js", "../../prettier.config.js"],
-      "outputs": [".eslintcache", "tsconfig.tsbuildinfo"]
-    },
-    "//#fix:root": {
-      "dependsOn": ["^build"],
-      "outputs": [".eslintcache", "tsconfig.buildinfo"]
-    },
     "lint": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["@apitree.cz/eslint-config#build", "^build"],
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
       "outputs": [".eslintcache"]
     },
     "lint:fix": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["@apitree.cz/eslint-config#build", "^build"],
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
       "outputs": [".eslintcache"]
     },
     "//#lint:root": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["@apitree.cz/eslint-config#build", "^build"],
       "outputs": [".eslintcache"]
     },
     "//#lint:root:fix": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["@apitree.cz/eslint-config#build", "^build"],
       "outputs": [".eslintcache"]
     },
     "format": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["@apitree.cz/prettier-config#build", "^build"],
       "inputs": ["$TURBO_DEFAULT$", "../../prettier.config.js"],
       "outputs": []
     },
     "format:fix": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["@apitree.cz/prettier-config#build", "^build"],
       "inputs": ["$TURBO_DEFAULT$", "../../prettier.config.js"],
       "outputs": []
     },
     "//#format:root": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["@apitree.cz/prettier-config#build", "^build"],
       "outputs": []
     },
     "//#format:root:fix": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["@apitree.cz/prettier-config#build", "^build"],
       "outputs": []
     },
-    "qa": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js", "../../prettier.config.js"],
-      "outputs": [".eslintcache", "tsconfig.tsbuildinfo"]
-    },
-    "//#qa:root": {
-      "dependsOn": ["^build"],
-      "outputs": [".eslintcache", "tsconfig.tsbuildinfo"]
-    },
     "//#sync-project-references": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["@apitree.cz/cli#build", "^build"],
       "inputs": ["packages/*/package.json"],
       "outputs": ["packages/*/tsconfig.json", "packages/*/tsconfig.build.json"]
     },
     "test": {
-      "dependsOn": ["^build"],
-      "outputs": []
-    },
-    "@apitree.cz/eslint-config#test": {
-      "dependsOn": ["^build", "build"],
+      "dependsOn": ["@apitree.cz/vitest-config#build", "^build"],
       "outputs": []
     },
     "test:coverage": {
-      "dependsOn": ["^build"],
-      "outputs": ["coverage/**/*"]
-    },
-    "@apitree.cz/eslint-config#test:coverage": {
-      "dependsOn": ["^build", "build"],
+      "dependsOn": ["@apitree.cz/vitest-config#build", "^build"],
       "outputs": ["coverage/**/*"]
     },
     "ts": {

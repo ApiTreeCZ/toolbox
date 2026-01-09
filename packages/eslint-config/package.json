@@ -54,8 +54,6 @@
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "qa": "turbo run ts format lint --no-daemon",
-    "test": "vitest --run",
-    "test:coverage": "pnpm run test --coverage",
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
