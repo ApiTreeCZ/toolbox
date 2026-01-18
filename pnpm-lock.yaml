@@ -143,7 +143,7 @@ importers:
         version: 10.1.8(eslint@9.39.2(jiti@2.6.1))
       eslint-config-turbo:
         specifier: ^2.7.3
-        version: 2.7.4(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.4)
+        version: 2.7.4(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.5)
       eslint-import-resolver-typescript:
         specifier: ^4.4.4
         version: 4.4.4(eslint-plugin-import@2.32.0)(eslint@9.39.2(jiti@2.6.1))
@@ -176,7 +176,7 @@ importers:
         version: 7.15.4(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-turbo:
         specifier: ^2.7.3
-        version: 2.7.4(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.4)
+        version: 2.7.4(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.5)
       eslint-plugin-unicorn:
         specifier: ^62.0.0
         version: 62.0.0(eslint@9.39.2(jiti@2.6.1))
@@ -216,7 +216,7 @@ importers:
     dependencies:
       prettier-plugin-packagejson:
         specifier: ^2.5.20
-        version: 2.5.21(prettier@3.8.0)
+        version: 2.5.22(prettier@3.8.0)
     devDependencies:
       prettier:
         specifier: ^3.7.4
@@ -2534,8 +2534,8 @@ packages:
   get-tsconfig@4.13.0:
     resolution: {integrity: sha512-1VKTZJCwBrvbd+Wn3AOgQP/2Av+TfTCOlE4AcRJE72W1ksZXbAx8PPBR9RzgTeSPzlPMHrbANMH3LbltH73wxQ==}
 
-  git-hooks-list@4.1.1:
-    resolution: {integrity: sha512-cmP497iLq54AZnv4YRAEMnEyQ1eIn4tGKbmswqwmFV4GBnAqE8NLtWxxdXa++AalfgL5EBH4IxTPyquEuGY/jA==}
+  git-hooks-list@4.2.1:
+    resolution: {integrity: sha512-WNvqJjOxxs/8ZP9+DWdwWJ7cDsd60NHf39XnD82pDVrKO5q7xfPqpkK6hwEAmBa/ZSEE4IOoR75EzbbIuwGlMw==}
 
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
@@ -3576,8 +3576,8 @@ packages:
     resolution: {integrity: sha512-E6rsNU1QNJgB3sjj7OANinGncFKuK+164sLXw1/CqBjj/EkXSoSdHCtWQGBNlREIGLnL7IEUEGa08YFVUbrhVg==}
     engines: {node: '>=16'}
 
-  prettier-plugin-packagejson@2.5.21:
-    resolution: {integrity: sha512-d9ivsysb1SeRaKDhjf6Hi7jBGnP4TVsh7DeVi8N5HtHJ5vwD7YHcQIuy6jRkr2qGW/VKbrEVDWVMODuqcZuz8Q==}
+  prettier-plugin-packagejson@2.5.22:
+    resolution: {integrity: sha512-G6WalmoUssKF8ZXkni0+n4324K+gG143KPysSQNW+FrR0XyNb3BdRxchGC/Q1FE/F702p7/6KU7r4mv0WSWbzA==}
     peerDependencies:
       prettier: '>= 1.16.0'
     peerDependenciesMeta:
@@ -3876,8 +3876,8 @@ packages:
   sort-object-keys@2.1.0:
     resolution: {integrity: sha512-SOiEnthkJKPv2L6ec6HMwhUcN0/lppkeYuN1x63PbyPRrgSPIuBJCiYxYyvWRTtjMlOi14vQUCGUJqS6PLVm8g==}
 
-  sort-package-json@3.5.0:
-    resolution: {integrity: sha512-moY4UtptUuP5sPuu9H9dp8xHNel7eP5/Kz/7+90jTvC0IOiPH2LigtRM/aSFSxreaWoToHUVUpEV4a2tAs2oKQ==}
+  sort-package-json@3.6.0:
+    resolution: {integrity: sha512-fyJsPLhWvY7u2KsKPZn1PixbXp+1m7V8NWqU8CvgFRbMEX41Ffw1kD8n0CfJiGoaSfoAvbrqRRl/DcHO8omQOQ==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -4121,8 +4121,18 @@ packages:
     cpu: [x64]
     os: [darwin]
 
+  turbo-darwin-64@2.7.5:
+    resolution: {integrity: sha512-nN3wfLLj4OES/7awYyyM7fkU8U8sAFxsXau2bYJwAWi6T09jd87DgHD8N31zXaJ7LcpyppHWPRI2Ov9MuZEwnQ==}
+    cpu: [x64]
+    os: [darwin]
+
   turbo-darwin-arm64@2.7.4:
     resolution: {integrity: sha512-P7sjqXtOL/+nYWPvcDGWhi8wf8M8mZHHB8XEzw2VX7VJrS8IGHyJHGD1AYfDvhAEcr7pnk3gGifz3/xyhI655w==}
+    cpu: [arm64]
+    os: [darwin]
+
+  turbo-darwin-arm64@2.7.5:
+    resolution: {integrity: sha512-wCoDHMiTf3FgLAbZHDDx/unNNonSGhsF5AbbYODbxnpYyoKDpEYacUEPjZD895vDhNvYCH0Nnk24YsP4n/cD6g==}
     cpu: [arm64]
     os: [darwin]
 
@@ -4131,8 +4141,18 @@ packages:
     cpu: [x64]
     os: [linux]
 
+  turbo-linux-64@2.7.5:
+    resolution: {integrity: sha512-KKPvhOmJMmzWj/yjeO4LywkQ85vOJyhru7AZk/+c4B6OUh/odQ++SiIJBSbTG2lm1CuV5gV5vXZnf/2AMlu3Zg==}
+    cpu: [x64]
+    os: [linux]
+
   turbo-linux-arm64@2.7.4:
     resolution: {integrity: sha512-+RQKgNjksVPxYAyAgmDV7w/1qj++qca+nSNTAOKGOfJiDtSvRKoci89oftJ6anGs00uamLKVEQ712TI/tfNAIw==}
+    cpu: [arm64]
+    os: [linux]
+
+  turbo-linux-arm64@2.7.5:
+    resolution: {integrity: sha512-8PIva4L6BQhiPikUTds9lSFSHXVDAsEvV6QUlgwPsXrtXVQMVi6Sv9p+IxtlWQFvGkdYJUgX9GnK2rC030Xcmw==}
     cpu: [arm64]
     os: [linux]
 
@@ -4141,13 +4161,27 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  turbo-windows-64@2.7.5:
+    resolution: {integrity: sha512-rupskv/mkIUgQXzX/wUiK00mKMorQcK8yzhGFha/D5lm05FEnLx8dsip6rWzMcVpvh+4GUMA56PgtnOgpel2AA==}
+    cpu: [x64]
+    os: [win32]
+
   turbo-windows-arm64@2.7.4:
     resolution: {integrity: sha512-1ZgBNjNRbDu/fPeqXuX9i26x3CJ/Y1gcwUpQ+Vp7kN9Un6RZ9kzs164f/knrjcu5E+szCRexVjRSJay1k5jApA==}
     cpu: [arm64]
     os: [win32]
 
+  turbo-windows-arm64@2.7.5:
+    resolution: {integrity: sha512-G377Gxn6P42RnCzfMyDvsqQV7j69kVHKlhz9J4RhtJOB5+DyY4yYh/w0oTIxZQ4JRMmhjwLu3w9zncMoQ6nNDw==}
+    cpu: [arm64]
+    os: [win32]
+
   turbo@2.7.4:
     resolution: {integrity: sha512-bkO4AddmDishzJB2ze7aYYPaejMoJVfS0XnaR6RCdXFOY8JGJfQE+l9fKiV7uDPa5Ut44gmOWJL3894CIMeH9g==}
+    hasBin: true
+
+  turbo@2.7.5:
+    resolution: {integrity: sha512-7Imdmg37joOloTnj+DPrab9hIaQcDdJ5RwSzcauo/wMOSAgO+A/I/8b3hsGGs6PWQz70m/jkPgdqWsfNKtwwDQ==}
     hasBin: true
 
   type-check@0.4.0:
@@ -6617,11 +6651,11 @@ snapshots:
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
 
-  eslint-config-turbo@2.7.4(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.4):
+  eslint-config-turbo@2.7.4(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.5):
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
-      eslint-plugin-turbo: 2.7.4(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.4)
-      turbo: 2.7.4
+      eslint-plugin-turbo: 2.7.4(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.5)
+      turbo: 2.7.5
 
   eslint-import-context@0.1.9(unrs-resolver@1.11.1):
     dependencies:
@@ -6824,11 +6858,11 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-turbo@2.7.4(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.4):
+  eslint-plugin-turbo@2.7.4(eslint@9.39.2(jiti@2.6.1))(turbo@2.7.5):
     dependencies:
       dotenv: 16.0.3
       eslint: 9.39.2(jiti@2.6.1)
-      turbo: 2.7.4
+      turbo: 2.7.5
 
   eslint-plugin-unicorn@62.0.0(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
@@ -7113,7 +7147,7 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
-  git-hooks-list@4.1.1: {}
+  git-hooks-list@4.2.1: {}
 
   git-raw-commits@4.0.0:
     dependencies:
@@ -8291,9 +8325,9 @@ snapshots:
 
   presentable-error@0.0.1: {}
 
-  prettier-plugin-packagejson@2.5.21(prettier@3.8.0):
+  prettier-plugin-packagejson@2.5.22(prettier@3.8.0):
     dependencies:
-      sort-package-json: 3.5.0
+      sort-package-json: 3.6.0
     optionalDependencies:
       prettier: 3.8.0
 
@@ -8633,11 +8667,11 @@ snapshots:
 
   sort-object-keys@2.1.0: {}
 
-  sort-package-json@3.5.0:
+  sort-package-json@3.6.0:
     dependencies:
       detect-indent: 7.0.2
       detect-newline: 4.0.1
-      git-hooks-list: 4.1.1
+      git-hooks-list: 4.2.1
       is-plain-obj: 4.1.0
       semver: 7.7.3
       sort-object-keys: 2.1.0
@@ -8893,19 +8927,37 @@ snapshots:
   turbo-darwin-64@2.7.4:
     optional: true
 
+  turbo-darwin-64@2.7.5:
+    optional: true
+
   turbo-darwin-arm64@2.7.4:
+    optional: true
+
+  turbo-darwin-arm64@2.7.5:
     optional: true
 
   turbo-linux-64@2.7.4:
     optional: true
 
+  turbo-linux-64@2.7.5:
+    optional: true
+
   turbo-linux-arm64@2.7.4:
+    optional: true
+
+  turbo-linux-arm64@2.7.5:
     optional: true
 
   turbo-windows-64@2.7.4:
     optional: true
 
+  turbo-windows-64@2.7.5:
+    optional: true
+
   turbo-windows-arm64@2.7.4:
+    optional: true
+
+  turbo-windows-arm64@2.7.5:
     optional: true
 
   turbo@2.7.4:
@@ -8916,6 +8968,15 @@ snapshots:
       turbo-linux-arm64: 2.7.4
       turbo-windows-64: 2.7.4
       turbo-windows-arm64: 2.7.4
+
+  turbo@2.7.5:
+    optionalDependencies:
+      turbo-darwin-64: 2.7.5
+      turbo-darwin-arm64: 2.7.5
+      turbo-linux-64: 2.7.5
+      turbo-linux-arm64: 2.7.5
+      turbo-windows-64: 2.7.5
+      turbo-windows-arm64: 2.7.5
 
   type-check@0.4.0:
     dependencies:
