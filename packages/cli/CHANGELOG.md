@@ -1,5 +1,11 @@
 # @apitree.cz/cli
 
+## 0.5.2
+
+### Patch Changes
+
+- b447b50: Updated dependency `zod` to `^4.0.0`.
+
 ## 0.5.1
 
 ### Patch Changes

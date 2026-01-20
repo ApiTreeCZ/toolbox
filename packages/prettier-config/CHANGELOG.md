@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.3.13
+
+### Patch Changes
+
+- bc452ea: Updated dependency `prettier-plugin-packagejson` to `^3.0.0`.
+
 ## 0.3.12
 
 ### Patch Changes
