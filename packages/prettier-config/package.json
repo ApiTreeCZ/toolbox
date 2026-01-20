@@ -37,7 +37,7 @@
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "prettier-plugin-packagejson": "^2.5.20"
+    "prettier-plugin-packagejson": "^3.0.0"
   },
   "devDependencies": {
     "prettier": "^3.7.4",
