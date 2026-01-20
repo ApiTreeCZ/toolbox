@@ -39,7 +39,7 @@ const validate = async (config: unknown, path: string) => {
   } catch (error) {
     if (error instanceof ZodError) {
       throw new TypeError(
-        `Config '${path}' is invalid:\n${error.errors
+        `Config '${path}' is invalid:\n${error.issues
           .map((error) => `- ${error.path.join('.')}: ${error.message}`)
           .join('\n')}`,
       );
