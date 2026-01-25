@@ -51,7 +51,6 @@ export const config = defineConfig(
         projectService: {
           allowDefaultProject: ['lint-staged.config.js', 'typedoc.config.js', 'vitest.config.js'],
         },
-        tsconfigRootDir: process.cwd(),
         sourceType: 'module',
       },
     },
@@ -65,7 +64,6 @@ export const config = defineConfig(
       'import/resolver': {
         typescript: {
           alwaysTryTypes: true,
-          project: process.cwd(),
         },
       },
     },
