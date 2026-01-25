@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 0.7.9
+
+### Patch Changes
+
+- 53ff211: Dispose of `import/resolver` and `typescript-eslint` project paths in favor of auto-detection.
+
 ## 0.7.8
 
 ### Patch Changes
