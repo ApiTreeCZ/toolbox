@@ -143,13 +143,13 @@ importers:
         version: 10.1.8(eslint@9.39.2(jiti@2.6.1))
       eslint-config-turbo:
         specifier: ^2.7.3
-        version: 2.8.0(eslint@9.39.2(jiti@2.6.1))(turbo@2.8.0)
+        version: 2.8.0(eslint@9.39.2(jiti@2.6.1))(turbo@2.8.2)
       eslint-import-resolver-typescript:
         specifier: ^4.4.4
         version: 4.4.4(eslint-plugin-import@2.32.0)(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-formatjs:
         specifier: ^6.0.10
-        version: 6.1.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
+        version: 6.1.3(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-import:
         specifier: ^2.32.0
         version: 2.32.0(@typescript-eslint/parser@8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@4.4.4)(eslint@9.39.2(jiti@2.6.1))
@@ -176,7 +176,7 @@ importers:
         version: 7.15.4(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-turbo:
         specifier: ^2.7.3
-        version: 2.8.0(eslint@9.39.2(jiti@2.6.1))(turbo@2.8.0)
+        version: 2.8.0(eslint@9.39.2(jiti@2.6.1))(turbo@2.8.2)
       eslint-plugin-unicorn:
         specifier: ^62.0.0
         version: 62.0.0(eslint@9.39.2(jiti@2.6.1))
@@ -812,23 +812,23 @@ packages:
       '@exodus/crypto':
         optional: true
 
-  '@formatjs/ecma402-abstract@3.1.0':
-    resolution: {integrity: sha512-CjP1sUzM7XiQW6YluDreN+dMvcKZysO/J4ikvuDjDyd6nSOoSqAK9gvD1s75ZFaJVXtYOsz+y3CUXPZ1sKxcxw==}
+  '@formatjs/ecma402-abstract@3.1.1':
+    resolution: {integrity: sha512-jhZbTwda+2tcNrs4kKvxrPLPjx8QsBCLCUgrrJ/S+G9YrGHWLhAyFMMBHJBnBoOwuLHd7L14FgYudviKaxkO2Q==}
 
   '@formatjs/fast-memoize@3.1.0':
     resolution: {integrity: sha512-b5mvSWCI+XVKiz5WhnBCY3RJ4ZwfjAidU0yVlKa3d3MSgKmH1hC3tBGEAtYyN5mqL7N0G5x0BOUYyO8CEupWgg==}
 
-  '@formatjs/icu-messageformat-parser@3.5.0':
-    resolution: {integrity: sha512-Q01XuvtbDVCJQsG/E2MSfMZ+UdUoZV8v4Aex8tTH44SqKJZCeu5LjuclaKFUS0o1YoXndfEinJen5k1T1GR1vg==}
+  '@formatjs/icu-messageformat-parser@3.5.1':
+    resolution: {integrity: sha512-sSDmSvmmoVQ92XqWb499KrIhv/vLisJU8ITFrx7T7NZHUmMY7EL9xgRowAosaljhqnj/5iufG24QrdzB6X3ItA==}
 
-  '@formatjs/icu-skeleton-parser@2.1.0':
-    resolution: {integrity: sha512-wNer4imHDFBVAJnMb2OGoSyM4wL/uuLnuo5mrenliqkDaNjRbG4jzlJcwTTDEBhai8iCjnzUsE7xwNJC29SfWw==}
+  '@formatjs/icu-skeleton-parser@2.1.1':
+    resolution: {integrity: sha512-PSFABlcNefjI6yyk8f7nyX1DC7NHmq6WaCHZLySEXBrXuLOB2f935YsnzuPjlz+ibhb9yWTdPeVX1OVcj24w2Q==}
 
-  '@formatjs/intl-localematcher@0.8.0':
-    resolution: {integrity: sha512-zgMYWdUlmEZpX2Io+v3LHrfq9xZ6khpQVf9UAw2xYWhGerGgI9XgH1HvL/A34jWiruUJpYlP5pk4g8nIcaDrXQ==}
+  '@formatjs/intl-localematcher@0.8.1':
+    resolution: {integrity: sha512-xwEuwQFdtSq1UKtQnyTZWC+eHdv7Uygoa+H2k/9uzBVQjDyp9r20LNDNKedWXll7FssT3GRHvqsdJGYSUWqYFA==}
 
-  '@formatjs/ts-transformer@4.3.1':
-    resolution: {integrity: sha512-uQR0QniJ4+OymrMlVTfiam+eNBtHyIEyWnu9YYYGn6M2qQyyOR3PsRqy4AhDIRVoXAOWZfcpYPMOFZDEtNRNQg==}
+  '@formatjs/ts-transformer@4.3.3':
+    resolution: {integrity: sha512-jXh2NRP1wwYt57KAHaMiI8qZ6m6HFkPSOuAoVbOIzI+cP4++X1CVAtoQhTdEAyHhn04T4IyMdsFIGjYvtTZSAA==}
     peerDependencies:
       ts-jest: ^29
     peerDependenciesMeta:
@@ -2343,8 +2343,8 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
-  eslint-plugin-formatjs@6.1.1:
-    resolution: {integrity: sha512-mdz7toBHactmQZcOe4QNvMIqvDUt4vpaDVBJq3qCb/EF4Gr6eLn+nC3EHw8IwBwRjGq7Ocm8EeFRPzNp5PB4NA==}
+  eslint-plugin-formatjs@6.1.3:
+    resolution: {integrity: sha512-JZnRP76EZAfbVFluNuK5hM2AlxlsYkgjZRkMoUq+QXobCuCs3AQ7ywlRVn1ni+Os14ccPuv44o6LRw7dlW/32A==}
     peerDependencies:
       eslint: '9'
 
@@ -4182,8 +4182,18 @@ packages:
     cpu: [x64]
     os: [darwin]
 
+  turbo-darwin-64@2.8.2:
+    resolution: {integrity: sha512-sumREbxABHxrWIwlK67sZEaDRE7+BFSU8gZj8OK+X7dLpgW1vTjsHzTECB5m2qzWlXHRdueAk8sKv7wyHqv9jw==}
+    cpu: [x64]
+    os: [darwin]
+
   turbo-darwin-arm64@2.8.0:
     resolution: {integrity: sha512-eVzejaP5fn51gmJAPW68U6mSjFaAZ26rPiE36mMdk+tMC4XBGmJHT/fIgrhcrXMvINCl27RF8VmguRe+MBlSuQ==}
+    cpu: [arm64]
+    os: [darwin]
+
+  turbo-darwin-arm64@2.8.2:
+    resolution: {integrity: sha512-J3zoDkf+k9yozdJmdNUOc9YfIoFs01Zm+GgNyfY8pU6siMWlPlgdt+3ezbIMeOns6CAQUzUcqo9awowykAS9Vw==}
     cpu: [arm64]
     os: [darwin]
 
@@ -4192,8 +4202,18 @@ packages:
     cpu: [x64]
     os: [linux]
 
+  turbo-linux-64@2.8.2:
+    resolution: {integrity: sha512-iVYUM+tyNAPd34HhMSjYWi7OSXnxnDhPjFKVvzSb7cZmQS6GlDSr7MALc5Wt/zn6/7jm1FuS7c5Wffg9WD2e1Q==}
+    cpu: [x64]
+    os: [linux]
+
   turbo-linux-arm64@2.8.0:
     resolution: {integrity: sha512-z9pUa8ENFuHmadPfjEYMRWlXO82t1F/XBDx2XTg+cWWRZHf85FnEB6D4ForJn/GoKEEvwdPhFLzvvhOssom2ug==}
+    cpu: [arm64]
+    os: [linux]
+
+  turbo-linux-arm64@2.8.2:
+    resolution: {integrity: sha512-v7FJAHUhY2nSEE87mr5ZBO51GmsFKp0EmK2P6rO+vGimCPmnGlLNj1at/eVcnp/cHRDnJj8J+b3QHWdUzTPTkg==}
     cpu: [arm64]
     os: [linux]
 
@@ -4202,13 +4222,27 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  turbo-windows-64@2.8.2:
+    resolution: {integrity: sha512-d1X+U5JLhyAse0VXM0rpmu6iLbBTAvjwc7MX0PBkEaTz2aZQqOHBpQkkrxia7bZzRNbfXHbGSqY/vbE3GSFWzw==}
+    cpu: [x64]
+    os: [win32]
+
   turbo-windows-arm64@2.8.0:
     resolution: {integrity: sha512-qarBZvCu6uka35739TS+y/3CBU3zScrVAfohAkKHG+So+93Wn+5tKArs8HrO2fuTaGou8fMIeTV7V5NgzCVkSQ==}
     cpu: [arm64]
     os: [win32]
 
+  turbo-windows-arm64@2.8.2:
+    resolution: {integrity: sha512-fMln07/l/5kscs79V0kTwdf17gkZW+E2iyqnzz691gLM7Jf6la0afd3IMsNtLzUh+dxKIFCswNiFVmHe8g+2jA==}
+    cpu: [arm64]
+    os: [win32]
+
   turbo@2.8.0:
     resolution: {integrity: sha512-hYbxnLEdvJF+DLALS+Ia+PbfNtn0sDP0hH2u9AFoskSUDmcVHSrtwHpzdX94MrRJKo9D9tYxY3MyP20gnlrWyA==}
+    hasBin: true
+
+  turbo@2.8.2:
+    resolution: {integrity: sha512-biW/S5hENCcJ5vxxJszCozEKcXtwGK29vxXzNbdfY/0q7QpYTCoyKdj0e8k/ADA6qkqaKDJwgrrHbC8Vy6wszg==}
     hasBin: true
 
   type-check@0.4.0:
@@ -5180,10 +5214,10 @@ snapshots:
 
   '@exodus/bytes@1.8.0': {}
 
-  '@formatjs/ecma402-abstract@3.1.0':
+  '@formatjs/ecma402-abstract@3.1.1':
     dependencies:
       '@formatjs/fast-memoize': 3.1.0
-      '@formatjs/intl-localematcher': 0.8.0
+      '@formatjs/intl-localematcher': 0.8.1
       decimal.js: 10.6.0
       tslib: 2.8.1
 
@@ -5191,25 +5225,25 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@formatjs/icu-messageformat-parser@3.5.0':
+  '@formatjs/icu-messageformat-parser@3.5.1':
     dependencies:
-      '@formatjs/ecma402-abstract': 3.1.0
-      '@formatjs/icu-skeleton-parser': 2.1.0
+      '@formatjs/ecma402-abstract': 3.1.1
+      '@formatjs/icu-skeleton-parser': 2.1.1
       tslib: 2.8.1
 
-  '@formatjs/icu-skeleton-parser@2.1.0':
+  '@formatjs/icu-skeleton-parser@2.1.1':
     dependencies:
-      '@formatjs/ecma402-abstract': 3.1.0
+      '@formatjs/ecma402-abstract': 3.1.1
       tslib: 2.8.1
 
-  '@formatjs/intl-localematcher@0.8.0':
+  '@formatjs/intl-localematcher@0.8.1':
     dependencies:
       '@formatjs/fast-memoize': 3.1.0
       tslib: 2.8.1
 
-  '@formatjs/ts-transformer@4.3.1':
+  '@formatjs/ts-transformer@4.3.3':
     dependencies:
-      '@formatjs/icu-messageformat-parser': 3.5.0
+      '@formatjs/icu-messageformat-parser': 3.5.1
       '@types/node': 22.19.7
       chalk: 4.1.2
       json-stable-stringify: 1.3.0
@@ -5698,7 +5732,7 @@ snapshots:
 
   '@types/concat-stream@2.0.3':
     dependencies:
-      '@types/node': 24.10.9
+      '@types/node': 22.19.7
 
   '@types/debug@4.1.12':
     dependencies:
@@ -6718,11 +6752,11 @@ snapshots:
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
 
-  eslint-config-turbo@2.8.0(eslint@9.39.2(jiti@2.6.1))(turbo@2.8.0):
+  eslint-config-turbo@2.8.0(eslint@9.39.2(jiti@2.6.1))(turbo@2.8.2):
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
-      eslint-plugin-turbo: 2.8.0(eslint@9.39.2(jiti@2.6.1))(turbo@2.8.0)
-      turbo: 2.8.0
+      eslint-plugin-turbo: 2.8.0(eslint@9.39.2(jiti@2.6.1))(turbo@2.8.2)
+      turbo: 2.8.2
 
   eslint-import-context@0.1.9(unrs-resolver@1.11.1):
     dependencies:
@@ -6785,12 +6819,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-formatjs@6.1.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3):
+  eslint-plugin-formatjs@6.1.3(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3):
     dependencies:
-      '@formatjs/icu-messageformat-parser': 3.5.0
-      '@formatjs/ts-transformer': 4.3.1
+      '@formatjs/icu-messageformat-parser': 3.5.1
+      '@formatjs/ts-transformer': 4.3.3
       '@types/picomatch': 4.0.2
-      '@typescript-eslint/utils': 8.53.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
+      '@typescript-eslint/utils': 8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       '@unicode/unicode-17.0.0': 1.6.16
       eslint: 9.39.2(jiti@2.6.1)
       magic-string: 0.30.21
@@ -6926,11 +6960,11 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-turbo@2.8.0(eslint@9.39.2(jiti@2.6.1))(turbo@2.8.0):
+  eslint-plugin-turbo@2.8.0(eslint@9.39.2(jiti@2.6.1))(turbo@2.8.2):
     dependencies:
       dotenv: 16.0.3
       eslint: 9.39.2(jiti@2.6.1)
-      turbo: 2.8.0
+      turbo: 2.8.2
 
   eslint-plugin-unicorn@62.0.0(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
@@ -8959,19 +8993,37 @@ snapshots:
   turbo-darwin-64@2.8.0:
     optional: true
 
+  turbo-darwin-64@2.8.2:
+    optional: true
+
   turbo-darwin-arm64@2.8.0:
+    optional: true
+
+  turbo-darwin-arm64@2.8.2:
     optional: true
 
   turbo-linux-64@2.8.0:
     optional: true
 
+  turbo-linux-64@2.8.2:
+    optional: true
+
   turbo-linux-arm64@2.8.0:
+    optional: true
+
+  turbo-linux-arm64@2.8.2:
     optional: true
 
   turbo-windows-64@2.8.0:
     optional: true
 
+  turbo-windows-64@2.8.2:
+    optional: true
+
   turbo-windows-arm64@2.8.0:
+    optional: true
+
+  turbo-windows-arm64@2.8.2:
     optional: true
 
   turbo@2.8.0:
@@ -8982,6 +9034,15 @@ snapshots:
       turbo-linux-arm64: 2.8.0
       turbo-windows-64: 2.8.0
       turbo-windows-arm64: 2.8.0
+
+  turbo@2.8.2:
+    optionalDependencies:
+      turbo-darwin-64: 2.8.2
+      turbo-darwin-arm64: 2.8.2
+      turbo-linux-64: 2.8.2
+      turbo-linux-arm64: 2.8.2
+      turbo-windows-64: 2.8.2
+      turbo-windows-arm64: 2.8.2
 
   type-check@0.4.0:
     dependencies:
