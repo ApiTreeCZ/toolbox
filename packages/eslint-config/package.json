@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/eslint-config",
-  "version": "0.7.9",
+  "version": "0.7.10",
   "description": "ESLint configuration for ApiTree projects.",
   "keywords": [
     "apitree",

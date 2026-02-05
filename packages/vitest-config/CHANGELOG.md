@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.8.7
+
+### Patch Changes
+
+- 7936531: Update dependencies: commander 14.0.3, @commitlint/\* 20.4.1, turbo 2.8.3, typescript-eslint 8.54.0, @next/eslint-plugin-next 16.1.6, eslint-plugin-storybook 10.2.6, jsdom 28.0.0, react 19.2.4, and other minor updates
+
 ## 0.8.6
 
 ### Patch Changes
