@@ -47,28 +47,28 @@
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
     "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
-    "fix": "turbo run ts format:fix lint:fix --no-daemon",
+    "fix": "turbo run ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{js,json,md,ts}\"",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
-    "qa": "turbo run ts format lint --no-daemon",
+    "qa": "turbo run ts format lint",
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "@swc/core": "^1.15.11",
-    "@vitejs/plugin-react": "^5.1.3",
+    "@swc/core": "^1.15.24",
+    "@vitejs/plugin-react": "^6.0.1",
     "unplugin-swc": "^1.5.9",
-    "vite": "^7.3.1"
+    "vite": "^8.0.5"
   },
   "devDependencies": {
-    "@vitest/coverage-v8": "^4.0.16",
-    "jsdom": "^28.0.0",
-    "vitest": "^4.0.16"
+    "@vitest/coverage-v8": "^4.1.3",
+    "jsdom": "^29.0.2",
+    "vitest": "^4.1.3"
   },
   "peerDependencies": {
     "@vitest/coverage-v8": "^4.0.15",
-    "jsdom": "^28.0.0",
+    "jsdom": "^29.0.0",
     "vitest": "^4.0.0"
   },
   "peerDependenciesMeta": {

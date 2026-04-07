@@ -33,17 +33,17 @@
   ],
   "scripts": {
     "cleanup": "del .eslintcache .turbo node_modules",
-    "fix": "turbo run format:fix lint:fix --no-daemon",
+    "fix": "turbo run format:fix lint:fix",
     "format": "prettier --check \"./**/*.{js,json,md}\"",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
-    "qa": "turbo run format lint --no-daemon"
+    "qa": "turbo run format lint"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.2"
   },
   "peerDependencies": {
-    "typescript": "^5.7.3"
+    "typescript": "^6.0.2"
   }
 }

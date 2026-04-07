@@ -28,16 +28,16 @@
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
     "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
-    "fix": "turbo rub ts format:fix lint:fix --no-daemon",
+    "fix": "turbo rub ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{js,json,md,ts}\"",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
-    "qa": "turbo run ts format lint --no-daemon",
+    "qa": "turbo run ts format lint",
     "ts": "tsc --build tsconfig.json"
   },
   "devDependencies": {
-    "lint-staged": "^16.2.7"
+    "lint-staged": "^16.4.0"
   },
   "peerDependencies": {
     "lint-staged": "^16.1.0"

@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This file provides guidance to AI assistants (Claude, Cursor, Copilot etc.) when working with code in this repository.
+This file provides guidance to AI assistants (Gemini, Copilot, Claude, etc.) when working with code in this repository.
 
 ## Project Overview
 

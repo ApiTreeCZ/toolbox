@@ -28,20 +28,20 @@
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
     "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
-    "fix": "turbo run ts format:fix lint:fix --no-daemon",
+    "fix": "turbo run ts format:fix lint:fix",
     "format": "prettier --check \"./**/*.{js,json,md,ts}\"",
     "format:fix": "pnpm run format --write",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
-    "qa": "turbo run ts format lint --no-daemon",
+    "qa": "turbo run ts format lint",
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "prettier-plugin-packagejson": "^3.0.0"
+    "prettier-plugin-packagejson": "^3.0.2"
   },
   "devDependencies": {
-    "prettier": "^3.7.4",
-    "typescript": "^5.9.3"
+    "prettier": "^3.8.1",
+    "typescript": "^6.0.2"
   },
   "peerDependencies": {
     "prettier": "^3.4.2"
