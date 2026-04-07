@@ -50,9 +50,9 @@ jobs:
         # language=bash
         run: |
           pnpm changeset version
-          pnpm changeset publish --no-git-tag
           pnpm install
           pnpm run build
+          pnpm changeset publish --no-git-tag
 
       - name: Commit changes
         if: inputs.stable == true
