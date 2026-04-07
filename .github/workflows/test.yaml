@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup project
+      - name: Set up project
         uses: ./.github/actions/setup
 
       - name: Run tests

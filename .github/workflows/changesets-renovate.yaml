@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.head_ref }}
 
-      - name: Setup project
+      - name: Set up project
         uses: ./.github/actions/setup
 
       - name: Generate Changeset for Renovate

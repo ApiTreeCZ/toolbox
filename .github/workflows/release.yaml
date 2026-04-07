@@ -31,7 +31,7 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GIT_TOKEN }}
 
-      - name: Setup project
+      - name: Set up project
         uses: ./.github/actions/setup
 
       - name: Build
