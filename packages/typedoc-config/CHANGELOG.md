@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.3.0
+
+### Minor Changes
+
+- 4c4bdd0: chore(deps): upgrade dependencies to latest versions and bump TypeScript to v6.
+
 ## 0.2.12
 
 ### Patch Changes

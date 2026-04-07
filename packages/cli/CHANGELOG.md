@@ -1,5 +1,16 @@
 # @apitree.cz/cli
 
+## 0.6.0
+
+### Minor Changes
+
+- 4c4bdd0: chore(deps): upgrade dependencies to latest versions and bump TypeScript to v6.
+
+### Patch Changes
+
+- Updated dependencies [4c4bdd0]
+  - @apitree.cz/ts-utils@0.2.6
+
 ## 0.5.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.4.0
+
+### Minor Changes
+
+- 4c4bdd0: chore(deps): upgrade dependencies to latest versions and bump TypeScript to v6.
+
 ## 0.3.13
 
 ### Patch Changes

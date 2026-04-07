@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 1.0.2
+
+### Patch Changes
+
+- 4c4bdd0: chore(deps): upgrade dependencies to latest versions and bump TypeScript to v6.
+
 ## 1.0.1
 
 ### Patch Changes

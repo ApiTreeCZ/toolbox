@@ -1,5 +1,15 @@
 # @apitree.cz/eslint-config
 
+## 0.8.0
+
+### Minor Changes
+
+- 4c4bdd0: chore(deps): upgrade dependencies to latest versions and bump TypeScript to v6.
+
+### Patch Changes
+
+- 7f27ad0: Updated dependency `eslint-plugin-unicorn` to `^63.0.0`.
+
 ## 0.7.10
 
 ### Patch Changes

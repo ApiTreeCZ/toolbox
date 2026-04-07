@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.8.7
+
+### Patch Changes
+
+- 4c4bdd0: chore(deps): upgrade dependencies to latest versions and bump TypeScript to v6.
+
 ## 0.8.6
 
 ### Patch Changes
