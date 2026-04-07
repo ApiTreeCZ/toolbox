@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.8.9
+
+### Patch Changes
+
+- 4eebb97: Bump `vite` to `8.0.6`
+
 ## 0.8.8
 
 ### Patch Changes
