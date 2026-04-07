@@ -13,8 +13,6 @@ on:
         type: boolean
 
 env:
-  CACHE_KEY: ${{ github.sha }}-${{ github.run_number }}-${{ github.run_attempt }}
-  CACHE_PATH: ./*
   TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
   TURBO_REMOTE_CACHE_SIGNATURE_KEY: ${{ secrets.TURBO_REMOTE_CACHE_SIGNATURE_KEY }}
@@ -44,6 +42,7 @@ jobs:
         # language=bash
         run: |
           pnpm changeset version --snapshot next
+          pnpm run build
           pnpm changeset publish --tag next --no-git-tag
 
       - name: Stable release
@@ -53,6 +52,7 @@ jobs:
           pnpm changeset version
           pnpm changeset publish --no-git-tag
           pnpm install
+          pnpm run build
 
       - name: Commit changes
         if: inputs.stable == true

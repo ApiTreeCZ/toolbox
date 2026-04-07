@@ -5,24 +5,14 @@ runs:
   using: composite
   steps:
     - name: Setup pnpm
-      uses: pnpm/action-setup@v4
+      uses: pnpm/action-setup@v5
 
     - name: Setup node.js
       uses: actions/setup-node@v6
       with:
         cache: pnpm
-        node-version-file: .nvmrc
-        registry-url: 'https://registry.npmjs.org'
-
-    - name: Cache
-      uses: actions/cache@v5
-      with:
-        key: ${{ github.sha }}-${{ github.run_number }}-${{ github.run_attempt }}
-        path: |
-          ./*
-          !./**/.env
-          !./.github/**/*
+        node-version-file: 'package.json'
 
     - name: Install dependencies
-      run: pnpm install --frozen-lockfile --prefer-offline
       shell: bash
+      run: pnpm install --frozen-lockfile --prefer-offline
