@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 0.5.1
+
+### Patch Changes
+
+- 95c4f6c: Allow TypeScript 5.9 peer
+
 ## 0.5.0
 
 ### Minor Changes
