@@ -8,6 +8,10 @@ on:
       - '**/pnpm-lock.yaml'
       - '.github/**/*.yaml'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
   contents: write
 

@@ -7,6 +7,11 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
@@ -14,20 +19,7 @@ env:
   TURBO_REMOTE_CACHE_SIGNATURE_KEY: ${{ secrets.TURBO_REMOTE_CACHE_SIGNATURE_KEY }}
 
 jobs:
-  setup:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Set up project
-        uses: ./.github/actions/setup
-
-      - name: Build packages
-        run: pnpm run build
-
   commitlint:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -40,7 +32,6 @@ jobs:
         run: pnpm commitlint --from=${{ github.sha }}
 
   manypkg:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -53,7 +44,6 @@ jobs:
         run: pnpm manypkg check
 
   eslint:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -66,7 +56,6 @@ jobs:
         run: pnpm run lint
 
   tsc:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -79,7 +68,6 @@ jobs:
         run: pnpm run ts
 
   prettier:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -90,3 +78,15 @@ jobs:
 
       - name: Run prettier
         run: pnpm run format
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up project
+        uses: ./.github/actions/setup
+
+      - name: Run tests
+        run: pnpm run test

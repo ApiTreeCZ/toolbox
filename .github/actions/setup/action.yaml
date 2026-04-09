@@ -13,6 +13,14 @@ runs:
         cache: pnpm
         node-version-file: 'package.json'
 
+    - name: Turbo cache
+      uses: actions/cache@v5
+      with:
+        path: .turbo
+        key: turbo-cache-${{ runner.os }}-${{ runner.arch }}-${{ github.sha }}
+        restore-keys: |
+          turbo-cache-${{ runner.os }}-${{ runner.arch }}-
+
     - name: Install dependencies
       shell: bash
       run: pnpm install --frozen-lockfile --prefer-offline
