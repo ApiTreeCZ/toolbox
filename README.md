@@ -7,12 +7,11 @@
 # Toolbox
 
 [![QA](https://github.com/ApiTreeCZ/toolbox/actions/workflows/qa.yaml/badge.svg)](https://github.com/ApiTreeCZ/toolbox/actions/workflows/qa.yaml)
-[![Test](https://github.com/ApiTreeCZ/toolbox/actions/workflows/test.yaml/badge.svg)](https://github.com/ApiTreeCZ/toolbox/actions/workflows/test.yaml)
 [![Release](https://github.com/ApiTreeCZ/toolbox/actions/workflows/release.yaml/badge.svg)](https://github.com/ApiTreeCZ/toolbox/actions/workflows/release.yaml)
 
 ### Shared configurations and utilities for ApiTree projects
 
-Powered by [Turbo](https://turbo.build/repo/docs)
+Powered by [Turborepo](https://turbo.build/repo/docs)
 
 </div>
 
