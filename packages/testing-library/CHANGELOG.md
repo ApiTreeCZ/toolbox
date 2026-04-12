@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 0.8.8
+
+### Patch Changes
+
+- d698c58: Bump deps
+
 ## 0.8.7
 
 ### Patch Changes

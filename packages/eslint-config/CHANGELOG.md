@@ -1,5 +1,12 @@
 # @apitree.cz/eslint-config
 
+## 0.8.1
+
+### Patch Changes
+
+- d698c58: Bump deps
+- 33ae731: Ensure TS project is resolved from ESLint process CWD
+
 ## 0.8.0
 
 ### Minor Changes
