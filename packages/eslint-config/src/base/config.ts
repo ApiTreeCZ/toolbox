@@ -52,6 +52,7 @@ export const config = defineConfig(
           allowDefaultProject: ['lint-staged.config.js', 'typedoc.config.js', 'vitest.config.js'],
         },
         sourceType: 'module',
+        tsconfigRootDir: process.cwd(),
       },
     },
     rules: {
