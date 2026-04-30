@@ -28,7 +28,7 @@ importers:
         version: link:packages/typedoc-config
       '@apitree.cz/vitest-config':
         specifier: ^0.8.9
-        version: 0.8.10(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.0)(vitest@4.1.5)(yaml@2.8.3)
+        version: 0.8.10(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(vitest@4.1.5)(yaml@2.8.3)
       '@changesets/cli':
         specifier: ^2.30.0
         version: 2.31.0(@types/node@24.12.2)
@@ -79,7 +79,7 @@ importers:
         version: 6.0.3
       vitest:
         specifier: ^4.1.4
-        version: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.0)(yaml@2.8.3)
+        version: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(yaml@2.8.3)
 
   packages/cli:
     dependencies:
@@ -235,7 +235,7 @@ importers:
         version: 6.9.1
       jsdom:
         specifier: ^29.0.2
-        version: 29.1.0
+        version: 29.1.1
     devDependencies:
       '@testing-library/react':
         specifier: ^16.3.2
@@ -254,7 +254,7 @@ importers:
         version: 19.2.5(react@19.2.5)
       vitest:
         specifier: ^4.1.4
-        version: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.0)(yaml@2.8.3)
+        version: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(yaml@2.8.3)
 
   packages/ts-config:
     devDependencies:
@@ -297,10 +297,10 @@ importers:
         version: 4.1.5(vitest@4.1.5)
       jsdom:
         specifier: ^29.0.2
-        version: 29.1.0
+        version: 29.1.1
       vitest:
         specifier: ^4.1.4
-        version: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.0)(yaml@2.8.3)
+        version: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(yaml@2.8.3)
 
 packages:
 
@@ -3098,8 +3098,8 @@ packages:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
 
-  jsdom@29.1.0:
-    resolution: {integrity: sha512-YNUc7fB9QuvSSQWfrH0xF+TyABkxUwx8sswgIDaCrw4Hol8BghdZDkITtZheRJeMtzWlnTfsM3bBBusRvpO1wg==}
+  jsdom@29.1.1:
+    resolution: {integrity: sha512-ECi4Fi2f7BdJtUKTflYRTiaMxIB0O6zfR1fX0GXpUrf6flp8QIYn1UT20YQqdSOfk2dfkCwS8LAFoJDEppNK5Q==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24.0.0}
     peerDependencies:
       canvas: ^3.0.0
@@ -4666,16 +4666,16 @@ snapshots:
 
   '@adobe/css-tools@4.4.4': {}
 
-  '@apitree.cz/vitest-config@0.8.10(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.0)(vitest@4.1.5)(yaml@2.8.3)':
+  '@apitree.cz/vitest-config@0.8.10(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(vitest@4.1.5)(yaml@2.8.3)':
     dependencies:
       '@swc/core': 1.15.30
       '@vitejs/plugin-react': 6.0.1(vite@8.0.10(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3))
       unplugin-swc: 1.5.9(@swc/core@1.15.30)
       vite: 8.0.10(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3)
-      vitest: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.0)(yaml@2.8.3)
+      vitest: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(yaml@2.8.3)
     optionalDependencies:
       '@vitest/coverage-v8': 4.1.5(vitest@4.1.5)
-      jsdom: 29.1.0
+      jsdom: 29.1.1
     transitivePeerDependencies:
       - '@rolldown/plugin-babel'
       - '@swc/helpers'
@@ -6086,7 +6086,7 @@ snapshots:
       obug: 2.1.1
       std-env: 4.1.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.0)(yaml@2.8.3)
+      vitest: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(yaml@2.8.3)
 
   '@vitest/eslint-plugin@1.6.16(@typescript-eslint/eslint-plugin@8.59.1(@typescript-eslint/parser@8.59.1(eslint@9.39.4(jiti@2.6.1))(typescript@6.0.3))(eslint@9.39.4(jiti@2.6.1))(typescript@6.0.3))(eslint@9.39.4(jiti@2.6.1))(typescript@6.0.3)(vitest@4.1.5)':
     dependencies:
@@ -6096,7 +6096,7 @@ snapshots:
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 8.59.1(@typescript-eslint/parser@8.59.1(eslint@9.39.4(jiti@2.6.1))(typescript@6.0.3))(eslint@9.39.4(jiti@2.6.1))(typescript@6.0.3)
       typescript: 6.0.3
-      vitest: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.0)(yaml@2.8.3)
+      vitest: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(yaml@2.8.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -6160,7 +6160,7 @@ snapshots:
       sirv: 3.0.2
       tinyglobby: 0.2.16
       tinyrainbow: 3.1.0
-      vitest: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.0)(yaml@2.8.3)
+      vitest: 4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(yaml@2.8.3)
 
   '@vitest/utils@3.2.4':
     dependencies:
@@ -7682,7 +7682,7 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  jsdom@29.1.0:
+  jsdom@29.1.1:
     dependencies:
       '@asamuzakjp/css-color': 5.1.11
       '@asamuzakjp/dom-selector': 7.1.1
@@ -9358,7 +9358,7 @@ snapshots:
       jiti: 2.6.1
       yaml: 2.8.3
 
-  vitest@4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.0)(yaml@2.8.3):
+  vitest@4.1.5(@types/node@24.12.2)(@vitest/coverage-v8@4.1.5)(@vitest/ui@4.1.5)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(yaml@2.8.3):
     dependencies:
       '@vitest/expect': 4.1.5
       '@vitest/mocker': 4.1.5(vite@8.0.10(@types/node@24.12.2)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.8.3))
@@ -9384,7 +9384,7 @@ snapshots:
       '@types/node': 24.12.2
       '@vitest/coverage-v8': 4.1.5(vitest@4.1.5)
       '@vitest/ui': 4.1.5(vitest@4.1.5)
-      jsdom: 29.1.0
+      jsdom: 29.1.1
     transitivePeerDependencies:
       - '@vitejs/devtools'
       - esbuild
