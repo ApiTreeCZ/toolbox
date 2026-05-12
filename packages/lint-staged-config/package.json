@@ -37,10 +37,10 @@
     "ts": "tsc --build tsconfig.json"
   },
   "devDependencies": {
-    "lint-staged": "^16.4.0"
+    "lint-staged": "^17.0.0"
   },
   "peerDependencies": {
-    "lint-staged": "^16.1.0"
+    "lint-staged": "^16.1.0 || ^17.0.0"
   },
   "peerDependenciesMeta": {
     "lint-staged": {
