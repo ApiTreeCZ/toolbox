@@ -41,7 +41,7 @@
     "qa": "turbo run format lint"
   },
   "devDependencies": {
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "typescript": "^5.9.3 || ^6.0.2"

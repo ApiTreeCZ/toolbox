@@ -1,3 +1,8 @@
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
+  unrs-resolver: true
+
 autoInstallPeers: false
 
 enablePrePostScripts: true
