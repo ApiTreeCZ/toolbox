@@ -1,5 +1,12 @@
 # @apitree.cz/lint-staged-config
 
+## 1.0.3
+
+### Patch Changes
+
+- 4b5e19a: Bump deps
+- 0dc9cac: Updated dependency `lint-staged` to `^16.1.0 || ^17.0.0`.
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 0.4.1
+
+### Patch Changes
+
+- 4b5e19a: Bump deps
+
 ## 0.4.0
 
 ### Minor Changes

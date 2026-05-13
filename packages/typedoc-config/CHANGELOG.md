@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 0.3.2
+
+### Patch Changes
+
+- 4b5e19a: Bump deps
+
 ## 0.3.1
 
 ### Patch Changes
