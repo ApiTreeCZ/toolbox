@@ -28,7 +28,7 @@ importers:
         version: link:packages/typedoc-config
       '@apitree.cz/vitest-config':
         specifier: ^0.8.10
-        version: 0.8.10(@types/node@24.12.4)(@vitest/coverage-v8@4.1.6)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(vitest@4.1.6)(yaml@2.9.0)
+        version: 0.8.11(@types/node@24.12.4)(@vitest/coverage-v8@4.1.6)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(vitest@4.1.6)(yaml@2.9.0)
       '@changesets/cli':
         specifier: ^2.31.0
         version: 2.31.0(@types/node@24.12.4)
@@ -307,8 +307,8 @@ packages:
   '@adobe/css-tools@4.4.4':
     resolution: {integrity: sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg==}
 
-  '@apitree.cz/vitest-config@0.8.10':
-    resolution: {integrity: sha512-1390kdY9hlwhox6Zkxc5z6jM/MCeBuQ/SawMsXzEHrSWYjQkZw54tONfISGu1YEwov+2svrt2NrLjqL4qWDlgA==}
+  '@apitree.cz/vitest-config@0.8.11':
+    resolution: {integrity: sha512-6vtOt0sz2jPMib3mbJZhfBE6RmReBeVp6H75xILDk5U03I9HtaplOk+IipHPj7R+miy+d+vRppSHfeYVM/Ti5g==}
     peerDependencies:
       '@vitest/coverage-v8': ^4.0.15
       jsdom: ^29.0.0
@@ -4498,7 +4498,7 @@ snapshots:
 
   '@adobe/css-tools@4.4.4': {}
 
-  '@apitree.cz/vitest-config@0.8.10(@types/node@24.12.4)(@vitest/coverage-v8@4.1.6)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(vitest@4.1.6)(yaml@2.9.0)':
+  '@apitree.cz/vitest-config@0.8.11(@types/node@24.12.4)(@vitest/coverage-v8@4.1.6)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(vitest@4.1.6)(yaml@2.9.0)':
     dependencies:
       '@swc/core': 1.15.33
       '@vitejs/plugin-react': 6.0.1(vite@8.0.12(@types/node@24.12.4)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.9.0))
