@@ -27,8 +27,8 @@ importers:
         specifier: workspace:*
         version: link:packages/typedoc-config
       '@apitree.cz/vitest-config':
-        specifier: ^0.8.11
-        version: 0.8.11(@types/node@24.12.4)(@vitest/coverage-v8@4.1.6)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(vitest@4.1.6)(yaml@2.9.0)
+        specifier: workspace:*
+        version: link:packages/vitest-config
       '@changesets/cli':
         specifier: ^2.31.0
         version: 2.31.0(@types/node@24.12.4)
@@ -306,18 +306,6 @@ packages:
 
   '@adobe/css-tools@4.4.4':
     resolution: {integrity: sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg==}
-
-  '@apitree.cz/vitest-config@0.8.11':
-    resolution: {integrity: sha512-6vtOt0sz2jPMib3mbJZhfBE6RmReBeVp6H75xILDk5U03I9HtaplOk+IipHPj7R+miy+d+vRppSHfeYVM/Ti5g==}
-    peerDependencies:
-      '@vitest/coverage-v8': ^4.0.15
-      jsdom: ^29.0.0
-      vitest: ^4.0.0
-    peerDependenciesMeta:
-      '@vitest/coverage-v8':
-        optional: true
-      jsdom:
-        optional: true
 
   '@asamuzakjp/css-color@5.1.11':
     resolution: {integrity: sha512-KVw6qIiCTUQhByfTd78h2yD1/00waTmm9uy/R7Ck/ctUyAPj+AEDLkQIdJW0T8+qGgj3j5bpNKK7Q3G+LedJWg==}
@@ -4748,34 +4736,6 @@ packages:
 snapshots:
 
   '@adobe/css-tools@4.4.4': {}
-
-  '@apitree.cz/vitest-config@0.8.11(@types/node@24.12.4)(@vitest/coverage-v8@4.1.6)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(vitest@4.1.6)(yaml@2.9.0)':
-    dependencies:
-      '@swc/core': 1.15.33
-      '@vitejs/plugin-react': 6.0.2(vite@8.0.13(@types/node@24.12.4)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.9.0))
-      unplugin-swc: 1.5.9(@swc/core@1.15.33)
-      vite: 8.0.13(@types/node@24.12.4)(esbuild@0.27.7)(jiti@2.6.1)(yaml@2.9.0)
-      vitest: 4.1.6(@types/node@24.12.4)(@vitest/coverage-v8@4.1.6)(@vitest/ui@4.1.6)(esbuild@0.27.7)(jiti@2.6.1)(jsdom@29.1.1)(yaml@2.9.0)
-    optionalDependencies:
-      '@vitest/coverage-v8': 4.1.6(vitest@4.1.6)
-      jsdom: 29.1.1
-    transitivePeerDependencies:
-      - '@rolldown/plugin-babel'
-      - '@swc/helpers'
-      - '@types/node'
-      - '@vitejs/devtools'
-      - babel-plugin-react-compiler
-      - esbuild
-      - jiti
-      - less
-      - rollup
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - terser
-      - tsx
-      - yaml
 
   '@asamuzakjp/css-color@5.1.11':
     dependencies:
