@@ -12,9 +12,4 @@ onlyBuiltDependencies:
 packages:
   - packages/*
 
-publicHoistPattern:
-  - '*eslint*'
-  - '*prettier*'
-  - '*vitest*'
-
 strictPeerDependencies: true

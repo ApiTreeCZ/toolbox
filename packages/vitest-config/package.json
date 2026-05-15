@@ -57,9 +57,9 @@
   },
   "dependencies": {
     "@swc/core": "^1.15.33",
-    "@vitejs/plugin-react": "^6.0.1",
+    "@vitejs/plugin-react": "^6.0.2",
     "unplugin-swc": "^1.5.9",
-    "vite": "^8.0.12"
+    "vite": "^8.0.13"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^4.1.6",

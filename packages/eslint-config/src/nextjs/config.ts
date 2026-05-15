@@ -1,9 +1,11 @@
 import next from '@next/eslint-plugin-next';
 import type { Linter } from 'eslint';
 
+import { assertPlugin } from '../utils.js';
+
 export const config = (apps = ['.']): Linter.Config[] => [
   {
-    plugins: { next },
+    plugins: { next: assertPlugin(next) },
     settings: {
       next: {
         rootDir: process.cwd(),
