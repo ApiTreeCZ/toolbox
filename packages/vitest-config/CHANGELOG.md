@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 0.8.13
+
+### Patch Changes
+
+- 36b5021: Bump deps
+
 ## 0.8.12
 
 ### Patch Changes
