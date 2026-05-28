@@ -4,7 +4,7 @@
 <img alt="ApiTree s.r.o." src="./public/apitree-logo.png" width="308" />
 </a>
 
-# Toolbox
+# 🧰 Toolbox
 
 [![QA](https://github.com/ApiTreeCZ/toolbox/actions/workflows/qa.yaml/badge.svg)](https://github.com/ApiTreeCZ/toolbox/actions/workflows/qa.yaml)
 [![Release](https://github.com/ApiTreeCZ/toolbox/actions/workflows/release.yaml/badge.svg)](https://github.com/ApiTreeCZ/toolbox/actions/workflows/release.yaml)
