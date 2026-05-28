@@ -39,11 +39,11 @@
   },
   "devDependencies": {
     "@apitree.cz/eslint-config": "workspace:*",
-    "eslint": "^9.39.4",
+    "eslint": "^10.0.0",
     "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "@apitree.cz/eslint-config": "workspace:*",
-    "eslint": "^9.39.0"
+    "eslint": "^9.39.0 || ^10.0.0"
   }
 }
