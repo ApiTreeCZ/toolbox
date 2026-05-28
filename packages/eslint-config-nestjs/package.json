@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/eslint-config-nestjs",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "ESLint configuration for NestJS projects in ApiTree.",
   "keywords": [
     "apitree",
