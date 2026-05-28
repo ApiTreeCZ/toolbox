@@ -24,7 +24,7 @@ Install and use the package in the root only.
 
 ## Usage
 
-Use one of the following configurations in your repository's root `eslint.config.js` file.
+Use the base configuration in your repository's root `eslint.config.js` file.
 
 ### Base
 
@@ -34,53 +34,14 @@ Suitable for general TypeScript projects.
 export { base as default } from '@apitree.cz/eslint-config';
 ```
 
-### React
+### Presets
 
-Necessary for React (JSX/MDX) projects.
+For project-specific rules, install one of the scoped preset packages. **Note that these presets must be used in conjunction with the base `@apitree.cz/eslint-config` package.**
 
-```javascript
-import { base, react } from '@apitree.cz/eslint-config';
-import { defineConfig } from 'eslint/config';
-
-export default defineConfig(base, react);
-```
-
-### Next.js
-
-Next.js configuration requires specifying path to app(s).
-
-```javascript
-import { base, react, nextjs } from '@apitree.cz/eslint-config';
-import { defineConfig } from 'eslint/config';
-
-export default defineConfig(base, react, nextjs(['apps/<nextjs-app>']));
-```
-
-> Omit the apps array if you have a single Next.js app repository (no monorepo).
-
-### Nest.js
-
-Nest.js configuration requires specifying path to app(s).
-
-```javascript
-import { base, nestjs } from '@apitree.cz/eslint-config';
-import { defineConfig } from 'eslint/config';
-
-export default defineConfig(base, nestjs(['apps/<nestjs-app>']));
-```
-
-> Omit the apps array if you have a single Nest.js app repository (no monorepo).
-
-### Storybook
-
-Necessary for projects containing Storybook instance.
-
-```javascript
-import { base, react, storybook } from '@apitree.cz/eslint-config';
-import { defineConfig } from 'eslint/config';
-
-export default defineConfig(base, react, storybook);
-```
+- [React Preset](file:///Users/vitrozsival/projects/apitree/toolbox/packages/eslint-config-react/README.md) (`@apitree.cz/eslint-config-react`)
+- [Next.js Preset](file:///Users/vitrozsival/projects/apitree/toolbox/packages/eslint-config-nextjs/README.md) (`@apitree.cz/eslint-config-nextjs`)
+- [NestJS Preset](file:///Users/vitrozsival/projects/apitree/toolbox/packages/eslint-config-nestjs/README.md) (`@apitree.cz/eslint-config-nestjs`)
+- [Storybook Preset](file:///Users/vitrozsival/projects/apitree/toolbox/packages/eslint-config-storybook/README.md) (`@apitree.cz/eslint-config-storybook`)
 
 ## IntelliJ IDE Setup
 

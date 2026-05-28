@@ -3,7 +3,6 @@ import vitest from '@vitest/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 import prettier from 'eslint-config-prettier';
 import imports from 'eslint-plugin-import';
-import turbo from 'eslint-plugin-turbo';
 import unicorn from 'eslint-plugin-unicorn';
 import unusedImports from 'eslint-plugin-unused-imports';
 import globals from 'globals';
@@ -37,7 +36,6 @@ export const config = defineConfig(
     plugins: {
       '@typescript-eslint': tsEslintPlugin,
       'unused-imports': unusedImports,
-      turbo: assertPlugin(turbo),
       unicorn,
     },
     languageOptions: {

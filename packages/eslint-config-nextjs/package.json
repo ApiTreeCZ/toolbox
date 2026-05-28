@@ -1,0 +1,56 @@
+{
+  "name": "@apitree.cz/eslint-config-nextjs",
+  "version": "0.0.0",
+  "description": "ESLint configuration for Next.js projects in ApiTree.",
+  "keywords": [
+    "apitree",
+    "eslint",
+    "config",
+    "nextjs",
+    "react",
+    "esm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ApiTreeCZ/toolbox",
+    "directory": "packages/eslint-config-nextjs"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "del dist tsconfig.build.tsbuildinfo",
+    "build": "tsc --build tsconfig.build.json",
+    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "fix": "turbo run ts format:fix lint:fix",
+    "format": "prettier --check \"./**/*.{js,json,md,ts}\"",
+    "format:fix": "pnpm run format --write",
+    "lint": "eslint --cache .",
+    "lint:fix": "pnpm run lint --fix",
+    "qa": "turbo run ts format lint",
+    "ts": "tsc --build tsconfig.json"
+  },
+  "dependencies": {
+    "@next/eslint-plugin-next": "^16.2.6"
+  },
+  "devDependencies": {
+    "@apitree.cz/eslint-config": "workspace:*",
+    "@apitree.cz/eslint-config-react": "workspace:*",
+    "eslint": "^9.39.4",
+    "react": "^19.2.6"
+  },
+  "peerDependencies": {
+    "@apitree.cz/eslint-config": "workspace:*",
+    "@apitree.cz/eslint-config-react": "workspace:*",
+    "eslint": "^9.39.0",
+    "react": "^19.0.0"
+  }
+}

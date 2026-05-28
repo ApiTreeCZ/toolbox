@@ -37,7 +37,11 @@ This monorepo is structured as follows:
 
 - `packages/`
   - `cli/`: Contains the CLI for ApiTree projects.
-  - `eslint-config/`: Contains the ESLint configurations.
+  - `eslint-config/`: Contains the base ESLint configuration.
+  - `eslint-config-nestjs/`: Contains the NestJS ESLint preset.
+  - `eslint-config-nextjs/`: Contains the Next.js ESLint preset.
+  - `eslint-config-react/`: Contains the React ESLint preset.
+  - `eslint-config-storybook/`: Contains the Storybook ESLint preset.
   - `lint-staged-config/`: Contains the lint-staged configuration.
   - `prettier-config/`: Contains the Prettier configuration.
   - `testing-library/`: Contains the React Testing Library setup.

@@ -1,7 +1,6 @@
+import { assertPlugin } from '@apitree.cz/eslint-config/utils';
 import next from '@next/eslint-plugin-next';
 import type { Linter } from 'eslint';
-
-import { assertPlugin } from '../utils.js';
 
 export const config = (apps = ['.']): Linter.Config[] => [
   {

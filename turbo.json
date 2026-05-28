@@ -17,21 +17,21 @@
       "outputs": ["docs/**/*"]
     },
     "lint": {
-      "dependsOn": ["@apitree.cz/eslint-config#build", "^build"],
+      "dependsOn": ["@apitree.cz/eslint-config#build", "@apitree.cz/eslint-config-react#build", "^build"],
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
       "outputs": [".eslintcache"]
     },
     "lint:fix": {
-      "dependsOn": ["@apitree.cz/eslint-config#build", "^build"],
+      "dependsOn": ["@apitree.cz/eslint-config#build", "@apitree.cz/eslint-config-react#build", "^build"],
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
       "outputs": [".eslintcache"]
     },
     "//#lint:root": {
-      "dependsOn": ["@apitree.cz/eslint-config#build", "^build"],
+      "dependsOn": ["@apitree.cz/eslint-config#build", "@apitree.cz/eslint-config-react#build", "^build"],
       "outputs": [".eslintcache"]
     },
     "//#lint:root:fix": {
-      "dependsOn": ["@apitree.cz/eslint-config#build", "^build"],
+      "dependsOn": ["@apitree.cz/eslint-config#build", "@apitree.cz/eslint-config-react#build", "^build"],
       "outputs": [".eslintcache"]
     },
     "format": {

@@ -1,5 +1,9 @@
 ---
-'@apitree.cz/eslint-config': patch
+'@apitree.cz/eslint-config': major
+'@apitree.cz/eslint-config-nestjs': major
+'@apitree.cz/eslint-config-nextjs': major
+'@apitree.cz/eslint-config-react': major
+'@apitree.cz/eslint-config-storybook': major
 ---
 
-Fix peer deps resolution
+Split `@apitree.cz/eslint-config` into technology-specific scoped packages to avoid transitive peer dependency conflicts in non-frontend projects.

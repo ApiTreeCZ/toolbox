@@ -47,6 +47,10 @@
   "devDependencies": {
     "@apitree.cz/cli": "workspace:*",
     "@apitree.cz/eslint-config": "workspace:*",
+    "@apitree.cz/eslint-config-nestjs": "workspace:*",
+    "@apitree.cz/eslint-config-nextjs": "workspace:*",
+    "@apitree.cz/eslint-config-react": "workspace:*",
+    "@apitree.cz/eslint-config-storybook": "workspace:*",
     "@apitree.cz/lint-staged-config": "workspace:*",
     "@apitree.cz/prettier-config": "workspace:*",
     "@apitree.cz/ts-config": "workspace:*",

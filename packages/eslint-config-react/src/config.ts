@@ -1,3 +1,4 @@
+import { typescript as baseTypeScriptRules, tests as baseTestsRules } from '@apitree.cz/eslint-config/rules';
 import vitest from '@vitest/eslint-plugin';
 import type { Linter } from 'eslint';
 import prettier from 'eslint-config-prettier';
@@ -7,8 +8,6 @@ import * as mdx from 'eslint-plugin-mdx';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
-
-import * as baseRules from '../base/rules/index.js';
 
 import * as rules from './rules/index.js';
 
@@ -24,7 +23,7 @@ export const config = [
     },
     settings: { react: { version: 'detect' } },
   },
-  { files: ['**/*.{ts,tsx}'], plugins: { formatjs }, rules: { ...baseRules.typescript, ...rules.formatjs } },
+  { files: ['**/*.{ts,tsx}'], plugins: { formatjs }, rules: { ...baseTypeScriptRules, ...rules.formatjs } },
   {
     files: ['**/*.{mdx,ts,tsx}'],
     languageOptions: {
@@ -64,7 +63,7 @@ export const config = [
       '**/tests/**/*.tsx',
     ],
     plugins: { vitest },
-    rules: { ...vitest.configs.recommended.rules, ...baseRules.tests, ...rules.tests },
+    rules: { ...vitest.configs.recommended.rules, ...baseTestsRules, ...rules.tests },
   },
   {
     files: ['**/*.mdx'],

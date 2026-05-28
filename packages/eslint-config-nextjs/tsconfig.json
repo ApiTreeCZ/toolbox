@@ -1,0 +1,10 @@
+{
+  "extends": "@apitree.cz/ts-config/library",
+  "compilerOptions": { "rootDir": "./src", "outDir": "./dist" },
+  "include": ["./src"],
+  "exclude": ["coverage", "dist", "node_modules"],
+  "references": [
+    { "path": "../eslint-config-react/tsconfig.build.json" },
+    { "path": "../eslint-config/tsconfig.build.json" }
+  ]
+}
