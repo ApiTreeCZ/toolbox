@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config-react
 
+## 1.0.1
+
+### Patch Changes
+
+- fc37106: Clean peer deps
+
 ## 1.0.0
 
 ### Major Changes

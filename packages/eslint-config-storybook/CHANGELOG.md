@@ -1,5 +1,12 @@
 # @apitree.cz/eslint-config-storybook
 
+## 1.0.1
+
+### Patch Changes
+
+- Updated dependencies [fc37106]
+  - @apitree.cz/eslint-config-react@1.0.1
+
 ## 1.0.0
 
 ### Major Changes

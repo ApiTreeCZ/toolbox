@@ -1,5 +1,13 @@
 # @apitree.cz/eslint-config-nextjs
 
+## 1.0.1
+
+### Patch Changes
+
+- fc37106: Clean peer deps
+- Updated dependencies [fc37106]
+  - @apitree.cz/eslint-config-react@1.0.1
+
 ## 1.0.0
 
 ### Major Changes
