@@ -1,5 +1,11 @@
 # @apitree.cz/ts-utils
 
+## 1.0.0
+
+### Major Changes
+
+- e065c16: 🎉 Release v1
+
 ## 0.2.6
 
 ### Patch Changes

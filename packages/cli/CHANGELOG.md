@@ -1,5 +1,16 @@
 # @apitree.cz/cli
 
+## 1.0.0
+
+### Major Changes
+
+- e065c16: 🎉 Release v1
+
+### Patch Changes
+
+- Updated dependencies [e065c16]
+  - @apitree.cz/ts-utils@1.0.0
+
 ## 0.6.1
 
 ### Patch Changes

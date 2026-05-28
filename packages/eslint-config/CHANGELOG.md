@@ -1,5 +1,15 @@
 # @apitree.cz/eslint-config
 
+## 1.0.0
+
+### Major Changes
+
+- e065c16: 🎉 Release v1
+
+### Patch Changes
+
+- e065c16: Bump deps
+
 ## 0.8.4
 
 ### Patch Changes

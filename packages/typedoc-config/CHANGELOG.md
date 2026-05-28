@@ -1,5 +1,11 @@
 # @apitree.cz/typedoc-config
 
+## 1.0.0
+
+### Major Changes
+
+- e065c16: 🎉 Release v1
+
 ## 0.3.2
 
 ### Patch Changes

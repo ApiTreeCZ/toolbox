@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 1.0.0
+
+### Major Changes
+
+- e065c16: 🎉 Release v1
+
 ## 0.8.13
 
 ### Patch Changes
