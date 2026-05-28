@@ -65,7 +65,7 @@
     "husky-check-email": "^0.0.8",
     "lint-staged": "^17.0.5",
     "prettier": "^3.8.3",
-    "turbo": "^2.9.14",
+    "turbo": "^2.9.15",
     "typedoc": "^0.28.19",
     "typescript": "^6.0.3",
     "vitest": "^4.1.7"
