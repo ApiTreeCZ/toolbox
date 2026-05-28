@@ -44,7 +44,8 @@
   "devDependencies": {
     "@apitree.cz/eslint-config-react": "workspace:*",
     "eslint": "^9.39.4",
-    "storybook": "^10.4.1"
+    "storybook": "^10.4.1",
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "@apitree.cz/eslint-config-react": "workspace:*",

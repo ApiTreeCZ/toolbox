@@ -39,7 +39,8 @@
   },
   "devDependencies": {
     "@apitree.cz/eslint-config": "workspace:*",
-    "eslint": "^9.39.4"
+    "eslint": "^9.39.4",
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "@apitree.cz/eslint-config": "workspace:*",
