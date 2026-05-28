@@ -79,30 +79,22 @@
     "eslint-plugin-unicorn": "^64.0.0",
     "eslint-plugin-unused-imports": "^4.4.1",
     "globals": "^17.6.0",
+    "storybook": "^10.4.1",
+    "turbo": "^2.9.15",
     "typescript-eslint": "^8.60.0"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
     "eslint": "^9.39.4",
     "react": "^19.2.6",
-    "storybook": "^10.4.1",
-    "turbo": "^2.9.15",
     "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "eslint": "^9.39.0",
-    "react": "^19.0.0",
-    "storybook": "^10.4.1",
-    "turbo": "^2.9.15"
+    "react": "^19.0.0"
   },
   "peerDependenciesMeta": {
     "react": {
-      "optional": true
-    },
-    "storybook": {
-      "optional": true
-    },
-    "turbo": {
       "optional": true
     }
   }
