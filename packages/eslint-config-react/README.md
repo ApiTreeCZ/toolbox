@@ -36,6 +36,6 @@ import { react } from '@apitree.cz/eslint-config-react';
 export default defineConfig(base, react);
 ```
 
-## Editor / IDE Setup
+## IntelliJ IDE Setup
 
-For the recommended IDE setup (e.g., IntelliJ), please refer to the setup guide in the [base package README](file:///Users/vitrozsival/projects/apitree/toolbox/packages/eslint-config/README.md#intellij-ide-setup).
+For the recommended IDE setup (e.g., IntelliJ), please refer to the setup guide in the [base package README](../eslint-config/README.md#intellij-ide-setup).
