@@ -16,12 +16,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
-env:
-  TURBO_API: ${{ vars.TURBO_API }}
-  TURBO_TEAM: ${{ vars.TURBO_TEAM }}
-  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-  TURBO_REMOTE_CACHE_SIGNATURE_KEY: ${{ secrets.TURBO_REMOTE_CACHE_SIGNATURE_KEY }}
-
 jobs:
   wait-for-checks:
     runs-on: ubuntu-latest
@@ -50,6 +44,8 @@ jobs:
 
       - name: Set up project
         uses: ./.github/actions/setup
+        with:
+          op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Build
         run: pnpm run build

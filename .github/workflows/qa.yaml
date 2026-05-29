@@ -13,12 +13,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  TURBO_API: ${{ vars.TURBO_API }}
-  TURBO_TEAM: ${{ vars.TURBO_TEAM }}
-  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-  TURBO_REMOTE_CACHE_SIGNATURE_KEY: ${{ secrets.TURBO_REMOTE_CACHE_SIGNATURE_KEY }}
-
 jobs:
   commitlint:
     runs-on: ubuntu-latest
@@ -28,6 +22,8 @@ jobs:
 
       - name: Set up project
         uses: ./.github/actions/setup
+        with:
+          op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Run commitlint
         run: pnpm commitlint --from=${{ github.sha }}
@@ -40,6 +36,8 @@ jobs:
 
       - name: Set up project
         uses: ./.github/actions/setup
+        with:
+          op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Run manypkg
         run: pnpm manypkg check
@@ -52,6 +50,8 @@ jobs:
 
       - name: Set up project
         uses: ./.github/actions/setup
+        with:
+          op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Run eslint
         run: pnpm run lint
@@ -64,6 +64,8 @@ jobs:
 
       - name: Set up project
         uses: ./.github/actions/setup
+        with:
+          op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Run tsc
         run: pnpm run ts
@@ -76,6 +78,8 @@ jobs:
 
       - name: Set up project
         uses: ./.github/actions/setup
+        with:
+          op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Run prettier
         run: pnpm run format
@@ -88,6 +92,8 @@ jobs:
 
       - name: Set up project
         uses: ./.github/actions/setup
+        with:
+          op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Run tests
         run: pnpm run test

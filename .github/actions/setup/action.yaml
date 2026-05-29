@@ -1,25 +1,21 @@
 name: Setup
 description: Setup monorepo for CI
 
+inputs:
+  op-service-account-token:
+    description: '1Password service account token'
+    required: true
+
 runs:
   using: composite
   steps:
-    - name: Set up pnpm
-      uses: pnpm/action-setup@v6
+    - name: Set up Node.js
+      uses: ApiTreeCZ/github-actions/setup-node-action@main
 
-    - name: Set up node.js
-      uses: actions/setup-node@v6
+    - name: Set up Turbo
+      uses: ApiTreeCZ/github-actions/setup-turbo-action@main
       with:
-        cache: pnpm
-        node-version-file: 'package.json'
-
-    - name: Turbo cache
-      uses: actions/cache@v5
-      with:
-        path: .turbo
-        key: turbo-cache-${{ runner.os }}-${{ runner.arch }}-${{ github.sha }}
-        restore-keys: |
-          turbo-cache-${{ runner.os }}-${{ runner.arch }}-
+        op-service-account-token: ${{ inputs.op-service-account-token }}
 
     - name: Install dependencies
       shell: bash

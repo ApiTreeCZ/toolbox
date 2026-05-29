@@ -28,6 +28,8 @@ jobs:
 
       - name: Set up project
         uses: ./.github/actions/setup
+        with:
+          op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Generate Changeset for Renovate
         env:
