@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/eslint-config-nextjs",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "ESLint configuration for Next.js projects in ApiTree.",
   "keywords": [
     "apitree",

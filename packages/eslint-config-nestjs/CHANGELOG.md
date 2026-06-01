@@ -1,5 +1,12 @@
 # @apitree.cz/eslint-config-nestjs
 
+## 2.0.0
+
+### Patch Changes
+
+- Updated dependencies [374fe65]
+  - @apitree.cz/eslint-config@2.1.0
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config-storybook
 
+## 2.0.0
+
+### Patch Changes
+
+- @apitree.cz/eslint-config-react@2.0.0
+
 ## 1.0.1
 
 ### Patch Changes

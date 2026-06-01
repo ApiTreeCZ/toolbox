@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 2.1.0
+
+### Minor Changes
+
+- 374fe65: Extend extraneous dependencies pattern to match more common ones
+
 ## 2.0.0
 
 ### Major Changes
