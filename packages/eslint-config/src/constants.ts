@@ -1,8 +1,14 @@
 export const extraneousDependenciesPatterns = [
   '**/*.config.js',
   '**/*.config.ts',
+  '**/*.d.ts',
+  '**/*.test.js',
+  '**/*.test.jsx',
+  '**/*.test.ts',
+  '**/*.test.tsx',
   '**/.storybook/**/*',
   '**/__mocks__/**/*',
+  '**/__tests__/**/*',
   '**/codegen.ts',
   '**/docs/**/*',
   '**/mock/**/*',
@@ -12,7 +18,6 @@ export const extraneousDependenciesPatterns = [
   '**/storybook/**/*',
   '**/test/**/*',
   '**/tests/**/*',
-  '**/types/*.d.ts',
 ] as const;
 
 export const importExtensions = ['.ts', '.tsx'] as const;
