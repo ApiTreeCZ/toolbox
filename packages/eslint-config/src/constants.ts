@@ -18,6 +18,9 @@ export const extraneousDependenciesPatterns = [
   '**/storybook/**/*',
   '**/test/**/*',
   '**/tests/**/*',
+  '.agents/**/*',
+  '.claude/**/*',
+  '.github/**/*',
 ] as const;
 
 export const importExtensions = ['.ts', '.tsx'] as const;
