@@ -1,4 +1,4 @@
-name: Changesets Renovate
+name: Changesets
 
 on:
   pull_request:
