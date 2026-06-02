@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       stable:
-        description: 'Release stable version'
+        description: 'Create stable release PR'
         required: false
         default: false
         type: boolean
