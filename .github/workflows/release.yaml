@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   preflight:
-    uses: ApiTreeCZ/github-actions/.github/workflows/preflight.yml@main
+    uses: ApiTreeCZ/github-actions/.github/workflows/preflight.yml@v0.5.1
 
   wait-for-checks:
     runs-on: ubuntu-latest
@@ -47,7 +47,7 @@ jobs:
     if: ${{ success() && inputs.create-release-pr && github.ref_name == 'main' && needs.preflight.outputs.should-release == 'true' && needs.preflight.outputs.is-stable-release == 'false' }}
     steps:
       - name: Create release PR
-        uses: ApiTreeCZ/github-actions/.github/actions/create-release-pr@main
+        uses: ApiTreeCZ/github-actions/.github/actions/create-release-pr@v0.5.1
         with:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
           # Toolbox is specific as it uses its own configs, pnpx commands work without them but the build output is polluted with ERR_MODULE_NOT_FOUND warnings
@@ -64,7 +64,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Create snapshot release
-        uses: ApiTreeCZ/github-actions/.github/actions/create-snapshot-release@main
+        uses: ApiTreeCZ/github-actions/.github/actions/create-snapshot-release@v0.5.1
         with:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
           # Toolbox is specific as it uses its own configs, pnpx commands work without them but the build output is polluted with ERR_MODULE_NOT_FOUND warnings
@@ -81,7 +81,7 @@ jobs:
       id-token: write
     steps:
       - name: Create stable release
-        uses: ApiTreeCZ/github-actions/.github/actions/create-stable-release@main
+        uses: ApiTreeCZ/github-actions/.github/actions/create-stable-release@v0.5.1
         with:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
           # Toolbox is specific as it uses its own configs, pnpx commands work without them but the build output is polluted with ERR_MODULE_NOT_FOUND warnings

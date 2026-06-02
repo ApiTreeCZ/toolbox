@@ -17,7 +17,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Check Changesets status
-        uses: ApiTreeCZ/github-actions/.github/actions/check-changesets-status@main
+        uses: ApiTreeCZ/github-actions/.github/actions/check-changesets-status@v0.5.1
 
   renovate:
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Set up Git
         id: setup-git
-        uses: ApiTreeCZ/github-actions/.github/actions/setup-git@main
+        uses: ApiTreeCZ/github-actions/.github/actions/setup-git@v0.5.1
         with:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
@@ -37,7 +37,7 @@ jobs:
           token: ${{ steps.setup-git.outputs.token }}
 
       - name: Set up project
-        uses: ApiTreeCZ/github-actions/.github/actions/setup-project@main
+        uses: ApiTreeCZ/github-actions/.github/actions/setup-project@v0.5.1
         with:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
