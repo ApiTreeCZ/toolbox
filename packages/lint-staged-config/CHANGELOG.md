@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 1.1.1
+
+### Patch Changes
+
+- 5d3165e: Bump deps
+
 ## 1.1.0
 
 ### Minor Changes

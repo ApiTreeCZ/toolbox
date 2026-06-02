@@ -1,5 +1,13 @@
 # @apitree.cz/cli
 
+## 1.0.1
+
+### Patch Changes
+
+- 5d3165e: Bump deps
+- Updated dependencies [5d3165e]
+  - @apitree.cz/ts-utils@1.0.1
+
 ## 1.0.0
 
 ### Major Changes
