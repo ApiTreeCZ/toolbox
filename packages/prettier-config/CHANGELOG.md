@@ -1,5 +1,11 @@
 # @apitree.cz/prettier-config
 
+## 1.0.1
+
+### Patch Changes
+
+- 5d3165e: Bump deps
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,5 +1,13 @@
 # @apitree.cz/eslint-config-nestjs
 
+## 3.0.1
+
+### Patch Changes
+
+- 5d3165e: Bump deps
+- Updated dependencies [5d3165e]
+  - @apitree.cz/eslint-config@2.2.1
+
 ## 3.0.0
 
 ### Patch Changes

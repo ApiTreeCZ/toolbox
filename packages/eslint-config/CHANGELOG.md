@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 2.2.1
+
+### Patch Changes
+
+- 5d3165e: Bump deps
+
 ## 2.2.0
 
 ### Minor Changes
