@@ -50,9 +50,7 @@ jobs:
         uses: ApiTreeCZ/github-actions/.github/actions/create-release-pr@main
         with:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
-          # language=bash
-          before-script: |
-            pnpm turbo run build --filter @apitree.cz/prettier-config
+          before-script: pnpx turbo run build --filter @apitree.cz/prettier-config
 
   create-snapshot-release:
     runs-on: ubuntu-latest
@@ -67,9 +65,7 @@ jobs:
         uses: ApiTreeCZ/github-actions/.github/actions/create-snapshot-release@main
         with:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
-          # language=bash
-          before-script: |
-            pnpm turbo run build --filter @apitree.cz/prettier-config
+          before-script: pnpx turbo run build --filter @apitree.cz/prettier-config
 
   create-stable-release:
     runs-on: ubuntu-latest
@@ -84,6 +80,4 @@ jobs:
         uses: ApiTreeCZ/github-actions/.github/actions/create-stable-release@main
         with:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
-          # language=bash
-          before-script: |
-            pnpm turbo run build --filter @apitree.cz/prettier-config
+          before-script: pnpx turbo run build --filter @apitree.cz/prettier-config
