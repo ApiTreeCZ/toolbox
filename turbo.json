@@ -21,6 +21,7 @@
         "@apitree.cz/eslint-config#build",
         "@apitree.cz/eslint-config-react#build",
         "@apitree.cz/lint-staged-config#build",
+        "@apitree.cz/typedoc-config#build",
         "^build"
       ],
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
@@ -31,6 +32,7 @@
         "@apitree.cz/eslint-config#build",
         "@apitree.cz/eslint-config-react#build",
         "@apitree.cz/lint-staged-config#build",
+        "@apitree.cz/typedoc-config#build",
         "^build"
       ],
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
