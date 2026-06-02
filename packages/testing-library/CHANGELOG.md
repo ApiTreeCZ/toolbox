@@ -1,5 +1,11 @@
 # @apitree.cz/testing-library
 
+## 1.0.1
+
+### Patch Changes
+
+- a1569f3: Bump deps
+
 ## 1.0.0
 
 ### Major Changes
