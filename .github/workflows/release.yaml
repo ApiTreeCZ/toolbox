@@ -9,6 +9,14 @@ on:
     branches:
       - main
 
+  workflow_dispatch:
+    inputs:
+      create-release-pr:
+        description: 'Create stable release PR'
+        type: boolean
+        default: false
+        required: false
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
@@ -36,7 +44,7 @@ jobs:
     needs:
       - preflight
       - wait-for-checks
-    if: ${{ success() && github.ref_name == 'main' && needs.preflight.outputs.should-release == 'true' && needs.preflight.outputs.is-stable-release == 'false' }}
+    if: ${{ success() && inputs.create-release-pr && github.ref_name == 'main' && needs.preflight.outputs.should-release == 'true' && needs.preflight.outputs.is-stable-release == 'false' }}
     steps:
       - name: Create release PR
         uses: ApiTreeCZ/github-actions/.github/actions/create-release-pr@main
@@ -58,6 +66,7 @@ jobs:
         with:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
           before-script: pnpm run build
+          is-release-pr: ${{ needs.preflight.outputs.is-release-pr }}
 
   create-stable-release:
     runs-on: ubuntu-latest
