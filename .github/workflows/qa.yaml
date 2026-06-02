@@ -56,7 +56,9 @@ jobs:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Run eslint
-        run: pnpm run lint
+        uses: ApiTreeCZ/github-actions/.github/actions/turbo-run@main
+        with:
+          task: lint
 
   tsc:
     runs-on: ubuntu-latest
@@ -70,7 +72,9 @@ jobs:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Run tsc
-        run: pnpm run ts
+        uses: ApiTreeCZ/github-actions/.github/actions/turbo-run@main
+        with:
+          task: ts
 
   prettier:
     runs-on: ubuntu-latest
@@ -84,7 +88,9 @@ jobs:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Run prettier
-        run: pnpm run format
+        uses: ApiTreeCZ/github-actions/.github/actions/turbo-run@main
+        with:
+          task: format
 
   test:
     runs-on: ubuntu-latest
@@ -98,4 +104,6 @@ jobs:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
 
       - name: Run tests
-        run: pnpm run test
+        uses: ApiTreeCZ/github-actions/.github/actions/turbo-run@main
+        with:
+          task: test
