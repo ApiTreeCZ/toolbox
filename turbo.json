@@ -17,12 +17,22 @@
       "outputs": ["docs/**/*"]
     },
     "lint": {
-      "dependsOn": ["@apitree.cz/eslint-config#build", "@apitree.cz/eslint-config-react#build", "^build"],
+      "dependsOn": [
+        "@apitree.cz/eslint-config#build",
+        "@apitree.cz/eslint-config-react#build",
+        "@apitree.cz/lint-staged-config#build",
+        "^build"
+      ],
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
       "outputs": [".eslintcache"]
     },
     "lint:fix": {
-      "dependsOn": ["@apitree.cz/eslint-config#build", "@apitree.cz/eslint-config-react#build", "^build"],
+      "dependsOn": [
+        "@apitree.cz/eslint-config#build",
+        "@apitree.cz/eslint-config-react#build",
+        "@apitree.cz/lint-staged-config#build",
+        "^build"
+      ],
       "inputs": ["$TURBO_DEFAULT$", "../../eslint.config.js"],
       "outputs": [".eslintcache"]
     },
