@@ -13,6 +13,8 @@ jobs:
   status:
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'apitree-github-actions[bot]' }}
+    permissions:
+      pull-requests: write
     steps:
       - name: Check Changesets status
         uses: ApiTreeCZ/github-actions/.github/actions/check-changesets-status@main
