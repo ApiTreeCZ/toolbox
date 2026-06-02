@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 2.2.0
+
+### Minor Changes
+
+- 0fe4dd6: Extend lint patterns
+
 ## 2.1.0
 
 ### Minor Changes

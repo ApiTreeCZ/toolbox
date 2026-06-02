@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 1.1.0
+
+### Minor Changes
+
+- 0fe4dd6: Extend lint patterns
+
 ## 1.0.5
 
 ### Patch Changes

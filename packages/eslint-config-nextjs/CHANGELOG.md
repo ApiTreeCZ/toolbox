@@ -1,5 +1,13 @@
 # @apitree.cz/eslint-config-nextjs
 
+## 3.0.0
+
+### Patch Changes
+
+- Updated dependencies [0fe4dd6]
+  - @apitree.cz/eslint-config@2.2.0
+  - @apitree.cz/eslint-config-react@3.0.0
+
 ## 2.0.0
 
 ### Patch Changes
