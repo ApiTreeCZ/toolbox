@@ -18,6 +18,7 @@
     },
     "lint": {
       "dependsOn": [
+        "@apitree.cz/cli#build",
         "@apitree.cz/eslint-config#build",
         "@apitree.cz/eslint-config-react#build",
         "@apitree.cz/lint-staged-config#build",
@@ -30,6 +31,7 @@
     },
     "lint:fix": {
       "dependsOn": [
+        "@apitree.cz/cli#build",
         "@apitree.cz/eslint-config#build",
         "@apitree.cz/eslint-config-react#build",
         "@apitree.cz/lint-staged-config#build",
