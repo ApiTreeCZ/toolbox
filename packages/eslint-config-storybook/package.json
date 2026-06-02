@@ -39,12 +39,12 @@
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "eslint-plugin-storybook": "^10.4.1"
+    "eslint-plugin-storybook": "^10.4.2"
   },
   "devDependencies": {
     "@apitree.cz/eslint-config-react": "workspace:*",
     "eslint": "^9.39.4",
-    "storybook": "^10.4.1",
+    "storybook": "^10.4.2",
     "typescript": "^6.0.3"
   },
   "peerDependencies": {

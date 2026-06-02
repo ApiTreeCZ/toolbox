@@ -39,13 +39,13 @@
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^16.2.6"
+    "@next/eslint-plugin-next": "^16.2.7"
   },
   "devDependencies": {
     "@apitree.cz/eslint-config": "workspace:*",
     "@apitree.cz/eslint-config-react": "workspace:*",
     "eslint": "^9.39.4",
-    "react": "^19.2.6",
+    "react": "^19.2.7",
     "typescript": "^6.0.3"
   },
   "peerDependencies": {
