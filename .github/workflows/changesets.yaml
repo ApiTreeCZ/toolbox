@@ -31,7 +31,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ github.head_ref }}
-          token: ${{ steps.setup-git.outputs.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up project
         uses: ApiTreeCZ/github-actions/.github/actions/setup-project@v0.5.1
