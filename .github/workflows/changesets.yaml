@@ -22,13 +22,10 @@ jobs:
   renovate:
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'renovate[bot]' }}
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
-      - name: Set up Git
-        id: setup-git
-        uses: ApiTreeCZ/github-actions/.github/actions/setup-git@v0.5.1
-        with:
-          op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
-
       - name: Checkout
         uses: actions/checkout@v6
         with:
@@ -63,6 +60,9 @@ jobs:
       - name: Commit and Push Changeset
         # language=bash
         run: |
+          git config user.name "renovate[bot]"
+          git config user.email "29139614+renovate[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git add .changeset
           git commit -m "chore(renovate): add changeset" || echo "No changes to commit"
           git push
