@@ -15,6 +15,8 @@ Powered by [Turborepo](https://turbo.build/repo/docs)
 
 </div>
 
+---
+
 ## Getting Started
 
 ### Prerequisites
