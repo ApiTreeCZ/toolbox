@@ -1,6 +1,6 @@
 {
   "name": "@apitree.cz/eslint-config-react",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "ESLint configuration for React projects in ApiTree.",
   "keywords": [
     "apitree",

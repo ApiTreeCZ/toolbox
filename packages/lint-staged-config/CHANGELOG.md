@@ -1,5 +1,11 @@
 # @apitree.cz/lint-staged-config
 
+## 1.1.2
+
+### Patch Changes
+
+- 3b7669f: Bump deps
+
 ## 1.1.1
 
 ### Patch Changes

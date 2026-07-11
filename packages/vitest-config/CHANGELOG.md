@@ -1,5 +1,11 @@
 # @apitree.cz/vitest-config
 
+## 1.0.3
+
+### Patch Changes
+
+- 3b7669f: Bump deps
+
 ## 1.0.2
 
 ### Patch Changes

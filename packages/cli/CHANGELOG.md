@@ -1,5 +1,13 @@
 # @apitree.cz/cli
 
+## 1.0.2
+
+### Patch Changes
+
+- 3b7669f: Bump deps
+- Updated dependencies [3b7669f]
+  - @apitree.cz/ts-utils@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes
