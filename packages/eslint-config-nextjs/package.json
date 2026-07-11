@@ -39,7 +39,7 @@
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^16.2.7"
+    "@next/eslint-plugin-next": "^16.2.10"
   },
   "devDependencies": {
     "@apitree.cz/eslint-config": "workspace:*",

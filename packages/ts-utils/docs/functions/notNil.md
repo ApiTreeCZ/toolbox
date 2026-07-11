@@ -4,7 +4,7 @@
 
 # Function: notNil()
 
-> **notNil**\<`T`\>(`type`): `type is NonNullable<T>`
+> **notNil**\<`T`>>>>>>\>(`type`): `type is NonNullable<T>`
 
 Defined in: [not-nil.ts:6](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/ts-utils/src/not-nil.ts#L6)
 

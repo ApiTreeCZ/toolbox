@@ -10,7 +10,7 @@ Defined in: [types.ts:11](https://github.com/ApiTreeCZ/toolbox/blob/main/package
 
 ### build?
 
-> `optional` **build**: `string`
+> `optional` **build?**: `string`
 
 Defined in: [types.ts:21](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L21)
 
@@ -24,7 +24,7 @@ Name of the TS config file for build.
 
 ### default?
 
-> `optional` **default**: `string`
+> `optional` **default?**: `string`
 
 Defined in: [types.ts:16](https://github.com/ApiTreeCZ/toolbox/blob/main/packages/cli/src/commands/sync-project-references/types.ts#L16)
 

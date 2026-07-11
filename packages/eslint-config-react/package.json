@@ -38,15 +38,15 @@
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "@vitest/eslint-plugin": "^1.6.19",
+    "@vitest/eslint-plugin": "^1.6.22",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-formatjs": "^6.4.13",
+    "eslint-plugin-formatjs": "^6.4.17",
     "eslint-plugin-jest-dom": "^5.5.0",
     "eslint-plugin-mdx": "^3.8.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-testing-library": "^7.16.2",
-    "globals": "^17.6.0"
+    "globals": "^17.7.0"
   },
   "devDependencies": {
     "@apitree.cz/eslint-config": "workspace:*",
