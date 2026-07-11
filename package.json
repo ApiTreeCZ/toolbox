@@ -71,7 +71,7 @@
     "prettier": "^3.8.5",
     "turbo": "^2.10.4",
     "typedoc": "^0.28.20",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.0",
     "vitest": "^4.1.10"
   },
   "packageManager": "pnpm@10.34.4",

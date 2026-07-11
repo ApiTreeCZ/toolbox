@@ -61,10 +61,10 @@
   "devDependencies": {
     "eslint": "^9.39.4",
     "turbo": "^2.10.4",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.0"
   },
   "peerDependencies": {
     "eslint": "^9.39.0",
-    "typescript": "^5.9.3 || ^6.0.2"
+    "typescript": "^5.9.3 || ^6.0.2 || ^7.0.0"
   }
 }

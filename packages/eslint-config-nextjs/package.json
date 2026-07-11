@@ -46,7 +46,7 @@
     "@apitree.cz/eslint-config-react": "workspace:*",
     "eslint": "^9.39.4",
     "react": "^19.2.7",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.0"
   },
   "peerDependencies": {
     "@apitree.cz/eslint-config": "workspace:*",
