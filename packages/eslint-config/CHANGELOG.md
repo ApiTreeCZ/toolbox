@@ -1,5 +1,12 @@
 # @apitree.cz/eslint-config
 
+## 2.2.2
+
+### Patch Changes
+
+- 1af5939: Updated dependency `eslint-plugin-unicorn` to `^65.0.0`.
+- 3b7669f: Bump deps
+
 ## 2.2.1
 
 ### Patch Changes

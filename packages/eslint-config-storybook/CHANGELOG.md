@@ -1,5 +1,13 @@
 # @apitree.cz/eslint-config-storybook
 
+## 3.0.2
+
+### Patch Changes
+
+- 3b7669f: Bump deps
+- Updated dependencies [3b7669f]
+  - @apitree.cz/eslint-config-react@3.0.2
+
 ## 3.0.1
 
 ### Patch Changes
