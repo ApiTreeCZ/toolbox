@@ -1,0 +1,95 @@
+name: Copilot
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'renovate[bot]' }}
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up project
+        uses: ApiTreeCZ/github-actions/.github/actions/setup-project@v0.6.1
+        with:
+          op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
+
+      - name: Load secrets
+        id: load-secrets
+        uses: ApiTreeCZ/github-actions/.github/actions/load-secrets@v0.6.1
+        with:
+          op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
+          secrets: |
+            COPILOT_ACCESS_TOKEN=op://apitree-infa/github-actions/COPILOT_ACCESS_TOKEN
+
+      - name: Parse secrets
+        id: parse-secrets
+        uses: ApiTreeCZ/github-actions/.github/actions/json-to-outputs@v0.6.1
+        with:
+          json: ${{ steps.load-secrets.outputs.secrets }}
+
+      - name: Prompt Copilot to auto-approve the PR
+        id: copilot
+        uses: ApiTreeCZ/github-actions/.github/actions/copilot@main
+        env:
+          COPILOT_REVIEW_RESULT: '${{ github.workspace }}/temp/copilot_review_result.txt'
+        with:
+          args: "--allow-tool='shell(gh:*)' --allow-tool='shell(git:*)' --allow-tool='write'"
+          prompt: |
+            You are Renovate bot Copilot that can analyze pull requests and determine if they can be auto-approved.
+            The pull request no. ${{ github.event.pull_request.number }} is created by the Renovate bot and contains automated dependency updates.
+            Use `gh` and `git` CLI to to analyze the PR and approve it if all the following conditions are met:
+            - The PR contains only dependency updates (no other code changes).
+            - All required CI checks have passed.
+            Write your response to ${{ env.COPILOT_REVIEW_RESULT }}. DO NOT use `gh` CLI to approve the PR in this step, you do not have the necessary permissions.
+            Respond with only "APPROVED" or a short reason why the PR cannot be auto-approved. DO NOT include any other text in your response.
+          # language=bash
+          output-cmd: |
+            # Read the Copilot output from the file
+            COPILOT_OUTPUT=$(cat "${{ env.COPILOT_REVIEW_RESULT }}")
+
+            # Check if the output is "APPROVED"
+            if [[ "$COPILOT_OUTPUT" == "APPROVED" ]]; then
+              echo "approved=true" >> $GITHUB_OUTPUT
+              echo "reason=" >> $GITHUB_OUTPUT
+            else
+              echo "approved=false" >> $GITHUB_OUTPUT
+              echo "reason=$COPILOT_OUTPUT" >> $GITHUB_OUTPUT
+            fi
+
+      - name: Auto-approve the PR
+        if: ${{ steps.copilot.outputs.approved == 'true' }}
+        # language=bash
+        run: |
+          gh login --with-token <<< "${{ steps.parse-secrets.outputs.COPILOT_ACCESS_TOKEN }}"
+          gh pr review ${{ github.event.pull_request.number }} --approve --body "Auto-approved by Copilot"
+
+      - name: Comment the PR with rejection reason
+        if: ${{ steps.copilot.outputs.approved == 'false' }}
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          comment-tag: copilot
+          # language=md
+          message: |
+            ### 🤖 Copilot PR Review
+
+            The PR cannot be auto-approved by Copilot for the following reason:
+
+            ```
+            ${{ steps.copilot.outputs.reason }}
+            ```

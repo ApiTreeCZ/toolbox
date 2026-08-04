@@ -10,9 +10,11 @@ node_modules
 *.log
 .eslintcache
 .turbo
-tsconfig.tsbuildinfo
+temp
+tmp
 tsconfig.build.tsbuildinfo
 tsconfig.lib.tsbuildinfo
+tsconfig.tsbuildinfo
 
 # Builds
 /packages/*/dist
