@@ -71,6 +71,7 @@ jobs:
               echo "approved=false" >> $GITHUB_OUTPUT
               echo "reason=$COPILOT_OUTPUT" >> $GITHUB_OUTPUT
             fi
+          token: ${{ steps.parse-secrets.outputs.COPILOT_ACCESS_TOKEN }}
 
       - name: Auto-approve the PR
         if: ${{ steps.copilot.outputs.approved == 'true' }}
