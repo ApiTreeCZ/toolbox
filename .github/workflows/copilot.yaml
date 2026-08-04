@@ -35,7 +35,7 @@ jobs:
         with:
           op-service-account-token: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
           secrets: |
-            COPILOT_ACCESS_TOKEN=op://apitree-infa/github-actions/COPILOT_ACCESS_TOKEN
+            COPILOT_ACCESS_TOKEN=op://apitree-infra/github-actions/COPILOT_ACCESS_TOKEN
 
       - name: Parse secrets
         id: parse-secrets
