@@ -13,12 +13,6 @@ jobs:
   renovate:
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'renovate[bot]' }}
-    permissions:
-      actions: read
-      checks: read
-      contents: write
-      copilot-requests: write
-      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -46,6 +40,10 @@ jobs:
         with:
           json: ${{ steps.load-secrets.outputs.secrets }}
 
+      - name: Authenticate with GitHub CLI
+        run: |
+          echo "${{ steps.parse-secrets.outputs.COPILOT_ACCESS_TOKEN }}" | gh auth login --with-token
+
       - name: Prompt Copilot to auto-approve the PR
         id: copilot
         uses: ApiTreeCZ/github-actions/.github/actions/copilot@main
@@ -59,14 +57,7 @@ jobs:
             Use `gh` and `git` CLI to to analyze the PR and approve it if all the following conditions are met:
             - The PR contains only dependency updates (no other code changes).
             - All required CI checks have passed.
-            Write your response to ${{ env.COPILOT_REVIEW_RESULT }}. DO NOT use `gh` CLI to approve the PR in this step, you do not have the necessary permissions.
-            Response format (required, must be valid JSON):
-            ```json
-            {
-              "approved": true|false,
-              "reason": "string"
-            }
-            ```
+            If the PR meets the conditions, approve it via `gh` CLI. Do nothing if it does not meet the conditions.
           # language=bash
           output-cmd: |
             # Parse the Copilot output JSON file
@@ -79,25 +70,4 @@ jobs:
               echo "approved=false" >> $GITHUB_OUTPUT
               echo "reason=Copilot review result file not found." >> $GITHUB_OUTPUT
             fi
-
-      - name: Auto-approve the PR
-        if: ${{ steps.copilot.outputs.approved == 'true' }}
-        # language=bash
-        run: |
-          gh login --with-token <<< "${{ steps.parse-secrets.outputs.COPILOT_ACCESS_TOKEN }}"
-          gh pr review ${{ github.event.pull_request.number }} --approve --body "Auto-approved by Copilot"
-
-      - name: Comment the PR with rejection reason
-        if: ${{ steps.copilot.outputs.approved == 'false' }}
-        uses: thollander/actions-comment-pull-request@v3
-        with:
-          comment-tag: copilot
-          # language=md
-          message: |
-            ### 🤖 Copilot PR Review
-
-            The PR cannot be auto-approved by Copilot for the following reason:
-
-            ```
-            ${{ steps.copilot.outputs.reason }}
-            ```
+          token: ${{ steps.parse-secrets.outputs.COPILOT_ACCESS_TOKEN }}
