@@ -58,16 +58,4 @@ jobs:
             - The PR contains only dependency updates (no other code changes).
             - All required CI checks have passed.
             If the PR meets the conditions, approve it via `gh` CLI. Do nothing if it does not meet the conditions.
-          # language=bash
-          output-cmd: |
-            # Parse the Copilot output JSON file
-            if [[ -f "${COPILOT_REVIEW_RESULT}" ]]; then
-              APPROVED=$(jq -r '.approved' "${COPILOT_REVIEW_RESULT}")
-              REASON=$(jq -r '.reason' "${COPILOT_REVIEW_RESULT}")
-              echo "approved=${APPROVED}" >> $GITHUB_OUTPUT
-              echo "reason=${REASON}" >> $GITHUB_OUTPUT
-            else
-              echo "approved=false" >> $GITHUB_OUTPUT
-              echo "reason=Copilot review result file not found." >> $GITHUB_OUTPUT
-            fi
           token: ${{ steps.parse-secrets.outputs.COPILOT_ACCESS_TOKEN }}
