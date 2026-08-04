@@ -13,6 +13,8 @@ jobs:
   renovate:
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'renovate[bot]' }}
+    permissions:
+      copilot-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -58,4 +60,3 @@ jobs:
             - The PR contains only dependency updates (no other code changes).
             - All required CI checks have passed.
             If the PR meets the conditions, approve it via `gh` CLI. Do nothing if it does not meet the conditions.
-          token: ${{ steps.parse-secrets.outputs.COPILOT_ACCESS_TOKEN }}
