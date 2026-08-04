@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'renovate[bot]' }}
     permissions:
+      actions: read
+      checks: read
       contents: write
       copilot-requests: write
       pull-requests: write
@@ -48,7 +50,7 @@ jobs:
         id: copilot
         uses: ApiTreeCZ/github-actions/.github/actions/copilot@main
         env:
-          COPILOT_REVIEW_RESULT: '${{ github.workspace }}/temp/copilot_review_result.txt'
+          COPILOT_REVIEW_RESULT: '${{ github.workspace }}/temp/copilot_review_result.json'
         with:
           args: "--allow-tool='shell(gh:*)' --allow-tool='shell(git:*)' --allow-tool='write'"
           prompt: |
@@ -58,19 +60,24 @@ jobs:
             - The PR contains only dependency updates (no other code changes).
             - All required CI checks have passed.
             Write your response to ${{ env.COPILOT_REVIEW_RESULT }}. DO NOT use `gh` CLI to approve the PR in this step, you do not have the necessary permissions.
-            Respond with only "APPROVED" or a short reason why the PR cannot be auto-approved. DO NOT include any other text in your response.
+            Response format (required, must be valid JSON):
+            ```json
+            {
+              "approved": true|false,
+              "reason": "string"
+            }
+            ```
           # language=bash
           output-cmd: |
-            # Read the Copilot output from the file
-            COPILOT_OUTPUT=$(cat "${{ env.COPILOT_REVIEW_RESULT }}")
-
-            # Check if the output is "APPROVED"
-            if [[ "$COPILOT_OUTPUT" == "APPROVED" ]]; then
-              echo "approved=true" >> $GITHUB_OUTPUT
-              echo "reason=" >> $GITHUB_OUTPUT
+            # Parse the Copilot output JSON file
+            if [[ -f "${COPILOT_REVIEW_RESULT}" ]]; then
+              APPROVED=$(jq -r '.approved' "${COPILOT_REVIEW_RESULT}")
+              REASON=$(jq -r '.reason' "${COPILOT_REVIEW_RESULT}")
+              echo "approved=${APPROVED}" >> $GITHUB_OUTPUT
+              echo "reason=${REASON}" >> $GITHUB_OUTPUT
             else
               echo "approved=false" >> $GITHUB_OUTPUT
-              echo "reason=$COPILOT_OUTPUT" >> $GITHUB_OUTPUT
+              echo "reason=Copilot review result file not found." >> $GITHUB_OUTPUT
             fi
 
       - name: Auto-approve the PR
