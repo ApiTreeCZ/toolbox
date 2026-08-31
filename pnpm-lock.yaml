@@ -223,7 +223,7 @@ importers:
         version: 10.1.8(eslint@9.39.5(jiti@2.6.1))
       eslint-plugin-formatjs:
         specifier: ^6.4.17
-        version: 6.6.0(eslint@9.39.5(jiti@2.6.1))
+        version: 6.6.1(eslint@9.39.5(jiti@2.6.1))
       eslint-plugin-jest-dom:
         specifier: ^5.5.0
         version: 5.10.1(@testing-library/dom@10.4.1)(eslint@9.39.5(jiti@2.6.1))
@@ -959,6 +959,9 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
+
+  '@jridgewell/sourcemap-codec@1.6.0':
+    resolution: {integrity: sha512-T7jf+5zgsZHwNJ4lvQ7/aezbyk0nNX+zJVWpmHA7VYsEx7a7qr5Rg5IbtJFqkgze5Y2sruq1RUY8Q837Od7iFw==}
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
@@ -2665,8 +2668,8 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
-  eslint-plugin-formatjs@6.6.0:
-    resolution: {integrity: sha512-IeVBg6r8QbUXnUrZ/ydJToPzi1GC0AV9fRLxJKy4MnfdNI0qfpskqghxWIzbXorkkYrxU98Eqnf97/WfGHoHpQ==}
+  eslint-plugin-formatjs@6.6.1:
+    resolution: {integrity: sha512-mHX9WR7uXwiCtX4NeU7HdNKxIAxCjIB7WtmIduTzMXkxcEpw8dQClBTDXswBockk+gIJ29ttxnUPiB3l5fkTxw==}
     peerDependencies:
       eslint: 9 || 10
 
@@ -3555,8 +3558,8 @@ packages:
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
-  magic-string@1.2.2:
-    resolution: {integrity: sha512-veT/+7iXrXzT39XnEN4lOxtNl72dMgJ8Lp+5Bd6YcMSWpb0n0MjBM8Uuooi6jgJr8dhUW2swQgBmoZVMni5SVg==}
+  magic-string@1.2.3:
+    resolution: {integrity: sha512-Bpb0W2TbLKOZ7vJnOUnVRGq3WL2p+ISV29M6hYPL1AFCpyKZpdr5ytiXoTSSxRVhg8YW7f65+6gbG8WG6PCa/g==}
 
   magicast@0.5.3:
     resolution: {integrity: sha512-pVKE4UdSQ7DvHzivsCIFx2BJn1mHG6KsyrFcaxFx6tONdneEuThrDx0Cj3AMg58KyN4pzYT+LHOotxDQDjNvkw==}
@@ -5633,7 +5636,7 @@ snapshots:
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.5
+      '@jridgewell/sourcemap-codec': 1.6.0
       '@jridgewell/trace-mapping': 0.3.31
 
   '@jridgewell/remapping@2.3.5':
@@ -5645,10 +5648,12 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
+  '@jridgewell/sourcemap-codec@1.6.0': {}
+
   '@jridgewell/trace-mapping@0.3.31':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.5.5
+      '@jridgewell/sourcemap-codec': 1.6.0
 
   '@manypkg/cli@0.25.1':
     dependencies:
@@ -7356,7 +7361,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-formatjs@6.6.0(eslint@9.39.5(jiti@2.6.1)):
+  eslint-plugin-formatjs@6.6.1(eslint@9.39.5(jiti@2.6.1)):
     dependencies:
       '@formatjs/icu-messageformat-parser': 3.5.17
       '@formatjs/ts-transformer': 4.4.19
@@ -7364,8 +7369,8 @@ snapshots:
       '@types/picomatch': 4.0.3
       '@unicode/unicode-17.0.0': 1.6.17
       eslint: 9.39.5(jiti@2.6.1)
-      magic-string: 1.2.2
-      picomatch: 4.0.5
+      magic-string: 1.2.3
+      picomatch: 4.0.7
     transitivePeerDependencies:
       - ts-jest
 
@@ -8308,9 +8313,9 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  magic-string@1.2.2:
+  magic-string@1.2.3:
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.5
+      '@jridgewell/sourcemap-codec': 1.6.0
 
   magicast@0.5.3:
     dependencies:
