@@ -1,5 +1,12 @@
 # @apitree.cz/vitest-config
 
+## 1.0.4
+
+### Patch Changes
+
+- e9c5e77: Bump deps
+- 20d9c58: Updated dependency `jsdom` to `^29.0.0 || ^30.0.0`.
+
 ## 1.0.3
 
 ### Patch Changes

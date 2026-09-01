@@ -1,5 +1,13 @@
 # @apitree.cz/testing-library
 
+## 1.0.4
+
+### Patch Changes
+
+- e9c5e77: Bump deps
+- 68de57c: Updated dependency `@testing-library/jest-dom` to `^7.0.0`.
+- 20d9c58: Updated dependency `jsdom` to `^29.0.0 || ^30.0.0`.
+
 ## 1.0.3
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @apitree.cz/eslint-config-nextjs
 
+## 3.0.3
+
+### Patch Changes
+
+- e9c5e77: Bump deps
+- Updated dependencies [e9c5e77]
+  - @apitree.cz/eslint-config-react@3.0.3
+  - @apitree.cz/eslint-config@2.2.3
+
 ## 3.0.2
 
 ### Patch Changes

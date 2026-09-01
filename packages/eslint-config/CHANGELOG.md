@@ -1,5 +1,11 @@
 # @apitree.cz/eslint-config
 
+## 2.2.3
+
+### Patch Changes
+
+- e9c5e77: Bump deps
+
 ## 2.2.2
 
 ### Patch Changes

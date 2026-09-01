@@ -1,5 +1,11 @@
 # @apitree.cz/ts-config
 
+## 1.0.2
+
+### Patch Changes
+
+- e9c5e77: Bump deps
+
 ## 1.0.1
 
 ### Patch Changes

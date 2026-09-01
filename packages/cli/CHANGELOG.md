@@ -1,5 +1,14 @@
 # @apitree.cz/cli
 
+## 1.0.3
+
+### Patch Changes
+
+- e9c5e77: Bump deps
+- 187144f: Updated dependency `execa` to `^10.0.0`.
+- Updated dependencies [e9c5e77]
+  - @apitree.cz/ts-utils@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
