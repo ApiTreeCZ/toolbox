@@ -70,12 +70,9 @@ In order for your IDE and tools to correctly resolve paths for internal librarie
 ```json
 {
   "extends": "@apitree.cz/ts-config/library",
-  "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist"
-  },
+  "compilerOptions": { "outDir": "./dist", "rootDir": "./src" },
   "include": ["./src"],
-  "exclude": ["dist", "node_modules"]
+  "exclude": ["./dist", "./node_modules"]
 }
 ```
 
@@ -94,9 +91,12 @@ If your package also contains other non-src directories (e.g. `tests`, `scripts`
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "rootDir": ".."
+    "composite": false,
+    "rootDir": "..",
+    "tsBuildInfoFile": "../tsconfig.tests.tsbuildinfo"
   },
-  "include": [".."]
+  "include": ["../src", "../tests"],
+  "exclude": ["../coverage", "../dist", "../node_modules"]
 }
 ```
 
