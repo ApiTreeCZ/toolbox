@@ -60,6 +60,7 @@ export const config = [
       '**/mock/**/*.tsx',
       '**/mocks/**/*.tsx',
       '**/stories/**/*.tsx',
+      '**/test/**/*.tsx',
       '**/tests/**/*.tsx',
     ],
     plugins: { vitest },

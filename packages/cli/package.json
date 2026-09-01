@@ -43,10 +43,10 @@
     "@manypkg/get-packages": "^3.1.0",
     "commander": "^14.0.3",
     "deepmerge": "^4.3.1",
-    "execa": "^10.0.0",
+    "execa": "^10.0.1",
     "path-exists": "^5.0.0",
     "ts-toolbelt": "^9.6.0",
-    "zod": "^4.4.3"
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "typescript": "^6.0.3"
