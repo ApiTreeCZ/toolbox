@@ -11,6 +11,9 @@ onlyBuiltDependencies:
   - 'esbuild'
   - 'unrs-resolver'
 
+overrides:
+  prettier: 3.8.5 # https://github.com/prettier/prettier/issues/19528
+
 packages:
   - packages/*
 
