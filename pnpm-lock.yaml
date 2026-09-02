@@ -167,7 +167,7 @@ importers:
         version: 4.4.1(@typescript-eslint/eslint-plugin@8.69.0(@typescript-eslint/parser@8.69.0(eslint@9.39.5(jiti@2.6.1))(typescript@6.0.3))(eslint@9.39.5(jiti@2.6.1))(typescript@6.0.3))(eslint@9.39.5(jiti@2.6.1))
       globals:
         specifier: ^17.11.0
-        version: 17.11.0
+        version: 17.12.0
       typescript-eslint:
         specifier: ^8.69.0
         version: 8.69.0(eslint@9.39.5(jiti@2.6.1))(typescript@6.0.3)
@@ -244,7 +244,7 @@ importers:
         version: 7.16.2(eslint@9.39.5(jiti@2.6.1))(typescript@6.0.3)
       globals:
         specifier: ^17.11.0
-        version: 17.11.0
+        version: 17.12.0
     devDependencies:
       '@apitree.cz/eslint-config':
         specifier: workspace:*
@@ -2845,8 +2845,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@17.11.0:
-    resolution: {integrity: sha512-Z2I8hM+PbJDXQDq3Icgpzv+mPdwr68iZUU9d5WW4FuXfDUQfkZaZuvjMv42/5crNyw154+9+VWXbYrUgDXbxNw==}
+  globals@17.12.0:
+    resolution: {integrity: sha512-cezEd/DTyyht9cvSSURyygXPfy04GtWO/5e6ZPvH7fCtjKz9PYOmuawphw1Ctd1f6C+5JypXfGD7ahNMXvevBA==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -7119,7 +7119,7 @@ snapshots:
       detect-indent: 7.0.2
       eslint: 9.39.5(jiti@2.6.1)
       find-up-simple: 1.0.1
-      globals: 17.11.0
+      globals: 17.12.0
       indent-string: 5.0.0
       is-builtin-module: 5.0.0
       jsesc: 3.1.0
@@ -7417,7 +7417,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@17.11.0: {}
+  globals@17.12.0: {}
 
   globalthis@1.0.4:
     dependencies:
