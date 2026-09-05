@@ -1,3 +1,8 @@
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
+  unrs-resolver: true
+
 autoInstallPeers: false
 
 enablePrePostScripts: true
@@ -5,11 +10,6 @@ enablePrePostScripts: true
 engineStrict: true
 
 minimumReleaseAge: 1140
-
-onlyBuiltDependencies:
-  - '@swc/core'
-  - 'esbuild'
-  - 'unrs-resolver'
 
 overrides:
   prettier: 3.8.5 # https://github.com/prettier/prettier/issues/19528
