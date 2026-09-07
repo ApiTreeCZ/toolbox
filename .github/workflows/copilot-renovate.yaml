@@ -1,4 +1,4 @@
-name: Copilot
+name: Copilot Renovate
 
 on:
   pull_request:
@@ -7,6 +7,6 @@ on:
 
 jobs:
   copilot:
-    uses: ApiTreeCZ/github-actions/.github/workflows/copilot.yml@v0.6.5
+    uses: ApiTreeCZ/github-actions/.github/workflows/copilot-renovate.yml@v0.7.0
     secrets:
       OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
