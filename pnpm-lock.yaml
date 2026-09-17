@@ -163,7 +163,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  prettier: 3.8.5
+  prettier: 3.9.7
 
 importers:
 
@@ -239,8 +239,8 @@ importers:
         specifier: ^17.4.1
         version: 17.5.1
       prettier:
-        specifier: 3.8.5
-        version: 3.8.5
+        specifier: 3.9.7
+        version: 3.9.7
       turbo:
         specifier: ^2.10.12
         version: 2.10.13
@@ -446,11 +446,11 @@ importers:
     dependencies:
       prettier-plugin-packagejson:
         specifier: ^3.0.2
-        version: 3.0.2(prettier@3.8.5)
+        version: 3.0.2(prettier@3.9.7)
     devDependencies:
       prettier:
-        specifier: 3.8.5
-        version: 3.8.5
+        specifier: 3.9.7
+        version: 3.9.7
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -3994,13 +3994,18 @@ packages:
   prettier-plugin-packagejson@3.0.2:
     resolution: {integrity: sha512-kmoj3hEynXwoHDo8ZhmWAIjRBoQWCDUVackiWfSDWdgD0rS3LGB61T9zoVbume/cotYdCoadUh4sqViAmXvpBQ==}
     peerDependencies:
-      prettier: 3.8.5
+      prettier: 3.9.7
     peerDependenciesMeta:
       prettier:
         optional: true
 
   prettier@3.8.5:
     resolution: {integrity: sha512-zxcTTCedNGJM4R8sj/Cq/F0W/c4iE0afWBcBwMTRtw4WHYP9TWkYjdiH3npPRUYsXQCPR0hTU9yjovOu+E6EQA==}
+    engines: {node: '>=14'}
+    hasBin: true
+
+  prettier@3.9.7:
+    resolution: {integrity: sha512-T3mF5P7HFzZVLDQuCUNtJj6WK1pcpLMweMNUVwGb01bLNkH9AkKxtZvmInw8K6bnn2O3d6/5RHl6zSHiBAD0Og==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5048,7 +5053,7 @@ snapshots:
       fs-extra: 7.0.1
       lodash.startcase: 4.4.0
       outdent: 0.5.0
-      prettier: 3.8.5
+      prettier: 3.9.7
       resolve-from: 5.0.0
       semver: 7.8.5
 
@@ -5177,7 +5182,7 @@ snapshots:
       '@changesets/types': 6.1.0
       fs-extra: 7.0.1
       human-id: 4.2.1
-      prettier: 3.8.5
+      prettier: 3.9.7
 
   '@commander-js/extra-typings@15.0.0(commander@15.0.0)':
     dependencies:
@@ -8687,13 +8692,16 @@ snapshots:
 
   presentable-error@0.0.1: {}
 
-  prettier-plugin-packagejson@3.0.2(prettier@3.8.5):
+  prettier-plugin-packagejson@3.0.2(prettier@3.9.7):
     dependencies:
       sort-package-json: 3.7.1
     optionalDependencies:
-      prettier: 3.8.5
+      prettier: 3.9.7
 
-  prettier@3.8.5: {}
+  prettier@3.8.5:
+    optional: true
+
+  prettier@3.9.7: {}
 
   pretty-format@27.5.1:
     dependencies:
