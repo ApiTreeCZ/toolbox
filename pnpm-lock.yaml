@@ -517,7 +517,7 @@ importers:
         version: 6.1.1(vite@8.2.2(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.6.1)(yaml@2.9.0))
       unplugin-swc:
         specifier: ^1.5.11
-        version: 1.5.11(@swc/core@1.16.2)(esbuild@0.28.2)(rolldown@1.2.6)(vite@8.2.2(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.6.1)(yaml@2.9.0))
+        version: 1.6.0(@swc/core@1.16.2)(esbuild@0.28.2)(rolldown@1.2.6)(vite@8.2.2(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.6.1)(yaml@2.9.0))
       vite:
         specifier: ^8.2.2
         version: 8.2.2(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.6.1)(yaml@2.9.0)
@@ -4596,8 +4596,8 @@ packages:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
     engines: {node: '>= 4.0.0'}
 
-  unplugin-swc@1.5.11:
-    resolution: {integrity: sha512-R7U4GbfrESPnYLn3nXREZrwhKQk3BAmTBoKJ5lmo7btTc/yJpNsDzavBWo+XpQTjDSIogiZEAxC5ig/vfMWxWg==}
+  unplugin-swc@1.6.0:
+    resolution: {integrity: sha512-aOdzxAwJvz1GeQ8vwSNA2N8AreHYBrpwxqnwzxmB7LCdeZiXOBDj0rgjZod+lMxFsJGm8k6lF/1iKF/9wacLbw==}
     peerDependencies:
       '@swc/core': ^1.2.108
 
@@ -9403,7 +9403,7 @@ snapshots:
 
   universalify@0.1.2: {}
 
-  unplugin-swc@1.5.11(@swc/core@1.16.2)(esbuild@0.28.2)(rolldown@1.2.6)(vite@8.2.2(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.6.1)(yaml@2.9.0)):
+  unplugin-swc@1.6.0(@swc/core@1.16.2)(esbuild@0.28.2)(rolldown@1.2.6)(vite@8.2.2(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.6.1)(yaml@2.9.0)):
     dependencies:
       '@rollup/pluginutils': 5.4.0
       '@swc/core': 1.16.2
