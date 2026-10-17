@@ -1,5 +1,5 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": { "noEmit": false },
-  "references": [{ "path": "../ts-utils/tsconfig.build.json" }]
+  "references": [{ "path": "../ts-utils/tsconfig.build.json" }, { "path": "../vitest-config/tsconfig.build.json" }]
 }
