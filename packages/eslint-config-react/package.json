@@ -40,7 +40,7 @@
   "dependencies": {
     "@vitest/eslint-plugin": "^1.6.27",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-formatjs": "^6.6.1",
+    "eslint-plugin-formatjs": "^8.0.0",
     "eslint-plugin-jest-dom": "^5.10.1",
     "eslint-plugin-mdx": "^3.8.1",
     "eslint-plugin-react": "^7.37.5",
