@@ -19,10 +19,32 @@ export interface GetReferencesProps extends Pick<GetTargetBuildConfigProps, 'tsC
   workspaces: Package[];
 }
 
+export interface TsConfigReference {
+  /**
+   * Path to the referenced TS config.
+   */
+  path: string;
+}
+
+export interface ProjectReference {
+  /**
+   * Reference used in the default TS config (points to the build config when available).
+   */
+  default: TsConfigReference;
+  /**
+   * Reference used in the build TS config, if the referenced package has one.
+   */
+  build: TsConfigReference | undefined;
+}
+
 /**
  * Returns list of package references to be added to its TS config.
  */
-export const getReferences = async ({ tsConfigs, workspacePackage, workspaces }: GetReferencesProps) => {
+export const getReferences = async ({
+  tsConfigs,
+  workspacePackage,
+  workspaces,
+}: GetReferencesProps): Promise<ProjectReference[]> => {
   const { dependencies } = await getWorkspaceDependencies({ workspacePackage, workspaces });
   const references = await Promise.all(
     dependencies.map(async (dependency) => {

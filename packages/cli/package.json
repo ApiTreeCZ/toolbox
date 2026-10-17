@@ -25,7 +25,7 @@
   "scripts": {
     "prebuild": "del dist tsconfig.build.tsbuildinfo",
     "build": "tsc --build tsconfig.build.json",
-    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo dist node_modules",
+    "cleanup": "del .eslintcache .turbo tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo coverage dist node_modules",
     "docs": "typedoc",
     "postdocs": "prettier --write \"./docs/**/*\"",
     "fix": "turbo run ts format:fix lint:fix",
@@ -34,6 +34,8 @@
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "qa": "turbo run ts format lint",
+    "test": "vitest --run",
+    "test:coverage": "pnpm run test --coverage",
     "ts": "tsc --build tsconfig.json"
   },
   "dependencies": {
@@ -44,11 +46,14 @@
     "commander": "^15.0.0",
     "deepmerge": "^4.3.1",
     "execa": "^10.0.1",
+    "jsonc-parser": "^3.3.1",
     "path-exists": "^5.0.0",
     "ts-toolbelt": "^9.6.0",
     "zod": "^4.5.4"
   },
   "devDependencies": {
-    "typescript": "^6.0.3"
+    "@apitree.cz/vitest-config": "workspace:*",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
   }
 }

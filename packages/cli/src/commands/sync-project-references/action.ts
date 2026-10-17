@@ -31,5 +31,9 @@ export const action = async ({ config }: ActionProps) => {
     return;
   }
   const paths = (await Promise.all(sync)).flat();
+  if (paths.length === 0) {
+    logger.info('Project references are up to date.');
+    return;
+  }
   await runHooks(hooks, paths);
 };
