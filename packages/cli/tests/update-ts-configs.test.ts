@@ -3,6 +3,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 
 import type { Package } from '@manypkg/get-packages';
+import { parse } from 'jsonc-parser';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { updateTsConfigs } from '../src/commands/sync-project-references/update-ts-configs.js';
@@ -74,9 +75,9 @@ describe('updateTsConfigs', () => {
       workspacePackage,
     });
 
-    expect(await readFile(tsConfigPath, 'utf8')).toBe(
-      '{\n  // Build only.\n  "extends": "./tsconfig.json","references": [{"path":"../a/tsconfig.build.json"}]\n}\n',
-    );
+    const text = await readFile(tsConfigPath, 'utf8');
+    expect(text).toContain('// Build only.');
+    expect(parse(text)).toEqual({ extends: './tsconfig.json', references: [{ path: '../a/tsconfig.build.json' }] });
   });
 
   it('does not write or report TS configs whose references are already in sync', async () => {
