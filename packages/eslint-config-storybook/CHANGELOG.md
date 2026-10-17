@@ -1,5 +1,15 @@
 # @apitree.cz/eslint-config-storybook
 
+## 3.0.4
+
+### Patch Changes
+
+- 7a3a25b: Upgraded dependencies to their latest compatible versions (ESLint 9 and TypeScript 6 lines are kept).
+  Updated dependency `eslint-plugin-formatjs` to `^8.1.1`.
+  Updated dependency `unplugin-swc` to `^2.0.0`.
+- Updated dependencies [7a3a25b]
+  - @apitree.cz/eslint-config-react@3.0.4
+
 ## 3.0.3
 
 ### Patch Changes

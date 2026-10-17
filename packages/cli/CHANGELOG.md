@@ -1,5 +1,14 @@
 # @apitree.cz/cli
 
+## 1.0.4
+
+### Patch Changes
+
+- f9e83f2: `sync-project-references` now edits only the `references` property of TS configs (JSONC-aware), keeping comments, trailing commas, key order and formatting. TS configs are written only when their references change. The command now fails with a non-zero exit code when a TS config can't be read or parsed.
+- 7a3a25b: Upgraded dependencies to their latest compatible versions (ESLint 9 and TypeScript 6 lines are kept).
+  Updated dependency `eslint-plugin-formatjs` to `^8.1.1`.
+  Updated dependency `unplugin-swc` to `^2.0.0`.
+
 ## 1.0.3
 
 ### Patch Changes
