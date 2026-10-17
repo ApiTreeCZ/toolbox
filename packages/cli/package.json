@@ -45,15 +45,15 @@
     "@manypkg/get-packages": "^3.1.0",
     "commander": "^15.0.0",
     "deepmerge": "^4.3.1",
-    "execa": "^10.0.1",
+    "execa": "^10.1.1",
     "jsonc-parser": "^3.3.1",
     "path-exists": "^5.0.0",
     "ts-toolbelt": "^9.6.0",
-    "zod": "^4.5.4"
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@apitree.cz/vitest-config": "workspace:*",
     "typescript": "^6.0.3",
-    "vitest": "^5.0.0"
+    "vitest": "^5.0.5"
   }
 }
