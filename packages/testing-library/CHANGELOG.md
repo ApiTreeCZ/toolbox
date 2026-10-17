@@ -1,5 +1,16 @@
 # @apitree.cz/testing-library
 
+## 1.0.5
+
+### Patch Changes
+
+- 07efbd3: Updated dependency `vitest` to `^4.0.0 || ^5.0.0`.
+  Updated dependency `@vitest/coverage-v8` to `^4.0.15 || ^5.0.0`.
+  Updated dependency `@vitest/ui` to `^5.0.0`.
+- 7a3a25b: Upgraded dependencies to their latest compatible versions (ESLint 9 and TypeScript 6 lines are kept).
+  Updated dependency `eslint-plugin-formatjs` to `^8.1.1`.
+  Updated dependency `unplugin-swc` to `^2.0.0`.
+
 ## 1.0.4
 
 ### Patch Changes
