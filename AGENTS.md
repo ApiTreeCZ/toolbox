@@ -11,7 +11,7 @@ ApiTree Toolbox is a Turbo-powered monorepo containing shared configurations and
 - Strict ESM-only module system
 - TypeScript everywhere with strict type checking
 - Conventional commits with Changesets for versioning
-- pnpm workspaces with Node.js 24.x requirement
+- pnpm workspaces with Node.js 26.x requirement
 
 ## Development Commands
 
