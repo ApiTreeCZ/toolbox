@@ -7,6 +7,6 @@ on:
 
 jobs:
   copilot-renovate:
-    uses: ApiTreeCZ/github-actions/.github/workflows/copilot-renovate.yml@v0.8.0
+    uses: ApiTreeCZ/github-actions/.github/workflows/copilot-renovate.yml@v0.8.1
     secrets:
       OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_APITREE_INFRA_SERVICE_ACCOUNT_TOKEN }}
