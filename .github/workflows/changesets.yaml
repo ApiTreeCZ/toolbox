@@ -53,7 +53,7 @@ jobs:
           fi
 
           # Generate changeset
-          pnpx @scaleway/changesets-renovate
+          pnpm changesets-renovate
           pnpm turbo run build --filter @apitree.cz/prettier-config
           pnpm prettier --write .changeset/**/*.md
 
