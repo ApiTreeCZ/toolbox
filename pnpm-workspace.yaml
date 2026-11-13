@@ -12,7 +12,7 @@ engineStrict: true
 minimumReleaseAge: 1140
 
 overrides:
-  prettier: 3.10.0 # https://github.com/prettier/prettier/issues/19528
+  prettier: 3.10.1 # https://github.com/prettier/prettier/issues/19528
 
 packages:
   - packages/*
